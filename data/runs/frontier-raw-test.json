@@ -1,0 +1,5670 @@
+{
+ "v": "browser-swarm-run/1",
+ "venue": "frontier API through kar-spendwall (job measure)",
+ "model": "claude-opus-5-5",
+ "effort": "medium (Simon's wall setting)",
+ "approval": "frontier-baseline-2026-11-22",
+ "split": "test",
+ "arm": "raw",
+ "sealSha256": "c40859345f96aa9396a1167d3ea3410cf39394de36ded191ce6697421f166058",
+ "at": "2026-11-22T19:28:01.793Z",
+ "order": "sha256(\"frontier:\" + id)",
+ "covered": 237,
+ "of": 410,
+ "complete": false,
+ "stoppedBy": "day: API budget reached for today ($2.50): the local tiers carry on, and the API is back tomorrow",
+ "errors": [],
+ "calls": 237,
+ "costCents": 238,
+ "records": {
+  "raw": [
+   {
+    "id": "draft:gen-record-273",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Chloe Shah",
+      "order": "ORD-190020",
+      "item": "coffee grinder",
+      "amount": "£204.29",
+      "date": "27 April 2025"
+     },
+     "letter": "Dear Chloe Shah, your refund of £204.29 for order ORD-190020 (coffee grinder, bought on 27 April 2025) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3018,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Chloe Shah, your refund of £204.29 for order ORD-190020 (coffee grinder, bought on 27 April 2025) has been processed."
+     }
+    ],
+    "ms": 3018
+   },
+   {
+    "id": "extract:cord-train-284",
+    "kind": "extract",
+    "arm": "raw",
+    "cell": "receipt-total",
+    "released": true,
+    "output": {
+     "value": "137,478"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2641,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "137,478"
+     }
+    ],
+    "ms": 2641
+   },
+   {
+    "id": "knowledge:mmlu-world_religions-167",
+    "kind": "knowledge",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "C"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3405,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "C"
+     }
+    ],
+    "ms": 3405
+   },
+   {
+    "id": "draft:gen-record-159",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Laura Murphy",
+      "order": "ORD-405288",
+      "item": "garden hose",
+      "amount": "£64.67",
+      "date": "12 October 2025"
+     },
+     "letter": "Dear Laura Murphy, your refund of £64.67 for order ORD-405288 (garden hose, bought on 12 October 2025) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2989,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Laura Murphy, your refund of £64.67 for order ORD-405288 (garden hose, bought on 12 October 2025) has been processed."
+     }
+    ],
+    "ms": 2989
+   },
+   {
+    "id": "knowledge:mmlu-nutrition-211",
+    "kind": "knowledge",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "A"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3105,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "A"
+     }
+    ],
+    "ms": 3105
+   },
+   {
+    "id": "reasoning:mmlu-elementary_mathematics-170",
+    "kind": "reasoning",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "C"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3001,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "C"
+     }
+    ],
+    "ms": 3001
+   },
+   {
+    "id": "qa:56ddde6b9a695914005b962a",
+    "kind": "qa",
+    "arm": "raw",
+    "cell": "docs-answer",
+    "released": false,
+    "why": "the reader found no answer in the source",
+    "calls": [
+     {
+      "ms": 4440,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "none"
+     }
+    ],
+    "ms": 4440
+   },
+   {
+    "id": "route:clinc-test-4083",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": true,
+    "output": {
+     "message": "in my motivational playlist include the song rap god",
+     "domain": "home"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3943,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "home"
+     }
+    ],
+    "ms": 3943
+   },
+   {
+    "id": "route:clinc-test-3599",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": true,
+    "output": {
+     "message": "revert back to factory settings",
+     "domain": "meta"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3874,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "meta"
+     }
+    ],
+    "ms": 3874
+   },
+   {
+    "id": "draft:gen-record-3",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Imran Clarke",
+      "order": "ORD-765942",
+      "item": "headphones",
+      "amount": "£14.06",
+      "date": "16 April 2026"
+     },
+     "letter": "Dear Imran Clarke, your refund of £14.06 for order ORD-765942 (headphones, bought on 16 April 2026) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3349,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Imran Clarke, your refund of £14.06 for order ORD-765942 (headphones, bought on 16 April 2026) has been processed."
+     }
+    ],
+    "ms": 3349
+   },
+   {
+    "id": "draft:gen-record-11",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Ben Taylor",
+      "order": "ORD-287842",
+      "item": "blender",
+      "amount": "£145.41",
+      "date": "11 November 2026"
+     },
+     "letter": "Dear Ben Taylor, your refund of £145.41 for order ORD-287842 (blender, bought on 11 November 2026) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2978,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Ben Taylor, your refund of £145.41 for order ORD-287842 (blender, bought on 11 November 2026) has been processed."
+     }
+    ],
+    "ms": 2978
+   },
+   {
+    "id": "classify:b77-test-1907",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": true,
+    "output": {
+     "message": "Please delete my account.",
+     "label": "terminate_account",
+     "second": null,
+     "labels": [
+      "terminate_account",
+      "balance_not_updated_after_cheque_or_cash_deposit",
+      "cash_withdrawal_not_recognised",
+      "transfer_into_account",
+      "Refund_not_showing_up"
+     ]
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3161,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "terminate account"
+     }
+    ],
+    "ms": 3161
+   },
+   {
+    "id": "route:clinc-test-3099",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": true,
+    "output": {
+     "message": "i have some charges on my account from old navy that aren't mine",
+     "domain": "banking"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3766,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "banking"
+     }
+    ],
+    "ms": 3766
+   },
+   {
+    "id": "extract:cord-train-566",
+    "kind": "extract",
+    "arm": "raw",
+    "cell": "receipt-total",
+    "released": true,
+    "output": {
+     "value": "9.500,00"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3095,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "9.500,00"
+     }
+    ],
+    "ms": 3095
+   },
+   {
+    "id": "qa:56de3f784396321400ee26fd",
+    "kind": "qa",
+    "arm": "raw",
+    "cell": "docs-answer",
+    "released": true,
+    "output": {
+     "question": "Who ruled Cyprus in 1191?",
+     "answer": "Isaac Komnenos",
+     "source": "Normans#26"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3083,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Isaac Komnenos"
+     }
+    ],
+    "ms": 3083
+   },
+   {
+    "id": "route:clinc-test-2738",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": true,
+    "output": {
+     "message": "what's my daily spending limit",
+     "domain": "credit_cards"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 6251,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "credit cards"
+     }
+    ],
+    "ms": 6251
+   },
+   {
+    "id": "route:clinc-test-1924",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": true,
+    "output": {
+     "message": "i no longer want you to be synced to my phone",
+     "domain": "meta"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 4121,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "meta"
+     }
+    ],
+    "ms": 4121
+   },
+   {
+    "id": "draft:gen-record-194",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Zara Reid",
+      "order": "ORD-173022",
+      "item": "kettle",
+      "amount": "£46.58",
+      "date": "13 December 2025"
+     },
+     "letter": "Dear Zara Reid, your refund of £46.58 for order ORD-173022 (kettle, bought on 13 December 2025) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 4018,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Zara Reid, your refund of £46.58 for order ORD-173022 (kettle, bought on 13 December 2025) has been processed."
+     }
+    ],
+    "ms": 4018
+   },
+   {
+    "id": "knowledge:mmlu-prehistory-2",
+    "kind": "knowledge",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "A"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3322,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "A"
+     }
+    ],
+    "ms": 3322
+   },
+   {
+    "id": "classify:b77-test-2936",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": true,
+    "output": {
+     "message": "It appears my card expires next month, can I order a new one?",
+     "label": "card_about_to_expire",
+     "second": null,
+     "labels": [
+      "card_about_to_expire",
+      "card_linking",
+      "card_arrival",
+      "activate_my_card",
+      "declined_card_payment"
+     ]
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3912,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "card about to expire"
+     }
+    ],
+    "ms": 3912
+   },
+   {
+    "id": "draft:gen-record-95",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Priya Price",
+      "order": "ORD-607851",
+      "item": "bookshelf",
+      "amount": "£84.55",
+      "date": "23 October 2026"
+     },
+     "letter": "Dear Priya Price, your refund of £84.55 for order ORD-607851 (bookshelf, bought on 23 October 2026) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 5639,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Priya Price, your refund of £84.55 for order ORD-607851 (bookshelf, bought on 23 October 2026) has been processed."
+     }
+    ],
+    "ms": 5639
+   },
+   {
+    "id": "qa:56e1c4fce3433e140042314f",
+    "kind": "qa",
+    "arm": "raw",
+    "cell": "docs-answer",
+    "released": true,
+    "output": {
+     "question": "AC and NC are complexity classes typically associated with what type of circuit?",
+     "answer": "Boolean",
+     "source": "Computational_complexity_theory#26"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 4640,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Boolean"
+     }
+    ],
+    "ms": 4640
+   },
+   {
+    "id": "qa:5ad401f2604f3c001a3ffd41",
+    "kind": "qa",
+    "arm": "raw",
+    "cell": "docs-answer",
+    "released": false,
+    "why": "the reader found no answer in the source",
+    "calls": [
+     {
+      "ms": 3330,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "none"
+     }
+    ],
+    "ms": 3330
+   },
+   {
+    "id": "reasoning:mmlu-elementary_mathematics-17",
+    "kind": "reasoning",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "B"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 4109,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "B"
+     }
+    ],
+    "ms": 4109
+   },
+   {
+    "id": "qa:56e19557e3433e1400422ff0",
+    "kind": "qa",
+    "arm": "raw",
+    "cell": "docs-answer",
+    "released": true,
+    "output": {
+     "question": "What is the term for the set of all connected graphs related to this decision problem?",
+     "answer": "formal language",
+     "source": "Computational_complexity_theory#7"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3179,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "formal language"
+     }
+    ],
+    "ms": 3179
+   },
+   {
+    "id": "knowledge:mmlu-world_religions-144",
+    "kind": "knowledge",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "B"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3452,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "B"
+     }
+    ],
+    "ms": 3452
+   },
+   {
+    "id": "date:gen-date-87",
+    "kind": "date",
+    "arm": "raw",
+    "cell": "iso-date",
+    "released": true,
+    "output": {
+     "text": "delivered on 3 November, 2017",
+     "iso": "2017-11-03"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2886,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "2017-11-03"
+     }
+    ],
+    "ms": 2886
+   },
+   {
+    "id": "classify:b77-test-2207",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": true,
+    "output": {
+     "message": "im not paying this transfer fee",
+     "label": "transfer_fee_charged",
+     "second": null,
+     "labels": [
+      "transfer_fee_charged",
+      "card_payment_fee_charged",
+      "failed_transfer",
+      "beneficiary_not_allowed",
+      "balance_not_updated_after_bank_transfer"
+     ]
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3534,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "transfer fee charged"
+     }
+    ],
+    "ms": 3534
+   },
+   {
+    "id": "extract:cord-train-538",
+    "kind": "extract",
+    "arm": "raw",
+    "cell": "receipt-total",
+    "released": true,
+    "output": {
+     "value": "287.595"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3358,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "287.595"
+     }
+    ],
+    "ms": 3358
+   },
+   {
+    "id": "extract:cord-train-404",
+    "kind": "extract",
+    "arm": "raw",
+    "cell": "receipt-total",
+    "released": true,
+    "output": {
+     "value": "49,000"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2740,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "49,000"
+     }
+    ],
+    "ms": 2740
+   },
+   {
+    "id": "knowledge:mmlu-nutrition-73",
+    "kind": "knowledge",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "A"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2928,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "A"
+     }
+    ],
+    "ms": 2928
+   },
+   {
+    "id": "draft:gen-record-257",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Priya Murphy",
+      "order": "ORD-169316",
+      "item": "running shoes",
+      "amount": "£196.52",
+      "date": "3 January 2026"
+     },
+     "letter": "Dear Priya Murphy, your refund of £196.52 for order ORD-169316 (running shoes, bought on 3 January 2026) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2696,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Priya Murphy, your refund of £196.52 for order ORD-169316 (running shoes, bought on 3 January 2026) has been processed."
+     }
+    ],
+    "ms": 2696
+   },
+   {
+    "id": "reasoning:mmlu-elementary_mathematics-346",
+    "kind": "reasoning",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "D"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2945,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "D"
+     }
+    ],
+    "ms": 2945
+   },
+   {
+    "id": "reasoning:mmlu-elementary_mathematics-138",
+    "kind": "reasoning",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "B"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 4029,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "B"
+     }
+    ],
+    "ms": 4029
+   },
+   {
+    "id": "classify:b77-test-2483",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": true,
+    "output": {
+     "message": "Where can I get my card at?",
+     "label": "card_arrival",
+     "second": null,
+     "labels": [
+      "declined_cash_withdrawal",
+      "card_linking",
+      "card_about_to_expire",
+      "activate_my_card",
+      "card_arrival"
+     ]
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3294,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "card arrival"
+     }
+    ],
+    "ms": 3294
+   },
+   {
+    "id": "pence:gen-money-67",
+    "kind": "pence",
+    "arm": "raw",
+    "cell": "pence",
+    "released": true,
+    "output": {
+     "text": "£2,012.37",
+     "pence": 201237
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3152,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "201237"
+     }
+    ],
+    "ms": 3152
+   },
+   {
+    "id": "extract:cord-test-36",
+    "kind": "extract",
+    "arm": "raw",
+    "cell": "receipt-total",
+    "released": true,
+    "output": {
+     "value": "40,000"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2826,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "40,000"
+     }
+    ],
+    "ms": 2826
+   },
+   {
+    "id": "route:clinc-test-1904",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": true,
+    "output": {
+     "message": "let my bank know i actually am visiting brazil",
+     "domain": "travel"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2724,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "travel"
+     }
+    ],
+    "ms": 2724
+   },
+   {
+    "id": "knowledge:mmlu-world_religions-133",
+    "kind": "knowledge",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "C"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3276,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "C"
+     }
+    ],
+    "ms": 3276
+   },
+   {
+    "id": "extract:cord-train-86",
+    "kind": "extract",
+    "arm": "raw",
+    "cell": "receipt-total",
+    "released": true,
+    "output": {
+     "value": "22.660"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2792,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "22.660"
+     }
+    ],
+    "ms": 2792
+   },
+   {
+    "id": "classify:b77-test-2451",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": true,
+    "output": {
+     "message": "How do I pay by check?",
+     "label": "top_up_by_cash_or_cheque",
+     "second": null,
+     "labels": [
+      "apple_pay_or_google_pay",
+      "top_up_by_cash_or_cheque",
+      "verify_my_identity",
+      "card_linking",
+      "activate_my_card"
+     ]
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3813,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "top up by cash or cheque"
+     }
+    ],
+    "ms": 3813
+   },
+   {
+    "id": "reasoning:mmlu-elementary_mathematics-48",
+    "kind": "reasoning",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "D"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3446,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "D"
+     }
+    ],
+    "ms": 3446
+   },
+   {
+    "id": "reasoning:mmlu-elementary_mathematics-246",
+    "kind": "reasoning",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "B"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2954,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "B"
+     }
+    ],
+    "ms": 2954
+   },
+   {
+    "id": "pence:gen-money-368",
+    "kind": "pence",
+    "arm": "raw",
+    "cell": "pence",
+    "released": true,
+    "output": {
+     "text": "£1,380.29",
+     "pence": 138029
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3252,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "138029"
+     }
+    ],
+    "ms": 3252
+   },
+   {
+    "id": "route:clinc-test-19",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": true,
+    "output": {
+     "message": "i must know how to say thank you in german",
+     "domain": "travel"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2830,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "travel"
+     }
+    ],
+    "ms": 2830
+   },
+   {
+    "id": "draft:gen-record-82",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Jack Shah",
+      "order": "ORD-796190",
+      "item": "coffee grinder",
+      "amount": "£130.29",
+      "date": "14 March 2025"
+     },
+     "letter": "Dear Jack Shah, your refund of £130.29 for order ORD-796190 (coffee grinder, bought on 14 March 2025) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3041,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Jack Shah, your refund of £130.29 for order ORD-796190 (coffee grinder, bought on 14 March 2025) has been processed."
+     }
+    ],
+    "ms": 3041
+   },
+   {
+    "id": "classify:b77-test-1959",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": false,
+    "why": "the reader chose no label",
+    "calls": [
+     {
+      "ms": 3504,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "none"
+     }
+    ],
+    "ms": 3504
+   },
+   {
+    "id": "date:gen-date-308",
+    "kind": "date",
+    "arm": "raw",
+    "cell": "iso-date",
+    "released": true,
+    "output": {
+     "text": "the 15th of January 1998",
+     "iso": "1998-01-15"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3658,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "1998-01-15"
+     }
+    ],
+    "ms": 3658
+   },
+   {
+    "id": "extract:cord-validation-12",
+    "kind": "extract",
+    "arm": "raw",
+    "cell": "receipt-total",
+    "released": true,
+    "output": {
+     "value": "72.000"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3315,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "72.000"
+     }
+    ],
+    "ms": 3315
+   },
+   {
+    "id": "route:clinc-oos-452",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": false,
+    "why": "no department fits",
+    "calls": [
+     {
+      "ms": 4830,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "none"
+     }
+    ],
+    "ms": 4830
+   },
+   {
+    "id": "qa:56de1563cffd8e1900b4b5c4",
+    "kind": "qa",
+    "arm": "raw",
+    "cell": "docs-answer",
+    "released": false,
+    "why": "the reader found no answer in the source",
+    "calls": [
+     {
+      "ms": 4983,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "none"
+     }
+    ],
+    "ms": 4983
+   },
+   {
+    "id": "route:clinc-test-2358",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": true,
+    "output": {
+     "message": "what is the number of calories in a steak",
+     "domain": "kitchen_and_dining"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 4803,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "kitchen and dining"
+     }
+    ],
+    "ms": 4803
+   },
+   {
+    "id": "qa:56e200e4cd28a01900c67c14",
+    "kind": "qa",
+    "arm": "raw",
+    "cell": "docs-answer",
+    "released": true,
+    "output": {
+     "question": "What tactic did researchers employ to offset the former deficit of work surrounding the complexity of algorithmic problems?",
+     "answer": "numerous foundations were laid out",
+     "source": "Computational_complexity_theory#43"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 4169,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "numerous foundations were laid out"
+     }
+    ],
+    "ms": 4169
+   },
+   {
+    "id": "classify:b77-test-1768",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": true,
+    "output": {
+     "message": "Help! I keep checking my account, but my refund is not showing. I requested that a seller refund my money a while back, but there is no money showing in my account. What can you do for me?",
+     "label": "Refund_not_showing_up",
+     "second": null,
+     "labels": [
+      "Refund_not_showing_up",
+      "cash_withdrawal_not_recognised",
+      "direct_debit_payment_not_recognised",
+      "card_payment_not_recognised",
+      "request_refund"
+     ]
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3648,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Refund not showing up"
+     }
+    ],
+    "ms": 3648
+   },
+   {
+    "id": "qa:56e1c2eee3433e1400423138",
+    "kind": "qa",
+    "arm": "raw",
+    "cell": "docs-answer",
+    "released": true,
+    "output": {
+     "question": "Decision problems capable of being solved by a deterministic Turing machine while maintaining adherence to polynomial time belong to what class?",
+     "answer": "P",
+     "source": "Computational_complexity_theory#24"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3984,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "P"
+     }
+    ],
+    "ms": 3984
+   },
+   {
+    "id": "qa:56dddf4066d3e219004dad5f",
+    "kind": "qa",
+    "arm": "raw",
+    "cell": "docs-answer",
+    "released": true,
+    "output": {
+     "question": "Who was the duke in the battle of Hastings?",
+     "answer": "William the Conqueror",
+     "source": "Normans#1"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3848,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "William the Conqueror"
+     }
+    ],
+    "ms": 3848
+   },
+   {
+    "id": "pence:gen-money-271",
+    "kind": "pence",
+    "arm": "raw",
+    "cell": "pence",
+    "released": true,
+    "output": {
+     "text": "£1,264.32",
+     "pence": 126432
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3510,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "126432"
+     }
+    ],
+    "ms": 3510
+   },
+   {
+    "id": "reasoning:mmlu-elementary_mathematics-88",
+    "kind": "reasoning",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "B"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2820,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "B"
+     }
+    ],
+    "ms": 2820
+   },
+   {
+    "id": "knowledge:mmlu-global_facts-82",
+    "kind": "knowledge",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "A"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3611,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "A"
+     }
+    ],
+    "ms": 3611
+   },
+   {
+    "id": "classify:b77-test-2653",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": true,
+    "output": {
+     "message": "Why would my topup not go through?",
+     "label": "pending_top_up",
+     "second": null,
+     "labels": [
+      "beneficiary_not_allowed",
+      "declined_card_payment",
+      "pending_top_up",
+      "failed_transfer",
+      "pending_card_payment"
+     ]
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 4056,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "pending top up"
+     }
+    ],
+    "ms": 4056
+   },
+   {
+    "id": "draft:gen-record-221",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Nina Taylor",
+      "order": "ORD-305532",
+      "item": "toaster",
+      "amount": "£117.64",
+      "date": "7 November 2025"
+     },
+     "letter": "Dear Nina Taylor, your refund of £117.64 for order ORD-305532 (toaster, bought on 7 November 2025) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2830,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Nina Taylor, your refund of £117.64 for order ORD-305532 (toaster, bought on 7 November 2025) has been processed."
+     }
+    ],
+    "ms": 2830
+   },
+   {
+    "id": "classify:b77-test-400",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": true,
+    "output": {
+     "message": "May I exchange currencies with this?",
+     "label": "exchange_via_app",
+     "second": null,
+     "labels": [
+      "exchange_via_app",
+      "card_payment_wrong_exchange_rate",
+      "fiat_currency_support",
+      "wrong_exchange_rate_for_cash_withdrawal",
+      "exchange_charge"
+     ]
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2867,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "exchange via app"
+     }
+    ],
+    "ms": 2867
+   },
+   {
+    "id": "classify:b77-test-2040",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": true,
+    "output": {
+     "message": "What is the number of days I have to wait for my Europe transfer?",
+     "label": "transfer_timing",
+     "second": null,
+     "labels": [
+      "pending_transfer",
+      "transfer_timing",
+      "transfer_not_received_by_recipient",
+      "transfer_fee_charged",
+      "failed_transfer"
+     ]
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2658,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "transfer timing"
+     }
+    ],
+    "ms": 2658
+   },
+   {
+    "id": "draft:gen-record-180",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Ruth Khan",
+      "order": "ORD-892511",
+      "item": "toaster",
+      "amount": "£231.98",
+      "date": "3 June 2026"
+     },
+     "letter": "Dear Ruth Khan, your refund of £231.98 for order ORD-892511 (toaster, bought on 3 June 2026) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3633,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Ruth Khan, your refund of £231.98 for order ORD-892511 (toaster, bought on 3 June 2026) has been processed."
+     }
+    ],
+    "ms": 3633
+   },
+   {
+    "id": "date:gen-date-251",
+    "kind": "date",
+    "arm": "raw",
+    "cell": "iso-date",
+    "released": true,
+    "output": {
+     "text": "the 12th of June 2023",
+     "iso": "2023-06-12"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3198,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "2023-06-12"
+     }
+    ],
+    "ms": 3198
+   },
+   {
+    "id": "classify:b77-test-1913",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": true,
+    "output": {
+     "message": "I wish to close my account. I do not like the service you provide.",
+     "label": "terminate_account",
+     "second": null,
+     "labels": [
+      "terminate_account",
+      "transfer_not_received_by_recipient",
+      "balance_not_updated_after_cheque_or_cash_deposit",
+      "Refund_not_showing_up",
+      "transfer_into_account"
+     ]
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3561,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "terminate account"
+     }
+    ],
+    "ms": 3561
+   },
+   {
+    "id": "route:clinc-test-259",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": true,
+    "output": {
+     "message": "what do i do to set up a vacation",
+     "domain": "work"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 4044,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "work"
+     }
+    ],
+    "ms": 4044
+   },
+   {
+    "id": "draft:gen-record-110",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Priya Patel",
+      "order": "ORD-211174",
+      "item": "running shoes",
+      "amount": "£251.14",
+      "date": "8 July 2026"
+     },
+     "letter": "Dear Priya Patel, your refund of £251.14 for order ORD-211174 (running shoes, bought on 8 July 2026) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3617,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Priya Patel, your refund of £251.14 for order ORD-211174 (running shoes, bought on 8 July 2026) has been processed."
+     }
+    ],
+    "ms": 3617
+   },
+   {
+    "id": "knowledge:mmlu-world_religions-35",
+    "kind": "knowledge",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "A"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3845,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "A"
+     }
+    ],
+    "ms": 3845
+   },
+   {
+    "id": "reasoning:mmlu-elementary_mathematics-160",
+    "kind": "reasoning",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "A"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3227,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "A"
+     }
+    ],
+    "ms": 3227
+   },
+   {
+    "id": "route:clinc-test-187",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": true,
+    "output": {
+     "message": "can you assist me with finding my phone",
+     "domain": "utility"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2806,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "utility"
+     }
+    ],
+    "ms": 2806
+   },
+   {
+    "id": "draft:gen-record-130",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Priya Wood",
+      "order": "ORD-105078",
+      "item": "desk lamp",
+      "amount": "£83.57",
+      "date": "28 July 2025"
+     },
+     "letter": "Dear Priya Wood, your refund of £83.57 for order ORD-105078 (desk lamp, bought on 28 July 2025) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2970,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Priya Wood, your refund of £83.57 for order ORD-105078 (desk lamp, bought on 28 July 2025) has been processed."
+     }
+    ],
+    "ms": 2970
+   },
+   {
+    "id": "extract:cord-validation-68",
+    "kind": "extract",
+    "arm": "raw",
+    "cell": "receipt-total",
+    "released": true,
+    "output": {
+     "value": "26,000"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3971,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "26,000"
+     }
+    ],
+    "ms": 3971
+   },
+   {
+    "id": "qa:56e1e9dfe3433e1400423200",
+    "kind": "qa",
+    "arm": "raw",
+    "cell": "docs-answer",
+    "released": true,
+    "output": {
+     "question": "Who are commonly associated with the algorithm typically considered the most effective with respect to finite polynomial hierarchy and graph isomorphism?",
+     "answer": "Laszlo Babai and Eugene Luks",
+     "source": "Computational_complexity_theory#36"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 4409,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Laszlo Babai and Eugene Luks"
+     }
+    ],
+    "ms": 4409
+   },
+   {
+    "id": "classify:b77-test-2252",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": false,
+    "why": "the reader chose no label",
+    "calls": [
+     {
+      "ms": 4222,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "none"
+     }
+    ],
+    "ms": 4222
+   },
+   {
+    "id": "qa:oos:5727cd7dff5b5019007d9591",
+    "kind": "qa",
+    "arm": "raw",
+    "cell": "docs-answer",
+    "released": false,
+    "why": "the reader found no answer in the source",
+    "calls": [
+     {
+      "ms": 3530,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "none"
+     }
+    ],
+    "ms": 3530
+   },
+   {
+    "id": "knowledge:mmlu-world_religions-140",
+    "kind": "knowledge",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "C"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3691,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "C"
+     }
+    ],
+    "ms": 3691
+   },
+   {
+    "id": "qa:56ddde6b9a695914005b9629",
+    "kind": "qa",
+    "arm": "raw",
+    "cell": "docs-answer",
+    "released": true,
+    "output": {
+     "question": "When were the Normans in Normandy?",
+     "answer": "10th and 11th centuries",
+     "source": "Normans#0"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 4691,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "10th and 11th centuries"
+     }
+    ],
+    "ms": 4691
+   },
+   {
+    "id": "pence:gen-money-23",
+    "kind": "pence",
+    "arm": "raw",
+    "cell": "pence",
+    "released": true,
+    "output": {
+     "text": "GBP 1964.97",
+     "pence": 196497
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3195,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "196497"
+     }
+    ],
+    "ms": 3195
+   },
+   {
+    "id": "date:gen-date-100",
+    "kind": "date",
+    "arm": "raw",
+    "cell": "iso-date",
+    "released": true,
+    "output": {
+     "text": "delivered on 5 June, 2028",
+     "iso": "2028-06-05"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2926,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "2028-06-05"
+     }
+    ],
+    "ms": 2926
+   },
+   {
+    "id": "date:gen-date-38",
+    "kind": "date",
+    "arm": "raw",
+    "cell": "iso-date",
+    "released": true,
+    "output": {
+     "text": "30 August 2015",
+     "iso": "2015-08-30"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2203,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "2015-08-30"
+     }
+    ],
+    "ms": 2203
+   },
+   {
+    "id": "classify:b77-test-2189",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": false,
+    "why": "the reader chose no label",
+    "calls": [
+     {
+      "ms": 2424,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "none"
+     }
+    ],
+    "ms": 2424
+   },
+   {
+    "id": "knowledge:mmlu-world_religions-99",
+    "kind": "knowledge",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "A"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2642,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "A"
+     }
+    ],
+    "ms": 2642
+   },
+   {
+    "id": "classify:b77-test-2471",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": true,
+    "output": {
+     "message": "Why can't I top up with a cheque?",
+     "label": "top_up_by_cash_or_cheque",
+     "second": null,
+     "labels": [
+      "top_up_failed",
+      "top_up_by_cash_or_cheque",
+      "apple_pay_or_google_pay",
+      "pending_top_up",
+      "top_up_reverted"
+     ]
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 1720,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "top up by cash or cheque"
+     }
+    ],
+    "ms": 1720
+   },
+   {
+    "id": "knowledge:mmlu-high_school_geography-97",
+    "kind": "knowledge",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "D"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 1362,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "D"
+     }
+    ],
+    "ms": 1362
+   },
+   {
+    "id": "reasoning:mmlu-elementary_mathematics-75",
+    "kind": "reasoning",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "D"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2053,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "D"
+     }
+    ],
+    "ms": 2053
+   },
+   {
+    "id": "knowledge:mmlu-nutrition-56",
+    "kind": "knowledge",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "C"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 1826,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "C"
+     }
+    ],
+    "ms": 1826
+   },
+   {
+    "id": "route:clinc-test-2365",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": true,
+    "output": {
+     "message": "the intake of calories it it bad",
+     "domain": "kitchen_and_dining"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2153,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "kitchen and dining"
+     }
+    ],
+    "ms": 2153
+   },
+   {
+    "id": "draft:gen-record-129",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Ben Walker",
+      "order": "ORD-609129",
+      "item": "rain jacket",
+      "amount": "£108.77",
+      "date": "4 April 2025"
+     },
+     "letter": "Dear Ben Walker, your refund of £108.77 for order ORD-609129 (rain jacket, bought on 4 April 2025) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 4045,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Ben Walker, your refund of £108.77 for order ORD-609129 (rain jacket, bought on 4 April 2025) has been processed."
+     }
+    ],
+    "ms": 4045
+   },
+   {
+    "id": "route:clinc-oos-337",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": false,
+    "why": "no department fits",
+    "calls": [
+     {
+      "ms": 2499,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "none"
+     }
+    ],
+    "ms": 2499
+   },
+   {
+    "id": "classify:b77-test-2484",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": true,
+    "output": {
+     "message": "price of physical card",
+     "label": "order_physical_card",
+     "second": null,
+     "labels": [
+      "order_physical_card",
+      "activate_my_card",
+      "card_arrival",
+      "card_linking",
+      "card_about_to_expire"
+     ]
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2454,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "order physical card"
+     }
+    ],
+    "ms": 2454
+   },
+   {
+    "id": "route:clinc-test-3219",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": true,
+    "output": {
+     "message": "where am i located on the map",
+     "domain": "auto_and_commute"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 1460,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "auto and commute"
+     }
+    ],
+    "ms": 1460
+   },
+   {
+    "id": "qa:56e1a0dccd28a01900c67a2e",
+    "kind": "qa",
+    "arm": "raw",
+    "cell": "docs-answer",
+    "released": false,
+    "why": "the reader found no answer in the source",
+    "calls": [
+     {
+      "ms": 2205,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "none"
+     }
+    ],
+    "ms": 2205
+   },
+   {
+    "id": "route:clinc-test-7",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": true,
+    "output": {
+     "message": "how would one say cruiser in china",
+     "domain": "travel"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 1497,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "travel"
+     }
+    ],
+    "ms": 1497
+   },
+   {
+    "id": "classify:b77-test-1352",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": true,
+    "output": {
+     "message": "How do i transfer money using my credit card?",
+     "label": "topping_up_by_card",
+     "second": null,
+     "labels": [
+      "transfer_into_account",
+      "balance_not_updated_after_bank_transfer",
+      "activate_my_card",
+      "pending_transfer",
+      "topping_up_by_card"
+     ]
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2549,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "topping up by card"
+     }
+    ],
+    "ms": 2549
+   },
+   {
+    "id": "knowledge:mmlu-high_school_geography-190",
+    "kind": "knowledge",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "D"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 1635,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "D"
+     }
+    ],
+    "ms": 1635
+   },
+   {
+    "id": "classify:b77-test-2233",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": true,
+    "output": {
+     "message": "What extra charges are there?",
+     "label": "extra_charge_on_statement",
+     "second": null,
+     "labels": [
+      "extra_charge_on_statement",
+      "card_payment_fee_charged",
+      "card_payment_not_recognised",
+      "cash_withdrawal_charge",
+      "top_up_by_card_charge"
+     ]
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3706,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "extra charge on statement"
+     }
+    ],
+    "ms": 3706
+   },
+   {
+    "id": "classify:b77-test-2324",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": false,
+    "why": "the reader chose no label",
+    "calls": [
+     {
+      "ms": 2270,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "none"
+     }
+    ],
+    "ms": 2270
+   },
+   {
+    "id": "route:clinc-test-201",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": true,
+    "output": {
+     "message": "where did i place my phone",
+     "domain": "utility"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 1591,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "utility"
+     }
+    ],
+    "ms": 1591
+   },
+   {
+    "id": "date:gen-date-26",
+    "kind": "date",
+    "arm": "raw",
+    "cell": "iso-date",
+    "released": true,
+    "output": {
+     "text": "23 April 1990",
+     "iso": "1990-04-23"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2350,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "1990-04-23"
+     }
+    ],
+    "ms": 2350
+   },
+   {
+    "id": "draft:gen-record-14",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Chloe Evans",
+      "order": "ORD-517540",
+      "item": "bookshelf",
+      "amount": "£297.86",
+      "date": "9 May 2025"
+     },
+     "letter": "Dear Chloe Evans, your refund of £297.86 for order ORD-517540 (bookshelf, bought on 9 May 2025) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 1923,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Chloe Evans, your refund of £297.86 for order ORD-517540 (bookshelf, bought on 9 May 2025) has been processed."
+     }
+    ],
+    "ms": 1923
+   },
+   {
+    "id": "draft:gen-record-233",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Chloe Clarke",
+      "order": "ORD-992847",
+      "item": "rain jacket",
+      "amount": "£183.33",
+      "date": "13 August 2025"
+     },
+     "letter": "Dear Chloe Clarke, your refund of £183.33 for order ORD-992847 (rain jacket, bought on 13 August 2025) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 1935,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Chloe Clarke, your refund of £183.33 for order ORD-992847 (rain jacket, bought on 13 August 2025) has been processed."
+     }
+    ],
+    "ms": 1935
+   },
+   {
+    "id": "extract:cord-train-154",
+    "kind": "extract",
+    "arm": "raw",
+    "cell": "receipt-total",
+    "released": true,
+    "output": {
+     "value": "20.000"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2069,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "20.000"
+     }
+    ],
+    "ms": 2069
+   },
+   {
+    "id": "route:clinc-test-2943",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": true,
+    "output": {
+     "message": "what is the name of this song that's on right now",
+     "domain": "home"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3167,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "home"
+     }
+    ],
+    "ms": 3167
+   },
+   {
+    "id": "route:clinc-test-1444",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": true,
+    "output": {
+     "message": "what are the details on my health care plan",
+     "domain": "work"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 1619,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "work"
+     }
+    ],
+    "ms": 1619
+   },
+   {
+    "id": "extract:cord-train-397",
+    "kind": "extract",
+    "arm": "raw",
+    "cell": "receipt-total",
+    "released": true,
+    "output": {
+     "value": "188,499"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3064,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "188,499"
+     }
+    ],
+    "ms": 3064
+   },
+   {
+    "id": "qa:5ad3f187604f3c001a3ff871",
+    "kind": "qa",
+    "arm": "raw",
+    "cell": "docs-answer",
+    "released": false,
+    "why": "the reader found no answer in the source",
+    "calls": [
+     {
+      "ms": 2508,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "none"
+     }
+    ],
+    "ms": 2508
+   },
+   {
+    "id": "pence:gen-money-198",
+    "kind": "pence",
+    "arm": "raw",
+    "cell": "pence",
+    "released": true,
+    "output": {
+     "text": "£1226.44",
+     "pence": 122644
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3286,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "122644"
+     }
+    ],
+    "ms": 3286
+   },
+   {
+    "id": "draft:gen-record-242",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Aisha Smith",
+      "order": "ORD-434361",
+      "item": "desk lamp",
+      "amount": "£199.31",
+      "date": "1 August 2026"
+     },
+     "letter": "Dear Aisha Smith, your refund of £199.31 for order ORD-434361 (desk lamp, bought on 1 August 2026) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2336,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Aisha Smith, your refund of £199.31 for order ORD-434361 (desk lamp, bought on 1 August 2026) has been processed."
+     }
+    ],
+    "ms": 2336
+   },
+   {
+    "id": "pence:gen-money-356",
+    "kind": "pence",
+    "arm": "raw",
+    "cell": "pence",
+    "released": true,
+    "output": {
+     "text": "a charge of £1,559.32",
+     "pence": 155932
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2039,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "155932"
+     }
+    ],
+    "ms": 2039
+   },
+   {
+    "id": "classify:b77-test-1983",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": true,
+    "output": {
+     "message": "Please check payments on my card. There is a duplicate and I only bought it once.",
+     "label": "transaction_charged_twice",
+     "second": null,
+     "labels": [
+      "card_payment_not_recognised",
+      "transaction_charged_twice",
+      "card_payment_fee_charged",
+      "direct_debit_payment_not_recognised",
+      "extra_charge_on_statement"
+     ]
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2326,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "transaction charged twice"
+     }
+    ],
+    "ms": 2326
+   },
+   {
+    "id": "draft:gen-record-285",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Imran Khan",
+      "order": "ORD-242485",
+      "item": "garden hose",
+      "amount": "£92.01",
+      "date": "6 October 2025"
+     },
+     "letter": "Dear Imran Khan, your refund of £92.01 for order ORD-242485 (garden hose, bought on 6 October 2025) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2326,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Imran Khan, your refund of £92.01 for order ORD-242485 (garden hose, bought on 6 October 2025) has been processed."
+     }
+    ],
+    "ms": 2326
+   },
+   {
+    "id": "classify:b77-test-1484",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": true,
+    "output": {
+     "message": "what is this charge on my account",
+     "label": "extra_charge_on_statement",
+     "second": null,
+     "labels": [
+      "extra_charge_on_statement",
+      "card_payment_not_recognised",
+      "direct_debit_payment_not_recognised",
+      "balance_not_updated_after_cheque_or_cash_deposit",
+      "reverted_card_payment?"
+     ]
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2778,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "extra charge on statement"
+     }
+    ],
+    "ms": 2778
+   },
+   {
+    "id": "draft:gen-record-235",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Faisal Price",
+      "order": "ORD-192736",
+      "item": "toaster",
+      "amount": "£250.53",
+      "date": "21 May 2025"
+     },
+     "letter": "Dear Faisal Price, your refund of £250.53 for order ORD-192736 (toaster, bought on 21 May 2025) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2199,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Faisal Price, your refund of £250.53 for order ORD-192736 (toaster, bought on 21 May 2025) has been processed."
+     }
+    ],
+    "ms": 2199
+   },
+   {
+    "id": "qa:oos:5a638e4468151a001a92237a",
+    "kind": "qa",
+    "arm": "raw",
+    "cell": "docs-answer",
+    "released": false,
+    "why": "the reader found no answer in the source",
+    "calls": [
+     {
+      "ms": 1948,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "none"
+     }
+    ],
+    "ms": 1948
+   },
+   {
+    "id": "classify:b77-test-1659",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": true,
+    "output": {
+     "message": "lost phone, can i still access account?",
+     "label": "lost_or_stolen_phone",
+     "second": null,
+     "labels": [
+      "lost_or_stolen_phone",
+      "transfer_into_account",
+      "balance_not_updated_after_cheque_or_cash_deposit",
+      "pending_cash_withdrawal",
+      "terminate_account"
+     ]
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2254,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "lost or stolen phone"
+     }
+    ],
+    "ms": 2254
+   },
+   {
+    "id": "classify:b77-test-528",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": true,
+    "output": {
+     "message": "When I put the wrong pin too much, I got blocked, so can you help me unblock my pin",
+     "label": "pin_blocked",
+     "second": null,
+     "labels": [
+      "pin_blocked",
+      "change_pin",
+      "wrong_amount_of_cash_received",
+      "wrong_exchange_rate_for_cash_withdrawal",
+      "card_payment_wrong_exchange_rate"
+     ]
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 1789,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "pin blocked"
+     }
+    ],
+    "ms": 1789
+   },
+   {
+    "id": "draft:gen-record-56",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Daniel Smith",
+      "order": "ORD-538925",
+      "item": "kettle",
+      "amount": "£42.91",
+      "date": "28 January 2025"
+     },
+     "letter": "Dear Daniel Smith, your refund of £42.91 for order ORD-538925 (kettle, bought on 28 January 2025) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2250,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Daniel Smith, your refund of £42.91 for order ORD-538925 (kettle, bought on 28 January 2025) has been processed."
+     }
+    ],
+    "ms": 2250
+   },
+   {
+    "id": "qa:5ad5344b5b96ef001a10ab86",
+    "kind": "qa",
+    "arm": "raw",
+    "cell": "docs-answer",
+    "released": false,
+    "why": "the reader found no answer in the source",
+    "calls": [
+     {
+      "ms": 2083,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "none"
+     }
+    ],
+    "ms": 2083
+   },
+   {
+    "id": "extract:cord-validation-99",
+    "kind": "extract",
+    "arm": "raw",
+    "cell": "receipt-total",
+    "released": true,
+    "output": {
+     "value": "39.000"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 9576,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "39.000"
+     }
+    ],
+    "ms": 9576
+   },
+   {
+    "id": "classify:b77-test-2196",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": false,
+    "why": "the reader chose no label",
+    "calls": [
+     {
+      "ms": 7593,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "none"
+     }
+    ],
+    "ms": 7593
+   },
+   {
+    "id": "pence:gen-money-239",
+    "kind": "pence",
+    "arm": "raw",
+    "cell": "pence",
+    "released": true,
+    "output": {
+     "text": "784 pounds 41 pence",
+     "pence": 78441
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 1345,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "78441"
+     }
+    ],
+    "ms": 1345
+   },
+   {
+    "id": "draft:gen-record-224",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Kiran Walker",
+      "order": "ORD-986732",
+      "item": "rain jacket",
+      "amount": "£127.79",
+      "date": "14 May 2026"
+     },
+     "letter": "Dear Kiran Walker, your refund of £127.79 for order ORD-986732 (rain jacket, bought on 14 May 2026) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2262,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Kiran Walker, your refund of £127.79 for order ORD-986732 (rain jacket, bought on 14 May 2026) has been processed."
+     }
+    ],
+    "ms": 2262
+   },
+   {
+    "id": "classify:b77-test-1794",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": false,
+    "why": "the reader chose no label",
+    "calls": [
+     {
+      "ms": 2292,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "none"
+     }
+    ],
+    "ms": 2292
+   },
+   {
+    "id": "extract:cord-train-62",
+    "kind": "extract",
+    "arm": "raw",
+    "cell": "receipt-total",
+    "released": true,
+    "output": {
+     "value": "3.600.000"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2279,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "3.600.000"
+     }
+    ],
+    "ms": 2279
+   },
+   {
+    "id": "draft:gen-record-252",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Daniel Ali",
+      "order": "ORD-600897",
+      "item": "phone case",
+      "amount": "£138.20",
+      "date": "23 June 2026"
+     },
+     "letter": "Dear Daniel Ali, your refund of £138.20 for order ORD-600897 (phone case, bought on 23 June 2026) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 6801,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Daniel Ali, your refund of £138.20 for order ORD-600897 (phone case, bought on 23 June 2026) has been processed."
+     }
+    ],
+    "ms": 6801
+   },
+   {
+    "id": "draft:gen-record-42",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Daniel Ali",
+      "order": "ORD-518854",
+      "item": "kettle",
+      "amount": "£230.70",
+      "date": "3 August 2026"
+     },
+     "letter": "Dear Daniel Ali, your refund of £230.70 for order ORD-518854 (kettle, bought on 3 August 2026) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 4966,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Daniel Ali, your refund of £230.70 for order ORD-518854 (kettle, bought on 3 August 2026) has been processed."
+     }
+    ],
+    "ms": 4966
+   },
+   {
+    "id": "draft:gen-record-174",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Ben Taylor",
+      "order": "ORD-240519",
+      "item": "garden hose",
+      "amount": "£108.24",
+      "date": "10 December 2025"
+     },
+     "letter": "Dear Ben Taylor, your refund of £108.24 for order ORD-240519 (garden hose, bought on 10 December 2025) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 1994,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Ben Taylor, your refund of £108.24 for order ORD-240519 (garden hose, bought on 10 December 2025) has been processed."
+     }
+    ],
+    "ms": 1994
+   },
+   {
+    "id": "extract:cord-validation-17",
+    "kind": "extract",
+    "arm": "raw",
+    "cell": "receipt-total",
+    "released": true,
+    "output": {
+     "value": "20,000"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2651,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "20,000"
+     }
+    ],
+    "ms": 2651
+   },
+   {
+    "id": "draft:gen-record-172",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Grace Smith",
+      "order": "ORD-377823",
+      "item": "kettle",
+      "amount": "£246.22",
+      "date": "20 December 2026"
+     },
+     "letter": "Dear Grace Smith, your refund of £246.22 for order ORD-377823 (kettle, bought on 20 December 2026) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 5281,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Grace Smith, your refund of £246.22 for order ORD-377823 (kettle, bought on 20 December 2026) has been processed."
+     }
+    ],
+    "ms": 5281
+   },
+   {
+    "id": "knowledge:mmlu-high_school_geography-11",
+    "kind": "knowledge",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "B"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 5454,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "B"
+     }
+    ],
+    "ms": 5454
+   },
+   {
+    "id": "route:clinc-test-4201",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": true,
+    "output": {
+     "message": "how old will you be",
+     "domain": "small_talk"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 4811,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "small talk"
+     }
+    ],
+    "ms": 4811
+   },
+   {
+    "id": "classify:b77-test-447",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": false,
+    "why": "the reader chose no label",
+    "calls": [
+     {
+      "ms": 4434,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "none"
+     }
+    ],
+    "ms": 4434
+   },
+   {
+    "id": "knowledge:mmlu-astronomy-22",
+    "kind": "knowledge",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "D"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3628,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "D"
+     }
+    ],
+    "ms": 3628
+   },
+   {
+    "id": "route:clinc-test-3685",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": true,
+    "output": {
+     "message": "what amount of interest does my checking account earn",
+     "domain": "banking"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 4260,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "banking"
+     }
+    ],
+    "ms": 4260
+   },
+   {
+    "id": "date:gen-date-394",
+    "kind": "date",
+    "arm": "raw",
+    "cell": "iso-date",
+    "released": true,
+    "output": {
+     "text": "25th Feb 2007",
+     "iso": "2007-02-25"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 6365,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "2007-02-25"
+     }
+    ],
+    "ms": 6365
+   },
+   {
+    "id": "date:gen-date-338",
+    "kind": "date",
+    "arm": "raw",
+    "cell": "iso-date",
+    "released": true,
+    "output": {
+     "text": "2029.07.08",
+     "iso": "2029-07-08"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 4053,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "2029-07-08"
+     }
+    ],
+    "ms": 4053
+   },
+   {
+    "id": "classify:b77-test-1103",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": true,
+    "output": {
+     "message": "What should I do to get transactions off of my account if I didn't make them?  My card must have been compromised and I need to freeze it asap!",
+     "label": "card_payment_not_recognised",
+     "second": null,
+     "labels": [
+      "card_payment_not_recognised",
+      "cash_withdrawal_not_recognised",
+      "card_about_to_expire",
+      "activate_my_card",
+      "direct_debit_payment_not_recognised"
+     ]
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 4708,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "card payment not recognised"
+     }
+    ],
+    "ms": 4708
+   },
+   {
+    "id": "qa:5ad3ad61604f3c001a3fec0d",
+    "kind": "qa",
+    "arm": "raw",
+    "cell": "docs-answer",
+    "released": false,
+    "why": "the reader found no answer in the source",
+    "calls": [
+     {
+      "ms": 4253,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "none"
+     }
+    ],
+    "ms": 4253
+   },
+   {
+    "id": "route:clinc-test-649",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": true,
+    "output": {
+     "message": "which subjects are you the most experienced with",
+     "domain": "meta"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 9771,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "meta"
+     }
+    ],
+    "ms": 9771
+   },
+   {
+    "id": "date:gen-date-125",
+    "kind": "date",
+    "arm": "raw",
+    "cell": "iso-date",
+    "released": true,
+    "output": {
+     "text": "the 17th of September 2012",
+     "iso": "2012-09-17"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3989,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "2012-09-17"
+     }
+    ],
+    "ms": 3989
+   },
+   {
+    "id": "reasoning:mmlu-high_school_mathematics-97",
+    "kind": "reasoning",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "B"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 4204,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "B"
+     }
+    ],
+    "ms": 4204
+   },
+   {
+    "id": "route:clinc-test-1400",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": true,
+    "output": {
+     "message": "you're right",
+     "domain": "meta"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 5045,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "meta"
+     }
+    ],
+    "ms": 5045
+   },
+   {
+    "id": "extract:cord-train-300",
+    "kind": "extract",
+    "arm": "raw",
+    "cell": "receipt-total",
+    "released": true,
+    "output": {
+     "value": "72.001"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 4152,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "72.001"
+     }
+    ],
+    "ms": 4152
+   },
+   {
+    "id": "reasoning:mmlu-elementary_mathematics-226",
+    "kind": "reasoning",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "B"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3931,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "B"
+     }
+    ],
+    "ms": 3931
+   },
+   {
+    "id": "extract:cord-train-793",
+    "kind": "extract",
+    "arm": "raw",
+    "cell": "receipt-total",
+    "released": true,
+    "output": {
+     "value": "20.000"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3874,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "20.000"
+     }
+    ],
+    "ms": 3874
+   },
+   {
+    "id": "draft:gen-record-131",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Tom Evans",
+      "order": "ORD-502315",
+      "item": "garden hose",
+      "amount": "£102.05",
+      "date": "18 August 2025"
+     },
+     "letter": "Dear Tom Evans, your refund of £102.05 for order ORD-502315 (garden hose, bought on 18 August 2025) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3331,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Tom Evans, your refund of £102.05 for order ORD-502315 (garden hose, bought on 18 August 2025) has been processed."
+     }
+    ],
+    "ms": 3331
+   },
+   {
+    "id": "route:clinc-test-966",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": true,
+    "output": {
+     "message": "can you tell me britain's timezone",
+     "domain": "travel"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3375,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "travel"
+     }
+    ],
+    "ms": 3375
+   },
+   {
+    "id": "qa:oos:572827fc3acd2414000df5bc",
+    "kind": "qa",
+    "arm": "raw",
+    "cell": "docs-answer",
+    "released": false,
+    "why": "the reader found no answer in the source",
+    "calls": [
+     {
+      "ms": 4480,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "none"
+     }
+    ],
+    "ms": 4480
+   },
+   {
+    "id": "classify:b77-test-2034",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": true,
+    "output": {
+     "message": "Where do my funds come from?",
+     "label": "verify_source_of_funds",
+     "second": null,
+     "labels": [
+      "verify_source_of_funds",
+      "lost_or_stolen_phone",
+      "transfer_into_account",
+      "cash_withdrawal_not_recognised",
+      "direct_debit_payment_not_recognised"
+     ]
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 5245,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "verify source of funds"
+     }
+    ],
+    "ms": 5245
+   },
+   {
+    "id": "draft:gen-record-154",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Hannah Reid",
+      "order": "ORD-848267",
+      "item": "phone case",
+      "amount": "£154.96",
+      "date": "8 July 2026"
+     },
+     "letter": "Dear Hannah Reid, your refund of £154.96 for order ORD-848267 (phone case, bought on 8 July 2026) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 4515,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Hannah Reid, your refund of £154.96 for order ORD-848267 (phone case, bought on 8 July 2026) has been processed."
+     }
+    ],
+    "ms": 4515
+   },
+   {
+    "id": "reasoning:mmlu-high_school_mathematics-249",
+    "kind": "reasoning",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "C"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 9072,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "C\n\nNone of the options exactly matches the correct interval, which is [-1/2, 1/20]. Option C is my best guess.\n\n- For 2u not to be in (-∞, -1), we need 2u ≥ -1, so u ≥ -1/2.\n- For -20u not to be in (-∞, -1), we need -20u ≥ -1, so u ≤ 1/20.\n\nOption C, [-1/2, -1/20], uses the same two fractions but has the wrong sign on the upper bound. It looks like the intended answer with a typo."
+     }
+    ],
+    "ms": 9072
+   },
+   {
+    "id": "qa:56de4b074396321400ee2794",
+    "kind": "qa",
+    "arm": "raw",
+    "cell": "docs-answer",
+    "released": false,
+    "why": "the reader found no answer in the source",
+    "calls": [
+     {
+      "ms": 4796,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "none"
+     }
+    ],
+    "ms": 4796
+   },
+   {
+    "id": "qa:56e1c3e1e3433e140042314a",
+    "kind": "qa",
+    "arm": "raw",
+    "cell": "docs-answer",
+    "released": false,
+    "why": "the reader found no answer in the source",
+    "calls": [
+     {
+      "ms": 7199,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "none"
+     }
+    ],
+    "ms": 7199
+   },
+   {
+    "id": "route:clinc-test-1914",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": true,
+    "output": {
+     "message": "send a notification to my bank of my travel dates from february 19th to 26th to peru",
+     "domain": "travel"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 6140,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "travel"
+     }
+    ],
+    "ms": 6140
+   },
+   {
+    "id": "extract:cord-train-782",
+    "kind": "extract",
+    "arm": "raw",
+    "cell": "receipt-total",
+    "released": true,
+    "output": {
+     "value": "135.000"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 5258,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "135.000"
+     }
+    ],
+    "ms": 5258
+   },
+   {
+    "id": "qa:56e1dc62cd28a01900c67bca",
+    "kind": "qa",
+    "arm": "raw",
+    "cell": "docs-answer",
+    "released": true,
+    "output": {
+     "question": "What complexity class is characterized by a computational tasks and efficient algorithms?",
+     "answer": "P",
+     "source": "Computational_complexity_theory#33"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 4934,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "P"
+     }
+    ],
+    "ms": 4934
+   },
+   {
+    "id": "pence:gen-money-371",
+    "kind": "pence",
+    "arm": "raw",
+    "cell": "pence",
+    "released": true,
+    "output": {
+     "text": "a charge of £1,799.18",
+     "pence": 179918
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 4271,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "179918"
+     }
+    ],
+    "ms": 4271
+   },
+   {
+    "id": "extract:cord-train-552",
+    "kind": "extract",
+    "arm": "raw",
+    "cell": "receipt-total",
+    "released": true,
+    "output": {
+     "value": "80,000"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3610,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "80,000"
+     }
+    ],
+    "ms": 3610
+   },
+   {
+    "id": "qa:56e1c9bfe3433e1400423193",
+    "kind": "qa",
+    "arm": "raw",
+    "cell": "docs-answer",
+    "released": false,
+    "why": "the reader found no answer in the source",
+    "calls": [
+     {
+      "ms": 5327,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "none"
+     }
+    ],
+    "ms": 5327
+   },
+   {
+    "id": "extract:cord-validation-34",
+    "kind": "extract",
+    "arm": "raw",
+    "cell": "receipt-total",
+    "released": true,
+    "output": {
+     "value": "283,338"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3825,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "283,338"
+     }
+    ],
+    "ms": 3825
+   },
+   {
+    "id": "extract:cord-train-263",
+    "kind": "extract",
+    "arm": "raw",
+    "cell": "receipt-total",
+    "released": true,
+    "output": {
+     "value": "60,999"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3199,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "60,999"
+     }
+    ],
+    "ms": 3199
+   },
+   {
+    "id": "knowledge:mmlu-prehistory-137",
+    "kind": "knowledge",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "D"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3972,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "D"
+     }
+    ],
+    "ms": 3972
+   },
+   {
+    "id": "draft:gen-record-98",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Nina Ali",
+      "order": "ORD-414656",
+      "item": "kettle",
+      "amount": "£196.11",
+      "date": "11 September 2025"
+     },
+     "letter": "Dear Nina Ali, your refund of £196.11 for order ORD-414656 (kettle, bought on 11 September 2025) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3591,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Nina Ali, your refund of £196.11 for order ORD-414656 (kettle, bought on 11 September 2025) has been processed."
+     }
+    ],
+    "ms": 3591
+   },
+   {
+    "id": "classify:b77-test-2973",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": true,
+    "output": {
+     "message": "is apple pay eligible for top up",
+     "label": "apple_pay_or_google_pay",
+     "second": null,
+     "labels": [
+      "apple_pay_or_google_pay",
+      "pending_top_up",
+      "top_up_failed",
+      "verify_top_up",
+      "top_up_reverted"
+     ]
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3976,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "apple pay or google pay"
+     }
+    ],
+    "ms": 3976
+   },
+   {
+    "id": "reasoning:mmlu-high_school_mathematics-121",
+    "kind": "reasoning",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "A"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3675,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "A"
+     }
+    ],
+    "ms": 3675
+   },
+   {
+    "id": "reasoning:mmlu-high_school_mathematics-75",
+    "kind": "reasoning",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "D"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3656,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "D"
+     }
+    ],
+    "ms": 3656
+   },
+   {
+    "id": "draft:gen-record-247",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Nina Evans",
+      "order": "ORD-815310",
+      "item": "rain jacket",
+      "amount": "£169.33",
+      "date": "7 August 2026"
+     },
+     "letter": "Dear Nina Evans, your refund of £169.33 for order ORD-815310 (rain jacket, bought on 7 August 2026) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 4227,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Nina Evans, your refund of £169.33 for order ORD-815310 (rain jacket, bought on 7 August 2026) has been processed."
+     }
+    ],
+    "ms": 4227
+   },
+   {
+    "id": "draft:gen-record-38",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Ruth Khan",
+      "order": "ORD-378433",
+      "item": "rain jacket",
+      "amount": "£227.68",
+      "date": "25 June 2025"
+     },
+     "letter": "Dear Ruth Khan, your refund of £227.68 for order ORD-378433 (rain jacket, bought on 25 June 2025) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 4080,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Ruth Khan, your refund of £227.68 for order ORD-378433 (rain jacket, bought on 25 June 2025) has been processed."
+     }
+    ],
+    "ms": 4080
+   },
+   {
+    "id": "extract:cord-train-745",
+    "kind": "extract",
+    "arm": "raw",
+    "cell": "receipt-total",
+    "released": true,
+    "output": {
+     "value": "3,400"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 4647,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "3,400"
+     }
+    ],
+    "ms": 4647
+   },
+   {
+    "id": "route:clinc-test-1550",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": true,
+    "output": {
+     "message": "can you not talk so fast",
+     "domain": "meta"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3828,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "meta"
+     }
+    ],
+    "ms": 3828
+   },
+   {
+    "id": "pence:gen-money-104",
+    "kind": "pence",
+    "arm": "raw",
+    "cell": "pence",
+    "released": true,
+    "output": {
+     "text": "41 pounds 25 pence",
+     "pence": 4125
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 4429,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "4125"
+     }
+    ],
+    "ms": 4429
+   },
+   {
+    "id": "classify:b77-test-1235",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": true,
+    "output": {
+     "message": "I am having issues with identity verification",
+     "label": "unable_to_verify_identity",
+     "second": null,
+     "labels": [
+      "why_verify_identity",
+      "verify_my_identity",
+      "unable_to_verify_identity",
+      "card_payment_fee_charged",
+      "verify_top_up"
+     ]
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 6294,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "unable to verify identity"
+     }
+    ],
+    "ms": 6294
+   },
+   {
+    "id": "knowledge:mmlu-nutrition-174",
+    "kind": "knowledge",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "D"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 6052,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "D"
+     }
+    ],
+    "ms": 6052
+   },
+   {
+    "id": "knowledge:mmlu-nutrition-21",
+    "kind": "knowledge",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "A"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 5224,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "A"
+     }
+    ],
+    "ms": 5224
+   },
+   {
+    "id": "classify:b77-test-348",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": true,
+    "output": {
+     "message": "Can I set up an automatic top-up for travel.",
+     "label": "automatic_top_up",
+     "second": null,
+     "labels": [
+      "automatic_top_up",
+      "pending_top_up",
+      "top_up_failed",
+      "verify_top_up",
+      "apple_pay_or_google_pay"
+     ]
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 5042,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "automatic top up"
+     }
+    ],
+    "ms": 5042
+   },
+   {
+    "id": "route:clinc-test-1960",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": true,
+    "output": {
+     "message": "thanks for trying",
+     "domain": "small_talk"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 6422,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "small talk"
+     }
+    ],
+    "ms": 6422
+   },
+   {
+    "id": "route:clinc-oos-690",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": false,
+    "why": "no department fits",
+    "calls": [
+     {
+      "ms": 6680,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "none"
+     }
+    ],
+    "ms": 6680
+   },
+   {
+    "id": "pence:gen-money-347",
+    "kind": "pence",
+    "arm": "raw",
+    "cell": "pence",
+    "released": true,
+    "output": {
+     "text": "£0.21",
+     "pence": 21
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 4369,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "21"
+     }
+    ],
+    "ms": 4369
+   },
+   {
+    "id": "qa:56e1a38de3433e140042305c",
+    "kind": "qa",
+    "arm": "raw",
+    "cell": "docs-answer",
+    "released": true,
+    "output": {
+     "question": "What is a commonly used measurement used to determine the complexity of a computational problem?",
+     "answer": "time",
+     "source": "Computational_complexity_theory#1"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 4792,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "time"
+     }
+    ],
+    "ms": 4792
+   },
+   {
+    "id": "reasoning:mmlu-high_school_mathematics-184",
+    "kind": "reasoning",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "C"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3819,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "C"
+     }
+    ],
+    "ms": 3819
+   },
+   {
+    "id": "knowledge:mmlu-world_religions-131",
+    "kind": "knowledge",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "D"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 4098,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "D"
+     }
+    ],
+    "ms": 4098
+   },
+   {
+    "id": "classify:b77-test-414",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": true,
+    "output": {
+     "message": "Is it possible to change to another currency?",
+     "label": "exchange_via_app",
+     "second": null,
+     "labels": [
+      "change_pin",
+      "transfer_not_received_by_recipient",
+      "exchange_via_app",
+      "pending_card_payment",
+      "pending_transfer"
+     ]
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2427,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "exchange via app"
+     }
+    ],
+    "ms": 2427
+   },
+   {
+    "id": "route:clinc-test-4005",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": true,
+    "output": {
+     "message": "could you be human",
+     "domain": "small_talk"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2505,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "small talk"
+     }
+    ],
+    "ms": 2505
+   },
+   {
+    "id": "extract:cord-train-392",
+    "kind": "extract",
+    "arm": "raw",
+    "cell": "receipt-total",
+    "released": true,
+    "output": {
+     "value": "30.000"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3114,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "30.000"
+     }
+    ],
+    "ms": 3114
+   },
+   {
+    "id": "reasoning:mmlu-elementary_mathematics-353",
+    "kind": "reasoning",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "C"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3265,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "C"
+     }
+    ],
+    "ms": 3265
+   },
+   {
+    "id": "extract:cord-train-134",
+    "kind": "extract",
+    "arm": "raw",
+    "cell": "receipt-total",
+    "released": true,
+    "output": {
+     "value": "54.000"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3018,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "54.000"
+     }
+    ],
+    "ms": 3018
+   },
+   {
+    "id": "knowledge:mmlu-nutrition-184",
+    "kind": "knowledge",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "B"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2804,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "B"
+     }
+    ],
+    "ms": 2804
+   },
+   {
+    "id": "date:gen-date-90",
+    "kind": "date",
+    "arm": "raw",
+    "cell": "iso-date",
+    "released": true,
+    "output": {
+     "text": "March 19, 2015",
+     "iso": "2015-03-19"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2584,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "2015-03-19"
+     }
+    ],
+    "ms": 2584
+   },
+   {
+    "id": "classify:b77-test-1547",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": true,
+    "output": {
+     "message": "I have forgotten my password.",
+     "label": "passcode_forgotten",
+     "second": null,
+     "labels": [
+      "passcode_forgotten",
+      "Refund_not_showing_up",
+      "transaction_charged_twice",
+      "cash_withdrawal_not_recognised",
+      "card_payment_not_recognised"
+     ]
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2529,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "passcode forgotten"
+     }
+    ],
+    "ms": 2529
+   },
+   {
+    "id": "route:clinc-test-2276",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": true,
+    "output": {
+     "message": "change to the woman voice",
+     "domain": "meta"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2890,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "meta"
+     }
+    ],
+    "ms": 2890
+   },
+   {
+    "id": "date:gen-date-64",
+    "kind": "date",
+    "arm": "raw",
+    "cell": "iso-date",
+    "released": true,
+    "output": {
+     "text": "2025.10.18",
+     "iso": "2025-10-18"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3316,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "2025-10-18"
+     }
+    ],
+    "ms": 3316
+   },
+   {
+    "id": "draft:gen-record-160",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Aisha Smith",
+      "order": "ORD-760917",
+      "item": "headphones",
+      "amount": "£228.70",
+      "date": "20 June 2026"
+     },
+     "letter": "Dear Aisha Smith, your refund of £228.70 for order ORD-760917 (headphones, bought on 20 June 2026) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2219,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Aisha Smith, your refund of £228.70 for order ORD-760917 (headphones, bought on 20 June 2026) has been processed."
+     }
+    ],
+    "ms": 2219
+   },
+   {
+    "id": "route:clinc-test-1404",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": false,
+    "why": "no department fits",
+    "calls": [
+     {
+      "ms": 2767,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "none"
+     }
+    ],
+    "ms": 2767
+   },
+   {
+    "id": "date:gen-date-243",
+    "kind": "date",
+    "arm": "raw",
+    "cell": "iso-date",
+    "released": true,
+    "output": {
+     "text": "2013.09.05",
+     "iso": "2013-09-05"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2597,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "2013-09-05"
+     }
+    ],
+    "ms": 2597
+   },
+   {
+    "id": "date:gen-date-335",
+    "kind": "date",
+    "arm": "raw",
+    "cell": "iso-date",
+    "released": true,
+    "output": {
+     "text": "13 June 2021",
+     "iso": "2021-06-13"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2854,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "2021-06-13"
+     }
+    ],
+    "ms": 2854
+   },
+   {
+    "id": "classify:b77-test-996",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": false,
+    "why": "the reader chose no label",
+    "calls": [
+     {
+      "ms": 2541,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "none"
+     }
+    ],
+    "ms": 2541
+   },
+   {
+    "id": "route:clinc-test-2972",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": true,
+    "output": {
+     "message": "do i have transaction fees if i use my american card internationally",
+     "domain": "credit_cards"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2210,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "credit cards"
+     }
+    ],
+    "ms": 2210
+   },
+   {
+    "id": "knowledge:mmlu-prehistory-58",
+    "kind": "knowledge",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "C"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2058,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "C"
+     }
+    ],
+    "ms": 2058
+   },
+   {
+    "id": "qa:5ad53e615b96ef001a10abde",
+    "kind": "qa",
+    "arm": "raw",
+    "cell": "docs-answer",
+    "released": true,
+    "output": {
+     "question": "Is the output of a functional solution typically characterized by a simple or complex answer?",
+     "answer": "more complex",
+     "source": "Computational_complexity_theory#8"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3059,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "more complex"
+     }
+    ],
+    "ms": 3059
+   },
+   {
+    "id": "draft:gen-record-125",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Alex Reid",
+      "order": "ORD-970244",
+      "item": "phone case",
+      "amount": "£42.99",
+      "date": "2 June 2026"
+     },
+     "letter": "Dear Alex Reid, your refund of £42.99 for order ORD-970244 (phone case, bought on 2 June 2026) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2797,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Alex Reid, your refund of £42.99 for order ORD-970244 (phone case, bought on 2 June 2026) has been processed."
+     }
+    ],
+    "ms": 2797
+   },
+   {
+    "id": "date:gen-date-399",
+    "kind": "date",
+    "arm": "raw",
+    "cell": "iso-date",
+    "released": true,
+    "output": {
+     "text": "Thursday 24 February 2022",
+     "iso": "2022-02-24"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2053,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "2022-02-24"
+     }
+    ],
+    "ms": 2053
+   },
+   {
+    "id": "qa:5ad560b85b96ef001a10ad21",
+    "kind": "qa",
+    "arm": "raw",
+    "cell": "docs-answer",
+    "released": false,
+    "why": "the reader found no answer in the source",
+    "calls": [
+     {
+      "ms": 1902,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "none"
+     }
+    ],
+    "ms": 1902
+   },
+   {
+    "id": "extract:cord-train-387",
+    "kind": "extract",
+    "arm": "raw",
+    "cell": "receipt-total",
+    "released": true,
+    "output": {
+     "value": "28,000"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 1938,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "28,000"
+     }
+    ],
+    "ms": 1938
+   },
+   {
+    "id": "draft:gen-record-127",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Ben Taylor",
+      "order": "ORD-829300",
+      "item": "rain jacket",
+      "amount": "£18.68",
+      "date": "28 January 2026"
+     },
+     "letter": "Dear Ben Taylor, your refund of £18.68 for order ORD-829300 (rain jacket, bought on 28 January 2026) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2062,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Ben Taylor, your refund of £18.68 for order ORD-829300 (rain jacket, bought on 28 January 2026) has been processed."
+     }
+    ],
+    "ms": 2062
+   },
+   {
+    "id": "knowledge:mmlu-high_school_geography-87",
+    "kind": "knowledge",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "D"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2786,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "D"
+     }
+    ],
+    "ms": 2786
+   },
+   {
+    "id": "qa:56e1d9fee3433e14004231cd",
+    "kind": "qa",
+    "arm": "raw",
+    "cell": "docs-answer",
+    "released": false,
+    "why": "the reader found no answer in the source",
+    "calls": [
+     {
+      "ms": 2920,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "none"
+     }
+    ],
+    "ms": 2920
+   },
+   {
+    "id": "reasoning:mmlu-elementary_mathematics-77",
+    "kind": "reasoning",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "D"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2466,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "D"
+     }
+    ],
+    "ms": 2466
+   },
+   {
+    "id": "classify:b77-test-1510",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": true,
+    "output": {
+     "message": "I understand that this is extremely late. After going over my transactions for the last couple of months I noticed a large charge that I'm sure I did not make. Is there anyway I can still dispute this?",
+     "label": "card_payment_not_recognised",
+     "second": null,
+     "labels": [
+      "direct_debit_payment_not_recognised",
+      "card_payment_not_recognised",
+      "extra_charge_on_statement",
+      "cash_withdrawal_not_recognised",
+      "transaction_charged_twice"
+     ]
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2810,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "card payment not recognised"
+     }
+    ],
+    "ms": 2810
+   },
+   {
+    "id": "qa:oos:5726a5525951b619008f78df",
+    "kind": "qa",
+    "arm": "raw",
+    "cell": "docs-answer",
+    "released": false,
+    "why": "the reader found no answer in the source",
+    "calls": [
+     {
+      "ms": 2033,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "none"
+     }
+    ],
+    "ms": 2033
+   },
+   {
+    "id": "qa:56de52614396321400ee27fe",
+    "kind": "qa",
+    "arm": "raw",
+    "cell": "docs-answer",
+    "released": true,
+    "output": {
+     "question": "What tradition were the Saint-Evroul monks known for?",
+     "answer": "singing",
+     "source": "Normans#38"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2535,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "singing"
+     }
+    ],
+    "ms": 2535
+   },
+   {
+    "id": "reasoning:mmlu-high_school_mathematics-3",
+    "kind": "reasoning",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "B"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2106,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "B"
+     }
+    ],
+    "ms": 2106
+   },
+   {
+    "id": "draft:gen-record-216",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Imran Murphy",
+      "order": "ORD-670272",
+      "item": "garden hose",
+      "amount": "£159.60",
+      "date": "1 March 2025"
+     },
+     "letter": "Dear Imran Murphy, your refund of £159.60 for order ORD-670272 (garden hose, bought on 1 March 2025) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2784,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Imran Murphy, your refund of £159.60 for order ORD-670272 (garden hose, bought on 1 March 2025) has been processed."
+     }
+    ],
+    "ms": 2784
+   },
+   {
+    "id": "classify:b77-test-2043",
+    "kind": "classify",
+    "arm": "raw",
+    "cell": "banking-intent",
+    "released": true,
+    "output": {
+     "message": "how soon will I see the transfer in my account?",
+     "label": "transfer_timing",
+     "second": null,
+     "labels": [
+      "transfer_timing",
+      "balance_not_updated_after_bank_transfer",
+      "balance_not_updated_after_cheque_or_cash_deposit",
+      "pending_transfer",
+      "transfer_into_account"
+     ]
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2335,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "transfer timing"
+     }
+    ],
+    "ms": 2335
+   },
+   {
+    "id": "reasoning:mmlu-high_school_mathematics-79",
+    "kind": "reasoning",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "B"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3736,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "B"
+     }
+    ],
+    "ms": 3736
+   },
+   {
+    "id": "extract:cord-train-162",
+    "kind": "extract",
+    "arm": "raw",
+    "cell": "receipt-total",
+    "released": true,
+    "output": {
+     "value": "41.580"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2780,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "41.580"
+     }
+    ],
+    "ms": 2780
+   },
+   {
+    "id": "date:gen-date-384",
+    "kind": "date",
+    "arm": "raw",
+    "cell": "iso-date",
+    "released": true,
+    "output": {
+     "text": "07/02/1991 (day first)",
+     "iso": "1991-02-07"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 1893,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "1991-02-07"
+     }
+    ],
+    "ms": 1893
+   },
+   {
+    "id": "qa:oos:5a63772268151a001a9222f2",
+    "kind": "qa",
+    "arm": "raw",
+    "cell": "docs-answer",
+    "released": false,
+    "why": "the reader found no answer in the source",
+    "calls": [
+     {
+      "ms": 2455,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "none"
+     }
+    ],
+    "ms": 2455
+   },
+   {
+    "id": "draft:gen-record-245",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Priya Murphy",
+      "order": "ORD-682339",
+      "item": "bookshelf",
+      "amount": "£297.09",
+      "date": "2 May 2026"
+     },
+     "letter": "Dear Priya Murphy, your refund of £297.09 for order ORD-682339 (bookshelf, bought on 2 May 2026) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2689,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Priya Murphy, your refund of £297.09 for order ORD-682339 (bookshelf, bought on 2 May 2026) has been processed."
+     }
+    ],
+    "ms": 2689
+   },
+   {
+    "id": "extract:cord-train-328",
+    "kind": "extract",
+    "arm": "raw",
+    "cell": "receipt-total",
+    "released": true,
+    "output": {
+     "value": "228.000"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2124,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "228.000"
+     }
+    ],
+    "ms": 2124
+   },
+   {
+    "id": "draft:gen-record-168",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Aisha Khan",
+      "order": "ORD-316077",
+      "item": "headphones",
+      "amount": "£91.49",
+      "date": "12 April 2026"
+     },
+     "letter": "Dear Aisha Khan, your refund of £91.49 for order ORD-316077 (headphones, bought on 12 April 2026) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3012,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Aisha Khan, your refund of £91.49 for order ORD-316077 (headphones, bought on 12 April 2026) has been processed."
+     }
+    ],
+    "ms": 3012
+   },
+   {
+    "id": "qa:56e16182e3433e1400422e2a",
+    "kind": "qa",
+    "arm": "raw",
+    "cell": "docs-answer",
+    "released": true,
+    "output": {
+     "question": "What is the term for a task that generally lends itself to being solved by a computer?",
+     "answer": "computational problem",
+     "source": "Computational_complexity_theory#0"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2250,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "computational problem"
+     }
+    ],
+    "ms": 2250
+   },
+   {
+    "id": "reasoning:mmlu-high_school_mathematics-102",
+    "kind": "reasoning",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "C"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2926,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "C"
+     }
+    ],
+    "ms": 2926
+   },
+   {
+    "id": "route:clinc-test-1366",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": true,
+    "output": {
+     "message": "when do you think i ought to change the oil in my car next",
+     "domain": "auto_and_commute"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2347,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "auto and commute"
+     }
+    ],
+    "ms": 2347
+   },
+   {
+    "id": "qa:56e1c4fce3433e1400423151",
+    "kind": "qa",
+    "arm": "raw",
+    "cell": "docs-answer",
+    "released": true,
+    "output": {
+     "question": "What is the expression used to represent a complexity class of counting problems?",
+     "answer": "#P",
+     "source": "Computational_complexity_theory#26"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2453,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "#P"
+     }
+    ],
+    "ms": 2453
+   },
+   {
+    "id": "reasoning:mmlu-elementary_mathematics-154",
+    "kind": "reasoning",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": false,
+    "why": "no letter",
+    "calls": [
+     {
+      "ms": 2585,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "620 - (-55) = 675\n\nD"
+     }
+    ],
+    "ms": 2585
+   },
+   {
+    "id": "qa:56de179dcffd8e1900b4b5da",
+    "kind": "qa",
+    "arm": "raw",
+    "cell": "docs-answer",
+    "released": true,
+    "output": {
+     "question": "In what year did the Norman's invade at Bannow Bay?",
+     "answer": "1169",
+     "source": "Normans#18"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2283,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "1169"
+     }
+    ],
+    "ms": 2283
+   },
+   {
+    "id": "reasoning:mmlu-high_school_mathematics-173",
+    "kind": "reasoning",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "C"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3605,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "C"
+     }
+    ],
+    "ms": 3605
+   },
+   {
+    "id": "route:clinc-test-3675",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": true,
+    "output": {
+     "message": "for my savings account i would like to know the interest rate",
+     "domain": "banking"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2669,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "banking"
+     }
+    ],
+    "ms": 2669
+   },
+   {
+    "id": "extract:cord-train-671",
+    "kind": "extract",
+    "arm": "raw",
+    "cell": "receipt-total",
+    "released": true,
+    "output": {
+     "value": "20.000"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3181,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "20.000"
+     }
+    ],
+    "ms": 3181
+   },
+   {
+    "id": "extract:cord-train-204",
+    "kind": "extract",
+    "arm": "raw",
+    "cell": "receipt-total",
+    "released": true,
+    "output": {
+     "value": "17,000"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2613,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "17,000"
+     }
+    ],
+    "ms": 2613
+   },
+   {
+    "id": "draft:gen-record-204",
+    "kind": "draft",
+    "arm": "raw",
+    "cell": "refund-letter",
+    "released": true,
+    "output": {
+     "record": {
+      "name": "Daniel Wood",
+      "order": "ORD-546051",
+      "item": "running shoes",
+      "amount": "£51.30",
+      "date": "27 December 2026"
+     },
+     "letter": "Dear Daniel Wood, your refund of £51.30 for order ORD-546051 (running shoes, bought on 27 December 2026) has been processed."
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2884,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "Dear Daniel Wood, your refund of £51.30 for order ORD-546051 (running shoes, bought on 27 December 2026) has been processed."
+     }
+    ],
+    "ms": 2884
+   },
+   {
+    "id": "knowledge:mmlu-high_school_geography-21",
+    "kind": "knowledge",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "D"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 3129,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "D"
+     }
+    ],
+    "ms": 3129
+   },
+   {
+    "id": "knowledge:mmlu-astronomy-42",
+    "kind": "knowledge",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "A"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2689,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "A"
+     }
+    ],
+    "ms": 2689
+   },
+   {
+    "id": "reasoning:mmlu-elementary_mathematics-72",
+    "kind": "reasoning",
+    "arm": "raw",
+    "cell": "multiple-choice",
+    "released": true,
+    "output": {
+     "letter": "B"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 2233,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "B"
+     }
+    ],
+    "ms": 2233
+   },
+   {
+    "id": "route:clinc-oos-832",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": true,
+    "output": {
+     "message": "rent the tuxedo the day before",
+     "domain": "home"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 1866,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "home"
+     }
+    ],
+    "ms": 1866
+   },
+   {
+    "id": "route:clinc-test-3932",
+    "kind": "route",
+    "arm": "raw",
+    "cell": "department",
+    "released": true,
+    "output": {
+     "message": "play the song called i want it that way",
+     "domain": "home"
+    },
+    "why": "",
+    "calls": [
+     {
+      "ms": 1926,
+      "ttft": null,
+      "prompt": null,
+      "cached": false,
+      "text": "home"
+     }
+    ],
+    "ms": 1926
+   }
+  ]
+ },
+ "metrics": {
+  "raw": {
+   "arm": "raw",
+   "venue": "frontier",
+   "model": "claude-opus-5-5",
+   "costUsd": 0,
+   "leftDevice": false,
+   "all": {
+    "tasks": 237,
+    "released": 207,
+    "correct": 210,
+    "silent": 10,
+    "missed": 17,
+    "accuracy": 0.8860759493670886,
+    "coverage": 0.8734177215189873,
+    "silentRate": 0.04219409282700422,
+    "silentAmongReleased": 0.04830917874396135,
+    "groundedRate": 0.6912751677852349,
+    "groundedOf": 149,
+    "medianMs": 3161
+   },
+   "bounded": {
+    "tasks": 190,
+    "released": 161,
+    "correct": 165,
+    "silent": 9,
+    "missed": 16,
+    "accuracy": 0.868421052631579,
+    "coverage": 0.8473684210526315,
+    "silentRate": 0.04736842105263158,
+    "silentAmongReleased": 0.055900621118012424,
+    "groundedRate": 1,
+    "groundedOf": 103,
+    "medianMs": 3104.5
+   },
+   "hard": {
+    "tasks": 47,
+    "released": 46,
+    "correct": 45,
+    "silent": 1,
+    "missed": 1,
+    "accuracy": 0.9574468085106383,
+    "coverage": 0.9787234042553191,
+    "silentRate": 0.02127659574468085,
+    "silentAmongReleased": 0.021739130434782608,
+    "groundedRate": 0,
+    "groundedOf": 46,
+    "medianMs": 3276
+   },
+   "byKind": {
+    "qa": {
+     "tasks": 32,
+     "released": 15,
+     "correct": 23,
+     "silent": 2,
+     "missed": 7,
+     "accuracy": 0.71875,
+     "coverage": 0.46875,
+     "silentRate": 0.0625,
+     "silentAmongReleased": 0.13333333333333333,
+     "groundedRate": 1,
+     "groundedOf": 15,
+     "medianMs": 3430
+    },
+    "extract": {
+     "tasks": 27,
+     "released": 27,
+     "correct": 27,
+     "silent": 0,
+     "missed": 0,
+     "accuracy": 1,
+     "coverage": 1,
+     "silentRate": 0,
+     "silentAmongReleased": 0,
+     "groundedRate": 1,
+     "groundedOf": 27,
+     "medianMs": 3095
+    },
+    "classify": {
+     "tasks": 35,
+     "released": 27,
+     "correct": 22,
+     "silent": 5,
+     "missed": 8,
+     "accuracy": 0.6285714285714286,
+     "coverage": 0.7714285714285715,
+     "silentRate": 0.14285714285714285,
+     "silentAmongReleased": 0.18518518518518517,
+     "groundedRate": null,
+     "groundedOf": 0,
+     "medianMs": 3161
+    },
+    "route": {
+     "tasks": 35,
+     "released": 31,
+     "correct": 32,
+     "silent": 2,
+     "missed": 1,
+     "accuracy": 0.9142857142857143,
+     "coverage": 0.8857142857142857,
+     "silentRate": 0.05714285714285714,
+     "silentAmongReleased": 0.06451612903225806,
+     "groundedRate": null,
+     "groundedOf": 0,
+     "medianMs": 3167
+    },
+    "date": {
+     "tasks": 15,
+     "released": 15,
+     "correct": 15,
+     "silent": 0,
+     "missed": 0,
+     "accuracy": 1,
+     "coverage": 1,
+     "silentRate": 0,
+     "silentAmongReleased": 0,
+     "groundedRate": 1,
+     "groundedOf": 15,
+     "medianMs": 2886
+    },
+    "pence": {
+     "tasks": 10,
+     "released": 10,
+     "correct": 10,
+     "silent": 0,
+     "missed": 0,
+     "accuracy": 1,
+     "coverage": 1,
+     "silentRate": 0,
+     "silentAmongReleased": 0,
+     "groundedRate": 1,
+     "groundedOf": 10,
+     "medianMs": 3269
+    },
+    "draft": {
+     "tasks": 36,
+     "released": 36,
+     "correct": 36,
+     "silent": 0,
+     "missed": 0,
+     "accuracy": 1,
+     "coverage": 1,
+     "silentRate": 0,
+     "silentAmongReleased": 0,
+     "groundedRate": 1,
+     "groundedOf": 36,
+     "medianMs": 2983.5
+    },
+    "knowledge": {
+     "tasks": 24,
+     "released": 24,
+     "correct": 23,
+     "silent": 1,
+     "missed": 0,
+     "accuracy": 0.9583333333333334,
+     "coverage": 1,
+     "silentRate": 0.041666666666666664,
+     "silentAmongReleased": 0.041666666666666664,
+     "groundedRate": 0,
+     "groundedOf": 24,
+     "medianMs": 3299
+    },
+    "reasoning": {
+     "tasks": 23,
+     "released": 22,
+     "correct": 22,
+     "silent": 0,
+     "missed": 1,
+     "accuracy": 0.9565217391304348,
+     "coverage": 0.9565217391304348,
+     "silentRate": 0,
+     "silentAmongReleased": 0,
+     "groundedRate": 0,
+     "groundedOf": 22,
+     "medianMs": 3265
+    }
+   }
+  }
+ }
+}

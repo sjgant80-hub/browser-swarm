@@ -88,6 +88,14 @@ test('the verdicts at and around every bar', () => {
   assert.equal(off({ swarm: { ...sw, all: { ...sw.all, medianMs: Infinity } } }).L, null);
   assert.match(CL.evaluate({ ...ev, swarm: { ...sw, rows: [] } }).find((x) => x.id === 'G').result, /swarm 0 of 0 .* \(—\)/);
   assert.equal(off({ swarmRaw: { ...sr, rows: [] }, bigRaw: { ...br, rows: [] } }).H, false);
+  const fr = arm({ rate: 0.05, silent: 5, tasks: 100, bacc: 0.9, hacc: 0.8, hsil: 1, rows: bad });
+  const X = CL.evaluate({ ...ev, frontier: { ...fr, all: { ...fr.all, accuracy: 0.9 } }, swarmOnFrontier: { ...sw, all: { ...sw.all, accuracy: 0.5 } }, frontierOf: 410 }).find((x) => x.id === 'X');
+  assert.equal(X.pass, null);
+  assert.match(X.result, /^reported, no bar: frontier raw on 100 of 410 test tasks \(a seeded sample\): 5 silent \(5\.0%\), accuracy 90\.0%; the swarm on the same tasks: 2 silent \(2\.0%\), accuracy 50\.0%; 20 tasks only the frontier failed silently, 0 only the swarm, p = /);
+  assert.match(CL.evaluate({ ...ev, frontier: fr, swarmOnFrontier: sw }).find((x) => x.id === 'X').result, /^pending/, 'without the total it is pending');
+  assert.match(CL.evaluate({ ...ev, frontier: fr, frontierOf: 410 }).find((x) => x.id === 'X').result, /^pending/);
+  assert.match(CL.evaluate({ ...ev, swarmOnFrontier: sw, frontierOf: 410 }).find((x) => x.id === 'X').result, /^pending/);
+  assert.match(CL.evaluate({ ...ev, frontier: fr, swarmOnFrontier: sw, frontierOf: 4.5 }).find((x) => x.id === 'X').result, /^pending/);
   const dash = CL.evaluate({ ...ev, attacks: { summary: { ...ev.attacks.summary, A2: { built: 0, gatedFalse: 0, rawFalse: 0 } } } }).find((x) => x.id === 'A2');
   assert.match(dash.result, /\(—\)/);
 });

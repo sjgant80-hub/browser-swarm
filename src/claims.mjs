@@ -72,7 +72,13 @@ export function evaluate(ev) {
   const f = get(e, 'fold');
   if (!f || num(f.grouped) === null || num(f.interleaved) === null || !Number.isInteger(f.pairs) || f.pairs === 0) out.push(pending('F', 'needs the fold-cache run in the tab'));
   else out.push({ id: 'F', pass: f.grouped <= 0.8 * f.interleaved && f.identical / f.pairs >= 0.95, result: `median time to first token ${f.grouped.toFixed(3)} s grouped against ${f.interleaved.toFixed(3)} s interleaved (${(f.grouped / f.interleaved).toFixed(2)}×); identical replies ${f.identical} of ${f.pairs}` });
-  out.push(pending('X', 'the frontier arm needs an API key: the viewer\'s own on this page, or its owner\'s yes for this repository\'s run'));
+  // X has no bar: the frontier arm is reported, on the tasks it covered, beside the swarm on exactly those tasks
+  const fr = get(e, 'frontier'), sub = get(e, 'swarmOnFrontier');
+  if (!fr || !sub || !Number.isInteger(get(e, 'frontierOf'))) out.push(pending('X', 'the frontier arm needs an API key: the viewer\'s own on this page, or its owner\'s yes for this repository\'s run'));
+  else {
+    const p = pairedSilent(sub, fr);
+    out.push({ id: 'X', pass: null, result: `reported, no bar: frontier raw on ${fr.all.tasks} of ${e.frontierOf} test tasks (a seeded sample): ${fr.all.silent} silent (${pct(num(fr.all.silentRate))}), accuracy ${pct(num(fr.all.accuracy))}; the swarm on the same tasks: ${sub.all.silent} silent (${pct(num(sub.all.silentRate))}), accuracy ${pct(num(sub.all.accuracy))}; ${p.bOnly} tasks only the frontier failed silently, ${p.aOnly} only the swarm, p = ${p.p.toPrecision(3)}` });
+  }
   return out;
 }
 

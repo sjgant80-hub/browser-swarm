@@ -5,5 +5,7 @@
  "node1b": null,
  "attacks": null,
  "fold": null,
- "walk": null
+ "walk": null,
+ "frontier": "data/runs/frontier-raw-test.json",
+ "attacksTab": null
 }

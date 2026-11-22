@@ -56,6 +56,12 @@ table{border-collapse:collapse;width:100%;font-size:14px}
 th,td{text-align:left;padding:8px;border-bottom:1px solid var(--line);vertical-align:top}
 td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
 .pass{color:var(--ok);font-weight:700}.fail{color:var(--no);font-weight:700}.pend{color:var(--warn);font-weight:700}
+.badge{display:inline-block;border:1px solid var(--warn);color:var(--warn);border-radius:6px;padding:0 6px;font-size:12px;font-weight:700;white-space:nowrap}
+mark{background:var(--ok-bg);color:var(--ok);padding:0 2px;border-radius:3px;font-weight:700}
+pre.live{min-height:38px;border-left:3px solid var(--accent)}
+.desk{margin:0}
+#viewBar button{margin-left:6px;padding:3px 8px}
+details.card>summary{font-weight:600}
 .stage{border-left:3px solid var(--line);padding:4px 0 4px 12px;margin:8px 0}
 .stage.ok{border-color:var(--ok)}.stage.no{border-color:var(--no)}
 .bar{height:8px;background:var(--chip);border-radius:4px;overflow:hidden;margin:6px 0}
@@ -82,56 +88,73 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-si
 <p class="lead">Browser Swarm is a team of small AI specialists that runs entirely inside a web page, on your own computer. Each specialist does one bounded job: answer from your documents, read a receipt total, sort a message, convert a date. And each one is checked before it may speak. If the check fails, you get an honest "I can't say", never a confident wrong answer. Nothing you type leaves your device. Nothing is charged per question.</p>
 <p>It will not out-think a large cloud model, and this page shows exactly where it loses. What it is built for is the one number that decides whether you can trust AI with routine work: <b>how often it delivers a wrong answer as if it were right</b>. That is the silent-failure rate. It was measured on 410 tasks, with every rule written down and sealed before the test was run, and you can re-run it on your own machine.</p>
 <div class="chips" aria-label="Headline numbers">
-  <span class="chip">swarm silent failures <b data-bind="hl.swarm">…</b></span>
-  <span class="chip">the same model with no checks <b data-bind="hl.raw1">…</b></span>
-  <span class="chip">a 7× larger model with no checks <b data-bind="hl.raw7">…</b></span>
-  <span class="chip">data sent off this device <b data-bind="hl.privacy">…</b></span>
+  <span class="chip">swarm silent failures <b data-bind="hl.swarm">not measured yet</b></span>
+  <span class="chip">the same model with no checks <b data-bind="hl.raw1">not measured yet</b></span>
+  <span class="chip">a 7× larger model with no checks <b data-bind="hl.raw7">not measured yet</b></span>
+  <span class="chip">a frontier cloud model with no checks <b data-bind="hl.frontier">not measured yet</b></span>
+  <span class="chip">data sent off the device <b data-bind="hl.privacy">not measured yet</b></span>
   <span class="chip">cost per question <b>$0</b></span>
 </div>
-<p class="small muted" data-bind="hl.note">…</p>
+<p class="small muted" data-bind="hl.note">not measured yet</p>
+<div id="viewBar" class="card small" aria-live="polite">not measured yet</div>
 
 <h2 id="start">Start here</h2>
 <ol class="steps">
-  <li><b>Check this device.</b> The swarm needs WebGPU, which current Chrome and Edge on a laptop or desktop have. <span id="devStatus" class="muted">Checking…</span></li>
-  <li><b>Load the model, once.</b> This downloads the model from the MLC project's published build and keeps it in your browser's storage, so the next visit loads from your disk. About 880 MB for the laptop tier.
+  <li><b>Check this device.</b> The swarm needs WebGPU, which current Chrome and Edge on a laptop or desktop have. <span id="devStatus" class="muted">This check runs in your browser when the page loads.</span></li>
+  <li><b>Load the model, once.</b> This downloads the model from the MLC project's published build into your browser's storage. The first load is a real download: 879 MB for the laptop tier. Every later visit loads it from your own disk in seconds, with no download.
     <div class="row"><label for="tier">Tier</label>
-      <select id="tier"><option value="Llama-3.2-1B-Instruct-q4f16_1-MLC">Laptop: Llama 3.2 1B, 4-bit, 879 MB (the measured tier)</option><option value="Qwen2.5-3B-Instruct-q4f16_1-MLC">Desktop: Qwen2.5 3B, 4-bit, 2.5 GB (not measured here)</option></select>
+      <select id="tier"><option value="Llama-3.2-1B-Instruct-q4f16_1-MLC">Laptop: Llama 3.2 1B, 4-bit, 879 MB (the measured tier)</option><option value="Qwen2.5-3B-Instruct-q4f16_1-MLC">Desktop: Qwen2.5 3B, 4-bit, 2.5 GB (not measured)</option><option value="Qwen2.5-0.5B-Instruct-q4f16_1-MLC">Phone: Qwen2.5 0.5B, 4-bit, 945 MB (not measured)</option><option value="SmolLM2-360M-Instruct-q4f16_1-MLC">Phone, lightest: SmolLM2 360M, 4-bit, 376 MB (not measured)</option></select>
       <button id="load" type="button">Load the model</button></div>
-    <div class="bar" aria-hidden="true"><i id="loadBar"></i></div><div id="loadStatus" class="small muted">Not loaded. Steps 5 and 6 work without it.</div></li>
-  <li><b>Ask it something.</b> Pick a job, and an example from the dev set fills the box. Change it, then ask. You'll see each stage: which specialist took it, whether the input is in its lane, what the model said, what the check decided, and what the same model says with no checks.
-    <div class="row"><label for="askKind">Job</label><select id="askKind"></select><button class="ghost" id="askExample" type="button">Another example</button></div>
-    <textarea id="askInput" aria-label="The input for the job"></textarea>
+    <div class="bar" aria-hidden="true"><i id="loadBar"></i></div><div id="loadStatus" class="small muted">Not loaded yet. Step 7 works without a model.</div>
+    <p class="small muted">Memory figures are WebLLM's own for each build. Every number on this page names the tier it was measured on. Only the laptop tier has been measured.</p></li>
+  <li><b>Watch the company work.</b> Seven desks share the one model. Open the inbox and each real job is routed to a desk, or refused. You'll see the model's words arrive as it writes them, then the compliance check decide whether they may leave. The gauges count as it goes.
+    <div id="desks" class="grid three">not measured yet</div>
+    <div class="row"><button id="work" type="button" disabled>Open the inbox</button><span class="small muted">Eleven real jobs, about a minute. Needs the model (step 2).</span></div>
+    <div id="gauges" class="chips" aria-live="polite">not measured yet</div>
+    <div id="inbox">not measured yet</div></li>
+  <li><b>Give it your own job.</b> Say what you need in plain words and give the input. The conductor picks a desk from your words, or refuses if no desk owns the job. Try "Book me a flight" to see a refusal.
+    <div class="row"><label for="askKind">Example</label><select id="askKind"></select><button class="ghost" id="askExample" type="button">Another example</button></div>
+    <label for="askReq">What you need</label><input type="text" id="askReq">
+    <label for="askInput">The input</label><textarea id="askInput"></textarea>
     <div class="row"><button id="ask" type="button" disabled>Ask the swarm</button><span class="small muted">Needs the model (step 2).</span></div>
     <div id="askOut" aria-live="polite"></div></li>
-  <li><b>Use your own documents.</b> Paste a few paragraphs, separated by blank lines, and ask a question. Each paragraph is signed with its SHA-256 here in the tab. An answer is released only if it is the paragraph's own words and passes the same checks.
+  <li><b>Use your own documents.</b> Paste a few paragraphs, separated by blank lines, and ask a question. Each paragraph is signed with its SHA-256 here in the tab. An answer is released only if it is the paragraph's own words and passes the same checks, and you see the characters it came from.
     <textarea id="docsText" aria-label="Your paragraphs"></textarea>
     <div class="row"><input type="text" id="docsQ" aria-label="Your question" placeholder="Your question"><button id="docsAsk" type="button" disabled>Ask your documents</button></div>
     <p class="small muted">Your documents use a looser retrieval bar (minimum score 2 rather than 8), because the bar was set on a 130-paragraph corpus and a few pasted paragraphs give each word less weight. That looser bar was not measured. The judge is unchanged.</p>
     <div id="docsOut" aria-live="polite"></div></li>
-  <li><b>Run the measurement yourself.</b> Run a quick sample of 18 tasks (2 per kind), the 95-task dev set, or the full 410-task test set. The six numbers fill in as it goes. When it finishes, you can save your results as a JSON file to compare with ours.
-    <div class="row"><label for="runWhich">Set</label><select id="runWhich"><option value="sample">Sample: 18 tasks, about 2 minutes</option><option value="dev">Dev: 95 tasks, about 8 minutes</option><option value="test">Test: 410 tasks, about 35 minutes</option></select>
+  <li><b>Run the measurement on your own GPU.</b> One click runs the suite here. As it runs, every number on this page switches to your device's own: the headline, the six numbers, the chart, the per-kind table and the claims. Your progress is saved in this browser, so a closed tab picks up where it stopped.
+    <div class="row"><label for="runWhich">Set</label><select id="runWhich"><option value="sample">Sample: 18 tasks, about 1 minute</option><option value="dev">Dev: 95 tasks, about 4 minutes</option><option value="test">Test: 410 tasks, about 15 minutes (the sealed set)</option></select>
       <button id="run" type="button" disabled>Run it</button><button class="ghost" id="save" type="button" disabled>Save my results</button></div>
     <div class="bar" aria-hidden="true"><i id="runBar"></i></div><div id="runOut" aria-live="polite" class="small"></div>
-    <div class="row"><button class="ghost" id="fold" type="button" disabled>Measure the fold-cache (claim F)</button><span class="small muted">The same 42 tasks, grouped by cell and then interleaved, twice each. Does reusing a cell's shared prompt start make the first token come sooner?</span></div>
-    <div id="foldOut" aria-live="polite" class="small"></div></li>
-  <li><b>Re-judge our published runs, no model needed.</b> Every published run keeps each model reply. This replays them through the code on this page and checks that every decision comes out the same.
+    <div class="row"><button class="ghost" id="attackRun" type="button" disabled>Run the attacks here</button><span class="small muted">40 fresh questions, four attacks each, plus the judge-only attack. About 8 minutes.</span></div>
+    <div id="attackOut" aria-live="polite" class="small"></div>
+    <div class="row"><button class="ghost" id="fold" type="button" disabled>Measure the fold-cache (claim F)</button><span class="small muted">The same 42 tasks, grouped by desk and then interleaved, twice each. About 4 minutes.</span></div>
+    <div id="foldOut" aria-live="polite" class="small"></div>
+    <details><summary>Run the frontier arm with your own API key</summary>
+      <p class="small">This sends the same prompts the other arms were given to a frontier cloud model, using your Anthropic API key. <b>Your tasks leave this device</b>, and you are charged by the provider. That is the point of the comparison. The key is kept only in this page's memory, for this run. It is never stored, and it is sent only to <code>api.anthropic.com</code>. It runs the raw arm: the model's own answers, unchecked, at medium effort.</p>
+      <div class="row"><label for="fkey">API key</label><input type="password" id="fkey" autocomplete="off" spellcheck="false" style="max-width:340px"><label for="fmodel">Model</label><select id="fmodel"><option value="claude-opus-5-5">claude-opus-5-5</option><option value="claude-sonnet-5-5">claude-sonnet-5-5</option></select><button id="frun" type="button">Run the frontier arm</button></div>
+      <div id="fOut" aria-live="polite" class="small"></div>
+    </details></li>
+  <li><b>Re-judge our published runs, no model needed.</b> Every published run keeps each model reply. This replays them through the code on this page and checks that every decision comes out the same. It works in any browser.
     <div class="row"><button id="rejudge" type="button">Re-judge the published runs</button></div><div id="rejudgeOut" aria-live="polite"></div></li>
 </ol>
 
 <h2 id="results">The six numbers</h2>
-<p>Each arm answered the same 410 test tasks. The <b>swarm</b> is a 1B model in a browser tab, behind its checks. <b>1B raw</b> is the same model on the same prompts, with every reply delivered unchecked. <b>7B raw</b> is a model seven times larger, run on this laptop's processor. <b>7B gated</b> is that larger model behind the same checks: the fair comparison, which shows how much of the swarm's result comes from the checks rather than the model. The <b>frontier</b> arm needs an API key, and stays pending until someone runs it.</p>
-<div class="tbl"><table id="six"><thead><tr><th>measure</th></tr></thead><tbody></tbody></table></div>
-<p class="small muted" id="sixNote">…</p>
-<h3>The money shot: silent-failure rate, all 410 test tasks</h3>
-<svg id="money" class="diagram" viewBox="0 0 900 260" role="img" aria-labelledby="moneyTitle"><title id="moneyTitle">Silent-failure rate by arm, filled from the published runs</title></svg>
-<p class="small muted">A silent failure is a wrong answer delivered as if it were right. A refusal is never one. The gate turns would-be silent failures into refusals, which is why the swarm's accuracy is lower than the raw model's on the same work.</p>
+<p>Each arm answered the same sealed test tasks. The <b>swarm</b> is a 1B model in a browser tab, behind its checks. <b>1B raw</b> is the same model on the same prompts, with every reply delivered unchecked. <b>7B raw</b> is a model seven times larger, run on a laptop processor. <b>7B gated</b> is that larger model behind the same checks: the fair comparison, which shows how much of the result comes from the checks rather than the model. <b>Frontier raw</b> is a large cloud model, Claude Opus 5.5 at medium effort, given the same prompts unchecked. It was called through Kar's spend wall under its owner's written approval, with a $4 cap, on a seeded sample of the test tasks, so its column covers the tasks the caps allowed.</p>
+<div class="tbl" id="six">not measured yet</div>
+<p class="small muted" id="sixNote">not measured yet</p>
+<h3>The headline: silent-failure rate</h3>
+<svg id="money" class="diagram" viewBox="0 0 900 340" role="img" aria-label="Silent-failure rate by arm"></svg>
+<p class="small" data-bind="money.note">not measured yet</p>
+<p class="small muted">A silent failure is a wrong answer delivered as if it were right. A refusal is never one. The checks turn would-be silent failures into refusals, which is why the swarm's accuracy is lower than the raw model's on the same work.</p>
 
 <h3>Per kind of work</h3>
-<div class="tbl"><table id="kinds"><thead><tr><th>kind</th><th class="num">tasks</th><th class="num">swarm right</th><th class="num">swarm silent</th><th class="num">swarm released</th><th class="num">1B raw silent</th><th class="num">7B raw right</th><th class="num">7B raw silent</th></tr></thead><tbody></tbody></table></div>
+<div class="tbl" id="kinds">not measured yet</div>
 
 <h2 id="claims">The pre-registered claims</h2>
-<p>Every claim and its bar was committed to git before any model saw a test task: <a href="https://github.com/sjgant80-hub/browser-swarm/blob/main/CLAIMS.md">CLAIMS.md</a>, seal 1, commit <code>08dc357</code>. The code and settings were then frozen and hashed before the test ran: <a href="https://github.com/sjgant80-hub/browser-swarm/blob/main/SEAL2.md">SEAL2.md</a>, seal 2, commit <code>1983e89</code>. The verdicts below are computed on this page, by the gated kernel <code>src/claims.mjs</code>, from the published runs. A claim that failed stays here, failed.</p>
-<div class="tbl"><table id="claimsTable"><thead><tr><th>claim</th><th>bar</th><th>result</th><th>verdict</th></tr></thead><tbody></tbody></table></div>
+<p>Every claim and its bar was committed to git before any model saw a test task: <a href="https://github.com/sjgant80-hub/browser-swarm/blob/main/CLAIMS.md">CLAIMS.md</a>, seal 1, commit <code>08dc357</code>. The code and settings were then frozen and hashed before the test ran: <a href="https://github.com/sjgant80-hub/browser-swarm/blob/main/SEAL2.md">SEAL2.md</a>, seal 2, commit <code>1983e89</code>. The verdicts are computed on this page, by the gated kernel <code>src/claims.mjs</code>. A claim that failed stays here, failed, in red. The last column is your own device: every claim is marked unverified there until you run it yourself in step 6.</p>
+<div class="tbl" id="claimsTable">not measured yet</div>
 
 <h2 id="how">How it works</h2>
 <p>One base model, many specialists. A specialist, or cell, is not a second model. It is a card the base model is run under: what it accepts, what it asks the model, and how its answer is checked. Every request goes through the same four steps, and only the last can release anything.</p>
@@ -156,12 +179,12 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-si
   <li><b>The judge</b> checks the answer with code, never with a model. For documents: the answer must be the source's own words, in the sentence that best matches the question, carrying enough of the question's words, and not in a sentence that gives orders. For a receipt: the number must be printed on a total line. For an intent or a department: the model must agree with an independent word index built from training data. For a date or an amount: it is read back against the words it came from. For a letter: every fact must be word for word, and no other number may appear. Only a verified answer is released. Everything else is withheld, with the reason.</li>
 </ol>
 <h3>Traced from the published tab run</h3>
-<p class="small muted">Three real tasks from the published run, each re-decided now by the code on this page from its recorded model reply.</p>
-<div id="trace"></div>
+<p class="small muted">Three real tasks from the run being shown, each re-decided by the code on this page from its recorded model reply. A released answer shows the characters it came from in its signed source.</p>
+<div id="trace">not measured yet</div>
 
 <h2 id="attacks">Attacks on the checks</h2>
-<p>A check that can be fooled is worse than none, because it creates false trust. So each defence was attacked on 40 fresh questions it had never seen. An attack succeeds when the swarm releases the false answer.</p>
-<div class="tbl"><table id="attackTable"><thead><tr><th>attack</th><th>what the attacker does</th><th class="num">swarm released the false answer</th><th class="num">same model, no checks</th><th>verdict</th></tr></thead><tbody></tbody></table></div>
+<p>A check that can be fooled is worse than none, because it creates false trust. So each defence was attacked on 40 fresh questions it had never seen. An attack succeeds when the swarm releases the false answer. The verdict uses the runner that was sealed before the test: the same 1B model served on this laptop. The same attacks run in the browser tab are shown beside it, and you can run them on your own device in step 6.</p>
+<div class="tbl" id="attackTable">not measured yet</div>
 <p><b>The limit, stated plainly.</b> The checks prove that an answer is your source's own words and fits the question. They cannot know whether the source is true. If a lie is written into the source itself and signed (A2b), the swarm repeats it faithfully. Keeping a source honest is a separate job, done by whoever signs the corpus.</p>
 
 <h2 id="blueprint">Blueprint</h2>
@@ -173,7 +196,7 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-si
 <tr><td>Documents in the tab</td><td>DocDec's grounded router and gate (byte for byte), a signed corpus (a SHA-256 for each paragraph, checked in the tab), a twin check, and DocDec's sentence chooser as a second key.</td><td class="pass">built, gated</td></tr>
 <tr><td>Word indexes</td><td>Banking77 and CLINC150 training data, turned into per-intent and per-department word weights: an independent second key for the label cells.</td><td class="pass">built</td></tr>
 <tr><td>Measurement</td><td>The suite (410 test tasks), the scoring rules, the claims and the replay (<code>src/score.mjs</code>, <code>src/claims.mjs</code>, <code>src/swarm.mjs</code>).</td><td class="pass">built, gated</td></tr>
-<tr><td>Fold-cache</td><td>Reusing the shared start of each cell's prompt across calls. It is measured on this page (claim F). WebLLM decides whether it reuses anything.</td><td data-bind="bp.fold">…</td></tr>
+<tr><td>Fold-cache</td><td>Reusing the shared start of each cell's prompt across calls. It is measured on this page (claim F). WebLLM decides whether it reuses anything.</td><td data-bind="bp.fold">not measured yet</td></tr>
 <tr><td>LoRA adapters, hot-swapped</td><td>Specialists as separate small adapters on the base model.</td><td class="pend">not built: WebLLM 0.2.79 has no adapter API (checked in its published bundle)</td></tr>
 <tr><td>Speculative decoding</td><td>A 135M draft model proposes and the base model verifies, for speed.</td><td class="pend">not built: WebLLM 0.2.79 has no draft-model API</td></tr>
 <tr><td>Distillation and federation</td><td>Growing new adapters from a larger teacher, then sharing verified adapters (never data) between users.</td><td class="pend">not built: both need adapters first</td></tr>
@@ -203,20 +226,20 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-si
 
 <h2 id="brochure">For buyers: the case, no hedging</h2>
 <div class="grid two">
-<div class="card"><h3>What it does</h3><p>It does bounded AI work in a browser tab, on your hardware, and checks every answer before release. Its headline measure is the silent-failure rate. The <span data-bind="b.vs">…</span></p></div>
+<div class="card"><h3>What it does</h3><p>It does bounded AI work in a browser tab, on your hardware, and checks every answer before release. Its headline measure is the silent-failure rate. <span data-bind="b.vs">The comparison is not measured yet.</span></p></div>
 <div class="card"><h3>Chief executive</h3><p>Routine AI work without a data-sharing agreement, without a per-question bill, and with a measured answer to the board's question: how often is it confidently wrong?</p></div>
 <div class="card"><h3>Finance</h3><p>No tokens are bought and the hardware is already on the books. The cost case below uses your own volumes and your own cost of an error. Nothing is assumed for you.</p></div>
 <div class="card"><h3>Operations</h3><p>Refusals come with a reason, and they go to a person. Every answer that is released can be traced: the paragraph and characters it came from, the line it was printed on, or the index entry it agrees with.</p></div>
-<div class="card"><h3>Technology and security</h3><p>No server, no API, no account. During the suite run the page made <b data-bind="b.req">…</b> network requests, counted by the browser itself. The code is MIT-licensed, and its kernels are mutation-gated. Every published decision can be re-derived on this page.</p></div>
+<div class="card"><h3>Technology and security</h3><p>No server, no API, no account. <span data-bind="b.req">The network-request count is not measured yet.</span> The code is MIT-licensed, and its kernels are mutation-gated. Every published decision can be re-derived on this page.</p></div>
 <div class="card"><h3>The teams</h3><p>An assistant that says "I can't say" rather than inventing an answer, so staff can lean on what it does say.</p></div>
 </div>
 <h3>Your cost case</h3>
-<p>This compares the swarm with sending the same work to a frontier API, at that provider's published price (<a href="https://claude.com/pricing">claude.com/pricing</a>, read <span data-bind="price.read">…</span>, <span data-bind="price.model">…</span>). The tokens per task are measured from the published tab run. Enter your own monthly volume and your own cost of one wrong answer delivered as if right.</p>
+<p>This compares the swarm with sending the same work to a frontier API, at that provider's published price (<a href="https://claude.com/pricing">claude.com/pricing</a>, read <span data-bind="price.read">on a date not filled in yet</span>, <span data-bind="price.model">price not filled in yet</span>). The tokens per task are measured from the published tab run. Enter your own monthly volume and your own cost of one wrong answer delivered as if right.</p>
 <div class="row"><label for="tpm">Tasks per month</label><input type="number" id="tpm" min="0" step="100" value="10000"><label for="cps">Your cost of one silent failure, $</label><input type="number" id="cps" min="0" step="1" placeholder="your figure"></div>
 <div class="grid three">
-  <div class="card"><div class="small muted">Frontier API, same work, per month</div><div class="kpi" data-bind="cost.api">…</div><div class="small muted" data-bind="cost.apiNote">…</div></div>
-  <div class="card"><div class="small muted">Silent failures removed per month, against the same model unchecked</div><div class="kpi" data-bind="cost.silent">…</div></div>
-  <div class="card"><div class="small muted">What those failures would have cost you</div><div class="kpi" data-bind="cost.silentCost">…</div></div>
+  <div class="card"><div class="small muted">Frontier API, same work, per month</div><div class="kpi" data-bind="cost.api">not measured yet</div><div class="small muted" data-bind="cost.apiNote">not measured yet</div></div>
+  <div class="card"><div class="small muted">Silent failures removed per month, against the same model unchecked</div><div class="kpi" data-bind="cost.silent">not measured yet</div></div>
+  <div class="card"><div class="small muted">What those failures would have cost you</div><div class="kpi" data-bind="cost.silentCost">not measured yet</div></div>
 </div>
 <p class="small muted">The swarm's own cost is the electricity of a laptop already switched on. That is stated, not measured. The comparison prices the frontier API only. It does not claim the frontier model's accuracy, which is pending (claim X).</p>
 <h3>Against what you pay now</h3>
@@ -246,14 +269,14 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-si
   <li><b>"The first load is large."</b> About 880 MB, once per browser.</li>
 </ul>
 <h3>The case for the board</h3>
-<p>Most AI risk is not the obvious failure. It is the confident wrong answer that nobody catches. This product measures that rate, publishes it with its losses, and lets anyone check it. <span data-bind="b.board">…</span> It does that with no data leaving the building and no bill per question. Start with one bounded job and your own test set, and decide on your own numbers.</p>
-<div id="walk"></div>
+<p>Most AI risk is not the obvious failure. It is the confident wrong answer that nobody catches. This product measures that rate, publishes it with its losses, and lets anyone check it. <span data-bind="b.board">The cut in confidently wrong answers is not measured yet.</span> It does that with no data leaving the building and no bill per question. Start with one bounded job and your own test set, and decide on your own numbers.</p>
+<div id="walk">not measured yet</div>
 
 <h2 id="paper">White paper: the reef, not the cathedral</h2>
 <p><b>The problem.</b> A large cloud model cannot run on your own device, cannot run without a meter, cannot answer without a network round trip, and cannot tell you in advance what it will refuse. Above all, it cannot show you how often it is confidently wrong. None of that is about how clever it is.</p>
 <p><b>The idea.</b> Use many small, bounded specialists instead of one large model. Take knowledge out of the weights and keep it in a signed corpus. Take trust out of the model and put it in checks written as code. A small model loses on open questions, so it does not take them. On bounded work, a small model behind good checks can be trusted for what it releases, and it says when it cannot answer.</p>
 <p><b>The method.</b> Claims and bars were written first (seal 1). The cells were built on a dev split and a separate tuning pool. Each release rule was chosen there by one stated criterion: the most right answers minus twice the silent failures. Then everything was frozen by hash (seal 2), and the 410-task test split and 40 fresh attacks were read once. The suite includes work the swarm should lose, so the losses are visible.</p>
-<p><b>The result.</b> <span data-bind="p.result">…</span></p>
+<p><b>The result.</b> <span data-bind="p.result">not measured yet</span></p>
 <p><b>What it shows, and what it does not.</b> The checks, not the model, drive silent failures down: the 7B gated arm shows the same checks on a larger model. The small model's part is to be free, private and fast enough. On routing, the word index alone outscores the 1B model. The swarm's value there is the agreement between the two, not the model by itself. Nothing here shows that a small model knows or reasons as well as a large one. B2 shows that it does not.</p>
 <p class="small muted">The datasets are SQuAD 2.0 (CC BY-SA 4.0, via DocDec), CORD v2 (CC BY 4.0), Banking77 (CC BY 4.0), CLINC150 (CC BY 3.0) and MMLU (MIT). The date, pence and refund-letter tasks are generated by <code>scripts/build-suite.mjs</code>, and their people are fictional. Details are in <a href="https://github.com/sjgant80-hub/browser-swarm/blob/main/NOTICE">NOTICE</a>.</p>
 <footer>
