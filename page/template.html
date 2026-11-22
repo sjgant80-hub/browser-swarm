@@ -87,11 +87,14 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-si
 <h1>Small AI that refuses rather than guesses, in your browser tab</h1>
 <p class="lead">Browser Swarm is a team of small AI specialists that runs entirely inside a web page, on your own computer. Each specialist does one bounded job: answer from your documents, read a receipt total, sort a message, convert a date. And each one is checked before it may speak. If the check fails, you get an honest "I can't say", never a confident wrong answer. Nothing you type leaves your device. Nothing is charged per question.</p>
 <p>It will not out-think a large cloud model, and this page shows exactly where it loses. What it is built for is the one number that decides whether you can trust AI with routine work: <b>how often it delivers a wrong answer as if it were right</b>. That is the silent-failure rate. It was measured on 410 tasks, with every rule written down and sealed before the test was run, and you can re-run it on your own machine.</p>
+<p><b>The price of that, stated up front:</b> <span data-bind="hl.price">The trade-off is not measured yet.</span></p>
 <div class="chips" aria-label="Headline numbers">
   <span class="chip">swarm silent failures <b data-bind="hl.swarm">not measured yet</b></span>
   <span class="chip">the same model with no checks <b data-bind="hl.raw1">not measured yet</b></span>
   <span class="chip">a 7× larger model with no checks <b data-bind="hl.raw7">not measured yet</b></span>
   <span class="chip">a frontier cloud model with no checks <b data-bind="hl.frontier">not measured yet</b></span>
+  <span class="chip">bounded work the swarm gets right <b data-bind="hl.acc">not measured yet</b></span>
+  <span class="chip">bounded work the 7× larger model gets right <b data-bind="hl.acc7">not measured yet</b></span>
   <span class="chip">data sent off the device <b data-bind="hl.privacy">not measured yet</b></span>
   <span class="chip">cost per question <b>$0</b></span>
 </div>

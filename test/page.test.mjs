@@ -48,7 +48,7 @@ test('the page code runs: the inlined kernels decide as the modules do', async (
 });
 
 test('nothing ships as a bare placeholder: every fill target is baked, and an unmeasured value says so', () => {
-  assert.ok(!visible.includes('…<') && !/>\s*…\s*</.test(visible), 'a bare ellipsis is on the page');
+  assert.ok(!/>\s*…\s*</.test(visible), 'an element whose whole content is an ellipsis is on the page');
   for (const id of BAKED) {
     const m = visible.match(new RegExp(`<([a-z0-9]+)\\b[^>]*\\sid="${id}"[^>]*>`));
     assert.ok(m, `#${id} is on the page`);

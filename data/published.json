@@ -1,9 +1,9 @@
 {
  "note": "the runs the page shows; null = not published yet",
- "tab": null,
+ "tab": "data/runs/tab-test.json",
  "big": "data/runs/node-qwen2.5_7b-test.json",
- "node1b": null,
- "attacks": null,
+ "node1b": "data/runs/node-llama3.2_1b-test.json",
+ "attacks": "data/runs/attacks-sealed-llama3.2_1b.json",
  "fold": null,
  "walk": null,
  "frontier": "data/runs/frontier-raw-test.json",

@@ -162,7 +162,7 @@ function renderMoney(A) {
         : `<rect x="${x0}" y="${y}" width="${w}" height="28" rx="4" fill="none" stroke="var(--muted)" stroke-dasharray="4 4"/><text x="${x0 + w + 8}" y="${y + 19}" class="muted">${A.mine ? 'not run on these tasks' : 'not measured yet'}</text>`);
   }).join('');
   bind('money.note', A.frontier && A.swarmF
-    ? `The frontier bar covers the ${A.frontier.all.tasks} tasks its run reached: a seeded sample across every kind, stopped by the spend caps. On exactly those tasks, the swarm released a wrong answer as if right ${A.swarmF.all.silent} times (${pct(A.swarmF.all.silentRate)}) and was right on ${pct(A.swarmF.all.accuracy)}. The frontier model did so ${A.frontier.all.silent} times (${pct(A.frontier.all.silentRate)}) and was right on ${pct(A.frontier.all.accuracy)}. It is far more accurate, and its errors still arrive looking like answers.`
+    ? `The frontier bar covers the ${A.frontier.all.tasks} tasks its run reached: a seeded sample across every kind, stopped by the spend caps. On exactly those tasks, the swarm released a wrong answer as if right ${A.swarmF.all.silent} times (${pct(A.swarmF.all.silentRate)}) and was right on ${pct(A.swarmF.all.accuracy)}. The frontier model did so ${A.frontier.all.silent} times (${pct(A.frontier.all.silentRate)}) and was right on ${pct(A.frontier.all.accuracy)}. It is far more accurate, and its errors still arrive looking like answers. ${(() => { const p = SCORE.pairedSilent(A.swarmF, A.frontier); return p.p < 0.05 ? `The swarm's lower rate of silent failures is statistically significant on these tasks (exact McNemar p = ${p.p.toPrecision(2)}).` : `On this sample the swarm's lower rate of silent failures is <b>not</b> statistically significant (exact McNemar p = ${p.p.toPrecision(2)}): it is not shown to beat the frontier model on this measure.`; })()}`
     : A.frontier ? `The frontier bar covers the ${A.frontier.all.tasks} tasks its run reached. The swarm's figures on the same tasks are not measured yet.` : 'The frontier comparison is not measured yet.');
 }
 function renderKinds(A) {
@@ -213,7 +213,7 @@ function stages(task, g, r, ctx) {
       if (g.stage === 'act') out.push(st(false, 'The model declined', esc(String(g.why).replace(/^the act refused: /, ''))));
       else out.push(st(g.released, g.cell === 'docs-answer' ? 'Cite check, after the model' : 'Compliance check, after the model', g.released ? 'verified' : esc(g.why)));
       const gr = g.released ? g.ground : null, doc = gr && gr.source && ctx ? ctx.byId.get(gr.source) : null;
-      if (doc) out.push(st(true, 'Source', `<code>${esc(gr.source)}</code>, characters ${gr.start}–${gr.end}, signature <code>${esc(String(ctx.manifest.get(gr.source)).slice(0, 12))}…</code> matches<br><span class="small">…${esc(doc.text.slice(Math.max(0, gr.start - 90), gr.start))}<mark>${esc(doc.text.slice(gr.start, gr.end))}</mark>${esc(doc.text.slice(gr.end, gr.end + 90))}…</span>`));
+      if (doc) out.push(st(true, 'Source', `<code>${esc(gr.source)}</code>, characters ${gr.start}–${gr.end}, signature <code>${esc(String(ctx.manifest.get(gr.source)).slice(0, 12))}…</code> matches<br><span class="small">${gr.start > 90 ? '… ' : ''}${esc(doc.text.slice(Math.max(0, gr.start - 90), gr.start))}<mark>${esc(doc.text.slice(gr.start, gr.end))}</mark>${esc(doc.text.slice(gr.end, gr.end + 90))}${gr.end + 90 < doc.text.length ? ' …' : ''}</span>`));
     }
   }
   out.push(`<div class="verdict ${g.released ? 'ok' : 'no'}">${g.released ? `Released: ${showOut(g.output)}` : 'Withheld: the swarm says it cannot answer this'}</div>`);
@@ -255,6 +255,9 @@ function renderHeadline(A, V) {
   const sw = A.swarm, r1 = A.raw1, of = (m) => `${pct(m.all.silentRate)} <span class="muted">(${m.all.silent} of ${m.all.tasks})</span>`;
   bind('hl.swarm', sw ? of(sw) : NM); bind('hl.raw1', r1 ? of(r1) : NM); bind('hl.raw7', A.raw7 ? of(A.raw7) : NM); bind('hl.frontier', A.frontier ? of(A.frontier) : NM);
   bind('hl.privacy', A.tab && A.tab.privacy ? `${A.tab.privacy.requests} requests` : NM);
+  const acc = (m) => (m && m.bounded.tasks ? `${pct(m.bounded.accuracy)} <span class="muted">(${m.bounded.correct} of ${m.bounded.tasks})</span>` : NM);
+  bind('hl.acc', acc(sw)); bind('hl.acc7', acc(A.raw7));
+  bind('hl.price', sw && sw.bounded.tasks ? `the swarm refuses far more than it answers. It released an answer on ${sw.all.released} of ${sw.all.tasks} tasks and got ${pct(sw.bounded.accuracy)} of the bounded work right${A.raw7 ? `, where a model seven times larger with no checks got ${pct(A.raw7.bounded.accuracy)}` : ''}. The claim that it would come close on accuracy <span class="fail">failed</span>. What it does release is rarely wrong.` : 'The trade-off is not measured yet.');
   const where = A.mine ? `your run on this device (${esc(tierOf(A.tab.model))})` : A.tab ? `the published tab run (${esc(sourceOf(A.tab))})` : 'the published runs';
   if (V) {
     const failed = V.filter((v) => v.pass === false).map((v) => v.id), passed = V.filter((v) => v.pass === true).map((v) => v.id), open = V.filter((v) => v.pass === null && /^pending/.test(v.result)).map((v) => v.id);
