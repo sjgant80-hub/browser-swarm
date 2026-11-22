@@ -1,0 +1,26 @@
+{
+ "v": "browser-swarm-seal/2",
+ "note": "every file that can change an answer, frozen before the test split was read; a test-split run counts only when its sealSha256 equals the SHA-256 of this file",
+ "files": {
+  "src/adversary.mjs": "b8b2ad89fbc0a74d3a3231c9cc452af8a81597b8aee13b1b49e42176ad3a7412",
+  "src/cells.mjs": "980a1459d0144604bbfad4235eecbc74acad748b3f876abdb6d0be9499da678e",
+  "src/checks.mjs": "4fe3747a4d6d0c579f27fefc93863614f11a91a7a36b727131b5b88148b9ab86",
+  "src/score.mjs": "1f1ff6a55006545bb6f2114b2779abc5287abea0413dfd22bb6eb075a5e4ff9b",
+  "src/sha256.mjs": "07bc007e05bb6add2ed6cafb46f90e4a1b49c37892d6b2dd5124414f3a36994e",
+  "src/swarm.mjs": "55d4e4b94f8bd3010cbd53863d0b6f3dee3fc0d0c071b4138d5d14ff73a0ecdc",
+  "vendor/docdec-gate.mjs": "3f0b10802fa42bf793404b59996699210b72ce89b07aaca067cc060ea3e3326c",
+  "vendor/docdec-kernel.mjs": "51e1f33730bfd1870b7de184f732c6ed6af7694b1a04c1b627c19054d7a0365f",
+  "vendor/guard.mjs": "fc58ac5d0c94355a4bf6851015bda0594cf204dc683f3cbac506d9409fca827a",
+  "vendor/route.mjs": "e891f69d8661309c34648843c5f34eda30b79885e004ff12faa6da0fd688766c",
+  "vendor/stats.mjs": "c8b36932ceeacc8a2c48ebf98c00a103c29708cd340b8e9edf81f218016cbe5c",
+  "data/settings.json": "262193147694e3271207ee600b2a932bcbfea2c932e0c8f5a31e17ffba433530",
+  "data/corpus.json": "4dad45da3cf5b8c26334aba3c0c380da7f14116d7bd85085fc5ccd677c099774",
+  "data/banking-index.json": "a5c32e98fcaa6e9fad4b411a1404e0ffa177990dac8920bd1b55195752e7d17c",
+  "data/departments.json": "be82cf9fa6010d130d132b57e01e0dedf792c4d660cd3a03bfe06c8f1187f2b6",
+  "data/suite.json": "bf949de227655b73f04d5c52a8c9f50289b38c7e1f0efd42a4af044d9b7b994e",
+  "data/attacks.json": "5669f6dc1617289d2d1b8fb58f0c3f6fdc3085b6395fde3f14564b4d7b9509b6",
+  "scripts/run-node.mjs": "a1c2ddab0161736038c0fe9d9dcf4f356d9528341e42771b185eb8e6357e7ddc",
+  "scripts/replay.mjs": "af5af144238b78c5bcd2ac87f436c981cedf114b465e06131bb68b40e884e3d2",
+  "scripts/attack.mjs": "1d328ade50f8cf3713610202e904d1a6efafc6ff42d21e36d0478672791f3357"
+ }
+}

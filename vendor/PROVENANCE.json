@@ -1,0 +1,46 @@
+{
+ "v": "browser-swarm-vendor/1",
+ "note": "each vendored file is byte for byte the file at that commit of its home repository, where it is mutation-gated",
+ "files": [
+  {
+   "file": "vendor/guard.mjs",
+   "repo": "sjgant80-hub/estate-genome",
+   "path": "src/guard.mjs",
+   "gate": "estate-genome data/gates.json: src/guard.mjs CLEAN 34/34",
+   "commit": "754d77753885da41a8810ba300395ec0df98ff87",
+   "sha256": "fc58ac5d0c94355a4bf6851015bda0594cf204dc683f3cbac506d9409fca827a"
+  },
+  {
+   "file": "vendor/route.mjs",
+   "repo": "sjgant80-hub/estate-genome",
+   "path": "src/route.mjs",
+   "gate": "estate-genome data/gates.json: src/route.mjs CLEAN 16/16",
+   "commit": "754d77753885da41a8810ba300395ec0df98ff87",
+   "sha256": "e891f69d8661309c34648843c5f34eda30b79885e004ff12faa6da0fd688766c"
+  },
+  {
+   "file": "vendor/docdec-kernel.mjs",
+   "repo": "sjgant80-hub/docdecdemo",
+   "path": "kernel.mjs",
+   "gate": "docdecdemo data/v2/gates.json",
+   "commit": "85bb7f6e5e9e94f891540b7d2f41dcdf92246002",
+   "sha256": "51e1f33730bfd1870b7de184f732c6ed6af7694b1a04c1b627c19054d7a0365f"
+  },
+  {
+   "file": "vendor/docdec-gate.mjs",
+   "repo": "sjgant80-hub/docdecdemo",
+   "path": "src/gate.mjs",
+   "gate": "docdecdemo data/v2/gates.json",
+   "commit": "85bb7f6e5e9e94f891540b7d2f41dcdf92246002",
+   "sha256": "3f0b10802fa42bf793404b59996699210b72ce89b07aaca067cc060ea3e3326c"
+  },
+  {
+   "file": "vendor/stats.mjs",
+   "repo": "sjgant80-hub/docdecdemo",
+   "path": "src/stats.mjs",
+   "gate": "docdecdemo data/v2/gates.json",
+   "commit": "85bb7f6e5e9e94f891540b7d2f41dcdf92246002",
+   "sha256": "c8b36932ceeacc8a2c48ebf98c00a103c29708cd340b8e9edf81f218016cbe5c"
+  }
+ ]
+}
