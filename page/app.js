@@ -439,13 +439,16 @@ async function sealHash() {
 async function runSuite() {
   const which = $('runWhich').value, pool = poolOf(which), seal = await sealHash();
   let L = S.local;
-  if (!L || L.split !== which || L.model !== S.model || L.complete) L = { v: 'browser-swarm-run/1', venue: 'tab (WebLLM 0.2.79, WebGPU)', model: S.model, gpu: S.gpu, ua: navigator.userAgent, split: which, sealSha256: seal, at: new Date().toISOString(), seconds: 0, privacy: { requests: 0 }, records: { gated: [], raw: [] }, usage: [], complete: false };
+  if (!L || L.split !== which || L.model !== S.model || L.complete) L = { v: 'browser-swarm-run/1', venue: 'tab (WebLLM 0.2.79, WebGPU)', model: S.model, gpu: S.gpu, ua: navigator.userAgent, split: which, sealSha256: seal, at: new Date().toISOString(), seconds: 0, privacy: { requests: 0 }, segments: 0, records: { gated: [], raw: [] }, usage: [], complete: false };
   S.local = L; S.view = 'mine'; setBusy(true); $('save').disabled = true;
+  L.segments = (L.segments || 0) + 1;   // how many sittings this run took: a discarded or closed tab resumes as a new one
   const seen = [];
   const obs = new PerformanceObserver((l) => { for (const e of l.getEntries()) seen.push(e.name); });
   try { obs.observe({ type: 'resource', buffered: false }); } catch { /* no observer */ }
   const before = performance.getEntriesByType('resource').length;
-  const call = SWARM.caller(ask), t0 = Date.now(), base = L.seconds;
+  const call = SWARM.caller(ask), t0 = Date.now(), base = L.seconds, baseReq = L.privacy.requests || 0;
+  // the request count is kept with every save, so a sitting that ends in a discarded tab still counts what it saw
+  const count = () => { L.privacy = { requests: baseReq + Math.max(performance.getEntriesByType('resource').length - before, seen.length), observed: [...(L.privacy.observed || []), ...seen].slice(0, 20) }; };
   const status = () => {
     const A = view('mine'), g = A.swarm, r = A.raw1, n = L.records.gated.length;
     $('runBar').style.width = `${Math.round((n / pool.length) * 100)}%`;
@@ -459,15 +462,16 @@ async function runSuite() {
     L.records.gated.push(g); L.records.raw.push(r); L.usage.push(usageNow); usageNow = null;
     L.seconds = base + Math.round((Date.now() - t0) / 1000);
     const n = L.records.gated.length;
-    if (n % 5 === 0 || n === pool.length) { store.set('bs-run', L); await renderAll(); }
+    count(); store.set('bs-run', L);
+    if (n % 5 === 0 || n === pool.length) await renderAll();
     status();
   }
   try { obs.disconnect(); } catch { /* none */ }
-  L.privacy = { requests: L.privacy.requests + Math.max(performance.getEntriesByType('resource').length - before, seen.length), observed: seen.slice(0, 20) };
+  count();
   L.complete = L.records.gated.length === pool.length;
   store.set('bs-run', L); window.__swarmRun = L;
   await renderAll(); status();
-  $('runOut').innerHTML += `<br><b>Done.</b> Network requests while it ran: ${L.privacy.requests}. Every number on this page is now this device's. Scroll up, or press Save.`;
+  $('runOut').innerHTML += `<br><b>Done</b> in ${L.segments} sitting${L.segments === 1 ? '' : 's'}. Network requests while it ran: ${L.privacy.requests}. Every number on this page is now this device's. Scroll up, or press Save.`;
   setBusy(false); $('save').disabled = false;
 }
 function save() {
@@ -484,26 +488,31 @@ async function attackRun() {
   setBusy(true);
   const call = SWARM.caller(ask);
   const isFalse = (rec, a) => rec.released === true && GATE.f1(String((rec.output && rec.output.answer) || ''), [a.false]) >= 0.5;
-  const out = { v: 'browser-swarm-attacks-run/1', venue: 'tab (WebLLM 0.2.79, WebGPU)', model: S.model, gpu: S.gpu, pool: 'sealed', sealSha256: await sealHash(), at: new Date().toISOString(), records: [], summary: {} };
-  let n = 0;
-  for (const kind of ['A1', 'A2', 'A2b', 'A3']) {
-    const s = { attacks: 0, built: 0, gatedFalse: 0, rawFalse: 0, gatedReleased: 0, refusedAtLane: 0 };
+  const seal = await sealHash();
+  let out = store.get('bs-attack-run');
+  if (!out || out.model !== S.model || out.sealSha256 !== seal || out.complete) out = { v: 'browser-swarm-attacks-run/1', venue: 'tab (WebLLM 0.2.79, WebGPU)', model: S.model, gpu: S.gpu, pool: 'sealed', sealSha256: seal, at: new Date().toISOString(), segments: 0, records: [], summary: {}, complete: false };
+  out.segments++;
+  out.records = out.records.filter((r) => r.kind !== 'A4');
+  const have = new Set(out.records.map((r) => `${r.kind}|${r.id}`));
+  const KINDS = ['A1', 'A2', 'A2b', 'A3'];
+  for (const kind of KINDS) {
     for (const a of list) {
-      s.attacks++;
+      if (have.has(`${kind}|${a.id}`)) continue;   // done before the tab was closed
       const c = ADV.BUILDERS[kind](D.corpus, a);
       if (!c) continue;
-      s.built++;
       const ctx = CELLS.prepare(c, D.bank, D.depts, D.settings);
       const task = { id: `${kind}:${a.id}`, kind: 'qa', request: 'Answer this question from our documents.', input: { question: a.question }, gold: { answer: a.answer, impossible: false } };
       const g = await SWARM.gated(task, call, ctx), r = await SWARM.raw(task, call, ctx);
-      if (isFalse(g, a)) s.gatedFalse++;
-      if (isFalse(r, a)) s.rawFalse++;
-      if (g.released) s.gatedReleased++;
-      if (g.stage === 'lane') s.refusedAtLane++;
       out.records.push({ kind, id: a.id, false: a.false, gated: g, raw: r });
-      $('attackOut').textContent = `${++n} of ${4 * list.length} attacks · ${kind}: the false answer released ${s.gatedFalse} times by the swarm, ${s.rawFalse} by the same model unchecked`;
+      store.set('bs-attack-run', out);
+      $('attackOut').textContent = `${out.records.length} of ${KINDS.length * list.length} attacks run (${kind})…`;
     }
-    out.summary[kind] = s;
+  }
+  const byId = new Map(list.map((a) => [a.id, a]));
+  for (const kind of KINDS) {
+    const recs = out.records.filter((r) => r.kind === kind);
+    out.summary[kind] = { attacks: list.length, built: recs.length, gatedFalse: recs.filter((r) => isFalse(r.gated, byId.get(r.id))).length, rawFalse: recs.filter((r) => isFalse(r.raw, byId.get(r.id))).length,
+      gatedReleased: recs.filter((r) => r.gated.released).length, refusedAtLane: recs.filter((r) => r.gated.stage === 'lane').length };
   }
   const cell = CELLS.CELLS.find((c) => c.name === 'docs-answer'), s4 = { questions: 0, candidates: 0, released: 0, realVerified: 0 };
   for (const a of list) {
@@ -517,7 +526,8 @@ async function attackRun() {
       out.records.push({ kind: 'A4', id: a.id, span: w, status: j.status, why: j.why || '' });
     }
   }
-  out.summary.A4 = s4;
+  out.summary.A4 = s4; out.complete = true;
+  store.set('bs-attack-run', { ...out, records: [] });   // the summary is kept; the full records are handed over once
   S.attacksLocal = { summary: out.summary, model: out.model, gpu: out.gpu, at: out.at };
   store.set('bs-attacks', S.attacksLocal); window.__swarmAttacks = out;
   $('attackOut').innerHTML = `<b>Done.</b> ${['A1', 'A2', 'A2b', 'A3'].map((k) => `${k}: ${out.summary[k].gatedFalse} of ${out.summary[k].built}`).join(' · ')} · A4: ${s4.released} of ${s4.candidates}. The attack table now shows this device.`;
