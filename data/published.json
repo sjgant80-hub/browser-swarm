@@ -5,7 +5,7 @@
  "node1b": "data/runs/node-llama3.2_1b-test.json",
  "attacks": "data/runs/attacks-sealed-llama3.2_1b.json",
  "fold": "data/runs/fold-tab.json",
- "walk": null,
+ "walk": "data/walk.json",
  "frontier": "data/runs/frontier-raw-test.json",
  "attacksTab": "data/runs/attacks-tab.json"
 }

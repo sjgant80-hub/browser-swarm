@@ -1,0 +1,51 @@
+{
+ "v": "browser-swarm-walk/1",
+ "note": "Four buyer personas read this page's text cold on 22 November 2026, each in four parts: 16 readings, 68 minutes. They were played by a local 7B model (qwen2.5:7b), so this is a first-pass audit by a model, not a customer's opinion. Kar checked every gap against the page. The real ones are listed with the fix made. Gaps that came only from reading the page in parts (a term defined in an earlier part) are left out.",
+ "personas": [
+  {
+   "who": "A CFO of a 400-person firm",
+   "verdict": "6 real gaps, all fixed on the page",
+   "gaps": [
+    { "gap": "\"$0 per question\" does not say what it covers, or whether there are other costs.", "fix": "The headline chip and the cost section now say: no meter of any kind; one model download; your own hardware and its electricity." },
+    { "gap": "It does not say what the product replaces, or what you would still pay people to do.", "fix": "New card: what it replaces, and what people still do, with the measured share of jobs it hands back." },
+    { "gap": "The failure rates are not compared with human error rates.", "fix": "The page now says people were not measured on these tasks, so it makes no claim against human error." },
+    { "gap": "Comparing a checked model with a larger unchecked one is not a fair comparison.", "fix": "The larger model behind the same checks was always measured. It is now in the headline, with its accuracy." },
+    { "gap": "A per-seat subscription is compared but not priced.", "fix": "The page now says why: seat prices vary by vendor and contract, so it is compared on behaviour only." },
+    { "gap": "Nothing on long-term maintenance and updates.", "fix": "New section: updates and upkeep." }
+   ]
+  },
+  {
+   "who": "A CISO at a regulated bank",
+   "verdict": "5 real gaps: 4 fixed, 1 stated as a limit",
+   "gaps": [
+    { "gap": "\"Nothing leaves your device\" does not say where data is processed or stored, or what is fetched.", "fix": "The security section now lists it exactly: processed, stored, sent, and fetched from where and when." },
+    { "gap": "No audit trail is described.", "fix": "Added: what each decision record holds, how to save the records, and how any record is re-decided. There is no central log, because nothing is sent." },
+    { "gap": "How is the model's integrity verified?", "fix": "It is not, and the page now says so: the model files are fetched by name and not checked against a fingerprint. For a regulated deployment, host and pin them." },
+    { "gap": "No statement on regulatory compliance.", "fix": "Added: this is not a certification; what it gives a reviewer is evidence, and your own assessment still applies." },
+    { "gap": "What happens when a wrong answer is delivered?", "fix": "The risks now give the measured share of released answers that were wrong, and say to sample what it releases." }
+   ]
+  },
+  {
+   "who": "A sceptical head of AI who uses a frontier model daily",
+   "verdict": "4 real gaps, all fixed on the page",
+   "gaps": [
+    { "gap": "The kinds of task, and how they were chosen, are not stated beside the results.", "fix": "The results now open with the 410-task breakdown, the datasets, and that the tasks were drawn by a fixed seed, not hand-picked." },
+    { "gap": "\"Bounded work\", \"hard work\", \"grounding\" and \"silent failure\" are used without definitions.", "fix": "New box near the top: words on this page." },
+    { "gap": "The statistical test is named but not explained.", "fix": "The words box says what the exact McNemar test is and how to read p." },
+    { "gap": "Why would a model this inaccurate be trusted for critical tasks?", "fix": "It should not be. The page now says it is not for critical decisions without a person." }
+   ]
+  },
+  {
+   "who": "An operations manager with no technical background",
+   "verdict": "6 real gaps, all fixed on the page",
+   "gaps": [
+    { "gap": "It is not clear what the product is: software, a service, or something else.", "fix": "The first sentence now says: a web page, free and open source, nothing to install." },
+    { "gap": "\"A team of specialists\" sounds like several systems.", "fix": "The opening now says it is one small model given seven job descriptions." },
+    { "gap": "Does the model have to be loaded again on every visit?", "fix": "Step 2 now says: it stays in the browser's storage, and you press Load or any Run button each visit." },
+    { "gap": "What can be done without loading the model?", "fix": "Step 2 now says: read every result, and re-check the published runs in step 7." },
+    { "gap": "No steps for hosting it on an intranet.", "fix": "The roll-out's last step now gives them." },
+    { "gap": "How do I read the per-kind table?", "fix": "A one-line reading guide now sits above it." }
+   ]
+  }
+ ]
+}

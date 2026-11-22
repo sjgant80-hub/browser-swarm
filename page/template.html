@@ -85,7 +85,7 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-si
 </nav>
 <main id="top">
 <h1>Small AI that refuses rather than guesses, in your browser tab</h1>
-<p class="lead">Browser Swarm is a team of small AI specialists that runs entirely inside a web page, on your own computer. Each specialist does one bounded job: answer from your documents, read a receipt total, sort a message, convert a date. And each one is checked before it may speak. If the check fails, you get an honest "I can't say" in place of a confident wrong answer. The checks are not perfect, and this page counts every wrong answer that got through. Nothing you type leaves your device. Nothing is charged per question.</p>
+<p class="lead">Browser Swarm is a web page that runs a small AI model on your own computer. It is free and open source, and there is nothing to install. The one model is given seven job descriptions, like seven desks in an office. Each desk does one bounded job: answer from your documents, read a receipt total, sort a message, convert a date. And each one is checked before it may speak. If the check fails, you get an honest "I can't say" in place of a confident wrong answer. The checks are not perfect, and this page counts every wrong answer that got through. Nothing you type leaves your device. Nothing is charged per question.</p>
 <p>It will not out-think a large cloud model, and this page shows exactly where it loses. What it is built for is the one number that decides whether you can trust AI with routine work: <b>how often it delivers a wrong answer as if it were right</b>. That is the silent-failure rate. It was measured on 410 tasks, with every rule written down and sealed before the test was run, and you can re-run it on your own machine.</p>
 <p><b>The price of that, stated up front:</b> <span data-bind="hl.price">The trade-off is not measured yet.</span></p>
 <div class="chips" aria-label="Headline numbers">
@@ -96,10 +96,24 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-si
   <span class="chip">bounded work the swarm gets right <b data-bind="hl.acc">not measured yet</b></span>
   <span class="chip">bounded work the 7× larger model gets right <b data-bind="hl.acc7">not measured yet</b></span>
   <span class="chip">data sent off the device <b data-bind="hl.privacy">not measured yet</b></span>
-  <span class="chip">cost per question <b>$0</b></span>
+  <span class="chip">the 7× larger model behind the same checks <b data-bind="hl.gated7">not measured yet</b></span>
+  <span class="chip">charge per question <b>$0</b> <span class="muted">(no meter: one model download, then your own hardware)</span></span>
 </div>
 <p class="small muted" data-bind="hl.note">not measured yet</p>
 <div id="viewBar" class="card small" aria-live="polite">not measured yet</div>
+<details class="card" id="words"><summary>Words on this page</summary>
+<ul class="small">
+  <li><b>Silent failure</b>: a wrong answer delivered as if it were right. A refusal is never one.</li>
+  <li><b>The swarm, a desk</b>: the one small model given seven job descriptions. A desk (the code calls it a cell) is one of them: what it accepts, what it asks the model, and how its answer is checked.</li>
+  <li><b>Bounded work</b>: a routine job with a right answer that can be checked. Here: answering from documents, reading a receipt total, naming a banking request, routing a message, converting a date, converting an amount, drafting a refund letter.</li>
+  <li><b>Hard work</b>: open general-knowledge and reasoning questions. They are in the test so the swarm's losses show.</li>
+  <li><b>Lane check</b>: the test before the model runs: does this job belong to this desk? If not, the model is never asked.</li>
+  <li><b>Compliance check</b> (the code calls it a judge): the test after the model: code that checks the answer against its source. It is never another model.</li>
+  <li><b>Raw, or unchecked</b>: the same model with every reply delivered as it comes. <b>Gated</b>: behind the checks.</li>
+  <li><b>Grounding</b>: a released answer can be traced to its source by a check anyone can run: the characters in the paragraph, the line on the receipt.</li>
+  <li><b>Sealed</b>: frozen by a fingerprint (a SHA-256 hash) before the test, so nothing could be adjusted after the results were seen.</li>
+  <li><b>p</b> (exact McNemar test): a test on the tasks where two arms disagree. Below 0.05, the gap is unlikely to be chance.</li>
+</ul></details>
 
 <h2 id="start">Start here</h2>
 <ol class="steps">
@@ -108,8 +122,8 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-si
     <div class="row"><label for="tier">Tier</label>
       <select id="tier"><option value="Llama-3.2-1B-Instruct-q4f16_1-MLC">Laptop: Llama 3.2 1B, 4-bit, 879 MB (the measured tier)</option><option value="Qwen2.5-3B-Instruct-q4f16_1-MLC">Desktop: Qwen2.5 3B, 4-bit, 2.5 GB (not measured)</option><option value="Qwen2.5-0.5B-Instruct-q4f16_1-MLC">Phone: Qwen2.5 0.5B, 4-bit, 945 MB (not measured)</option><option value="SmolLM2-360M-Instruct-q4f16_1-MLC">Phone, lightest: SmolLM2 360M, 4-bit, 376 MB (not measured)</option></select>
       <button id="load" type="button">Load the model</button></div>
-    <div class="bar" aria-hidden="true"><i id="loadBar"></i></div><div id="loadStatus" class="small muted">Not loaded yet. Step 7 works without a model.</div>
-    <p class="small muted">Memory figures are WebLLM's own for each build. Every number on this page names the tier it was measured on. Only the laptop tier has been measured.</p></li>
+    <div class="bar" aria-hidden="true"><i id="loadBar"></i></div><div id="loadStatus" class="small muted">Not loaded yet. Without it you can still read every result and re-check the published runs in step 7.</div>
+    <p class="small muted">The model stays in the browser's storage, but it has to be loaded into memory on each visit: press Load, or any Run button. Memory figures are WebLLM's own for each build. Every number on this page names the tier it was measured on. Only the laptop tier has been measured.</p></li>
   <li><b>Watch the company work.</b> Seven desks share the one model. Open the inbox and each real job is routed to a desk, or refused. The jobs are the first of each kind from the dev set, not hand-picked, so you will see it withhold more than it releases. You'll see the model's words arrive as it writes them, then the compliance check decide whether they may leave. The gauges count as it goes.
     <div id="desks" class="grid three">not measured yet</div>
     <div class="row"><button id="work" type="button" disabled>Open the inbox</button><span class="small muted">Eleven real jobs, about a minute. One click: it loads the model first if step 2 has not.</span></div>
@@ -144,7 +158,7 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-si
 </ol>
 
 <h2 id="results">The six numbers</h2>
-<p>Each arm answered the same sealed test tasks. The <b>swarm</b> is a 1B model in a browser tab, behind its checks. <b>1B raw</b> is the same model on the same prompts, with every reply delivered unchecked. <b>7B raw</b> is a model seven times larger, run on a laptop processor. <b>7B gated</b> is that larger model behind the same checks: the fair comparison, which shows how much of the result comes from the checks rather than the model. <b>Frontier raw</b> is a large cloud model, Claude Opus 5.5 at medium effort, given the same prompts unchecked. It was called through Kar's spend wall under its owner's written approval, with a $4 cap, on a seeded sample of the test tasks, so its column covers the tasks the caps allowed.</p>
+<p>The test is 410 tasks: 60 questions about a set of documents, 50 receipts, 60 banking messages, 60 messages to route, 25 dates, 25 amounts, 50 refund letters, and 80 hard general questions the swarm is expected to refuse. They were drawn by a fixed seed from published datasets (SQuAD 2.0, CORD, Banking77, CLINC150 and MMLU) plus three generated kinds. None was hand-picked. Each arm answered the same tasks. The <b>swarm</b> is a 1B model in a browser tab, behind its checks. <b>1B raw</b> is the same model on the same prompts, with every reply delivered unchecked. <b>7B raw</b> is a model seven times larger, run on a laptop processor. <b>7B gated</b> is that larger model behind the same checks: the fair comparison, which shows how much of the result comes from the checks rather than the model. <b>Frontier raw</b> is a large cloud model, Claude Opus 5.5 at medium effort, given the same prompts unchecked. It was called through Kar's spend wall under its owner's written approval, with a $4 cap, on a seeded sample of the test tasks, so its column covers the tasks the caps allowed.</p>
 <div class="tbl" id="six">not measured yet</div>
 <p class="small muted" id="sixNote">not measured yet</p>
 <h3>The headline: silent-failure rate</h3>
@@ -153,6 +167,7 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-si
 <p class="small muted">A silent failure is a wrong answer delivered as if it were right. A refusal is never one. The checks turn would-be silent failures into refusals, which is why the swarm's accuracy is lower than the raw model's on the same work.</p>
 
 <h3>Per kind of work</h3>
+<p class="small muted">Read a row as: of the tasks of this kind, how many came out right (a right answer released, or a job rightly refused), how many wrong answers got through (silent), and how many answers were released at all.</p>
 <div class="tbl" id="kinds">not measured yet</div>
 
 <h2 id="claims">The pre-registered claims</h2>
@@ -224,11 +239,12 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-si
   <li><b>Sign your corpus</b> (for documents) or build the word index (for labels) from your own data.</li>
   <li><b>Run your test set on this page</b>, on a staff laptop, and read your own six numbers. Decide whether its refusal rate is one you can live with.</li>
   <li><b>Put it in front of staff with the refusals routed to a person.</b> Every refusal says why, and that list becomes your backlog.</li>
-  <li><b>Host it yourself.</b> It is one static page. Put it on your intranet, and after the first load it works offline.</li>
+  <li><b>Host it yourself.</b> Copy the repository's files to any web server on your intranet, or fork it and switch on GitHub Pages. There is no build step and no server code. Open <code>index.html</code> over https (WebGPU needs a secure address). After the first load it works offline.</li>
 </ol>
 
 <h2 id="brochure">For buyers: the case, no hedging</h2>
 <div class="grid two">
+<div class="card"><h3>What it replaces, and what people still do</h3><p>It takes the routine first pass at the seven bounded jobs above. People still do three things: <span data-bind="b.people">the share is not measured yet.</span> People were not measured on these tasks, so this page makes no claim against human error rates. It is not for critical decisions without a person.</p></div>
 <div class="card"><h3>What it does</h3><p>It does bounded AI work in a browser tab, on your hardware, and checks every answer before release. Its headline measure is the silent-failure rate. <span data-bind="b.vs">The comparison is not measured yet.</span></p></div>
 <div class="card"><h3>Chief executive</h3><p>Routine AI work without a data-sharing agreement, without a per-question bill, and with a measured answer to the board's question: how often is it confidently wrong?</p></div>
 <div class="card"><h3>Finance</h3><p>No tokens are bought and the hardware is already on the books. The cost case below uses your own volumes and your own cost of an error. Nothing is assumed for you.</p></div>
@@ -244,7 +260,7 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-si
   <div class="card"><div class="small muted">Silent failures removed per month, against the same model unchecked</div><div class="kpi" data-bind="cost.silent">not measured yet</div></div>
   <div class="card"><div class="small muted">What those failures would have cost you</div><div class="kpi" data-bind="cost.silentCost">not measured yet</div></div>
 </div>
-<p class="small muted">The swarm's own cost is the electricity of a laptop already switched on. That is stated, not measured. The comparison prices the frontier API only. It does not claim the frontier model's accuracy, which is pending (claim X).</p>
+<p class="small muted">The swarm has no meter: no charge per question, per task or per seat. Its costs are a one-off model download, the laptops you already own, and their electricity, which is stated here, not measured. A per-seat subscription is not priced on this page: seat prices vary by vendor and contract, so it is compared on behaviour only, in the table below. The comparison prices the frontier API only. It does not claim the frontier model's accuracy, which is pending (claim X).</p>
 <h3>Against what you pay now</h3>
 <div class="tbl"><table><thead><tr><th></th><th>Browser Swarm</th><th>A cloud AI API</th><th>A per-seat AI subscription</th></tr></thead><tbody>
 <tr><td>Where your data goes</td><td>Nowhere: it stays in the tab</td><td>To the provider</td><td>To the provider</td></tr>
@@ -259,8 +275,14 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-si
   <li><b>No processing leaves the device.</b> The model runs in the browser on WebGPU. The page loads its model from the MLC project's published build once, then works offline. It sends nothing back anywhere.</li>
   <li><b>No personal data is collected by us.</b> There is no account, analytics or telemetry. Results are saved only if you press "Save my results", to your own disk.</li>
   <li><b>Supply chain.</b> The page loads one library, WebLLM 0.2.79, pinned to an exact version. Its code is MIT-licensed and public, and its decision code is mutation-gated with witness v0.6.</li>
+  <li><b>Where your data is, exactly.</b> Processed: in this tab's memory and on your own GPU. Stored: the model in this browser's cache, and a saved run of your own in this browser's local storage, for this site only. Sent: nothing. Fetched, at load time only: the page from GitHub Pages, the WebLLM library from the jsDelivr CDN, the model's weights from the MLC project's repository on Hugging Face, and its compiled code from the MLC project's repository on GitHub.</li>
+  <li><b>Audit trail.</b> Every decision is a record: the request, the desk, the lane check's result, the model's exact reply, the check's verdict and reason, and for a released fact its source and character positions. "Save my results" writes the records to a file on your disk, and step 7 shows how any record is re-decided from its reply. There is no central log, because nothing is sent anywhere.</li>
+  <li><b>Model integrity: a limit.</b> WebLLM fetches the model files by name and does not check them against a fingerprint, and neither does this page. For a regulated deployment, host the model files on your own server and pin them.</li>
+  <li><b>Not a certification.</b> This page is not a compliance certificate. What it gives a reviewer is evidence: no data leaves the device, every decision can be replayed, and the failure rate is measured and published. Your own data-protection assessment still applies.</li>
   <li><b>Assurance.</b> The claims were registered before the test, the code was frozen by hash before the test, and every published decision can be replayed in your browser.</li>
 </ul>
+<h3>Updates and upkeep</h3>
+<p>Nothing updates by itself. The page pins its library and its model by exact version. To change the model, a desk or a check, you edit the files, re-run your test set, and publish again; a test fails if any sealed file changes without a new seal. A new desk is admitted only when its check can tell a right answer from a wrong one.</p>
 <h3>Deployment, support and ownership</h3>
 <p>It is one static page and its data files. Host it on your intranet, or use this one. The code is MIT-licensed to its holder, Simon Gant, and is yours to fork. It is supplied by <a href="https://www.ai-nativesolutions.com">AI Native Solutions</a>; start there for a deployment on your own job and data. Support is agreed per deployment, in each deployment's agreement.</p>
 <h3>Risks, answered straight</h3>
@@ -270,6 +292,8 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-si
   <li><b>"A lying source passes."</b> Yes (A2b). Sign only documents you stand behind.</li>
   <li><b>"Not every laptop has WebGPU."</b> Step 1 checks this. Without it, the model cannot run here, but the published numbers can still be re-judged here.</li>
   <li><b>"The first load is large."</b> About 880 MB, once per browser.</li>
+  <li><b>"What it releases can still be wrong."</b> Yes. <span data-bind="b.spot">The share is not measured yet.</span> Sample what it releases as well as what it hands back.</li>
+  <li><b>"The model files are not pinned."</b> True today: see the security answers above.</li>
 </ul>
 <h3>The case for the board</h3>
 <p>Most AI risk is not the obvious failure. It is the confident wrong answer that nobody catches. This product measures that rate, publishes it with its losses, and lets anyone check it. <span data-bind="b.board">The cut in confidently wrong answers is not measured yet.</span> It does that with no data leaving the building and no bill per question. Start with one bounded job and your own test set, and decide on your own numbers.</p>

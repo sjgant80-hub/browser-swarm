@@ -256,7 +256,9 @@ function renderHeadline(A, V) {
   bind('hl.swarm', sw ? of(sw) : NM); bind('hl.raw1', r1 ? of(r1) : NM); bind('hl.raw7', A.raw7 ? of(A.raw7) : NM); bind('hl.frontier', A.frontier ? of(A.frontier) : NM);
   bind('hl.privacy', A.tab && A.tab.privacy ? `${A.tab.privacy.requests} requests` : NM);
   const acc = (m) => (m && m.bounded.tasks ? `${pct(m.bounded.accuracy)} <span class="muted">(${m.bounded.correct} of ${m.bounded.tasks})</span>` : NM);
-  bind('hl.acc', acc(sw)); bind('hl.acc7', acc(A.raw7));
+  bind('hl.acc', acc(sw)); bind('hl.acc7', acc(A.raw7)); bind('hl.gated7', A.gated7 ? `${of(A.gated7)}, ${pct(A.gated7.bounded.accuracy)} of bounded work right` : NM);
+  bind('b.people', sw ? `every job it hands back (on the sealed test it handed back ${sw.all.tasks - sw.all.released} of ${sw.all.tasks}), everything hard or open, and spot checks of what it releases.` : 'the share is not measured yet.');
+  bind('b.spot', sw ? `Of the ${sw.all.released} answers it released on the sealed test, ${sw.all.silent} were wrong (${pct(sw.all.silentAmongReleased)}).` : 'The share is not measured yet.');
   bind('hl.price', sw && sw.bounded.tasks ? `the swarm refuses far more than it answers. It released an answer on ${sw.all.released} of ${sw.all.tasks} tasks and got ${pct(sw.bounded.accuracy)} of the bounded work right${A.raw7 ? `, where a model seven times larger with no checks got ${pct(A.raw7.bounded.accuracy)}` : ''}. The claim that it would come close on accuracy <span class="fail">failed</span>. Of the ${sw.all.released} answers it released, ${sw.all.silent} were wrong (${pct(sw.all.silentAmongReleased)})${r1 ? `; of the ${r1.all.released} the same model released unchecked, ${r1.all.silent} were wrong (${pct(r1.all.silentAmongReleased)})` : ''}.` : 'The trade-off is not measured yet.');
   const where = A.mine ? `your run on this device (${esc(tierOf(A.tab.model))})` : A.tab ? `the published tab run (${esc(sourceOf(A.tab))})` : 'the published runs';
   if (V) {
