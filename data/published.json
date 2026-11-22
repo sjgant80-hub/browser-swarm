@@ -1,1 +1,9 @@
-{ "note": "the runs the page shows; null = not published yet", "tab": null, "big": null, "node1b": null, "attacks": null, "fold": null, "walk": null }
+{
+ "note": "the runs the page shows; null = not published yet",
+ "tab": null,
+ "big": "data/runs/node-qwen2.5_7b-test.json",
+ "node1b": null,
+ "attacks": null,
+ "fold": null,
+ "walk": null
+}
