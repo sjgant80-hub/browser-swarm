@@ -1,0 +1,658 @@
+{
+ "v": "browser-swarm-corpus/1",
+ "from": "DocDec eval set (SQuAD 2.0 subset)",
+ "license": "CC BY-SA 4.0",
+ "root": "29a0eb23c9b580d4cfe3fe9cf47e2489d2eb1b1490552c60f0c2cf95fa3dc5f5",
+ "paragraphs": [
+  {
+   "id": "Normans#0",
+   "text": "The Normans (Norman: Nourmands; French: Normands; Latin: Normanni) were the people who in the 10th and 11th centuries gave their name to Normandy, a region in France. They were descended from Norse (\"Norman\" comes from \"Norseman\") raiders and pirates from Denmark, Iceland and Norway who, under their leader Rollo, agreed to swear fealty to King Charles III of West Francia. Through generations of assimilation and mixing with the native Frankish and Roman-Gaulish populations, their descendants would gradually merge with the Carolingian-based cultures of West Francia. The distinct cultural and ethnic identity of the Normans emerged initially in the first half of the 10th century, and it continued to evolve over the succeeding centuries.",
+   "sha256": "dd5c8526091ce0e937a062da23833808b4e54d9ce41cdc101173265b6a718bbd"
+  },
+  {
+   "id": "Normans#1",
+   "text": "The Norman dynasty had a major political, cultural and military impact on medieval Europe and even the Near East. The Normans were famed for their martial spirit and eventually for their Christian piety, becoming exponents of the Catholic orthodoxy into which they assimilated. They adopted the Gallo-Romance language of the Frankish land they settled, their dialect becoming known as Norman, Normaund or Norman French, an important literary language. The Duchy of Normandy, which they formed by treaty with the French crown, was a great fief of medieval France, and under Richard I of Normandy was forged into a cohesive and formidable principality in feudal tenure. The Normans are noted both for their culture, such as their unique Romanesque architecture and musical traditions, and for their significant military accomplishments and innovations. Norman adventurers founded the Kingdom of Sicily under Roger II after conquering southern Italy on the Saracens and Byzantines, and an expedition on behalf of their duke, William the Conqueror, led to the Norman conquest of England at the Battle of Hastings in 1066. Norman cultural and military influence spread from these new European centres to the Crusader states of the Near East, where their prince Bohemond I founded the Principality of Antioch in the Levant, to Scotland and Wales in Great Britain, to Ireland, and to the coasts of north Africa and the Canary Islands.",
+   "sha256": "6a4859b84af16a97c8e1dcf1acad6e45d077ea9ef8ecf5e9a80b9bc201a26760"
+  },
+  {
+   "id": "Normans#2",
+   "text": "The English name \"Normans\" comes from the French words Normans/Normanz, plural of Normant, modern French normand, which is itself borrowed from Old Low Franconian Nortmann \"Northman\" or directly from Old Norse Norðmaðr, Latinized variously as Nortmannus, Normannus, or Nordmannus (recorded in Medieval Latin, 9th century) to mean \"Norseman, Viking\".",
+   "sha256": "72457fa0c9150fb2a7fed021650358b9295b523f55397d61363a047683297908"
+  },
+  {
+   "id": "Normans#3",
+   "text": "In the course of the 10th century, the initially destructive incursions of Norse war bands into the rivers of France evolved into more permanent encampments that included local women and personal property. The Duchy of Normandy, which began in 911 as a fiefdom, was established by the treaty of Saint-Clair-sur-Epte between King Charles III of West Francia and the famed Viking ruler Rollo, and was situated in the former Frankish kingdom of Neustria. The treaty offered Rollo and his men the French lands between the river Epte and the Atlantic coast in exchange for their protection against further Viking incursions. The area corresponded to the northern part of present-day Upper Normandy down to the river Seine, but the Duchy would eventually extend west beyond the Seine. The territory was roughly equivalent to the old province of Rouen, and reproduced the Roman administrative structure of Gallia Lugdunensis II (part of the former Gallia Lugdunensis).",
+   "sha256": "231a015181e1e06c442f571a8baa25ce2ec844e939e02b2955b0aee6945c648b"
+  },
+  {
+   "id": "Normans#4",
+   "text": "Before Rollo's arrival, its populations did not differ from Picardy or the Île-de-France, which were considered \"Frankish\". Earlier Viking settlers had begun arriving in the 880s, but were divided between colonies in the east (Roumois and Pays de Caux) around the low Seine valley and in the west in the Cotentin Peninsula, and were separated by traditional pagii, where the population remained about the same with almost no foreign settlers. Rollo's contingents who raided and ultimately settled Normandy and parts of the Atlantic coast included Danes, Norwegians, Norse–Gaels, Orkney Vikings, possibly Swedes, and Anglo-Danes from the English Danelaw under Norse control.",
+   "sha256": "92cbfe0adf7c07d3dee4f0e9ccfab845d9dcdc504748be9b51256859cd1a2a6b"
+  },
+  {
+   "id": "Normans#5",
+   "text": "The descendants of Rollo's Vikings and their Frankish wives would replace the Norse religion and Old Norse language with Catholicism (Christianity) and the Gallo-Romance language of the local people, blending their maternal Frankish heritage with Old Norse traditions and customs to synthesize a unique \"Norman\" culture in the north of France. The Norman language was forged by the adoption of the indigenous langue d'oïl branch of Romance by a Norse-speaking ruling class, and it developed into the regional language that survives today.",
+   "sha256": "6cc34106bc6b1deb652e610973c798faa2caaaed6b16c99c39c6f5b49df3a196"
+  },
+  {
+   "id": "Normans#6",
+   "text": "The Normans thereafter adopted the growing feudal doctrines of the rest of France, and worked them into a functional hierarchical system in both Normandy and in England. The new Norman rulers were culturally and ethnically distinct from the old French aristocracy, most of whom traced their lineage to Franks of the Carolingian dynasty. Most Norman knights remained poor and land-hungry, and by 1066 Normandy had been exporting fighting horsemen for more than a generation. Many Normans of Italy, France and England eventually served as avid Crusaders under the Italo-Norman prince Bohemund I and the Anglo-Norman king Richard the Lion-Heart.",
+   "sha256": "27749618f729fa62e79b34e0666fb6ce7980b9e0e582584b2a78d0294543512a"
+  },
+  {
+   "id": "Normans#7",
+   "text": "Soon after the Normans began to enter Italy, they entered the Byzantine Empire and then Armenia, fighting against the Pechenegs, the Bulgars, and especially the Seljuk Turks. Norman mercenaries were first encouraged to come to the south by the Lombards to act against the Byzantines, but they soon fought in Byzantine service in Sicily. They were prominent alongside Varangian and Lombard contingents in the Sicilian campaign of George Maniaces in 1038–40. There is debate whether the Normans in Greek service actually were from Norman Italy, and it now seems likely only a few came from there. It is also unknown how many of the \"Franks\", as the Byzantines called them, were Normans and not other Frenchmen.",
+   "sha256": "89494d97715f55668860a0d80728f6cfb351c1eaed8068e4319ca353f7e4a9a9"
+  },
+  {
+   "id": "Normans#8",
+   "text": "One of the first Norman mercenaries to serve as a Byzantine general was Hervé in the 1050s. By then however, there were already Norman mercenaries serving as far away as Trebizond and Georgia. They were based at Malatya and Edessa, under the Byzantine duke of Antioch, Isaac Komnenos. In the 1060s, Robert Crispin led the Normans of Edessa against the Turks. Roussel de Bailleul even tried to carve out an independent state in Asia Minor with support from the local population, but he was stopped by the Byzantine general Alexius Komnenos.",
+   "sha256": "8d0f136ca3e21898494994833851f5c381fc610d00c5a286083f4b15d65caad4"
+  },
+  {
+   "id": "Normans#9",
+   "text": "Some Normans joined Turkish forces to aid in the destruction of the Armenians vassal-states of Sassoun and Taron in far eastern Anatolia. Later, many took up service with the Armenian state further south in Cilicia and the Taurus Mountains. A Norman named Oursel led a force of \"Franks\" into the upper Euphrates valley in northern Syria. From 1073 to 1074, 8,000 of the 20,000 troops of the Armenian general Philaretus Brachamius were Normans—formerly of Oursel—led by Raimbaud. They even lent their ethnicity to the name of their castle: Afranji, meaning \"Franks.\" The known trade between Amalfi and Antioch and between Bari and Tarsus may be related to the presence of Italo-Normans in those cities while Amalfi and Bari were under Norman rule in Italy.",
+   "sha256": "e80ce1ef7c64e3240017398f3333a9fece8bfa318dc05be5457d3ab870d07771"
+  },
+  {
+   "id": "Normans#10",
+   "text": "Several families of Byzantine Greece were of Norman mercenary origin during the period of the Comnenian Restoration, when Byzantine emperors were seeking out western European warriors. The Raoulii were descended from an Italo-Norman named Raoul, the Petraliphae were descended from a Pierre d'Aulps, and that group of Albanian clans known as the Maniakates were descended from Normans who served under George Maniaces in the Sicilian expedition of 1038.",
+   "sha256": "b1d0c552c7191c039b4fd09d303a727030d84b6cc8c1731a2822fd79722b3862"
+  },
+  {
+   "id": "Normans#11",
+   "text": "Robert Guiscard, an other Norman adventurer previously elevated to the dignity of count of Apulia as the result of his military successes, ultimately drove the Byzantines out of southern Italy. Having obtained the consent of pope Gregory VII and acting as his vassal, Robert continued his campaign conquering the Balkan peninsula as a foothold for western feudal lords and the Catholic Church. After allying himself with Croatia and the Catholic cities of Dalmatia, in 1081 he led an army of 30,000 men in 300 ships landing on the southern shores of Albania, capturing Valona, Kanina, Jericho (Orikumi), and reaching Butrint after numerous pillages. They joined the fleet that had previously conquered Corfu and attacked Dyrrachium from land and sea, devastating everything along the way. Under these harsh circumstances, the locals accepted the call of emperor Alexius I Comnenus to join forces with the Byzantines against the Normans. The Albanian forces could not take part in the ensuing battle because it had started before their arrival. Immediately before the battle, the Venetian fleet had secured a victory in the coast surrounding the city. Forced to retreat, Alexius ceded the command to a high Albanian official named Comiscortes in the service of Byzantium. The city's garrison resisted until February 1082, when Dyrrachium was betrayed to the Normans by the Venetian and Amalfitan merchants who had settled there. The Normans were now free to penetrate into the hinterland; they took Ioannina and some minor cities in southwestern Macedonia and Thessaly before appearing at the gates of Thessalonica. Dissension among the high ranks coerced the Normans to retreat to Italy. They lost Dyrrachium, Valona, and Butrint in 1085, after the death of Robert.",
+   "sha256": "536e195415da4934032881cb450b11e570caec121170eb2072ecccea49d36996"
+  },
+  {
+   "id": "Normans#12",
+   "text": "A few years after the First Crusade, in 1107, the Normans under the command of Bohemond, Robert's son, landed in Valona and besieged Dyrrachium using the most sophisticated military equipment of the time, but to no avail. Meanwhile, they occupied Petrela, the citadel of Mili at the banks of the river Deabolis, Gllavenica (Ballsh), Kanina and Jericho. This time, the Albanians sided with the Normans, dissatisfied by the heavy taxes the Byzantines had imposed upon them. With their help, the Normans secured the Arbanon passes and opened their way to Dibra. The lack of supplies, disease and Byzantine resistance forced Bohemond to retreat from his campaign and sign a peace treaty with the Byzantines in the city of Deabolis.",
+   "sha256": "00490c1aee74110c3cd1afd78d24a5278d94f9a92455ff33a952663986874447"
+  },
+  {
+   "id": "Normans#13",
+   "text": "The further decline of Byzantine state-of-affairs paved the road to a third attack in 1185, when a large Norman army invaded Dyrrachium, owing to the betrayal of high Byzantine officials. Some time later, Dyrrachium—one of the most important naval bases of the Adriatic—fell again to Byzantine hands.",
+   "sha256": "d352fae900cfd1fb07e900ce8c975e46f39748c746696de6bdeb051c5bc2580d"
+  },
+  {
+   "id": "Normans#14",
+   "text": "The Normans were in contact with England from an early date. Not only were their original Viking brethren still ravaging the English coasts, they occupied most of the important ports opposite England across the English Channel. This relationship eventually produced closer ties of blood through the marriage of Emma, sister of Duke Richard II of Normandy, and King Ethelred II of England. Because of this, Ethelred fled to Normandy in 1013, when he was forced from his kingdom by Sweyn Forkbeard. His stay in Normandy (until 1016) influenced him and his sons by Emma, who stayed in Normandy after Cnut the Great's conquest of the isle.",
+   "sha256": "2040b02c1c6b01d5338300b80a1c0ae71f9b266eb95d141e6f008328e7ad6251"
+  },
+  {
+   "id": "Normans#15",
+   "text": "When finally Edward the Confessor returned from his father's refuge in 1041, at the invitation of his half-brother Harthacnut, he brought with him a Norman-educated mind. He also brought many Norman counsellors and fighters, some of whom established an English cavalry force. This concept never really took root, but it is a typical example of the attitudes of Edward. He appointed Robert of Jumièges archbishop of Canterbury and made Ralph the Timid earl of Hereford. He invited his brother-in-law Eustace II, Count of Boulogne to his court in 1051, an event which resulted in the greatest of early conflicts between Saxon and Norman and ultimately resulted in the exile of Earl Godwin of Wessex.",
+   "sha256": "2eb036f29c316461f4c29577e8a7d145eaf561304aa07090de17f07637b9b838"
+  },
+  {
+   "id": "Normans#16",
+   "text": "In 1066, Duke William II of Normandy conquered England killing King Harold II at the Battle of Hastings. The invading Normans and their descendants replaced the Anglo-Saxons as the ruling class of England. The nobility of England were part of a single Normans culture and many had lands on both sides of the channel. Early Norman kings of England, as Dukes of Normandy, owed homage to the King of France for their land on the continent. They considered England to be their most important holding (it brought with it the title of King—an important status symbol).",
+   "sha256": "b0cc267c558cbacbae71b948e32e72786e48630b11fbacff7f754248d31c02ee"
+  },
+  {
+   "id": "Normans#17",
+   "text": "Eventually, the Normans merged with the natives, combining languages and traditions. In the course of the Hundred Years' War, the Norman aristocracy often identified themselves as English. The Anglo-Norman language became distinct from the Latin language, something that was the subject of some humour by Geoffrey Chaucer. The Anglo-Norman language was eventually absorbed into the Anglo-Saxon language of their subjects (see Old English) and influenced it, helping (along with the Norse language of the earlier Anglo-Norse settlers and the Latin used by the church) in the development of Middle English. It in turn evolved into Modern English.",
+   "sha256": "e77cc2842075cf67e0f42d9c55fea1df5857504c655c9e1e596c5f52dc859507"
+  },
+  {
+   "id": "Normans#18",
+   "text": "The Normans had a profound effect on Irish culture and history after their invasion at Bannow Bay in 1169. Initially the Normans maintained a distinct culture and ethnicity. Yet, with time, they came to be subsumed into Irish culture to the point that it has been said that they became \"more Irish than the Irish themselves.\" The Normans settled mostly in an area in the east of Ireland, later known as the Pale, and also built many fine castles and settlements, including Trim Castle and Dublin Castle. Both cultures intermixed, borrowing from each other's language, culture and outlook. Norman descendants today can be recognised by their surnames. Names such as French, (De) Roche, Devereux, D'Arcy, Treacy and Lacy are particularly common in the southeast of Ireland, especially in the southern part of County Wexford where the first Norman settlements were established. Other Norman names such as Furlong predominate there. Another common Norman-Irish name was Morell (Murrell) derived from the French Norman name Morel. Other names beginning with Fitz (from the Norman for son) indicate Norman ancestry. These included Fitzgerald, FitzGibbons (Gibbons) dynasty, Fitzmaurice. Other families bearing such surnames as Barry (de Barra) and De Búrca (Burke) are also of Norman extraction.",
+   "sha256": "823249b3c179c7bf3d9de7f322b83644f50d2ae221e5d56785b0dce7e235e2e2"
+  },
+  {
+   "id": "Normans#19",
+   "text": "One of the claimants of the English throne opposing William the Conqueror, Edgar Atheling, eventually fled to Scotland. King Malcolm III of Scotland married Edgar's sister Margaret, and came into opposition to William who had already disputed Scotland's southern borders. William invaded Scotland in 1072, riding as far as Abernethy where he met up with his fleet of ships. Malcolm submitted, paid homage to William and surrendered his son Duncan as a hostage, beginning a series of arguments as to whether the Scottish Crown owed allegiance to the King of England.",
+   "sha256": "68e815c1eccce28acd02576891be89765c5d2769195c1714b1fb27828cd727a1"
+  },
+  {
+   "id": "Normans#20",
+   "text": "Normans came into Scotland, building castles and founding noble families who would provide some future kings, such as Robert the Bruce, as well as founding a considerable number of the Scottish clans. King David I of Scotland, whose elder brother Alexander I had married Sybilla of Normandy, was instrumental in introducing Normans and Norman culture to Scotland, part of the process some scholars call the \"Davidian Revolution\". Having spent time at the court of Henry I of England (married to David's sister Maud of Scotland), and needing them to wrestle the kingdom from his half-brother Máel Coluim mac Alaxandair, David had to reward many with lands. The process was continued under David's successors, most intensely of all under William the Lion. The Norman-derived feudal system was applied in varying degrees to most of Scotland. Scottish families of the names Bruce, Gray, Ramsay, Fraser, Ogilvie, Montgomery, Sinclair, Pollock, Burnard, Douglas and Gordon to name but a few, and including the later royal House of Stewart, can all be traced back to Norman ancestry.",
+   "sha256": "889592b3e637c0400bdbe22ed06f541a89a8b1c11477b6a55029e9af6bd2131d"
+  },
+  {
+   "id": "Normans#21",
+   "text": "Even before the Norman Conquest of England, the Normans had come into contact with Wales. Edward the Confessor had set up the aforementioned Ralph as earl of Hereford and charged him with defending the Marches and warring with the Welsh. In these original ventures, the Normans failed to make any headway into Wales.",
+   "sha256": "5ff3ae0e9f5f03c7c4795cd17b5dcba5e7554d6e0137d3133bd31c7039a115f0"
+  },
+  {
+   "id": "Normans#22",
+   "text": "Subsequent to the Conquest, however, the Marches came completely under the dominance of William's most trusted Norman barons, including Bernard de Neufmarché, Roger of Montgomery in Shropshire and Hugh Lupus in Cheshire. These Normans began a long period of slow conquest during which almost all of Wales was at some point subject to Norman interference. Norman words, such as baron (barwn), first entered Welsh at that time.",
+   "sha256": "96dc015bb2dea5aca473659180a62193857f51811c3f2bcaaa72c8d88f712607"
+  },
+  {
+   "id": "Normans#23",
+   "text": "The legendary religious zeal of the Normans was exercised in religious wars long before the First Crusade carved out a Norman principality in Antioch. They were major foreign participants in the Reconquista in Iberia. In 1018, Roger de Tosny travelled to the Iberian Peninsula to carve out a state for himself from Moorish lands, but failed. In 1064, during the War of Barbastro, William of Montreuil led the papal army and took a huge booty.",
+   "sha256": "8121c40d42d753225c6a469ed73c8181e91e006ed9ad9f72aa74a74b2363b0b8"
+  },
+  {
+   "id": "Normans#24",
+   "text": "In 1096, Crusaders passing by the siege of Amalfi were joined by Bohemond of Taranto and his nephew Tancred with an army of Italo-Normans. Bohemond was the de facto leader of the Crusade during its passage through Asia Minor. After the successful Siege of Antioch in 1097, Bohemond began carving out an independent principality around that city. Tancred was instrumental in the conquest of Jerusalem and he worked for the expansion of the Crusader kingdom in Transjordan and the region of Galilee.[citation needed]",
+   "sha256": "d6b793bb23a351b7418793d96d8e3094c74522cf35f731653c539571da8529f6"
+  },
+  {
+   "id": "Normans#25",
+   "text": "The conquest of Cyprus by the Anglo-Norman forces of the Third Crusade opened a new chapter in the history of the island, which would be under Western European domination for the following 380 years. Although not part of a planned operation, the conquest had much more permanent results than initially expected.",
+   "sha256": "218bcafd4ea9a6566900672f26303adc874834255c2b12646ddef2c72e9093f2"
+  },
+  {
+   "id": "Normans#26",
+   "text": "In April 1191 Richard the Lion-hearted left Messina with a large fleet in order to reach Acre. But a storm dispersed the fleet. After some searching, it was discovered that the boat carrying his sister and his fiancée Berengaria was anchored on the south coast of Cyprus, together with the wrecks of several other ships, including the treasure ship. Survivors of the wrecks had been taken prisoner by the island's despot Isaac Komnenos. On 1 May 1191, Richard's fleet arrived in the port of Limassol on Cyprus. He ordered Isaac to release the prisoners and the treasure. Isaac refused, so Richard landed his troops and took Limassol.",
+   "sha256": "7250341734ca75ae43d8f7cafbba939053160807e1106cee1d1a0c2b5bab85a2"
+  },
+  {
+   "id": "Normans#27",
+   "text": "Various princes of the Holy Land arrived in Limassol at the same time, in particular Guy de Lusignan. All declared their support for Richard provided that he support Guy against his rival Conrad of Montferrat. The local barons abandoned Isaac, who considered making peace with Richard, joining him on the crusade, and offering his daughter in marriage to the person named by Richard. But Isaac changed his mind and tried to escape. Richard then proceeded to conquer the whole island, his troops being led by Guy de Lusignan. Isaac surrendered and was confined with silver chains, because Richard had promised that he would not place him in irons. By 1 June, Richard had conquered the whole island. His exploit was well publicized and contributed to his reputation; he also derived significant financial gains from the conquest of the island. Richard left for Acre on 5 June, with his allies. Before his departure, he named two of his Norman generals, Richard de Camville and Robert de Thornham, as governors of Cyprus.",
+   "sha256": "c2aa9999cd49b96b950c98756b6cb8ee69d8e051665b4e9b169149c7c2fe349d"
+  },
+  {
+   "id": "Normans#28",
+   "text": "Between 1402 and 1405, the expedition led by the Norman noble Jean de Bethencourt and the Poitevine Gadifer de la Salle conquered the Canarian islands of Lanzarote, Fuerteventura and El Hierro off the Atlantic coast of Africa. Their troops were gathered in Normandy, Gascony and were later reinforced by Castilian colonists.",
+   "sha256": "c6c943ad8d937131ec164bb4c6bdeb900da7261119bc84eb598b8d715c378b1d"
+  },
+  {
+   "id": "Normans#29",
+   "text": "Bethencourt took the title of King of the Canary Islands, as vassal to Henry III of Castile. In 1418, Jean's nephew Maciot de Bethencourt sold the rights to the islands to Enrique Pérez de Guzmán, 2nd Count de Niebla.",
+   "sha256": "95379f334c7d36ba1f093516d6dd76bea434b5242cb83707f6166b127a657c0f"
+  },
+  {
+   "id": "Normans#30",
+   "text": "The customary law of Normandy was developed between the 10th and 13th centuries and survives today through the legal systems of Jersey and Guernsey in the Channel Islands. Norman customary law was transcribed in two customaries in Latin by two judges for use by them and their colleagues: These are the Très ancien coutumier (Very ancient customary), authored between 1200 and 1245; and the Grand coutumier de Normandie (Great customary of Normandy, originally Summa de legibus Normanniae in curia laïcali), authored between 1235 and 1245.",
+   "sha256": "e5f87e55985983815a9352a8e3c2413035c4ebf26e931d9d4dbccd2d10f98bf9"
+  },
+  {
+   "id": "Normans#31",
+   "text": "Norman architecture typically stands out as a new stage in the architectural history of the regions they subdued. They spread a unique Romanesque idiom to England and Italy, and the encastellation of these regions with keeps in their north French style fundamentally altered the military landscape. Their style was characterised by rounded arches, particularly over windows and doorways, and massive proportions.",
+   "sha256": "ced0f58ca39721ecf4eef6e96cbd5c7920c5e262af997dc8d26a7efb5a90b9a6"
+  },
+  {
+   "id": "Normans#32",
+   "text": "In England, the period of Norman architecture immediately succeeds that of the Anglo-Saxon and precedes the Early Gothic. In southern Italy, the Normans incorporated elements of Islamic, Lombard, and Byzantine building techniques into their own, initiating a unique style known as Norman-Arab architecture within the Kingdom of Sicily.",
+   "sha256": "7b7ff1f8935459f0c21c7e861026fca972eb90d370d58dd89ed28b1f53fa01de"
+  },
+  {
+   "id": "Normans#33",
+   "text": "In the visual arts, the Normans did not have the rich and distinctive traditions of the cultures they conquered. However, in the early 11th century the dukes began a programme of church reform, encouraging the Cluniac reform of monasteries and patronising intellectual pursuits, especially the proliferation of scriptoria and the reconstitution of a compilation of lost illuminated manuscripts. The church was utilised by the dukes as a unifying force for their disparate duchy. The chief monasteries taking part in this \"renaissance\" of Norman art and scholarship were Mont-Saint-Michel, Fécamp, Jumièges, Bec, Saint-Ouen, Saint-Evroul, and Saint-Wandrille. These centres were in contact with the so-called \"Winchester school\", which channeled a pure Carolingian artistic tradition to Normandy. In the final decade of the 11th and first of the 12th century, Normandy experienced a golden age of illustrated manuscripts, but it was brief and the major scriptoria of Normandy ceased to function after the midpoint of the century.",
+   "sha256": "00c84baa77993a3ac494e18297fb45693d3de708a3172de621d68d140b0a1bcf"
+  },
+  {
+   "id": "Normans#34",
+   "text": "The French Wars of Religion in the 16th century and French Revolution in the 18th successively destroyed much of what existed in the way of the architectural and artistic remnant of this Norman creativity. The former, with their violence, caused the wanton destruction of many Norman edifices; the latter, with its assault on religion, caused the purposeful destruction of religious objects of any type, and its destabilisation of society resulted in rampant pillaging.",
+   "sha256": "2d5e9f304697ac88e70d959415ed2a0826e4e17344d07025e79fe80526e13c31"
+  },
+  {
+   "id": "Normans#35",
+   "text": "By far the most famous work of Norman art is the Bayeux Tapestry, which is not a tapestry but a work of embroidery. It was commissioned by Odo, the Bishop of Bayeux and first Earl of Kent, employing natives from Kent who were learned in the Nordic traditions imported in the previous half century by the Danish Vikings.",
+   "sha256": "0500dcf91ad6681a7202730d78e85eed22c2b829b1bfc4d44a2560223db14913"
+  },
+  {
+   "id": "Normans#36",
+   "text": "In Britain, Norman art primarily survives as stonework or metalwork, such as capitals and baptismal fonts. In southern Italy, however, Norman artwork survives plentifully in forms strongly influenced by its Greek, Lombard, and Arab forebears. Of the royal regalia preserved in Palermo, the crown is Byzantine in style and the coronation cloak is of Arab craftsmanship with Arabic inscriptions. Many churches preserve sculptured fonts, capitals, and more importantly mosaics, which were common in Norman Italy and drew heavily on the Greek heritage. Lombard Salerno was a centre of ivorywork in the 11th century and this continued under Norman domination. Finally should be noted the intercourse between French Crusaders traveling to the Holy Land who brought with them French artefacts with which to gift the churches at which they stopped in southern Italy amongst their Norman cousins. For this reason many south Italian churches preserve works from France alongside their native pieces.",
+   "sha256": "3bd1082a529b9d984a09852df94240c24b0e05d5f22cb1b10e6d95d51b9e1392"
+  },
+  {
+   "id": "Normans#37",
+   "text": "Normandy was the site of several important developments in the history of classical music in the 11th century. Fécamp Abbey and Saint-Evroul Abbey were centres of musical production and education. At Fécamp, under two Italian abbots, William of Volpiano and John of Ravenna, the system of denoting notes by letters was developed and taught. It is still the most common form of pitch representation in English- and German-speaking countries today. Also at Fécamp, the staff, around which neumes were oriented, was first developed and taught in the 11th century. Under the German abbot Isembard, La Trinité-du-Mont became a centre of musical composition.",
+   "sha256": "739008a2b11054ac3e7f4ddcaa1d8e35db764247129ae46031be460b212648b4"
+  },
+  {
+   "id": "Normans#38",
+   "text": "At Saint Evroul, a tradition of singing had developed and the choir achieved fame in Normandy. Under the Norman abbot Robert de Grantmesnil, several monks of Saint-Evroul fled to southern Italy, where they were patronised by Robert Guiscard and established a Latin monastery at Sant'Eufemia. There they continued the tradition of singing.",
+   "sha256": "308326ce8e8a00212b35957ebc9a655b0ea0f166d9dfe56b9c3159dfb8d95066"
+  },
+  {
+   "id": "Computational_complexity_theory#0",
+   "text": "Computational complexity theory is a branch of the theory of computation in theoretical computer science that focuses on classifying computational problems according to their inherent difficulty, and relating those classes to each other. A computational problem is understood to be a task that is in principle amenable to being solved by a computer, which is equivalent to stating that the problem may be solved by mechanical application of mathematical steps, such as an algorithm.",
+   "sha256": "4d3f905eee7981da9b9da72fa2e46d6de1701497204d573cd2b11c15b077ad99"
+  },
+  {
+   "id": "Computational_complexity_theory#1",
+   "text": "A problem is regarded as inherently difficult if its solution requires significant resources, whatever the algorithm used. The theory formalizes this intuition, by introducing mathematical models of computation to study these problems and quantifying the amount of resources needed to solve them, such as time and storage. Other complexity measures are also used, such as the amount of communication (used in communication complexity), the number of gates in a circuit (used in circuit complexity) and the number of processors (used in parallel computing). One of the roles of computational complexity theory is to determine the practical limits on what computers can and cannot do.",
+   "sha256": "6fd6522d4ecd5fc13437e466b8409c90aeecf62508493d6cd828ec6d82cec94b"
+  },
+  {
+   "id": "Computational_complexity_theory#2",
+   "text": "Closely related fields in theoretical computer science are analysis of algorithms and computability theory. A key distinction between analysis of algorithms and computational complexity theory is that the former is devoted to analyzing the amount of resources needed by a particular algorithm to solve a problem, whereas the latter asks a more general question about all possible algorithms that could be used to solve the same problem. More precisely, it tries to classify problems that can or cannot be solved with appropriately restricted resources. In turn, imposing restrictions on the available resources is what distinguishes computational complexity from computability theory: the latter theory asks what kind of problems can, in principle, be solved algorithmically.",
+   "sha256": "c14cb52e0d8ca7b881d0d20570d1ad267d085b79af6bdbfb72715ac665d264d0"
+  },
+  {
+   "id": "Computational_complexity_theory#3",
+   "text": "A computational problem can be viewed as an infinite collection of instances together with a solution for every instance. The input string for a computational problem is referred to as a problem instance, and should not be confused with the problem itself. In computational complexity theory, a problem refers to the abstract question to be solved. In contrast, an instance of this problem is a rather concrete utterance, which can serve as the input for a decision problem. For example, consider the problem of primality testing. The instance is a number (e.g. 15) and the solution is \"yes\" if the number is prime and \"no\" otherwise (in this case \"no\"). Stated another way, the instance is a particular input to the problem, and the solution is the output corresponding to the given input.",
+   "sha256": "29fcf6218856cfd64395c81351e873a0769b0f291577dd5933cc1ac378f40976"
+  },
+  {
+   "id": "Computational_complexity_theory#4",
+   "text": "To further highlight the difference between a problem and an instance, consider the following instance of the decision version of the traveling salesman problem: Is there a route of at most 2000 kilometres passing through all of Germany's 15 largest cities? The quantitative answer to this particular problem instance is of little use for solving other instances of the problem, such as asking for a round trip through all sites in Milan whose total length is at most 10 km. For this reason, complexity theory addresses computational problems and not particular problem instances.",
+   "sha256": "00b76f48835bfc2434242a5dea1681e9e4d9c363cc74180aa0b9b9fec6f02bef"
+  },
+  {
+   "id": "Computational_complexity_theory#5",
+   "text": "When considering computational problems, a problem instance is a string over an alphabet. Usually, the alphabet is taken to be the binary alphabet (i.e., the set {0,1}), and thus the strings are bitstrings. As in a real-world computer, mathematical objects other than bitstrings must be suitably encoded. For example, integers can be represented in binary notation, and graphs can be encoded directly via their adjacency matrices, or by encoding their adjacency lists in binary.",
+   "sha256": "5ef3de079d69dbfcbf3418f94ba50a6dbe082fa9d93ddac954bac3e8bdfae797"
+  },
+  {
+   "id": "Computational_complexity_theory#6",
+   "text": "Decision problems are one of the central objects of study in computational complexity theory. A decision problem is a special type of computational problem whose answer is either yes or no, or alternately either 1 or 0. A decision problem can be viewed as a formal language, where the members of the language are instances whose output is yes, and the non-members are those instances whose output is no. The objective is to decide, with the aid of an algorithm, whether a given input string is a member of the formal language under consideration. If the algorithm deciding this problem returns the answer yes, the algorithm is said to accept the input string, otherwise it is said to reject the input.",
+   "sha256": "c1eb0d23a5536b9229cc206f583ba22b35e941f0b5315019f5f51be28bbacb20"
+  },
+  {
+   "id": "Computational_complexity_theory#7",
+   "text": "An example of a decision problem is the following. The input is an arbitrary graph. The problem consists in deciding whether the given graph is connected, or not. The formal language associated with this decision problem is then the set of all connected graphs—of course, to obtain a precise definition of this language, one has to decide how graphs are encoded as binary strings.",
+   "sha256": "6233f5ff4a063a8401e5bbc7f802133992c089ea6b276dbbe6462d513f33c086"
+  },
+  {
+   "id": "Computational_complexity_theory#8",
+   "text": "A function problem is a computational problem where a single output (of a total function) is expected for every input, but the output is more complex than that of a decision problem, that is, it isn't just yes or no. Notable examples include the traveling salesman problem and the integer factorization problem.",
+   "sha256": "4ddd2ea4a2c377fbff94602ffde9e3feead6020c3937f8e6feda19f75b6fd619"
+  },
+  {
+   "id": "Computational_complexity_theory#9",
+   "text": "It is tempting to think that the notion of function problems is much richer than the notion of decision problems. However, this is not really the case, since function problems can be recast as decision problems. For example, the multiplication of two integers can be expressed as the set of triples (a, b, c) such that the relation a × b = c holds. Deciding whether a given triple is a member of this set corresponds to solving the problem of multiplying two numbers.",
+   "sha256": "b6b3b4a40d231c6d0d5783eb7db8789ff44856f59009e6c3b4ee703f6529394d"
+  },
+  {
+   "id": "Computational_complexity_theory#10",
+   "text": "To measure the difficulty of solving a computational problem, one may wish to see how much time the best algorithm requires to solve the problem. However, the running time may, in general, depend on the instance. In particular, larger instances will require more time to solve. Thus the time required to solve a problem (or the space required, or any measure of complexity) is calculated as a function of the size of the instance. This is usually taken to be the size of the input in bits. Complexity theory is interested in how algorithms scale with an increase in the input size. For instance, in the problem of finding whether a graph is connected, how much more time does it take to solve a problem for a graph with 2n vertices compared to the time taken for a graph with n vertices?",
+   "sha256": "7da2d7e1a3f7c747e12d14023544c6bd21aa39f41732fff415fa7d8aa83c57fe"
+  },
+  {
+   "id": "Computational_complexity_theory#11",
+   "text": "If the input size is n, the time taken can be expressed as a function of n. Since the time taken on different inputs of the same size can be different, the worst-case time complexity T(n) is defined to be the maximum time taken over all inputs of size n. If T(n) is a polynomial in n, then the algorithm is said to be a polynomial time algorithm. Cobham's thesis says that a problem can be solved with a feasible amount of resources if it admits a polynomial time algorithm.",
+   "sha256": "f37ddc9cea4f4e968e127bc1332cd0e7f57964aeceed1b11367c88c09e34c8f4"
+  },
+  {
+   "id": "Computational_complexity_theory#12",
+   "text": "A Turing machine is a mathematical model of a general computing machine. It is a theoretical device that manipulates symbols contained on a strip of tape. Turing machines are not intended as a practical computing technology, but rather as a thought experiment representing a computing machine—anything from an advanced supercomputer to a mathematician with a pencil and paper. It is believed that if a problem can be solved by an algorithm, there exists a Turing machine that solves the problem. Indeed, this is the statement of the Church–Turing thesis. Furthermore, it is known that everything that can be computed on other models of computation known to us today, such as a RAM machine, Conway's Game of Life, cellular automata or any programming language can be computed on a Turing machine. Since Turing machines are easy to analyze mathematically, and are believed to be as powerful as any other model of computation, the Turing machine is the most commonly used model in complexity theory.",
+   "sha256": "569d9834c490d9ef08715516299c35473302aac1c4aeea04f4647c2e806a18f8"
+  },
+  {
+   "id": "Computational_complexity_theory#13",
+   "text": "A deterministic Turing machine is the most basic Turing machine, which uses a fixed set of rules to determine its future actions. A probabilistic Turing machine is a deterministic Turing machine with an extra supply of random bits. The ability to make probabilistic decisions often helps algorithms solve problems more efficiently. Algorithms that use random bits are called randomized algorithms. A non-deterministic Turing machine is a deterministic Turing machine with an added feature of non-determinism, which allows a Turing machine to have multiple possible future actions from a given state. One way to view non-determinism is that the Turing machine branches into many possible computational paths at each step, and if it solves the problem in any of these branches, it is said to have solved the problem. Clearly, this model is not meant to be a physically realizable model, it is just a theoretically interesting abstract machine that gives rise to particularly interesting complexity classes. For examples, see non-deterministic algorithm.",
+   "sha256": "b1883919e17ff672ebc5c8754b9babd683410134d88304f2048788353467a297"
+  },
+  {
+   "id": "Computational_complexity_theory#14",
+   "text": "Many types of Turing machines are used to define complexity classes, such as deterministic Turing machines, probabilistic Turing machines, non-deterministic Turing machines, quantum Turing machines, symmetric Turing machines and alternating Turing machines. They are all equally powerful in principle, but when resources (such as time or space) are bounded, some of these may be more powerful than others.",
+   "sha256": "94a07cc8780eb4400c56a348d92177f5013c97e5647728b384a3a14f2662cc5f"
+  },
+  {
+   "id": "Computational_complexity_theory#15",
+   "text": "Many machine models different from the standard multi-tape Turing machines have been proposed in the literature, for example random access machines. Perhaps surprisingly, each of these models can be converted to another without providing any extra computational power. The time and memory consumption of these alternate models may vary. What all these models have in common is that the machines operate deterministically.",
+   "sha256": "8910fbbf56034ece8e91508b95e4c9b5a93d59dd5f4dddb51a734f71b66480c4"
+  },
+  {
+   "id": "Computational_complexity_theory#16",
+   "text": "However, some computational problems are easier to analyze in terms of more unusual resources. For example, a non-deterministic Turing machine is a computational model that is allowed to branch out to check many different possibilities at once. The non-deterministic Turing machine has very little to do with how we physically want to compute algorithms, but its branching exactly captures many of the mathematical models we want to analyze, so that non-deterministic time is a very important resource in analyzing computational problems.",
+   "sha256": "62ee7897368284927c822dd6d4fe87c9b80a087753928b980b6d5f9f64e71efb"
+  },
+  {
+   "id": "Computational_complexity_theory#17",
+   "text": "For a precise definition of what it means to solve a problem using a given amount of time and space, a computational model such as the deterministic Turing machine is used. The time required by a deterministic Turing machine M on input x is the total number of state transitions, or steps, the machine makes before it halts and outputs the answer (\"yes\" or \"no\"). A Turing machine M is said to operate within time f(n), if the time required by M on each input of length n is at most f(n). A decision problem A can be solved in time f(n) if there exists a Turing machine operating in time f(n) that solves the problem. Since complexity theory is interested in classifying problems based on their difficulty, one defines sets of problems based on some criteria. For instance, the set of problems solvable within time f(n) on a deterministic Turing machine is then denoted by DTIME(f(n)).",
+   "sha256": "5944ed72046a98d74e984ac5c604a461fffd2fe1cf76b22760638f1f3d949379"
+  },
+  {
+   "id": "Computational_complexity_theory#18",
+   "text": "Analogous definitions can be made for space requirements. Although time and space are the most well-known complexity resources, any complexity measure can be viewed as a computational resource. Complexity measures are very generally defined by the Blum complexity axioms. Other complexity measures used in complexity theory include communication complexity, circuit complexity, and decision tree complexity.",
+   "sha256": "7b6e0d4b29b58911af0fdd9c0fbe4598a87c0fc055d9f95dcd4143510fedcff3"
+  },
+  {
+   "id": "Computational_complexity_theory#19",
+   "text": "The best, worst and average case complexity refer to three different ways of measuring the time complexity (or any other complexity measure) of different inputs of the same size. Since some inputs of size n may be faster to solve than others, we define the following complexities:",
+   "sha256": "e3b13d85a858b90fec804e930b4e2453c9d2a925d62565d94d6b00617d3f14fa"
+  },
+  {
+   "id": "Computational_complexity_theory#20",
+   "text": "For example, consider the deterministic sorting algorithm quicksort. This solves the problem of sorting a list of integers that is given as the input. The worst-case is when the input is sorted or sorted in reverse order, and the algorithm takes time O(n2) for this case. If we assume that all possible permutations of the input list are equally likely, the average time taken for sorting is O(n log n). The best case occurs when each pivoting divides the list in half, also needing O(n log n) time.",
+   "sha256": "a21efd80668b227ef68dd022f77a31b092d02d626d2e188520af3bf6059d57dc"
+  },
+  {
+   "id": "Computational_complexity_theory#21",
+   "text": "To classify the computation time (or similar resources, such as space consumption), one is interested in proving upper and lower bounds on the minimum amount of time required by the most efficient algorithm solving a given problem. The complexity of an algorithm is usually taken to be its worst-case complexity, unless specified otherwise. Analyzing a particular algorithm falls under the field of analysis of algorithms. To show an upper bound T(n) on the time complexity of a problem, one needs to show only that there is a particular algorithm with running time at most T(n). However, proving lower bounds is much more difficult, since lower bounds make a statement about all possible algorithms that solve a given problem. The phrase \"all possible algorithms\" includes not just the algorithms known today, but any algorithm that might be discovered in the future. To show a lower bound of T(n) for a problem requires showing that no algorithm can have time complexity lower than T(n).",
+   "sha256": "217d81bcc0dab6b35310da997143cfd073de323168a86a3644e7f8eb39baaaf8"
+  },
+  {
+   "id": "Computational_complexity_theory#22",
+   "text": "Upper and lower bounds are usually stated using the big O notation, which hides constant factors and smaller terms. This makes the bounds independent of the specific details of the computational model used. For instance, if T(n) = 7n2 + 15n + 40, in big O notation one would write T(n) = O(n2).",
+   "sha256": "25160eaaf4cedb4feaad143ed4ed40d1a5aeba443aaa0327bbecb05f058934a7"
+  },
+  {
+   "id": "Computational_complexity_theory#23",
+   "text": "Of course, some complexity classes have complicated definitions that do not fit into this framework. Thus, a typical complexity class has a definition like the following:",
+   "sha256": "cfd4f8f5ab4043a0c3cd16823929a42af6d9122d2f0d03670f4f5ea69d7b2b37"
+  },
+  {
+   "id": "Computational_complexity_theory#24",
+   "text": "But bounding the computation time above by some concrete function f(n) often yields complexity classes that depend on the chosen machine model. For instance, the language {xx | x is any binary string} can be solved in linear time on a multi-tape Turing machine, but necessarily requires quadratic time in the model of single-tape Turing machines. If we allow polynomial variations in running time, Cobham-Edmonds thesis states that \"the time complexities in any two reasonable and general models of computation are polynomially related\" (Goldreich 2008, Chapter 1.2). This forms the basis for the complexity class P, which is the set of decision problems solvable by a deterministic Turing machine within polynomial time. The corresponding set of function problems is FP.",
+   "sha256": "910b91d2f97cafa3b557bb9be5dd6fdcbaa2991bf2197b4010bd3d78c81969cc"
+  },
+  {
+   "id": "Computational_complexity_theory#25",
+   "text": "Many important complexity classes can be defined by bounding the time or space used by the algorithm. Some important complexity classes of decision problems defined in this manner are the following:",
+   "sha256": "836fc4670df58e0f64317be9b717f3d2d78b471dc16251d4f836c660af6a3216"
+  },
+  {
+   "id": "Computational_complexity_theory#26",
+   "text": "Other important complexity classes include BPP, ZPP and RP, which are defined using probabilistic Turing machines; AC and NC, which are defined using Boolean circuits; and BQP and QMA, which are defined using quantum Turing machines. #P is an important complexity class of counting problems (not decision problems). Classes like IP and AM are defined using Interactive proof systems. ALL is the class of all decision problems.",
+   "sha256": "b12f8869c244fe800cc88e3758ec51e32429412575313c6b2d991e5f60a1d928"
+  },
+  {
+   "id": "Computational_complexity_theory#27",
+   "text": "For the complexity classes defined in this way, it is desirable to prove that relaxing the requirements on (say) computation time indeed defines a bigger set of problems. In particular, although DTIME(n) is contained in DTIME(n2), it would be interesting to know if the inclusion is strict. For time and space requirements, the answer to such questions is given by the time and space hierarchy theorems respectively. They are called hierarchy theorems because they induce a proper hierarchy on the classes defined by constraining the respective resources. Thus there are pairs of complexity classes such that one is properly included in the other. Having deduced such proper set inclusions, we can proceed to make quantitative statements about how much more additional time or space is needed in order to increase the number of problems that can be solved.",
+   "sha256": "697fc195c9b97bc8be1791335b67318ae68f44c890d45b0503189769ebc68eba"
+  },
+  {
+   "id": "Computational_complexity_theory#28",
+   "text": "The time and space hierarchy theorems form the basis for most separation results of complexity classes. For instance, the time hierarchy theorem tells us that P is strictly contained in EXPTIME, and the space hierarchy theorem tells us that L is strictly contained in PSPACE.",
+   "sha256": "3e323e5c6d09bfcbdf60c1f613c0c9360d6a95200b947d3698c789308e00d3d6"
+  },
+  {
+   "id": "Computational_complexity_theory#29",
+   "text": "Many complexity classes are defined using the concept of a reduction. A reduction is a transformation of one problem into another problem. It captures the informal notion of a problem being at least as difficult as another problem. For instance, if a problem X can be solved using an algorithm for Y, X is no more difficult than Y, and we say that X reduces to Y. There are many different types of reductions, based on the method of reduction, such as Cook reductions, Karp reductions and Levin reductions, and the bound on the complexity of reductions, such as polynomial-time reductions or log-space reductions.",
+   "sha256": "13e9fbf3902511de0c59a6c616fe4bb22971b931abe106864f6f57b7b66316da"
+  },
+  {
+   "id": "Computational_complexity_theory#30",
+   "text": "The most commonly used reduction is a polynomial-time reduction. This means that the reduction process takes polynomial time. For example, the problem of squaring an integer can be reduced to the problem of multiplying two integers. This means an algorithm for multiplying two integers can be used to square an integer. Indeed, this can be done by giving the same input to both inputs of the multiplication algorithm. Thus we see that squaring is not more difficult than multiplication, since squaring can be reduced to multiplication.",
+   "sha256": "54711cd280362ef0faf67464e2abcb0c1f7682f248bcaba63afbfda7bda16b95"
+  },
+  {
+   "id": "Computational_complexity_theory#31",
+   "text": "This motivates the concept of a problem being hard for a complexity class. A problem X is hard for a class of problems C if every problem in C can be reduced to X. Thus no problem in C is harder than X, since an algorithm for X allows us to solve any problem in C. Of course, the notion of hard problems depends on the type of reduction being used. For complexity classes larger than P, polynomial-time reductions are commonly used. In particular, the set of problems that are hard for NP is the set of NP-hard problems.",
+   "sha256": "11f3c106363aa4f6fea948825269829f23db795723c77a21a4dee2752cee9822"
+  },
+  {
+   "id": "Computational_complexity_theory#32",
+   "text": "If a problem X is in C and hard for C, then X is said to be complete for C. This means that X is the hardest problem in C. (Since many problems could be equally hard, one might say that X is one of the hardest problems in C.) Thus the class of NP-complete problems contains the most difficult problems in NP, in the sense that they are the ones most likely not to be in P. Because the problem P = NP is not solved, being able to reduce a known NP-complete problem, Π2, to another problem, Π1, would indicate that there is no known polynomial-time solution for Π1. This is because a polynomial-time solution to Π1 would yield a polynomial-time solution to Π2. Similarly, because all NP problems can be reduced to the set, finding an NP-complete problem that can be solved in polynomial time would mean that P = NP.",
+   "sha256": "5069342da076e41ece723574effb0a566b22663edb71937944db3629b8595a42"
+  },
+  {
+   "id": "Computational_complexity_theory#33",
+   "text": "The complexity class P is often seen as a mathematical abstraction modeling those computational tasks that admit an efficient algorithm. This hypothesis is called the Cobham–Edmonds thesis. The complexity class NP, on the other hand, contains many problems that people would like to solve efficiently, but for which no efficient algorithm is known, such as the Boolean satisfiability problem, the Hamiltonian path problem and the vertex cover problem. Since deterministic Turing machines are special non-deterministic Turing machines, it is easily observed that each problem in P is also member of the class NP.",
+   "sha256": "c38ef516e41c288e48baaa51d99898d601d4e886bb759f38af5399abc02dfc4d"
+  },
+  {
+   "id": "Computational_complexity_theory#34",
+   "text": "The question of whether P equals NP is one of the most important open questions in theoretical computer science because of the wide implications of a solution. If the answer is yes, many important problems can be shown to have more efficient solutions. These include various types of integer programming problems in operations research, many problems in logistics, protein structure prediction in biology, and the ability to find formal proofs of pure mathematics theorems. The P versus NP problem is one of the Millennium Prize Problems proposed by the Clay Mathematics Institute. There is a US$1,000,000 prize for resolving the problem.",
+   "sha256": "57ea608fc0f4249a93c9de52fc73db3ff0e90f245a9c336159e74c986a34743d"
+  },
+  {
+   "id": "Computational_complexity_theory#35",
+   "text": "It was shown by Ladner that if P ≠ NP then there exist problems in NP that are neither in P nor NP-complete. Such problems are called NP-intermediate problems. The graph isomorphism problem, the discrete logarithm problem and the integer factorization problem are examples of problems believed to be NP-intermediate. They are some of the very few NP problems not known to be in P or to be NP-complete.",
+   "sha256": "5c0fd2f8509736ad1d703d7ef3c3bd05e32333b37735101e2f5d067a36cf3aa5"
+  },
+  {
+   "id": "Computational_complexity_theory#36",
+   "text": "The graph isomorphism problem is the computational problem of determining whether two finite graphs are isomorphic. An important unsolved problem in complexity theory is whether the graph isomorphism problem is in P, NP-complete, or NP-intermediate. The answer is not known, but it is believed that the problem is at least not NP-complete. If graph isomorphism is NP-complete, the polynomial time hierarchy collapses to its second level. Since it is widely believed that the polynomial hierarchy does not collapse to any finite level, it is believed that graph isomorphism is not NP-complete. The best algorithm for this problem, due to Laszlo Babai and Eugene Luks has run time 2O(√(n log(n))) for graphs with n vertices.",
+   "sha256": "a2cf630a7f1289cfaadc365903fadad7bae668fdb2735e77dcaea5a85de175a4"
+  },
+  {
+   "id": "Computational_complexity_theory#37",
+   "text": "The integer factorization problem is the computational problem of determining the prime factorization of a given integer. Phrased as a decision problem, it is the problem of deciding whether the input has a factor less than k. No efficient integer factorization algorithm is known, and this fact forms the basis of several modern cryptographic systems, such as the RSA algorithm. The integer factorization problem is in NP and in co-NP (and even in UP and co-UP). If the problem is NP-complete, the polynomial time hierarchy will collapse to its first level (i.e., NP will equal co-NP). The best known algorithm for integer factorization is the general number field sieve, which takes time O(e(64/9)1/3(n.log 2)1/3(log (n.log 2))2/3) to factor an n-bit integer. However, the best known quantum algorithm for this problem, Shor's algorithm, does run in polynomial time. Unfortunately, this fact doesn't say much about where the problem lies with respect to non-quantum complexity classes.",
+   "sha256": "aa681b6c7d1a2367ebf36bb39734e4d4b923b5605ff91c3720031204a2a479a6"
+  },
+  {
+   "id": "Computational_complexity_theory#38",
+   "text": "Many known complexity classes are suspected to be unequal, but this has not been proved. For instance P ⊆ NP ⊆ PP ⊆ PSPACE, but it is possible that P = PSPACE. If P is not equal to NP, then P is not equal to PSPACE either. Since there are many known complexity classes between P and PSPACE, such as RP, BPP, PP, BQP, MA, PH, etc., it is possible that all these complexity classes collapse to one class. Proving that any of these classes are unequal would be a major breakthrough in complexity theory.",
+   "sha256": "d23507599fde3bea64581b405ee4729f02882f17e7602e4f065a2b2a98228ea6"
+  },
+  {
+   "id": "Computational_complexity_theory#39",
+   "text": "Along the same lines, co-NP is the class containing the complement problems (i.e. problems with the yes/no answers reversed) of NP problems. It is believed that NP is not equal to co-NP; however, it has not yet been proven. It has been shown that if these two complexity classes are not equal then P is not equal to NP.",
+   "sha256": "72b788bd3798b7b363e83daea211a9068ded0f80fbaed48424cf8ae6d8380aa6"
+  },
+  {
+   "id": "Computational_complexity_theory#40",
+   "text": "Similarly, it is not known if L (the set of all problems that can be solved in logarithmic space) is strictly contained in P or equal to P. Again, there are many complexity classes between the two, such as NL and NC, and it is not known if they are distinct or equal classes.",
+   "sha256": "fa4f1279877804a3ee0afc8a8e3f12cffab66a695619e9ab4fb87d466f1278f2"
+  },
+  {
+   "id": "Computational_complexity_theory#41",
+   "text": "Problems that can be solved in theory (e.g., given large but finite time), but which in practice take too long for their solutions to be useful, are known as intractable problems. In complexity theory, problems that lack polynomial-time solutions are considered to be intractable for more than the smallest inputs. In fact, the Cobham–Edmonds thesis states that only those problems that can be solved in polynomial time can be feasibly computed on some computational device. Problems that are known to be intractable in this sense include those that are EXPTIME-hard. If NP is not the same as P, then the NP-complete problems are also intractable in this sense. To see why exponential-time algorithms might be unusable in practice, consider a program that makes 2n operations before halting. For small n, say 100, and assuming for the sake of example that the computer does 1012 operations each second, the program would run for about 4 × 1010 years, which is the same order of magnitude as the age of the universe. Even with a much faster computer, the program would only be useful for very small instances and in that sense the intractability of a problem is somewhat independent of technological progress. Nevertheless, a polynomial time algorithm is not always practical. If its running time is, say, n15, it is unreasonable to consider it efficient and it is still useless except on small instances.",
+   "sha256": "ba15f86ae09bc08e0deccb09eabeacc8426433f31366f7bdd5db57801a480ace"
+  },
+  {
+   "id": "Computational_complexity_theory#42",
+   "text": "What intractability means in practice is open to debate. Saying that a problem is not in P does not imply that all large cases of the problem are hard or even that most of them are. For example, the decision problem in Presburger arithmetic has been shown not to be in P, yet algorithms have been written that solve the problem in reasonable times in most cases. Similarly, algorithms can solve the NP-complete knapsack problem over a wide range of sizes in less than quadratic time and SAT solvers routinely handle large instances of the NP-complete Boolean satisfiability problem.",
+   "sha256": "80050447c9b41fb5fac1950338fd3ace00106108cadec17c27aa5b41f7aee5cf"
+  },
+  {
+   "id": "Computational_complexity_theory#43",
+   "text": "Before the actual research explicitly devoted to the complexity of algorithmic problems started off, numerous foundations were laid out by various researchers. Most influential among these was the definition of Turing machines by Alan Turing in 1936, which turned out to be a very robust and flexible simplification of a computer.",
+   "sha256": "f7140e68e270abe4b07098bebe1f59cce949b799b8237e1c88451a74c65cd4a0"
+  },
+  {
+   "id": "Computational_complexity_theory#44",
+   "text": "As Fortnow & Homer (2003) point out, the beginning of systematic studies in computational complexity is attributed to the seminal paper \"On the Computational Complexity of Algorithms\" by Juris Hartmanis and Richard Stearns (1965), which laid out the definitions of time and space complexity and proved the hierarchy theorems. Also, in 1965 Edmonds defined a \"good\" algorithm as one with running time bounded by a polynomial of the input size.",
+   "sha256": "03eb6accc47f8f37613f49787d90a7cde1808cd11e3eca574b283b3e63a9aa56"
+  },
+  {
+   "id": "Computational_complexity_theory#45",
+   "text": "Earlier papers studying problems solvable by Turing machines with specific bounded resources include  John Myhill's definition of linear bounded automata (Myhill 1960), Raymond Smullyan's study of rudimentary sets (1961), as well as Hisao Yamada's paper on real-time computations (1962). Somewhat earlier, Boris Trakhtenbrot (1956), a pioneer in the field from the USSR, studied another specific complexity measure. As he remembers:",
+   "sha256": "0771c41591ce859133397b70f7fe295ca178804c352b68cc34f3f35caa1c92ab"
+  },
+  {
+   "id": "Computational_complexity_theory#46",
+   "text": "Even though some proofs of complexity-theoretic theorems regularly assume some concrete choice of input encoding, one tries to keep the discussion abstract enough to be independent of the choice of encoding. This can be achieved by ensuring that different representations can be transformed into each other efficiently.",
+   "sha256": "86456bb4ed1522c9e166ed46d812534728fcdc279a359f4976015afda6907420"
+  },
+  {
+   "id": "Computational_complexity_theory#47",
+   "text": "In 1967, Manuel Blum developed an axiomatic complexity theory based on his axioms and proved an important result, the so-called, speed-up theorem. The field really began to flourish in 1971 when the US researcher Stephen Cook and, working independently, Leonid Levin in the USSR, proved that there exist practically relevant problems that are NP-complete. In 1972, Richard Karp took this idea a leap forward with his landmark paper, \"Reducibility Among Combinatorial Problems\", in which he showed that 21 diverse combinatorial and graph theoretical problems, each infamous for its computational intractability, are NP-complete.",
+   "sha256": "85280982cc4ee3fe931d5767fcaa5f1dfbab2804f71c4ac8ac953b8ad303f0d0"
+  },
+  {
+   "id": "Oxygen#0",
+   "text": "Oxygen is a chemical element with symbol O and atomic number 8. It is a member of the chalcogen group on the periodic table and is a highly reactive nonmetal and oxidizing agent that readily forms compounds (notably oxides) with most elements. By mass, oxygen is the third-most abundant element in the universe, after hydrogen and helium. At standard temperature and pressure, two atoms of the element bind to form dioxygen, a colorless and odorless diatomic gas with the formula O\n2. Diatomic oxygen gas constitutes 20.8% of the Earth's atmosphere. However, monitoring of atmospheric oxygen levels show a global downward trend, because of fossil-fuel burning. Oxygen is the most abundant element by mass in the Earth's crust as part of oxide compounds such as silicon dioxide, making up almost half of the crust's mass.",
+   "sha256": "e1e68b90e348d860a1f3c0cfe6e1367d9c8c8a57ad577d564b36e00900222682"
+  },
+  {
+   "id": "Oxygen#1",
+   "text": "Many major classes of organic molecules in living organisms, such as proteins, nucleic acids, carbohydrates, and fats, contain oxygen, as do the major inorganic compounds that are constituents of animal shells, teeth, and bone. Most of the mass of living organisms is oxygen as it is a part of water, the major constituent of lifeforms. Oxygen is used in cellular respiration and released by photosynthesis, which uses the energy of sunlight to produce oxygen from water. It is too chemically reactive to remain a free element in air without being continuously replenished by the photosynthetic action of living organisms. Another form (allotrope) of oxygen, ozone (O\n3), strongly absorbs UVB radiation and consequently the high-altitude ozone layer helps protect the biosphere from ultraviolet radiation, but is a pollutant near the surface where it is a by-product of smog. At even higher low earth orbit altitudes, sufficient atomic oxygen is present to cause erosion for spacecraft.",
+   "sha256": "6b5baac861c36b5fd13e7a181e848be90fe9291892c24fcaa534999aeb639149"
+  },
+  {
+   "id": "Oxygen#2",
+   "text": "In the late 17th century, Robert Boyle proved that air is necessary for combustion. English chemist John Mayow (1641–1679) refined this work by showing that fire requires only a part of air that he called spiritus nitroaereus or just nitroaereus. In one experiment he found that placing either a mouse or a lit candle in a closed container over water caused the water to rise and replace one-fourteenth of the air's volume before extinguishing the subjects. From this he surmised that nitroaereus is consumed in both respiration and combustion.",
+   "sha256": "d8abf737112efa9397c511991f2e930e293c8a4b7a2251790cb6dc58cc065917"
+  },
+  {
+   "id": "Oxygen#3",
+   "text": "In the meantime, on August 1, 1774, an experiment conducted by the British clergyman Joseph Priestley focused sunlight on mercuric oxide (HgO) inside a glass tube, which liberated a gas he named \"dephlogisticated air\". He noted that candles burned brighter in the gas and that a mouse was more active and lived longer while breathing it. After breathing the gas himself, he wrote: \"The feeling of it to my lungs was not sensibly different from that of common air, but I fancied that my breast felt peculiarly light and easy for some time afterwards.\" Priestley published his findings in 1775 in a paper titled \"An Account of Further Discoveries in Air\" which was included in the second volume of his book titled Experiments and Observations on Different Kinds of Air. Because he published his findings first, Priestley is usually given priority in the discovery.",
+   "sha256": "2eca63750a362ff269957ac209e2ce98797d8646a987f037ecd7aad0aa135bb8"
+  },
+  {
+   "id": "Oxygen#4",
+   "text": "One of the first known experiments on the relationship between combustion and air was conducted by the 2nd century BCE Greek writer on mechanics, Philo of Byzantium. In his work Pneumatica, Philo observed that inverting a vessel over a burning candle and surrounding the vessel's neck with water resulted in some water rising into the neck. Philo incorrectly surmised that parts of the air in the vessel were converted into the classical element fire and thus were able to escape through pores in the glass. Many centuries later Leonardo da Vinci built on Philo's work by observing that a portion of air is consumed during combustion and respiration.",
+   "sha256": "1eabc60bd67e282008972d9719c0467f1212ff70fc4080e4658c6586cf589027"
+  },
+  {
+   "id": "Oxygen#5",
+   "text": "Highly concentrated sources of oxygen promote rapid combustion. Fire and explosion hazards exist when concentrated oxidants and fuels are brought into close proximity; an ignition event, such as heat or a spark, is needed to trigger combustion. Oxygen is the oxidant, not the fuel, but nevertheless the source of most of the chemical energy released in combustion. Combustion hazards also apply to compounds of oxygen with a high oxidative potential, such as peroxides, chlorates, nitrates, perchlorates, and dichromates because they can donate oxygen to a fire.",
+   "sha256": "ad88fe48ac1ab4c46310dbb92ef9eb65cb2d3c8e6a37c2e16ca5b79106cf73e5"
+  },
+  {
+   "id": "Oxygen#6",
+   "text": "Concentrated O\n2 will allow combustion to proceed rapidly and energetically. Steel pipes and storage vessels used to store and transmit both gaseous and liquid oxygen will act as a fuel; and therefore the design and manufacture of O\n2 systems requires special training to ensure that ignition sources are minimized. The fire that killed the Apollo 1 crew in a launch pad test spread so rapidly because the capsule was pressurized with pure O\n2 but at slightly more than atmospheric pressure, instead of the 1⁄3 normal pressure that would be used in a mission.[k]",
+   "sha256": "d58b1a4d6bf601f6d89c2d7d1e8973e368c0b2c976fc6c565cb1649d3183c7f8"
+  },
+  {
+   "id": "Oxygen#7",
+   "text": "Oxygen is present in the atmosphere in trace quantities in the form of carbon dioxide (CO\n2). The Earth's crustal rock is composed in large part of oxides of silicon (silica SiO\n2, as found in granite and quartz), aluminium (aluminium oxide Al\n2O\n3, in bauxite and corundum), iron (iron(III) oxide Fe\n2O\n3, in hematite and rust), and calcium carbonate (in limestone). The rest of the Earth's crust is also made of oxygen compounds, in particular various complex silicates (in silicate minerals). The Earth's mantle, of much larger mass than the crust, is largely composed of silicates of magnesium and iron.",
+   "sha256": "1bb8a054229137a9005ea877e0aa27b556891e3521788927c58348127564b154"
+  },
+  {
+   "id": "Oxygen#8",
+   "text": "John Dalton's original atomic hypothesis assumed that all elements were monatomic and that the atoms in compounds would normally have the simplest atomic ratios with respect to one another. For example, Dalton assumed that water's formula was HO, giving the atomic mass of oxygen as 8 times that of hydrogen, instead of the modern value of about 16. In 1805, Joseph Louis Gay-Lussac and Alexander von Humboldt showed that water is formed of two volumes of hydrogen and one volume of oxygen; and by 1811 Amedeo Avogadro had arrived at the correct interpretation of water's composition, based on what is now called Avogadro's law and the assumption of diatomic elemental molecules.[a]",
+   "sha256": "e0e9c1b00942a791f21d4d84c2985047c45f3e69d4a43439329f0a03c36f3f75"
+  },
+  {
+   "id": "Oxygen#9",
+   "text": "Highly combustible materials that leave little residue, such as wood or coal, were thought to be made mostly of phlogiston; whereas non-combustible substances that corrode, such as iron, contained very little. Air did not play a role in phlogiston theory, nor were any initial quantitative experiments conducted to test the idea; instead, it was based on observations of what happens when something burns, that most common objects appear to become lighter and seem to lose something in the process. The fact that a substance like wood gains overall weight in burning was hidden by the buoyancy of the gaseous combustion products. Indeed, one of the first clues that the phlogiston theory was incorrect was that metals, too, gain weight in rusting (when they were supposedly losing phlogiston).",
+   "sha256": "fbc28ab618de17aa9bd46ab3f1997022bc6a9d236b4f2f2c21adae550e178119"
+  },
+  {
+   "id": "Oxygen#10",
+   "text": "In this dioxygen, the two oxygen atoms are chemically bonded to each other. The bond can be variously described based on level of theory, but is reasonably and simply described as a covalent double bond that results from the filling of molecular orbitals formed from the atomic orbitals of the individual oxygen atoms, the filling of which results in a bond order of two. More specifically, the double bond is the result of sequential, low-to-high energy, or Aufbau, filling of orbitals, and the resulting cancellation of contributions from the 2s electrons, after sequential filling of the low σ and σ* orbitals; σ overlap of the two atomic 2p orbitals that lie along the O-O molecular axis and π overlap of two pairs of atomic 2p orbitals perpendicular to the O-O molecular axis, and then cancellation of contributions from the remaining two of the six 2p electrons after their partial filling of the lowest π and π* orbitals.",
+   "sha256": "f831f1f184fd3a9793b6dde3bdbf892925d66cff3ec221ca3f9d0387b41ad687"
+  },
+  {
+   "id": "Oxygen#11",
+   "text": "Oxygen was discovered independently by Carl Wilhelm Scheele, in Uppsala, in 1773 or earlier, and Joseph Priestley in Wiltshire, in 1774, but Priestley is often given priority because his work was published first. The name oxygen was coined in 1777 by Antoine Lavoisier, whose experiments with oxygen helped to discredit the then-popular phlogiston theory of combustion and corrosion. Its name derives from the Greek roots ὀξύς oxys, \"acid\", literally \"sharp\", referring to the sour taste of acids and -γενής -genes, \"producer\", literally \"begetter\", because at the time of naming, it was mistakenly thought that all acids required oxygen in their composition. Common uses of oxygen includes the production cycle of steel, plastics and textiles, brazing, welding and cutting of steels and other metals, rocket propellant, in oxygen therapy and life support systems in aircraft, submarines, spaceflight and diving.",
+   "sha256": "5e9573dfeb2a0db4f639ca16519759712547a4abf0de1e03015f67d069799f3d"
+  },
+  {
+   "id": "Oxygen#12",
+   "text": "This combination of cancellations and σ and π overlaps results in dioxygen's double bond character and reactivity, and a triplet electronic ground state. An electron configuration with two unpaired electrons as found in dioxygen (see the filled π* orbitals in the diagram), orbitals that are of equal energy—i.e., degenerate—is a configuration termed a spin triplet state. Hence, the ground state of the O\n2 molecule is referred to as triplet oxygen.[b] The highest energy, partially filled orbitals are antibonding, and so their filling weakens the bond order from three to two. Because of its unpaired electrons, triplet oxygen reacts only slowly with most organic molecules, which have paired electron spins; this prevents spontaneous combustion.",
+   "sha256": "8ce2dcdbc9d03cccc09926a2d4518e85b49d3e4f59e03003d552e94ad5a5203c"
+  },
+  {
+   "id": "Oxygen#13",
+   "text": "In one experiment, Lavoisier observed that there was no overall increase in weight when tin and air were heated in a closed container. He noted that air rushed in when he opened the container, which indicated that part of the trapped air had been consumed. He also noted that the tin had increased in weight and that increase was the same as the weight of the air that rushed back in. This and other experiments on combustion were documented in his book Sur la combustion en général, which was published in 1777. In that work, he proved that air is a mixture of two gases; 'vital air', which is essential to combustion and respiration, and azote (Gk. ἄζωτον \"lifeless\"), which did not support either. Azote later became nitrogen in English, although it has kept the name in French and several other European languages.",
+   "sha256": "99ba13b83b00cb792f32172352e751adb373fb038760c686b2cbb9543de8c934"
+  },
+  {
+   "id": "Oxygen#14",
+   "text": "Trioxygen (O\n3) is usually known as ozone and is a very reactive allotrope of oxygen that is damaging to lung tissue. Ozone is produced in the upper atmosphere when O\n2 combines with atomic oxygen made by the splitting of O\n2 by ultraviolet (UV) radiation. Since ozone absorbs strongly in the UV region of the spectrum, the ozone layer of the upper atmosphere functions as a protective radiation shield for the planet. Near the Earth's surface, it is a pollutant formed as a by-product of automobile exhaust. The metastable molecule tetraoxygen (O\n4) was discovered in 2001, and was assumed to exist in one of the six phases of solid oxygen. It was proven in 2006 that this phase, created by pressurizing O\n2 to 20 GPa, is in fact a rhombohedral O\n8 cluster. This cluster has the potential to be a much more powerful oxidizer than either O\n2 or O\n3 and may therefore be used in rocket fuel. A metallic phase was discovered in 1990 when solid oxygen is subjected to a pressure of above 96 GPa and it was shown in 1998 that at very low temperatures, this phase becomes superconducting.",
+   "sha256": "069f593a47b1c7d532212a62aba1e27bdd08d0259cb3e0a96bc73f362f4036e4"
+  },
+  {
+   "id": "Oxygen#15",
+   "text": "The common allotrope of elemental oxygen on Earth is called dioxygen, O\n2. It is the form that is a major part of the Earth's atmosphere (see Occurrence). O2 has a bond length of 121 pm and a bond energy of 498 kJ·mol−1, which is smaller than the energy of other double bonds or pairs of single bonds in the biosphere and responsible for the exothermic reaction of O2 with any organic molecule. Due to its energy content, O2 is used by complex forms of life, such as animals, in cellular respiration (see Biological role). Other aspects of O\n2 are covered in the remainder of this article.",
+   "sha256": "fd80faaf43d6d56307f1567cba40b08ce93dcfb538d6704d48b9c014969757ef"
+  },
+  {
+   "id": "Oxygen#16",
+   "text": "In 1891 Scottish chemist James Dewar was able to produce enough liquid oxygen to study. The first commercially viable process for producing liquid oxygen was independently developed in 1895 by German engineer Carl von Linde and British engineer William Hampson. Both men lowered the temperature of air until it liquefied and then distilled the component gases by boiling them off one at a time and capturing them. Later, in 1901, oxyacetylene welding was demonstrated for the first time by burning a mixture of acetylene and compressed O\n2. This method of welding and cutting metal later became common.",
+   "sha256": "3b43cbab19f7f3133d1da9d6519cc013ff3e5e23c2c70f574acda48ff54ebc31"
+  },
+  {
+   "id": "Oxygen#17",
+   "text": "Oxygen is more soluble in water than nitrogen is. Water in equilibrium with air contains approximately 1 molecule of dissolved O\n2 for every 2 molecules of N\n2, compared to an atmospheric ratio of approximately 1:4. The solubility of oxygen in water is temperature-dependent, and about twice as much (14.6 mg·L−1) dissolves at 0 °C than at 20 °C (7.6 mg·L−1). At 25 °C and 1 standard atmosphere (101.3 kPa) of air, freshwater contains about 6.04 milliliters (mL) of oxygen per liter, whereas seawater contains about 4.95 mL per liter. At 5 °C the solubility increases to 9.0 mL (50% more than at 25 °C) per liter for water and 7.2 mL (45% more) per liter for sea water.",
+   "sha256": "3ee61e6d7605bacdeb4f37ab798daa449f57668fd923e6b04e1a516237821782"
+  },
+  {
+   "id": "Oxygen#18",
+   "text": "Oxygen is the most abundant chemical element by mass in the Earth's biosphere, air, sea and land. Oxygen is the third most abundant chemical element in the universe, after hydrogen and helium. About 0.9% of the Sun's mass is oxygen. Oxygen constitutes 49.2% of the Earth's crust by mass and is the major component of the world's oceans (88.8% by mass). Oxygen gas is the second most common component of the Earth's atmosphere, taking up 20.8% of its volume and 23.1% of its mass (some 1015 tonnes).[d] Earth is unusual among the planets of the Solar System in having such a high concentration of oxygen gas in its atmosphere: Mars (with 0.1% O\n2 by volume) and Venus have far lower concentrations. The O\n2 surrounding these other planets is produced solely by ultraviolet radiation impacting oxygen-containing molecules such as carbon dioxide.",
+   "sha256": "b272a915ce32f275f02c333e828edde708d727538b2125a5dfee6f8a3e81aae8"
+  },
+  {
+   "id": "Oxygen#19",
+   "text": "By the late 19th century scientists realized that air could be liquefied, and its components isolated, by compressing and cooling it. Using a cascade method, Swiss chemist and physicist Raoul Pierre Pictet evaporated liquid sulfur dioxide in order to liquefy carbon dioxide, which in turn was evaporated to cool oxygen gas enough to liquefy it. He sent a telegram on December 22, 1877 to the French Academy of Sciences in Paris announcing his discovery of liquid oxygen. Just two days later, French physicist Louis Paul Cailletet announced his own method of liquefying molecular oxygen. Only a few drops of the liquid were produced in either case so no meaningful analysis could be conducted. Oxygen was liquified in stable state for the first time on March 29, 1883 by Polish scientists from Jagiellonian University, Zygmunt Wróblewski and Karol Olszewski.",
+   "sha256": "36476aaf2aea4f7927c065f38bbc7e2f8ec013b37ee0a2f1c7f545368f0dc62e"
+  },
+  {
+   "id": "Oxygen#20",
+   "text": "Planetary geologists have measured different abundances of oxygen isotopes in samples from the Earth, the Moon, Mars, and meteorites, but were long unable to obtain reference values for the isotope ratios in the Sun, believed to be the same as those of the primordial solar nebula. Analysis of a silicon wafer exposed to the solar wind in space and returned by the crashed Genesis spacecraft has shown that the Sun has a higher proportion of oxygen-16 than does the Earth. The measurement implies that an unknown process depleted oxygen-16 from the Sun's disk of protoplanetary material prior to the coalescence of dust grains that formed the Earth.",
+   "sha256": "11e489536cc7ac71a8ee73d6c7e52469ad3ad8807c404fd6cba2907c8189cab7"
+  },
+  {
+   "id": "Oxygen#21",
+   "text": "Singlet oxygen is a name given to several higher-energy species of molecular O\n2 in which all the electron spins are paired. It is much more reactive towards common organic molecules than is molecular oxygen per se. In nature, singlet oxygen is commonly formed from water during photosynthesis, using the energy of sunlight. It is also produced in the troposphere by the photolysis of ozone by light of short wavelength, and by the immune system as a source of active oxygen. Carotenoids in photosynthetic organisms (and possibly also in animals) play a major role in absorbing energy from singlet oxygen and converting it to the unexcited ground state before it can cause harm to tissues.",
+   "sha256": "5c55e63733e829bbd22ed99b6f3eace596d8c9e3245bbbf97d42348d58022545"
+  },
+  {
+   "id": "Oxygen#22",
+   "text": "Paleoclimatologists measure the ratio of oxygen-18 and oxygen-16 in the shells and skeletons of marine organisms to determine what the climate was like millions of years ago (see oxygen isotope ratio cycle). Seawater molecules that contain the lighter isotope, oxygen-16, evaporate at a slightly faster rate than water molecules containing the 12% heavier oxygen-18; this disparity increases at lower temperatures. During periods of lower global temperatures, snow and rain from that evaporated water tends to be higher in oxygen-16, and the seawater left behind tends to be higher in oxygen-18. Marine organisms then incorporate more oxygen-18 into their skeletons and shells than they would in a warmer climate. Paleoclimatologists also directly measure this ratio in the water molecules of ice core samples that are up to several hundreds of thousands of years old.",
+   "sha256": "683b342d0ffcfc6fe43a44ff9a999b6c5cf8e41e48c559c45ade86e4512db2be"
+  },
+  {
+   "id": "Oxygen#23",
+   "text": "Oxygen presents two spectrophotometric absorption bands peaking at the wavelengths 687 and 760 nm. Some remote sensing scientists have proposed using the measurement of the radiance coming from vegetation canopies in those bands to characterize plant health status from a satellite platform. This approach exploits the fact that in those bands it is possible to discriminate the vegetation's reflectance from its fluorescence, which is much weaker. The measurement is technically difficult owing to the low signal-to-noise ratio and the physical structure of vegetation; but it has been proposed as a possible method of monitoring the carbon cycle from satellites on a global scale.",
+   "sha256": "6fc646facb48400c43061228449cf9516037f6d3ab2d188ce20799edf2af1a06"
+  },
+  {
+   "id": "Oxygen#24",
+   "text": "In the triplet form, O\n2 molecules are paramagnetic. That is, they impart magnetic character to oxygen when it is in the presence of a magnetic field, because of the spin magnetic moments of the unpaired electrons in the molecule, and the negative exchange energy between neighboring O\n2 molecules. Liquid oxygen is attracted to a magnet to a sufficient extent that, in laboratory demonstrations, a bridge of liquid oxygen may be supported against its own weight between the poles of a powerful magnet.[c]",
+   "sha256": "0ed001b44e25271ed198ff145a14f9dc467d1f56b27afead08e9b4bc33f29fd0"
+  },
+  {
+   "id": "Oxygen#25",
+   "text": "Reactive oxygen species, such as superoxide ion (O−\n2) and hydrogen peroxide (H\n2O\n2), are dangerous by-products of oxygen use in organisms. Parts of the immune system of higher organisms create peroxide, superoxide, and singlet oxygen to destroy invading microbes. Reactive oxygen species also play an important role in the hypersensitive response of plants against pathogen attack. Oxygen is toxic to obligately anaerobic organisms, which were the dominant form of early life on Earth until O\n2 began to accumulate in the atmosphere about 2.5 billion years ago during the Great Oxygenation Event, about a billion years after the first appearance of these organisms.",
+   "sha256": "7570c6179b8da3c0ea28959bb249cf7b34072b311b684304210406b0986f7d7a"
+  },
+  {
+   "id": "Oxygen#26",
+   "text": "Oxygen condenses at 90.20 K (−182.95 °C, −297.31 °F), and freezes at 54.36 K (−218.79 °C, −361.82 °F). Both liquid and solid O\n2 are clear substances with a light sky-blue color caused by absorption in the red (in contrast with the blue color of the sky, which is due to Rayleigh scattering of blue light). High-purity liquid O\n2 is usually obtained by the fractional distillation of liquefied air. Liquid oxygen may also be produced by condensation out of air, using liquid nitrogen as a coolant. It is a highly reactive substance and must be segregated from combustible materials.",
+   "sha256": "c456b31b38f7b3d656d571ec7289b0630f5f2d8ce31a3965fddb4291053d73ef"
+  },
+  {
+   "id": "Oxygen#27",
+   "text": "Free oxygen also occurs in solution in the world's water bodies. The increased solubility of O\n2 at lower temperatures (see Physical properties) has important implications for ocean life, as polar oceans support a much higher density of life due to their higher oxygen content. Water polluted with plant nutrients such as nitrates or phosphates may stimulate growth of algae by a process called eutrophication and the decay of these organisms and other biomaterials may reduce amounts of O\n2 in eutrophic water bodies. Scientists assess this aspect of water quality by measuring the water's biochemical oxygen demand, or the amount of O\n2 needed to restore it to a normal concentration.",
+   "sha256": "ab5c862550d9c095acff44d9d96550d8bdd1760386df7e8e7ac8f6e47650d6b8"
+  },
+  {
+   "id": "Oxygen#28",
+   "text": "Free oxygen gas was almost nonexistent in Earth's atmosphere before photosynthetic archaea and bacteria evolved, probably about 3.5 billion years ago. Free oxygen first appeared in significant quantities during the Paleoproterozoic eon (between 3.0 and 2.3 billion years ago). For the first billion years, any free oxygen produced by these organisms combined with dissolved iron in the oceans to form banded iron formations. When such oxygen sinks became saturated, free oxygen began to outgas from the oceans 3–2.7 billion years ago, reaching 10% of its present level around 1.7 billion years ago.",
+   "sha256": "8ef143d276f98e3c0b64cb15958e1ff007dda45e722834eed2c95d4919a3429f"
+  },
+  {
+   "id": "Oxygen#29",
+   "text": "The unusually high concentration of oxygen gas on Earth is the result of the oxygen cycle. This biogeochemical cycle describes the movement of oxygen within and between its three main reservoirs on Earth: the atmosphere, the biosphere, and the lithosphere. The main driving factor of the oxygen cycle is photosynthesis, which is responsible for modern Earth's atmosphere. Photosynthesis releases oxygen into the atmosphere, while respiration and decay remove it from the atmosphere. In the present equilibrium, production and consumption occur at the same rate of roughly 1/2000th of the entire atmospheric oxygen per year.",
+   "sha256": "dd790b7fdd62790386db0c2a1e657cb576e6313042d6722d73c517fa827ed359"
+  },
+  {
+   "id": "Oxygen#30",
+   "text": "The other major method of producing O\n2 gas involves passing a stream of clean, dry air through one bed of a pair of identical zeolite molecular sieves, which absorbs the nitrogen and delivers a gas stream that is 90% to 93% O\n2. Simultaneously, nitrogen gas is released from the other nitrogen-saturated zeolite bed, by reducing the chamber operating pressure and diverting part of the oxygen gas from the producer bed through it, in the reverse direction of flow. After a set cycle time the operation of the two beds is interchanged, thereby allowing for a continuous supply of gaseous oxygen to be pumped through a pipeline. This is known as pressure swing adsorption. Oxygen gas is increasingly obtained by these non-cryogenic technologies (see also the related vacuum swing adsorption).",
+   "sha256": "9e5f19ae8c4bcea47d2097bb803a6f512f53874779686d5848e1aec6bdadef81"
+  },
+  {
+   "id": "Oxygen#31",
+   "text": "Oxygen gas can also be produced through electrolysis of water into molecular oxygen and hydrogen. DC electricity must be used: if AC is used, the gases in each limb consist of hydrogen and oxygen in the explosive ratio 2:1. Contrary to popular belief, the 2:1 ratio observed in the DC electrolysis of acidified water does not prove that the empirical formula of water is H2O unless certain assumptions are made about the molecular formulae of hydrogen and oxygen themselves. A similar method is the electrocatalytic O\n2 evolution from oxides and oxoacids. Chemical catalysts can be used as well, such as in chemical oxygen generators or oxygen candles that are used as part of the life-support equipment on submarines, and are still part of standard equipment on commercial airliners in case of depressurization emergencies. Another air separation technology involves forcing air to dissolve through ceramic membranes based on zirconium dioxide by either high pressure or an electric current, to produce nearly pure O\n2 gas.",
+   "sha256": "3b7ac2e35093c9f8c2b22f00bf75316eee3b144d65fffac08fff051c11609234"
+  },
+  {
+   "id": "Oxygen#32",
+   "text": "Oxygen, as a supposed mild euphoric, has a history of recreational use in oxygen bars and in sports. Oxygen bars are establishments, found in Japan, California, and Las Vegas, Nevada since the late 1990s that offer higher than normal O\n2 exposure for a fee. Professional athletes, especially in American football, also sometimes go off field between plays to wear oxygen masks in order to get a \"boost\" in performance. The pharmacological effect is doubtful; a placebo effect is a more likely explanation. Available studies support a performance boost from enriched O\n2 mixtures only if they are breathed during aerobic exercise.",
+   "sha256": "dbbb33306f8f352995a1d3fd2732b580913659def1453f2b1f9ebc7902eda387"
+  },
+  {
+   "id": "Oxygen#33",
+   "text": "Hyperbaric (high-pressure) medicine uses special oxygen chambers to increase the partial pressure of O\n2 around the patient and, when needed, the medical staff. Carbon monoxide poisoning, gas gangrene, and decompression sickness (the 'bends') are sometimes treated using these devices. Increased O\n2 concentration in the lungs helps to displace carbon monoxide from the heme group of hemoglobin. Oxygen gas is poisonous to the anaerobic bacteria that cause gas gangrene, so increasing its partial pressure helps kill them. Decompression sickness occurs in divers who decompress too quickly after a dive, resulting in bubbles of inert gas, mostly nitrogen and helium, forming in their blood. Increasing the pressure of O\n2 as soon as possible is part of the treatment.",
+   "sha256": "ee860af1558390e8f6b7b1a0d64e334296f4af9fd2716e0a65c5eb5c88fa4d3e"
+  },
+  {
+   "id": "Oxygen#34",
+   "text": "Uptake of O\n2 from the air is the essential purpose of respiration, so oxygen supplementation is used in medicine. Treatment not only increases oxygen levels in the patient's blood, but has the secondary effect of decreasing resistance to blood flow in many types of diseased lungs, easing work load on the heart. Oxygen therapy is used to treat emphysema, pneumonia, some heart disorders (congestive heart failure), some disorders that cause increased pulmonary artery pressure, and any disease that impairs the body's ability to take up and use gaseous oxygen.",
+   "sha256": "1a29c4d900a5861923886c7581703bf0d565d9d2f379ba04c2860be4aa68f14e"
+  },
+  {
+   "id": "Oxygen#35",
+   "text": "Due to its electronegativity, oxygen forms chemical bonds with almost all other elements to give corresponding oxides. The surface of most metals, such as aluminium and titanium, are oxidized in the presence of air and become coated with a thin film of oxide that passivates the metal and slows further corrosion. Many oxides of the transition metals are non-stoichiometric compounds, with slightly less metal than the chemical formula would show. For example, the mineral FeO (wüstite) is written as Fe\n1 − xO, where x is usually around 0.05.",
+   "sha256": "8657b03977310d90fc72a13d570f1c07e80c6100a3b2eeb92d2acdff9adb8b16"
+  },
+  {
+   "id": "Oxygen#36",
+   "text": "People who climb mountains or fly in non-pressurized fixed-wing aircraft sometimes have supplemental O\n2 supplies.[h] Passengers traveling in (pressurized) commercial airplanes have an emergency supply of O\n2 automatically supplied to them in case of cabin depressurization. Sudden cabin pressure loss activates chemical oxygen generators above each seat, causing oxygen masks to drop. Pulling on the masks \"to start the flow of oxygen\" as cabin safety instructions dictate, forces iron filings into the sodium chlorate inside the canister. A steady stream of oxygen gas is then produced by the exothermic reaction.",
+   "sha256": "badbd9d07214ab8658b0a88e6e7e4d7d0f49fb5d0523843171461e2db2e5ce51"
+  },
+  {
+   "id": "Oxygen#37",
+   "text": "Oxygen storage methods include high pressure oxygen tanks, cryogenics and chemical compounds. For reasons of economy, oxygen is often transported in bulk as a liquid in specially insulated tankers, since one liter of liquefied oxygen is equivalent to 840 liters of gaseous oxygen at atmospheric pressure and 20 °C (68 °F). Such tankers are used to refill bulk liquid oxygen storage containers, which stand outside hospitals and other institutions with a need for large volumes of pure oxygen gas. Liquid oxygen is passed through heat exchangers, which convert the cryogenic liquid into gas before it enters the building. Oxygen is also stored and shipped in smaller cylinders containing the compressed gas; a form that is useful in certain portable medical applications and oxy-fuel welding and cutting.",
+   "sha256": "730ba2104466230111a89907773728154408650beef8a8f777c6ef19249e8d1b"
+  },
+  {
+   "id": "Oxygen#38",
+   "text": "Among the most important classes of organic compounds that contain oxygen are (where \"R\" is an organic group): alcohols (R-OH); ethers (R-O-R); ketones (R-CO-R); aldehydes (R-CO-H); carboxylic acids (R-COOH); esters (R-COO-R); acid anhydrides (R-CO-O-CO-R); and amides (R-C(O)-NR\n2). There are many important organic solvents that contain oxygen, including: acetone, methanol, ethanol, isopropanol, furan, THF, diethyl ether, dioxane, ethyl acetate, DMF, DMSO, acetic acid, and formic acid. Acetone ((CH\n3)\n2CO) and phenol (C\n6H\n5OH) are used as feeder materials in the synthesis of many different substances. Other important organic compounds that contain oxygen are: glycerol, formaldehyde, glutaraldehyde, citric acid, acetic anhydride, and acetamide. Epoxides are ethers in which the oxygen atom is part of a ring of three atoms.",
+   "sha256": "fa7b1b0d74d9f12de63015fe351bfacee09ceccf626caceb999b7b6413671d75"
+  },
+  {
+   "id": "Oxygen#39",
+   "text": "The element is found in almost all biomolecules that are important to (or generated by) life. Only a few common complex biomolecules, such as squalene and the carotenes, contain no oxygen. Of the organic compounds with biological relevance, carbohydrates contain the largest proportion by mass of oxygen. All fats, fatty acids, amino acids, and proteins contain oxygen (due to the presence of carbonyl groups in these acids and their ester residues). Oxygen also occurs in phosphate (PO3−\n4) groups in the biologically important energy-carrying molecules ATP and ADP, in the backbone and the purines (except adenine) and pyrimidines of RNA and DNA, and in bones as calcium phosphate and hydroxylapatite.",
+   "sha256": "bb44cc7d6df50b60e3aa046eb94c63b1c6e157582dd86e876099903c7837fe97"
+  },
+  {
+   "id": "Oxygen#40",
+   "text": "Oxygen toxicity to the lungs and central nervous system can also occur in deep scuba diving and surface supplied diving. Prolonged breathing of an air mixture with an O\n2 partial pressure more than 60 kPa can eventually lead to permanent pulmonary fibrosis. Exposure to a O\n2 partial pressures greater than 160 kPa (about 1.6 atm) may lead to convulsions (normally fatal for divers). Acute oxygen toxicity (causing seizures, its most feared effect for divers) can occur by breathing an air mixture with 21% O\n2 at 66 m or more of depth; the same thing can occur by breathing 100% O\n2 at only 6 m.",
+   "sha256": "892da1bea8067c68eb6c0076aabb9951ef6cdc4cc76275dd8412ade20dfeca2c"
+  },
+  {
+   "id": "Oxygen#41",
+   "text": "Breathing pure O\n2 in space applications, such as in some modern space suits, or in early spacecraft such as Apollo, causes no damage due to the low total pressures used. In the case of spacesuits, the O\n2 partial pressure in the breathing gas is, in general, about 30 kPa (1.4 times normal), and the resulting O\n2 partial pressure in the astronaut's arterial blood is only marginally more than normal sea-level O\n2 partial pressure (for more information on this, see space suit and arterial blood gas).",
+   "sha256": "e1b10ed004e12df6dceedd14f615055081a60be7a8c36c4491296355382176a6"
+  },
+  {
+   "id": "Oxygen#42",
+   "text": "Oxygen gas (O\n2) can be toxic at elevated partial pressures, leading to convulsions and other health problems.[j] Oxygen toxicity usually begins to occur at partial pressures more than 50 kilopascals (kPa), equal to about 50% oxygen composition at standard pressure or 2.5 times the normal sea-level O\n2 partial pressure of about 21 kPa. This is not a problem except for patients on mechanical ventilators, since gas supplied through oxygen masks in medical applications is typically composed of only 30%–50% O\n2 by volume (about 30 kPa at standard pressure). (although this figure also is subject to wide variation, depending on type of mask).",
+   "sha256": "6e5410ef5b1cf7aa294d0905e9bb3458c6bbdd873d39aefcd61606cb2be59f78"
+  }
+ ]
+}

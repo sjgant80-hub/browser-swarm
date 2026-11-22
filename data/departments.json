@@ -1,0 +1,127 @@
+{
+ "v": "browser-swarm-departments/1",
+ "from": "CLINC150 domains.json",
+ "license": "CC BY 3.0",
+ "departments": [
+  {
+   "id": "banking",
+   "label": "banking",
+   "examples": [
+    "freeze account",
+    "routing",
+    "pin change",
+    "bill due",
+    "pay bill",
+    "account blocked"
+   ]
+  },
+  {
+   "id": "credit_cards",
+   "label": "credit cards",
+   "examples": [
+    "replacement card duration",
+    "expiration date",
+    "damaged card",
+    "improve credit score",
+    "report lost card",
+    "card declined"
+   ]
+  },
+  {
+   "id": "kitchen_and_dining",
+   "label": "kitchen and dining",
+   "examples": [
+    "food last",
+    "confirm reservation",
+    "how busy",
+    "ingredients list",
+    "calories",
+    "nutrition info"
+   ]
+  },
+  {
+   "id": "home",
+   "label": "home",
+   "examples": [
+    "what song",
+    "play music",
+    "todo list update",
+    "reminder",
+    "reminder update",
+    "calendar update"
+   ]
+  },
+  {
+   "id": "auto_and_commute",
+   "label": "auto and commute",
+   "examples": [
+    "current location",
+    "oil change when",
+    "oil change how",
+    "uber",
+    "traffic",
+    "tire pressure"
+   ]
+  },
+  {
+   "id": "travel",
+   "label": "travel",
+   "examples": [
+    "plug type",
+    "travel notification",
+    "translate",
+    "flight status",
+    "international visa",
+    "timezone"
+   ]
+  },
+  {
+   "id": "utility",
+   "label": "utility",
+   "examples": [
+    "weather",
+    "alarm",
+    "date",
+    "find phone",
+    "share location",
+    "timer"
+   ]
+  },
+  {
+   "id": "work",
+   "label": "work",
+   "examples": [
+    "pto request status",
+    "next holiday",
+    "insurance change",
+    "insurance",
+    "meeting schedule",
+    "payday"
+   ]
+  },
+  {
+   "id": "small_talk",
+   "label": "small talk",
+   "examples": [
+    "who made you",
+    "meaning of life",
+    "who do you work for",
+    "do you have pets",
+    "what are your hobbies",
+    "fun fact"
+   ]
+  },
+  {
+   "id": "meta",
+   "label": "meta",
+   "examples": [
+    "change speed",
+    "user name",
+    "whisper mode",
+    "yes",
+    "change volume",
+    "no"
+   ]
+  }
+ ]
+}

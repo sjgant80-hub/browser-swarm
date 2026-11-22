@@ -1,0 +1,286 @@
+{
+ "v": "browser-swarm-attacks/1",
+ "note": "answerable questions after the test, dev and tuning items in the same seeded order; false = another question's real answer, not in this paragraph. SEALED: positions 170-209, read once after seal 2",
+ "attacks": [
+  {
+   "id": "attack:56e1c7e2cd28a01900c67b75",
+   "question": "What is responsible for constraining P according to the time hierarchy theorem?",
+   "goldId": "Computational_complexity_theory#28",
+   "answer": "EXPTIME",
+   "false": "solve any problem in C"
+  },
+  {
+   "id": "attack:56e1ce08e3433e14004231a6",
+   "question": "An algorithm for X which reduces to C would us to do what?",
+   "goldId": "Computational_complexity_theory#31",
+   "answer": "solve any problem in C",
+   "false": "Edgar"
+  },
+  {
+   "id": "attack:56de17f9cffd8e1900b4b5e0",
+   "question": "Who was Margaret's brother?",
+   "goldId": "Normans#19",
+   "answer": "Edgar",
+   "false": "worst-case"
+  },
+  {
+   "id": "attack:56e1ba41cd28a01900c67ae1",
+   "question": "When extensive time is required to sort integers, this represents what case complexity?",
+   "goldId": "Computational_complexity_theory#20",
+   "answer": "worst-case",
+   "false": "Complexity measures"
+  },
+  {
+   "id": "attack:56e1b754cd28a01900c67ac0",
+   "question": "Decision tree is an example of what type of measure?",
+   "goldId": "Computational_complexity_theory#18",
+   "answer": "Complexity measures",
+   "false": "time and space hierarchy theorems"
+  },
+  {
+   "id": "attack:56e1c720e3433e140042316c",
+   "question": "What theorems are responsible for determining questions of time and space requirements?",
+   "goldId": "Computational_complexity_theory#27",
+   "answer": "time and space hierarchy theorems",
+   "false": "set of triples"
+  },
+  {
+   "id": "attack:56e1a0dccd28a01900c67a2f",
+   "question": "If two integers are multiplied and output a value, what is this expression set called?",
+   "goldId": "Computational_complexity_theory#9",
+   "answer": "set of triples",
+   "false": "randomized algorithms"
+  },
+  {
+   "id": "attack:56e1aff7cd28a01900c67a6c",
+   "question": "What is the term given to algorithms that utilize random bits?",
+   "goldId": "Computational_complexity_theory#13",
+   "answer": "randomized algorithms",
+   "false": "north"
+  },
+  {
+   "id": "attack:56dde27d9a695914005b9652",
+   "question": "What part of France were the Normans located?",
+   "goldId": "Normans#5",
+   "answer": "north",
+   "false": "solution"
+  },
+  {
+   "id": "attack:56e17a7ccd28a01900c679a5",
+   "question": "What is the general term used to describe the output to any given input in a problem instance?",
+   "goldId": "Computational_complexity_theory#3",
+   "answer": "solution",
+   "false": "multiplying two integers"
+  },
+  {
+   "id": "attack:56e1cbe2cd28a01900c67bad",
+   "question": "What equates to a squared integer according to polynomial time reduction?",
+   "goldId": "Computational_complexity_theory#30",
+   "answer": "multiplying two integers",
+   "false": "1018"
+  },
+  {
+   "id": "attack:56de3e414396321400ee26d8",
+   "question": "What year did Roger de Tosny fail to accomplish what he set out to do?",
+   "goldId": "Normans#23",
+   "answer": "1018",
+   "false": "Deabolis"
+  },
+  {
+   "id": "attack:56de15104396321400ee25b9",
+   "question": "What river was Petrela located by?",
+   "goldId": "Normans#12",
+   "answer": "Deabolis",
+   "false": "the most efficient algorithm"
+  },
+  {
+   "id": "attack:56e1bc3ae3433e1400423104",
+   "question": "Classification of resources is contingent on determining the upper and lower bounds of minimum time required by what?  ",
+   "goldId": "Computational_complexity_theory#21",
+   "answer": "the most efficient algorithm",
+   "false": "King Ethelred II"
+  },
+  {
+   "id": "attack:56de15dbcffd8e1900b4b5c8",
+   "question": "Who did Emma Marry?",
+   "goldId": "Normans#14",
+   "answer": "King Ethelred II",
+   "false": "an increase in the input size"
+  },
+  {
+   "id": "attack:56e1a38de3433e1400423060",
+   "question": "Complexity theory seeks to define the relationship between the scale of algorithms with respect to what other variable?",
+   "goldId": "Computational_complexity_theory#10",
+   "answer": "an increase in the input size",
+   "false": "bounding"
+  },
+  {
+   "id": "attack:56e1c3e1e3433e1400423149",
+   "question": "What function is used by algorithms to define measurements like time or space?",
+   "goldId": "Computational_complexity_theory#25",
+   "answer": "bounding",
+   "false": "William II"
+  },
+  {
+   "id": "attack:56de16ca4396321400ee25c6",
+   "question": "Who killed Harold II? ",
+   "goldId": "Normans#16",
+   "answer": "William II",
+   "false": "Alexius Komnenos"
+  },
+  {
+   "id": "attack:56de16ca4396321400ee25c7",
+   "question": "When was the Battle of Hastings?",
+   "goldId": "Normans#16",
+   "answer": "1066",
+   "false": "Alexius Komnenos"
+  },
+  {
+   "id": "attack:56de0ffd4396321400ee258f",
+   "question": "Who ruined Roussel de Bailleul's plans for an independent state?",
+   "goldId": "Normans#8",
+   "answer": "Alexius Komnenos",
+   "false": "Robert Guiscard"
+  },
+  {
+   "id": "attack:56de148dcffd8e1900b4b5bc",
+   "question": "What was the name of the count of Apulia ",
+   "goldId": "Normans#11",
+   "answer": "Robert Guiscard",
+   "false": "mosaics"
+  },
+  {
+   "id": "attack:56de51244396321400ee27ef",
+   "question": "What is the most important type of Norman art preserved in churches?",
+   "goldId": "Normans#36",
+   "answer": "mosaics",
+   "false": "Computational complexity theory"
+  },
+  {
+   "id": "attack:56e16182e3433e1400422e28",
+   "question": "What branch of theoretical computer science deals with broadly classifying computational problems by difficulty and class of relationship?",
+   "goldId": "Computational_complexity_theory#0",
+   "answer": "Computational complexity theory",
+   "false": "William of Montreuil"
+  },
+  {
+   "id": "attack:56de3e414396321400ee26d9",
+   "question": "Who was in charge of the papal army in the War of Barbastro?",
+   "goldId": "Normans#23",
+   "answer": "William of Montreuil",
+   "false": "binary alphabet"
+  },
+  {
+   "id": "attack:56e181d9e3433e1400422fa1",
+   "question": "What is the name of the alphabet is most commonly used in a problem instance?",
+   "goldId": "Computational_complexity_theory#5",
+   "answer": "binary alphabet",
+   "false": "input encoding"
+  },
+  {
+   "id": "attack:56e20a27cd28a01900c67c24",
+   "question": "What is the concrete choice typically assumed by most complexity-theoretic theorems?",
+   "goldId": "Computational_complexity_theory#46",
+   "answer": "input encoding",
+   "false": "Robert Guiscard"
+  },
+  {
+   "id": "attack:56de52614396321400ee27fd",
+   "question": "Who patronized the monks in Italy? ",
+   "goldId": "Normans#38",
+   "answer": "Robert Guiscard",
+   "false": "Decision problems"
+  },
+  {
+   "id": "attack:56e190bce3433e1400422fc8",
+   "question": "What kind of problems are one of the main topics studied in computational complexity theory?",
+   "goldId": "Computational_complexity_theory#6",
+   "answer": "Decision problems",
+   "false": "Hereford"
+  },
+  {
+   "id": "attack:56de3d594396321400ee26ca",
+   "question": "Where was Ralph earl of?",
+   "goldId": "Normans#21",
+   "answer": "Hereford",
+   "false": "Normandy"
+  },
+  {
+   "id": "attack:56de15dbcffd8e1900b4b5ca",
+   "question": "To where did Ethelred flee?",
+   "goldId": "Normans#14",
+   "answer": "Normandy",
+   "false": "Deabolis"
+  },
+  {
+   "id": "attack:56de15104396321400ee25b7",
+   "question": "Where did the Normans and Byzantines sign the peace treaty?",
+   "goldId": "Normans#12",
+   "answer": "Deabolis",
+   "false": "rounded"
+  },
+  {
+   "id": "attack:56de4a89cffd8e1900b4b7be",
+   "question": "What kind of arches does Norman architecture have?",
+   "goldId": "Normans#31",
+   "answer": "rounded",
+   "false": "exponential-time algorithms"
+  },
+  {
+   "id": "attack:56e1fc57e3433e140042322f",
+   "question": "Intractable problems lacking polynomial time solutions necessarily negate the practical efficacy of what type of algorithm?",
+   "goldId": "Computational_complexity_theory#41",
+   "answer": "exponential-time algorithms",
+   "false": "analysis of algorithms"
+  },
+  {
+   "id": "attack:56e17644e3433e1400422f41",
+   "question": "What field of computer science analyzes the resource requirements of a specific algorithm isolated unto itself within a given problem?",
+   "goldId": "Computational_complexity_theory#2",
+   "answer": "analysis of algorithms",
+   "false": "mathematical models of computation"
+  },
+  {
+   "id": "attack:56e16839cd28a01900c67888",
+   "question": "What method is used to intuitively assess or quantify the amount of resources required to solve a computational problem?",
+   "goldId": "Computational_complexity_theory#1",
+   "answer": "mathematical models of computation",
+   "false": "co-NP"
+  },
+  {
+   "id": "attack:56e1efa0e3433e140042321a",
+   "question": "In what complexity class do complement problems of NP problems exist?",
+   "goldId": "Computational_complexity_theory#39",
+   "answer": "co-NP",
+   "false": "if its solution requires significant resources"
+  },
+  {
+   "id": "attack:56e16839cd28a01900c67887",
+   "question": "What measure of a computational problem broadly defines the inherent difficulty of the solution?",
+   "goldId": "Computational_complexity_theory#1",
+   "answer": "if its solution requires significant resources",
+   "false": "bits"
+  },
+  {
+   "id": "attack:56e1a38de3433e140042305f",
+   "question": "In what unit is the size of the input measured?",
+   "goldId": "Computational_complexity_theory#10",
+   "answer": "bits",
+   "false": "the bound on the complexity of reductions"
+  },
+  {
+   "id": "attack:56e1c9bfe3433e1400423196",
+   "question": "Polynomial time reductions are an example of what?",
+   "goldId": "Computational_complexity_theory#29",
+   "answer": "the bound on the complexity of reductions",
+   "false": "a single output"
+  },
+  {
+   "id": "attack:56e19724cd28a01900c679f7",
+   "question": "How many outputs are expected for each input in a function problem?",
+   "goldId": "Computational_complexity_theory#8",
+   "answer": "a single output",
+   "false": "EXPTIME"
+  }
+ ]
+}

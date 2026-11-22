@@ -1,0 +1,4786 @@
+{
+ "v": "browser-swarm-tune/1",
+ "note": "the items after test and dev in the same seeded order; used only to choose settings",
+ "tasks": [
+  {
+   "id": "qa:56de1645cffd8e1900b4b5d2",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Who did Edward make archbishop of Canterbury?"
+   },
+   "gold": {
+    "answer": "Robert of Jumièges",
+    "goldId": "Normans#15",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1b00ce3433e14004230a1",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "In the determination of complexity classes, what are two examples of types of Turing machines?"
+   },
+   "gold": {
+    "answer": "probabilistic Turing machines, non-deterministic Turing machines",
+    "goldId": "Computational_complexity_theory#14",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56ddde6b9a695914005b962b",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Who was the Norse leader?"
+   },
+   "gold": {
+    "answer": "Rollo",
+    "goldId": "Normans#0",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1c4fce3433e140042314e",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What are three examples of complexity classes associated with definitions established by probabilistic Turing machines?"
+   },
+   "gold": {
+    "answer": "BPP, ZPP and RP",
+    "goldId": "Computational_complexity_theory#26",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1d9fee3433e14004231cb",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "The hardest problems in NP can be analogously written as what class of problems?"
+   },
+   "gold": {
+    "answer": "NP-complete",
+    "goldId": "Computational_complexity_theory#32",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1febfe3433e1400423237",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Despite the Presburger problem, and in view of intractability, what has been done to establish solutions in reasonable periods of time?"
+   },
+   "gold": {
+    "answer": "algorithms have been written",
+    "goldId": "Computational_complexity_theory#42",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1ddfce3433e14004231d6",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is a particular problem in biology that would benefit from determining that P = NP?"
+   },
+   "gold": {
+    "answer": "protein structure prediction",
+    "goldId": "Computational_complexity_theory#34",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e19724cd28a01900c679f8",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "The traveling salesman problem is an example of what type of problem?"
+   },
+   "gold": {
+    "answer": "A function problem",
+    "goldId": "Computational_complexity_theory#8",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1aba0e3433e1400423094",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is the term for a mathematical model that theoretically represents a general computing machine?"
+   },
+   "gold": {
+    "answer": "A Turing machine",
+    "goldId": "Computational_complexity_theory#12",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e202e9e3433e1400423242",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "In what year was Hatmanis and Stearn's seminal work in computational complexity received? "
+   },
+   "gold": {
+    "answer": "1965",
+    "goldId": "Computational_complexity_theory#44",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1ee4de3433e1400423214",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What evidence between and among complexity classes would signify a theoretical watershed for complexity theory?"
+   },
+   "gold": {
+    "answer": "Proving that any of these classes are unequal",
+    "goldId": "Computational_complexity_theory#38",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56de148dcffd8e1900b4b5be",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "How many men were in Robert's army?"
+   },
+   "gold": {
+    "answer": "30,000",
+    "goldId": "Normans#11",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56de16ca4396321400ee25c5",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Where did Harold II die?"
+   },
+   "gold": {
+    "answer": "Battle of Hastings",
+    "goldId": "Normans#16",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1bd4acd28a01900c67afd",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What does a big O notation hide?"
+   },
+   "gold": {
+    "answer": "constant factors and smaller terms",
+    "goldId": "Computational_complexity_theory#22",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56de1645cffd8e1900b4b5d0",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Who was Edward the Confessor's half-brother?"
+   },
+   "gold": {
+    "answer": "Harthacnut",
+    "goldId": "Normans#15",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1b00ce3433e140042309f",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What are two factors that directly effect how powerful a Turing machine may or may not be?"
+   },
+   "gold": {
+    "answer": "time or space",
+    "goldId": "Computational_complexity_theory#14",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e200e4cd28a01900c67c16",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What theoretical device is attributed to Alan Turing?"
+   },
+   "gold": {
+    "answer": "Turing machines",
+    "goldId": "Computational_complexity_theory#43",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e190bce3433e1400422fcc",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What answer denotes that an algorithm has accepted an input string?"
+   },
+   "gold": {
+    "answer": "yes",
+    "goldId": "Computational_complexity_theory#6",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56de179dcffd8e1900b4b5db",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What country did the Normans invade in 1169?"
+   },
+   "gold": {
+    "answer": "Ireland",
+    "goldId": "Normans#18",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e17a7ccd28a01900c679a3",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Is a problem instance typically characterized as abstract or concrete?"
+   },
+   "gold": {
+    "answer": "concrete",
+    "goldId": "Computational_complexity_theory#3",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1d9fee3433e14004231ce",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "If polynomial time can be utilized within an NP-complete problem, what does the imply P is equal to?"
+   },
+   "gold": {
+    "answer": "NP",
+    "goldId": "Computational_complexity_theory#32",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e20a3ae3433e140042324d",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is the paper written by Richard Karp in 1972 that ushered in a new era of understanding between intractability and NP-complete problems?"
+   },
+   "gold": {
+    "answer": "\"Reducibility Among Combinatorial Problems\"",
+    "goldId": "Computational_complexity_theory#47",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1bd4acd28a01900c67afc",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What expression is generally used to convey upper or lower bounds?"
+   },
+   "gold": {
+    "answer": "big O notation",
+    "goldId": "Computational_complexity_theory#22",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56de3efccffd8e1900b4b6fe",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "How long did Western Europe control Cyprus?"
+   },
+   "gold": {
+    "answer": "380 years",
+    "goldId": "Normans#25",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1bc3ae3433e1400423106",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Which bound of time is more difficult to establish?"
+   },
+   "gold": {
+    "answer": "lower bounds",
+    "goldId": "Computational_complexity_theory#21",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1febfe3433e1400423238",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is an example of a problem to which effective algorithms have provided a solution in spite of the intractability associated with the breadth of sizes?"
+   },
+   "gold": {
+    "answer": "NP-complete knapsack problem",
+    "goldId": "Computational_complexity_theory#42",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e16839cd28a01900c6788a",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What unit is measured to determine circuit complexity?"
+   },
+   "gold": {
+    "answer": "number of gates in a circuit",
+    "goldId": "Computational_complexity_theory#1",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1dc62cd28a01900c67bcc",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What complexity class is commonly characterized by unknown algorithms to enhance solvability?"
+   },
+   "gold": {
+    "answer": "NP",
+    "goldId": "Computational_complexity_theory#33",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1c3e1e3433e1400423148",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What are two examples of measurements are bound within algorithms to establish complexity classes?"
+   },
+   "gold": {
+    "answer": "time or space",
+    "goldId": "Computational_complexity_theory#25",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56de3cd0cffd8e1900b4b6bf",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What culture's arrival in Scotland is know as the \"Davidian Revolution\"?"
+   },
+   "gold": {
+    "answer": "Norman",
+    "goldId": "Normans#20",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:571a484210f8ca1400304fbe",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is the second most abundant element?"
+   },
+   "gold": {
+    "answer": "helium",
+    "goldId": "Oxygen#0",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1bc3ae3433e1400423107",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "A specific algorithm demonstrating T(n) represents what measure of time complexity?"
+   },
+   "gold": {
+    "answer": "upper bound",
+    "goldId": "Computational_complexity_theory#21",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1febfe3433e140042323a",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is the example of another problem characterized by large instances that is routinely solved by SAT handlers employing efficient algorithms?"
+   },
+   "gold": {
+    "answer": "NP-complete Boolean satisfiability problem",
+    "goldId": "Computational_complexity_theory#42",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e16839cd28a01900c6788b",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What practical role does defining the complexity of problems play in everyday computing?"
+   },
+   "gold": {
+    "answer": "determine the practical limits on what computers can and cannot do",
+    "goldId": "Computational_complexity_theory#1",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1a38de3433e140042305d",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is one variable on which the running time may be contingent?"
+   },
+   "gold": {
+    "answer": "the instance",
+    "goldId": "Computational_complexity_theory#10",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56de3f784396321400ee26fc",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What year did the storm hit Richard's fleet?"
+   },
+   "gold": {
+    "answer": "1191",
+    "goldId": "Normans#26",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56de4c324396321400ee27ad",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Who commissioned the Tapestry?"
+   },
+   "gold": {
+    "answer": "Odo",
+    "goldId": "Normans#35",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1c4fce3433e1400423150",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "BQP and QMA are examples of complexity classes most commonly associated with what type of Turing machine?"
+   },
+   "gold": {
+    "answer": "quantum",
+    "goldId": "Computational_complexity_theory#26",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e181d9e3433e1400422fa4",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is one way in which graphs can be encoded? "
+   },
+   "gold": {
+    "answer": "adjacency matrices",
+    "goldId": "Computational_complexity_theory#5",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1b169cd28a01900c67a74",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What two resources commonly consumed by alternate models are typically known to vary?"
+   },
+   "gold": {
+    "answer": "time and memory",
+    "goldId": "Computational_complexity_theory#15",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1ce08e3433e14004231a8",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "A problem set that that is hard for the expression NP can also be stated how?"
+   },
+   "gold": {
+    "answer": "NP-hard",
+    "goldId": "Computational_complexity_theory#31",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1c0f6cd28a01900c67b2d",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Complexity classes are generally classified into what?"
+   },
+   "gold": {
+    "answer": "framework",
+    "goldId": "Computational_complexity_theory#23",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e19557e3433e1400422fee",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What kind of graph is an example of an input used in a decision problem?"
+   },
+   "gold": {
+    "answer": "arbitrary graph",
+    "goldId": "Computational_complexity_theory#7",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1c2eee3433e1400423135",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "A multi-tape Turing machine requires what type of time for a solution?"
+   },
+   "gold": {
+    "answer": "linear time",
+    "goldId": "Computational_complexity_theory#24",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56de3f784396321400ee26fa",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What ruined Richard's plans to reach Acre?"
+   },
+   "gold": {
+    "answer": "a storm",
+    "goldId": "Normans#26",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1aba0e3433e1400423098",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What does a Turing machine handle on a strip of tape?"
+   },
+   "gold": {
+    "answer": "symbols",
+    "goldId": "Computational_complexity_theory#12",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56de179dcffd8e1900b4b5dc",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What culture did the Normans combine with in Ireland?"
+   },
+   "gold": {
+    "answer": "Irish",
+    "goldId": "Normans#18",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1bd4acd28a01900c67aff",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Big O notation provides autonomy to upper and lower bounds with relationship to what? "
+   },
+   "gold": {
+    "answer": "the computational model",
+    "goldId": "Computational_complexity_theory#22",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e200e4cd28a01900c67c17",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "In what year was the Alan Turing's definitional model of a computing device received?"
+   },
+   "gold": {
+    "answer": "1936",
+    "goldId": "Computational_complexity_theory#43",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56dde0379a695914005b9637",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "When was the Latin version of the word Norman first recorded?"
+   },
+   "gold": {
+    "answer": "9th century",
+    "goldId": "Normans#2",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56de3d594396321400ee26cb",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Who was Ralph in charge of being at war with?"
+   },
+   "gold": {
+    "answer": "the Welsh",
+    "goldId": "Normans#21",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1f10ee3433e1400423226",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is unknown about the complexity classes between L and P that further prevents determining the value relationship between L and P?"
+   },
+   "gold": {
+    "answer": "if they are distinct or equal classes",
+    "goldId": "Computational_complexity_theory#40",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56de52614396321400ee27fc",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What monastery did the Saint-Evroul monks establish in Italy?"
+   },
+   "gold": {
+    "answer": "Latin monastery at Sant'Eufemia.",
+    "goldId": "Normans#38",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e20a27cd28a01900c67c25",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "In the effort of maintaining a level of abstraction, what choice is typically left independent?"
+   },
+   "gold": {
+    "answer": "encoding",
+    "goldId": "Computational_complexity_theory#46",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e17a7ccd28a01900c679a4",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is another name for any given measure of input associated with a problem?"
+   },
+   "gold": {
+    "answer": "instances",
+    "goldId": "Computational_complexity_theory#3",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1c0f6cd28a01900c67b2e",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Difficulty in establishing a framework for complexity classes can be caused by what variable?"
+   },
+   "gold": {
+    "answer": "complicated definitions",
+    "goldId": "Computational_complexity_theory#23",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:571a484210f8ca1400304fbd",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "The atomic number of the periodic table for oxygen?"
+   },
+   "gold": {
+    "answer": "8",
+    "goldId": "Oxygen#0",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56de4b074396321400ee2793",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What architecture type came after Norman in England?"
+   },
+   "gold": {
+    "answer": "Early Gothic",
+    "goldId": "Normans#32",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e200e4cd28a01900c67c18",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "In the most basic sense what did a Turing machine emulate?"
+   },
+   "gold": {
+    "answer": "a computer",
+    "goldId": "Computational_complexity_theory#43",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56de49564396321400ee277a",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What continent are the Canarian Islands off the coast of?"
+   },
+   "gold": {
+    "answer": "Africa",
+    "goldId": "Normans#28",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e190bce3433e1400422fc9",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What are the two simple word responses to a decision problem?"
+   },
+   "gold": {
+    "answer": "yes or no",
+    "goldId": "Computational_complexity_theory#6",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e17644e3433e1400422f42",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What field of computer science analyzes all possible algorithms in aggregate to determine the resource requirements needed to solve to a given problem?  "
+   },
+   "gold": {
+    "answer": "computational complexity theory",
+    "goldId": "Computational_complexity_theory#2",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56de1563cffd8e1900b4b5c2",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "When did the Normans attack Dyrrachium?"
+   },
+   "gold": {
+    "answer": "1185",
+    "goldId": "Normans#13",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1c7e2cd28a01900c67b76",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Within what variable is L constrained according to the space hierarchy theorem?"
+   },
+   "gold": {
+    "answer": "PSPACE",
+    "goldId": "Computational_complexity_theory#28",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1a564cd28a01900c67a49",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "If input size is is equal to n, what can respectively be assumed is the function of n?"
+   },
+   "gold": {
+    "answer": "the time taken",
+    "goldId": "Computational_complexity_theory#11",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1c720e3433e140042316b",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "In what expression can one expect to find DTIME(n)"
+   },
+   "gold": {
+    "answer": "DTIME(n2)",
+    "goldId": "Computational_complexity_theory#27",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1c7e2cd28a01900c67b74",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is the foundation for separation results within complexity classes?"
+   },
+   "gold": {
+    "answer": "time and space hierarchy theorems",
+    "goldId": "Computational_complexity_theory#28",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1b8f3e3433e14004230e9",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Case complexities provide three likelihoods of what differing variable that remains the same size? "
+   },
+   "gold": {
+    "answer": "inputs",
+    "goldId": "Computational_complexity_theory#19",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1b754cd28a01900c67abe",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is typically used to broadly define complexity measures?"
+   },
+   "gold": {
+    "answer": "Blum complexity axioms",
+    "goldId": "Computational_complexity_theory#18",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56de40da4396321400ee2708",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Who was Guy's Rival?"
+   },
+   "gold": {
+    "answer": "Conrad of Montferrat",
+    "goldId": "Normans#27",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1b8f3e3433e14004230e8",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is one common example of a critical complexity measure?"
+   },
+   "gold": {
+    "answer": "time",
+    "goldId": "Computational_complexity_theory#19",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56de0ffd4396321400ee258d",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "When did Herve serve as a Byzantine general?"
+   },
+   "gold": {
+    "answer": "1050s",
+    "goldId": "Normans#8",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1a564cd28a01900c67a4a",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What term corresponds to the maximum measurement of time across all functions of n? "
+   },
+   "gold": {
+    "answer": "worst-case time complexity",
+    "goldId": "Computational_complexity_theory#11",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1fc57e3433e140042322c",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Problems capable of theoretical solutions but consuming unreasonable time in practical application are known as what?"
+   },
+   "gold": {
+    "answer": "intractable problems",
+    "goldId": "Computational_complexity_theory#41",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1ec83cd28a01900c67c0a",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What computational problem is commonly associated with prime factorization?"
+   },
+   "gold": {
+    "answer": "The integer factorization problem",
+    "goldId": "Computational_complexity_theory#37",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e16839cd28a01900c67889",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What are two basic primary resources used to guage complexity?"
+   },
+   "gold": {
+    "answer": "time and storage",
+    "goldId": "Computational_complexity_theory#1",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1b62ecd28a01900c67aa3",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "The time required to output an answer on a deterministic Turing machine is expressed as what?"
+   },
+   "gold": {
+    "answer": "state transitions",
+    "goldId": "Computational_complexity_theory#17",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1c2eee3433e1400423134",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Concrete bounding of computation time frequently produces complexity classes contingent upon what?"
+   },
+   "gold": {
+    "answer": "chosen machine model",
+    "goldId": "Computational_complexity_theory#24",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1ce08e3433e14004231a4",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "The complexity of problems often depends on what?"
+   },
+   "gold": {
+    "answer": "the type of reduction being used",
+    "goldId": "Computational_complexity_theory#31",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:571c3a685efbb31900334db3",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Of what group in the periodic table is oxygen a member?"
+   },
+   "gold": {
+    "answer": "chalcogen",
+    "goldId": "Oxygen#0",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:5ad560b85b96ef001a10ad22",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What system not often define classes like IP and AM/"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad3ffd7604f3c001a3ffca9",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Who was divided by the church?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad3af11604f3c001a3fec63",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What was replace with the Norse religion?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad56c6b5b96ef001a10ae6f",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What implication can not be derived for P and NP is P and co-NP are established to be unequal?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad3f7ac604f3c001a3ffa3b",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Who did Edgar marry?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad568d35b96ef001a10ae1a",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Who showed that if P=NQ then there exists problems in NQ that are neither P nor NQ-complete?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad541ad5b96ef001a10abea",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "How does one measure the simplicity of a computational problem?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad561c85b96ef001a10ad40",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What kind of statement is not made in an effort of establishing the time and space requirements needed to enhance the ultimate number of problems solved?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad3fe91604f3c001a3ffc47",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is the oldest work of Norman art?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad3fccf604f3c001a3ffbb5",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Who fled from southern Italy?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad54a375b96ef001a10ac48",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is not used for a precise definition of what it means to solve a problem using a given amount of time and space?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad3ffd7604f3c001a3ffca8",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Who began a program of church reform in the 1100s"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad3ff1b604f3c001a3ffc74",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What revolution was fought in the 1899's?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad532575b96ef001a10ab7e",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What are three basic primary resources used to gauge complexity?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad3ea79604f3c001a3ff6e9",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Where were several Norman mercenary familes originate from?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad547945b96ef001a10ac18",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is not an example of a machine model that deviates from a generally accepted multi-tape Turing machine?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad54b035b96ef001a10ac56",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What type of measure is communication complexity not an example of?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad3fc41604f3c001a3ffb90",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What did the Normans take part in in the 10th century?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad3e96b604f3c001a3ff689",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Who joined Norman forces in the destruction of the Armenians?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad3f8d2604f3c001a3ffa8d",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Who did King David I of Scotland Marry?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad400b0604f3c001a3ffcdf",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What precedes the period of Anglo-Saxon architecture?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad562525b96ef001a10ad52",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is not strictly contained in EXPTIME?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad3dbc6604f3c001a3ff3ec",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "During what campaign did the Vargian and Lombard fight?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad39d53604f3c001a3fe8d1",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Who gave their name to Normandy in the 1000's and 1100's"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad5316b5b96ef001a10ab74",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is understood to be a task that is in principle not amendable to being solved by a computer?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad54d625b96ef001a10ac65",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What does the deterministic parting algorithm quicksort do?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad541ad5b96ef001a10abeb",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is one variable which the running of time be not be contingent?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad545545b96ef001a10ac07",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What are three factors that directly effect how powerful a Turing machine may or may not be?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad568175b96ef001a10ae13",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What problem was proposed by Clay Mathematics Institute at the Alpha Prize Problems?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad532575b96ef001a10ab7f",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What unit is measured to determine circuit simplicity?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:oos:5a5812f9770dc0001aeeffd3",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "How do studies give information about tectonic plate boundaries?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:572f609ca23a5019007fc5b2",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Where is the highest point of the Rhine basin?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5ad2434fd7d075001a4289da",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What do the top 400 richest Americans have less of than half of all Americans combined?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:57300bf504bcaa1900d77087",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Where is the Rhine Bridge?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:570607f575f01819005e78b4",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is the largest city in all of California?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5a3e2f07378766001a0024cf",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "When was UNEP founded?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5ad15d77645df0001a2d18c2",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What did Franco Frattini, the Justice, Freedom and Security Commissioner, and Dimas reject?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5acfe99177cf76001a686455",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": " Maududi believed that Islam needed what to not be established?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5ad2a901d7d075001a429e28",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Where does the North Sea discharge into?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:57265285708984140094c25c",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "How significant was the transfer of disease through fleas?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5ad13b23645df0001a2d12f8",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What has operated among a decreasing plurality of national and globalising legal systems?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5727d9c43acd2414000dee17",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Starting in what year has Harvard topped the Academic Rankings of World Universities?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5727b8df3acd2414000dea9b",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "In what year was Henry Ware elected to chair?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:57261f9f271a42140099d4a9",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is one of the reason that US production has been held responsible for recessions and lower economic growth?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5ad28c93d7d075001a429a0e",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "The southern flow retains the name IJssel until it flows into what?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:570d29c2b3d812140066d4c0",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "How many Victorians are Buddhist?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5706149552bb891400689883",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What was the name of the stadium that the teams played in?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:57273a465951b619008f86ff",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is the process of constructing a building or infrastructure?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5a67e5278476ee001a58a761",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Where do most students at the Groton School come from?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5ad27abcd7d075001a42962c",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "How wide are the Jura Mountains?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5728fb002ca10214002dab6d",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is secreted by the respiratory tract to trap microorganisms?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:572fdc34a23a5019007fca95",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What net loss did the Conservatives suffer?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5ad243abd7d075001a428a14",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Where was Jean de Rely from?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5710ed7bb654c5140001fa2e",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What leader led the Dutch Revolt and wrote Apologie?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:57288428ff5b5019007da28e",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What Yuan policies did Muslims dislike?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5ad1373b645df0001a2d11d0",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "How are the votes weighted to ensure the smaller states are dominated by larger ones?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:57302700a23a5019007fce8d",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Where did Turabi place students sympathetic to his views?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5a664612c2b11c001a425f0c",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What types of people were always involved in the court system?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5ad140ab645df0001a2d13cc",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "How many non paid holidays does the Working time directive require workers to have each year?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5728dc2d3acd2414000e0083",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What public entity of learning is often target of civil disobedience?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5a667dae846392001a1e1c57",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "How did RAND use this network?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5acf9bcf77cf76001a68547a",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What doctorate program has been offered since 1996?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5ad40346604f3c001a3ffd73",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Where had the Mongol capital been before Kublai destroyed it?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:57286dfa2ca10214002da334",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Where did the Tran dynasty rule?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:573735e8c3c5551400e51e74",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "How long did it take to improve on Sir Isaac Newton's laws of motion?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:57300a25a23a5019007fcc98",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What was a long term goal of French foreign policy along the Rhine?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5ad49c34ba00c4001a268d9a",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is the system of many biological structures and processes that protect an organism from cold?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5729727baf94a219006aa437",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is the name of the supposition that any number larger than 2 can be represented as the sum of two primes?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5a6395e668151a001a9223a2",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is the median temperature in the summer?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5ad263d9d7d075001a429122",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What French city was Alexander Pepin originally from?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5ad260dbd7d075001a428fda",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "A dollar spent by a rich person is likely to provide what for them?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5729f1c13f37b319004785ea",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Who is the author of the book, \"Knowledge and Decisions\"?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5733d5704776f4190066130f",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Where were French North Americans settled?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5a38d2f9a4b263001a8c193d",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What did Toyota rebrand its Forte as?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:572995d46aef051400154fe8",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Assuming p is a prime other than 2 or 5, then, according to Fermat's theorem, what type of decimal will 1/p always be?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:570d418dfed7b91900d45dbe",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "How many seats does Victoria have in the Senate?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5acfea9277cf76001a68648a",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What was the defeat of the Arab troops at the hand of the Israeli troops during the Seven-Day War?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5733d3cb4776f419006612eb",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is the confusion of the French and Indian war?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5a3e488b378766001a00253c",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "How many chapters have coordinating lead authors?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:57377c98c3c5551400e51efc",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is the principle about relating spin and space variables?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5ad406b6604f3c001a3ffe73",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What problems did the Yuan dynasty have near its beginning?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5a57f487770dc0001aeefeff",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What has it now become possible to do when dating isotopes while using fossils?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:572883153acd2414000dfa6f",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What Mongolian system did Kublai's government compromise with?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:57287c2bff5b5019007da26d",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "According to the wealth concentration theory, what advantage do the wealthy have in accumulating new wealth?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:57297d421d046914007794e7",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is the name of another type of modern primality test?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5a6792f1f038b7001ab0c2ea",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "In what article does it give Gleichschaltung the right to create private schools?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:57337f6ad058e614000b5bcd",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "When did the Warsaw area enlargement take place?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:573092088ab72b1400f9c598",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Which is older the British Empire or the Ethiopian Empire?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5a25d89aef59cd001a623cf9",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Who's presence is likely in the initial bid?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5ad25b9ed7d075001a428e70",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "How many ships with Hugeunot's aboard had sailed to Cape of Good Hope in 1671?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5ad2615ed7d075001a429018",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Who named \"Bauffet's Point\" at Davenports Neck?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5a667761846392001a1e1c38",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Does packet switching charge a fee when no data is transferred?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5ad5036c5b96ef001a10a986",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What type of theatre is the Katyn Fotoplastikon?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:572feddda23a5019007fcb5f",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What carries a significant amount of the Rhine flow through France?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:572a05eb3f37b31900478656",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What's one factor in eroding self-esteem?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5ad4d5e15b96ef001a10a298",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What evolved in modern jawed vertebrates?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5a58e3833e1742001a15ce85",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What does the fourth scale compress?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:572885c44b864d1900164a78",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What region of China is Hebei part of?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:572fcb6da23a5019007fc9f2",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "If a matter is not specifically reserved, who is it devolved to?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5a6374de68151a001a9222e7",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Where according to net domestic product does Victoria rank in Australia?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5a67dedd8476ee001a58a74e",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Why would course content funding be restricted by the courts?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5728202c4b864d19001644ed",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What group of people performed revolutionary civil disobedience toward the Austrian government?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5a2c3ca9bfd06b001a5aea86",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What service doesn't require a fee to use?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5acfa23577cf76001a685631",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Who is the chairman of Microsoft as well as the NBA commissioner?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:572f59b4a23a5019007fc587",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Why does the Rhine water fall into depths at the Rheinbrech?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5acfab5077cf76001a6857d0",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Who is a Nobel prize winning prior novelist?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5a820ebf31013a001a33516f",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What medical school is located in Allston?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:57268527708984140094c8c2",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What was the main idea of James Hutton's paper?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:57284456ff5b5019007da060",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What was the name given to the undergraduate college's liberal-arts curriculum?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5730aa52069b531400832221",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "By when did most of France's Colonies gain independence?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "classify:b77-test-1114",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Some of my card payments look different than where I purchased products from. Why is that?"
+   },
+   "gold": {
+    "intent": "card_payment_not_recognised"
+   }
+  },
+  {
+   "id": "classify:b77-test-915",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "What cards and currencies will suffice?"
+   },
+   "gold": {
+    "intent": "supported_cards_and_currencies"
+   }
+  },
+  {
+   "id": "classify:b77-test-2848",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Is there a way my new card can be renewed?"
+   },
+   "gold": {
+    "intent": "activate_my_card"
+   }
+  },
+  {
+   "id": "classify:b77-test-2856",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "how to activate card?"
+   },
+   "gold": {
+    "intent": "activate_my_card"
+   }
+  },
+  {
+   "id": "classify:b77-test-1972",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "It appears that I am being double charged for some items that I have purchased this past week.  Please review and correct."
+   },
+   "gold": {
+    "intent": "transaction_charged_twice"
+   }
+  },
+  {
+   "id": "classify:b77-test-416",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "How would I use my money in a different country?"
+   },
+   "gold": {
+    "intent": "exchange_via_app"
+   }
+  },
+  {
+   "id": "classify:b77-test-1280",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I like to Mastercard rather than Visa."
+   },
+   "gold": {
+    "intent": "visa_or_mastercard"
+   }
+  },
+  {
+   "id": "classify:b77-test-1692",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I want a refund because my package has been taking too long to arrive. How do I go about doing that?"
+   },
+   "gold": {
+    "intent": "request_refund"
+   }
+  },
+  {
+   "id": "classify:b77-test-2701",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I transferred some money but it is yet to arrive."
+   },
+   "gold": {
+    "intent": "balance_not_updated_after_bank_transfer"
+   }
+  },
+  {
+   "id": "classify:b77-test-2738",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I'm unsure of a withdrawl in my statement."
+   },
+   "gold": {
+    "intent": "cash_withdrawal_not_recognised"
+   }
+  },
+  {
+   "id": "classify:b77-test-1578",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "What are some reasons that would cause ATM machines to decline my card? It has happened to me multiple times!"
+   },
+   "gold": {
+    "intent": "declined_cash_withdrawal"
+   }
+  },
+  {
+   "id": "classify:b77-test-868",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Is there a reason why my transaction is taking so long?"
+   },
+   "gold": {
+    "intent": "transfer_not_received_by_recipient"
+   }
+  },
+  {
+   "id": "classify:b77-test-2490",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Do you charge for physical cards"
+   },
+   "gold": {
+    "intent": "order_physical_card"
+   }
+  },
+  {
+   "id": "classify:b77-test-2711",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "My transfer is pending."
+   },
+   "gold": {
+    "intent": "balance_not_updated_after_bank_transfer"
+   }
+  },
+  {
+   "id": "classify:b77-test-1715",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "What's the refund process?"
+   },
+   "gold": {
+    "intent": "request_refund"
+   }
+  },
+  {
+   "id": "classify:b77-test-180",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Where did this 1 euro fee come from?"
+   },
+   "gold": {
+    "intent": "extra_charge_on_statement"
+   }
+  },
+  {
+   "id": "classify:b77-test-2380",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Why is it important to verify a top-up card?"
+   },
+   "gold": {
+    "intent": "verify_top_up"
+   }
+  },
+  {
+   "id": "classify:b77-test-2614",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "What do I do to get a disposable virtual card?"
+   },
+   "gold": {
+    "intent": "get_disposable_virtual_card"
+   }
+  },
+  {
+   "id": "classify:b77-test-1689",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I wasn't charged the correct amount for an item I purchased, how can I fix this?"
+   },
+   "gold": {
+    "intent": "request_refund"
+   }
+  },
+  {
+   "id": "classify:b77-test-1226",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I tried verifying my ID, but it won't let me."
+   },
+   "gold": {
+    "intent": "unable_to_verify_identity"
+   }
+  },
+  {
+   "id": "classify:b77-test-2",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I ordered a card but it has not arrived. Help please!"
+   },
+   "gold": {
+    "intent": "card_arrival"
+   }
+  },
+  {
+   "id": "classify:b77-test-1645",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I can't find my phone."
+   },
+   "gold": {
+    "intent": "lost_or_stolen_phone"
+   }
+  },
+  {
+   "id": "classify:b77-test-993",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "What places will accept my card?"
+   },
+   "gold": {
+    "intent": "card_acceptance"
+   }
+  },
+  {
+   "id": "classify:b77-test-555",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "My card's frozen, what can I do?"
+   },
+   "gold": {
+    "intent": "pin_blocked"
+   }
+  },
+  {
+   "id": "classify:b77-test-1976",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Why is there a transaction that shows multiple times?"
+   },
+   "gold": {
+    "intent": "transaction_charged_twice"
+   }
+  },
+  {
+   "id": "classify:b77-test-1353",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "My friends want to top up my account"
+   },
+   "gold": {
+    "intent": "topping_up_by_card"
+   }
+  },
+  {
+   "id": "classify:b77-test-2255",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "How do i get my salary in the account?"
+   },
+   "gold": {
+    "intent": "receiving_money"
+   }
+  },
+  {
+   "id": "classify:b77-test-206",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I tried taking money from the ATM but no money came out, but the transaction is still pending? How is this possible?"
+   },
+   "gold": {
+    "intent": "pending_cash_withdrawal"
+   }
+  },
+  {
+   "id": "classify:b77-test-2184",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Explain why I can't do a transfer to a beneficiary."
+   },
+   "gold": {
+    "intent": "beneficiary_not_allowed"
+   }
+  },
+  {
+   "id": "classify:b77-test-1492",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Even though it's late, I wanted to see about disputing a charge. I was just looking through my transactions over the past couple of months and noticed a pretty large amount that was not completed by me. Is this possibly something I can still do."
+   },
+   "gold": {
+    "intent": "direct_debit_payment_not_recognised"
+   }
+  },
+  {
+   "id": "classify:b77-test-2606",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I would like a temporary virtual card"
+   },
+   "gold": {
+    "intent": "get_disposable_virtual_card"
+   }
+  },
+  {
+   "id": "classify:b77-test-335",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "can you assist me with the auto top up ?"
+   },
+   "gold": {
+    "intent": "automatic_top_up"
+   }
+  },
+  {
+   "id": "classify:b77-test-1862",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "When will my transfer go through?"
+   },
+   "gold": {
+    "intent": "pending_transfer"
+   }
+  },
+  {
+   "id": "classify:b77-test-1282",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "How do I get a visa card?"
+   },
+   "gold": {
+    "intent": "visa_or_mastercard"
+   }
+  },
+  {
+   "id": "classify:b77-test-2652",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "My top up failed."
+   },
+   "gold": {
+    "intent": "top_up_failed"
+   }
+  },
+  {
+   "id": "classify:b77-test-1404",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Can I freeze my card right now?"
+   },
+   "gold": {
+    "intent": "compromised_card"
+   }
+  },
+  {
+   "id": "classify:b77-test-255",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "How do I change currencies to euros?"
+   },
+   "gold": {
+    "intent": "fiat_currency_support"
+   }
+  },
+  {
+   "id": "classify:b77-test-1238",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Why can't I verify my id?"
+   },
+   "gold": {
+    "intent": "unable_to_verify_identity"
+   }
+  },
+  {
+   "id": "classify:b77-test-1746",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I tired to move my money, but my transfer was declined."
+   },
+   "gold": {
+    "intent": "declined_transfer"
+   }
+  },
+  {
+   "id": "classify:b77-test-2139",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I would like to change my pin."
+   },
+   "gold": {
+    "intent": "change_pin"
+   }
+  },
+  {
+   "id": "classify:b77-test-333",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "where is theft-top option?"
+   },
+   "gold": {
+    "intent": "automatic_top_up"
+   }
+  },
+  {
+   "id": "classify:b77-test-2649",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Why didn`t my topup go through?"
+   },
+   "gold": {
+    "intent": "top_up_failed"
+   }
+  },
+  {
+   "id": "classify:b77-test-54",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Can I link my new card?"
+   },
+   "gold": {
+    "intent": "card_linking"
+   }
+  },
+  {
+   "id": "classify:b77-test-1098",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I don't recognise a card payment"
+   },
+   "gold": {
+    "intent": "card_payment_not_recognised"
+   }
+  },
+  {
+   "id": "classify:b77-test-725",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "What are the restrictions to top-offs?"
+   },
+   "gold": {
+    "intent": "top_up_limits"
+   }
+  },
+  {
+   "id": "classify:b77-test-985",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Can I use my card everywhere?"
+   },
+   "gold": {
+    "intent": "card_acceptance"
+   }
+  },
+  {
+   "id": "classify:b77-test-2375",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Why does top-up need verifying?"
+   },
+   "gold": {
+    "intent": "verify_top_up"
+   }
+  },
+  {
+   "id": "classify:b77-test-288",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "When can I expect my card to be delivered to the US?"
+   },
+   "gold": {
+    "intent": "card_delivery_estimate"
+   }
+  },
+  {
+   "id": "classify:b77-test-1326",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Can I top up using my car?"
+   },
+   "gold": {
+    "intent": "topping_up_by_card"
+   }
+  },
+  {
+   "id": "classify:b77-test-2478",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Can I submit a check or cash payment?"
+   },
+   "gold": {
+    "intent": "top_up_by_cash_or_cheque"
+   }
+  },
+  {
+   "id": "classify:b77-test-2013",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "My source of funds need verified."
+   },
+   "gold": {
+    "intent": "verify_source_of_funds"
+   }
+  },
+  {
+   "id": "classify:b77-test-967",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "What stores can I sue my card?"
+   },
+   "gold": {
+    "intent": "card_acceptance"
+   }
+  },
+  {
+   "id": "classify:b77-test-692",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I want to cancel a transfer right away! Can you help?"
+   },
+   "gold": {
+    "intent": "cancel_transfer"
+   }
+  },
+  {
+   "id": "classify:b77-test-667",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I'm attempting to top-up my account but it has been pending for an hour."
+   },
+   "gold": {
+    "intent": "pending_top_up"
+   }
+  },
+  {
+   "id": "classify:b77-test-427",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Where do I go to change GBP?"
+   },
+   "gold": {
+    "intent": "exchange_via_app"
+   }
+  },
+  {
+   "id": "classify:b77-test-2837",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Are there any extra fees for adding money into the international card?"
+   },
+   "gold": {
+    "intent": "top_up_by_card_charge"
+   }
+  },
+  {
+   "id": "classify:b77-test-1718",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I want to get an item refunded"
+   },
+   "gold": {
+    "intent": "request_refund"
+   }
+  },
+  {
+   "id": "classify:b77-test-2957",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "If my card is about to expire, do I need to order a new one?"
+   },
+   "gold": {
+    "intent": "card_about_to_expire"
+   }
+  },
+  {
+   "id": "classify:b77-test-1297",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "What are the available cards?"
+   },
+   "gold": {
+    "intent": "visa_or_mastercard"
+   }
+  },
+  {
+   "id": "classify:b77-test-1962",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Why am I being charged twice fro a restaurant?"
+   },
+   "gold": {
+    "intent": "transaction_charged_twice"
+   }
+  },
+  {
+   "id": "classify:b77-test-2645",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "please tell me why my top-up failed."
+   },
+   "gold": {
+    "intent": "top_up_failed"
+   }
+  },
+  {
+   "id": "classify:b77-test-1224",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "What's with not verifying my Id?"
+   },
+   "gold": {
+    "intent": "unable_to_verify_identity"
+   }
+  },
+  {
+   "id": "classify:b77-test-6",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Do you know if there is a tracking number for the new card you sent me?"
+   },
+   "gold": {
+    "intent": "card_arrival"
+   }
+  },
+  {
+   "id": "classify:b77-test-1837",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I tried using my card and it kept getting declined, Why?"
+   },
+   "gold": {
+    "intent": "declined_card_payment"
+   }
+  },
+  {
+   "id": "classify:b77-test-1339",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Will my friend be able to top off my account?"
+   },
+   "gold": {
+    "intent": "topping_up_by_card"
+   }
+  },
+  {
+   "id": "classify:b77-test-1142",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Where can I go to update my personal profile?"
+   },
+   "gold": {
+    "intent": "edit_personal_details"
+   }
+  },
+  {
+   "id": "classify:b77-test-2152",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I need to change my pin but I am on the road."
+   },
+   "gold": {
+    "intent": "change_pin"
+   }
+  },
+  {
+   "id": "classify:b77-test-2782",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Would I be charged for exchanging currencies?"
+   },
+   "gold": {
+    "intent": "exchange_charge"
+   }
+  },
+  {
+   "id": "classify:b77-test-2838",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "What are the fees for top ups?"
+   },
+   "gold": {
+    "intent": "top_up_by_card_charge"
+   }
+  },
+  {
+   "id": "classify:b77-test-1735",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "You keep declining my transfers? It's always been working really well so far, but when I tried to buy something just now the card got declined. I tried couple times already but same thing."
+   },
+   "gold": {
+    "intent": "declined_transfer"
+   }
+  },
+  {
+   "id": "classify:b77-test-176",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I need information about an extra €1 fee in my statement."
+   },
+   "gold": {
+    "intent": "extra_charge_on_statement"
+   }
+  },
+  {
+   "id": "classify:b77-test-1793",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "My refund is missing"
+   },
+   "gold": {
+    "intent": "Refund_not_showing_up"
+   }
+  },
+  {
+   "id": "classify:b77-test-2352",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I would like use the bank transfer, but I don't understand the process, can you please explain, topping up?"
+   },
+   "gold": {
+    "intent": "transfer_into_account"
+   }
+  },
+  {
+   "id": "classify:b77-test-1120",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I no longer live at my address on file, how do I change it?"
+   },
+   "gold": {
+    "intent": "edit_personal_details"
+   }
+  },
+  {
+   "id": "classify:b77-test-1001",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "How do I fix a reverted top up?"
+   },
+   "gold": {
+    "intent": "top_up_reverted"
+   }
+  },
+  {
+   "id": "classify:b77-test-1026",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "The app reverted my top off."
+   },
+   "gold": {
+    "intent": "top_up_reverted"
+   }
+  },
+  {
+   "id": "classify:b77-test-3028",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "which kind of documentation do I need for identity check?"
+   },
+   "gold": {
+    "intent": "verify_my_identity"
+   }
+  },
+  {
+   "id": "classify:b77-test-1413",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I think my identity has been stolen, can you check on unauthorized charges?"
+   },
+   "gold": {
+    "intent": "compromised_card"
+   }
+  },
+  {
+   "id": "classify:b77-test-95",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Do you have a list of exchange rates?"
+   },
+   "gold": {
+    "intent": "exchange_rate"
+   }
+  },
+  {
+   "id": "classify:b77-test-2186",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Why isn't my transfer going through? I get a message saying it's not possible. I've had no issues in the past."
+   },
+   "gold": {
+    "intent": "beneficiary_not_allowed"
+   }
+  },
+  {
+   "id": "classify:b77-test-2081",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "My card payment was reverted.  Why?"
+   },
+   "gold": {
+    "intent": "reverted_card_payment?"
+   }
+  },
+  {
+   "id": "classify:b77-test-2316",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Why didn't my transfer go through?"
+   },
+   "gold": {
+    "intent": "failed_transfer"
+   }
+  },
+  {
+   "id": "classify:b77-test-2554",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "My virtual card won't work."
+   },
+   "gold": {
+    "intent": "virtual_card_not_working"
+   }
+  },
+  {
+   "id": "classify:b77-test-2319",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I tried to transfer money and it did not work."
+   },
+   "gold": {
+    "intent": "failed_transfer"
+   }
+  },
+  {
+   "id": "classify:b77-test-2090",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "What do I do if it says my card payment has been cancelled?"
+   },
+   "gold": {
+    "intent": "reverted_card_payment?"
+   }
+  },
+  {
+   "id": "classify:b77-test-1366",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "What's the most disposable cards I can have?"
+   },
+   "gold": {
+    "intent": "disposable_card_limits"
+   }
+  },
+  {
+   "id": "classify:b77-test-2778",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "How much do I have to pay for the exchange fee?"
+   },
+   "gold": {
+    "intent": "exchange_charge"
+   }
+  },
+  {
+   "id": "classify:b77-test-460",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I think my card was stolen."
+   },
+   "gold": {
+    "intent": "lost_or_stolen_card"
+   }
+  },
+  {
+   "id": "classify:b77-test-1379",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I have to have several disposable cards per day."
+   },
+   "gold": {
+    "intent": "disposable_card_limits"
+   }
+  },
+  {
+   "id": "classify:b77-test-1215",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "The app will not let me into my account."
+   },
+   "gold": {
+    "intent": "unable_to_verify_identity"
+   }
+  },
+  {
+   "id": "classify:b77-test-1758",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I was attempting to purchase a golf club off eBay yesterday, but my credit card was declined. I tried multiple times, and again this morning. Can you check into my card please?"
+   },
+   "gold": {
+    "intent": "declined_transfer"
+   }
+  },
+  {
+   "id": "classify:b77-test-2365",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "What are the benefits to verifying the top-up?"
+   },
+   "gold": {
+    "intent": "verify_top_up"
+   }
+  },
+  {
+   "id": "classify:b77-test-2303",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Why couldn't I complete a transfer?"
+   },
+   "gold": {
+    "intent": "failed_transfer"
+   }
+  },
+  {
+   "id": "classify:b77-test-1554",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "My passcode doesn't work"
+   },
+   "gold": {
+    "intent": "passcode_forgotten"
+   }
+  },
+  {
+   "id": "classify:b77-test-1469",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I want to withdraw money, where can I go?"
+   },
+   "gold": {
+    "intent": "atm_support"
+   }
+  },
+  {
+   "id": "classify:b77-test-1432",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "There are a few transaction that I don't recognize, I think someone managed to get my card details and use it."
+   },
+   "gold": {
+    "intent": "compromised_card"
+   }
+  },
+  {
+   "id": "classify:b77-test-2004",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "where to funds come from"
+   },
+   "gold": {
+    "intent": "verify_source_of_funds"
+   }
+  },
+  {
+   "id": "classify:b77-test-239",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "What's a pending transaction? My card was declined at an ATM, but my account says it's still pending. Can I cancel the payment?"
+   },
+   "gold": {
+    "intent": "pending_cash_withdrawal"
+   }
+  },
+  {
+   "id": "classify:b77-test-701",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I made a mistake when I did a transfer so now what can I do to fix that?"
+   },
+   "gold": {
+    "intent": "cancel_transfer"
+   }
+  },
+  {
+   "id": "classify:b77-test-1883",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I would like to delete my account please."
+   },
+   "gold": {
+    "intent": "terminate_account"
+   }
+  },
+  {
+   "id": "classify:b77-test-372",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Help me.  My card doesn't work."
+   },
+   "gold": {
+    "intent": "card_not_working"
+   }
+  },
+  {
+   "id": "classify:b77-test-1360",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "How can i get multiple disposble cards."
+   },
+   "gold": {
+    "intent": "disposable_card_limits"
+   }
+  },
+  {
+   "id": "classify:b77-test-3002",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I need to verify my identity, but how do I do that?"
+   },
+   "gold": {
+    "intent": "verify_my_identity"
+   }
+  },
+  {
+   "id": "classify:b77-test-1727",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Why did a transfer get declined?"
+   },
+   "gold": {
+    "intent": "declined_transfer"
+   }
+  },
+  {
+   "id": "classify:b77-test-1987",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "My card has been charged two separate times for a single transaction."
+   },
+   "gold": {
+    "intent": "transaction_charged_twice"
+   }
+  },
+  {
+   "id": "classify:b77-test-1115",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "There is a strange payment on my statement. What should I do?"
+   },
+   "gold": {
+    "intent": "card_payment_not_recognised"
+   }
+  },
+  {
+   "id": "classify:b77-test-13",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "still waiting on my new card"
+   },
+   "gold": {
+    "intent": "card_arrival"
+   }
+  },
+  {
+   "id": "classify:b77-test-773",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Where is the money I pushed it's on my mobile app as being withdrawn."
+   },
+   "gold": {
+    "intent": "wrong_amount_of_cash_received"
+   }
+  },
+  {
+   "id": "classify:b77-test-973",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Is my card accepted everywhere?"
+   },
+   "gold": {
+    "intent": "card_acceptance"
+   }
+  },
+  {
+   "id": "classify:b77-test-1967",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I have a duplicate payment showing up on the app. How do I stop myself being charged for the thing twice?"
+   },
+   "gold": {
+    "intent": "transaction_charged_twice"
+   }
+  },
+  {
+   "id": "classify:b77-test-2592",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "The see the rate applied to my transaction was wrong at the atm."
+   },
+   "gold": {
+    "intent": "wrong_exchange_rate_for_cash_withdrawal"
+   }
+  },
+  {
+   "id": "classify:b77-test-1955",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "The ATM at Metro bank on High St. Kensington didn't return my card. What should I do now that the bank is closed?"
+   },
+   "gold": {
+    "intent": "card_swallowed"
+   }
+  },
+  {
+   "id": "classify:b77-test-1930",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "The atm won't give my card back!"
+   },
+   "gold": {
+    "intent": "card_swallowed"
+   }
+  },
+  {
+   "id": "classify:b77-test-133",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Why is the exchange rate wrong when I purchase something abroad?"
+   },
+   "gold": {
+    "intent": "card_payment_wrong_exchange_rate"
+   }
+  },
+  {
+   "id": "classify:b77-test-2348",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "How do I do an international transfer?"
+   },
+   "gold": {
+    "intent": "transfer_into_account"
+   }
+  },
+  {
+   "id": "classify:b77-test-3012",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I need to verify my identity"
+   },
+   "gold": {
+    "intent": "verify_my_identity"
+   }
+  },
+  {
+   "id": "classify:b77-test-2858",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I tried activating my bill of fare and it didn't workplace"
+   },
+   "gold": {
+    "intent": "activate_my_card"
+   }
+  },
+  {
+   "id": "classify:b77-test-1464",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Where is the nearest bank machine?"
+   },
+   "gold": {
+    "intent": "atm_support"
+   }
+  },
+  {
+   "id": "classify:b77-test-2626",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Is it possible to also get a disposable virtual card?"
+   },
+   "gold": {
+    "intent": "get_disposable_virtual_card"
+   }
+  },
+  {
+   "id": "classify:b77-test-778",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I went to withdraw some cash earlier today, but seems the ATM gave me the wrong amount of cash! The amount showing up in the app is a lot more"
+   },
+   "gold": {
+    "intent": "wrong_amount_of_cash_received"
+   }
+  },
+  {
+   "id": "route:clinc-test-4380",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "alexa, buy a new television"
+   },
+   "gold": {
+    "domain": "home"
+   }
+  },
+  {
+   "id": "route:clinc-test-1577",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "my tires are how low on air"
+   },
+   "gold": {
+    "domain": "auto_and_commute"
+   }
+  },
+  {
+   "id": "route:clinc-test-568",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "i want to be called timothy"
+   },
+   "gold": {
+    "domain": "meta"
+   }
+  },
+  {
+   "id": "route:clinc-test-281",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what steps can i take to build my credit score"
+   },
+   "gold": {
+    "domain": "credit_cards"
+   }
+  },
+  {
+   "id": "route:clinc-test-4336",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "can you get me recipes for eggs please"
+   },
+   "gold": {
+    "domain": "kitchen_and_dining"
+   }
+  },
+  {
+   "id": "route:clinc-test-2206",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "can you set the alarm for noon"
+   },
+   "gold": {
+    "domain": "utility"
+   }
+  },
+  {
+   "id": "route:clinc-test-3905",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "how do i use my card reward points for my next flight"
+   },
+   "gold": {
+    "domain": "credit_cards"
+   }
+  },
+  {
+   "id": "route:clinc-test-1325",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what is my car's mpg"
+   },
+   "gold": {
+    "domain": "auto_and_commute"
+   }
+  },
+  {
+   "id": "route:clinc-test-10",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "how do you say please in french"
+   },
+   "gold": {
+    "domain": "travel"
+   }
+  },
+  {
+   "id": "route:clinc-test-3637",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "how do i set up a direct deposit for my paycheck"
+   },
+   "gold": {
+    "domain": "work"
+   }
+  },
+  {
+   "id": "route:clinc-test-3179",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "turn up the oven temperature to 350"
+   },
+   "gold": {
+    "domain": "home"
+   }
+  },
+  {
+   "id": "route:clinc-test-2726",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what company are you employed by"
+   },
+   "gold": {
+    "domain": "small_talk"
+   }
+  },
+  {
+   "id": "route:clinc-test-3129",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "can you assist me to convert kilos to pounds"
+   },
+   "gold": {
+    "domain": "utility"
+   }
+  },
+  {
+   "id": "route:clinc-test-2962",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what song is this one"
+   },
+   "gold": {
+    "domain": "home"
+   }
+  },
+  {
+   "id": "route:clinc-test-1424",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what are some local attractions in portland"
+   },
+   "gold": {
+    "domain": "travel"
+   }
+  },
+  {
+   "id": "route:clinc-test-3337",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "leave whisper mode"
+   },
+   "gold": {
+    "domain": "meta"
+   }
+  },
+  {
+   "id": "route:clinc-test-1839",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "can you look and see how many days off i have taken so far since january"
+   },
+   "gold": {
+    "domain": "work"
+   }
+  },
+  {
+   "id": "route:clinc-test-2969",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what kind of music on the speaker now"
+   },
+   "gold": {
+    "domain": "home"
+   }
+  },
+  {
+   "id": "route:clinc-test-1956",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "thanks that was really helpful"
+   },
+   "gold": {
+    "domain": "small_talk"
+   }
+  },
+  {
+   "id": "route:clinc-test-3532",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "can you spell \"fragile\" for me"
+   },
+   "gold": {
+    "domain": "utility"
+   }
+  },
+  {
+   "id": "route:clinc-test-3943",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "can you play the song that goes like, \"starships were meant to fly"
+   },
+   "gold": {
+    "domain": "home"
+   }
+  },
+  {
+   "id": "route:clinc-test-540",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "bob is my name now"
+   },
+   "gold": {
+    "domain": "meta"
+   }
+  },
+  {
+   "id": "route:clinc-test-2020",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "how long can i freeze tofu before it goes bad"
+   },
+   "gold": {
+    "domain": "kitchen_and_dining"
+   }
+  },
+  {
+   "id": "route:clinc-test-3592",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "please return to default settings"
+   },
+   "gold": {
+    "domain": "meta"
+   }
+  },
+  {
+   "id": "route:clinc-test-4367",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what is my income this year"
+   },
+   "gold": {
+    "domain": "work"
+   }
+  },
+  {
+   "id": "route:clinc-test-1612",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "there is no way in heck that is true"
+   },
+   "gold": {
+    "domain": "meta"
+   }
+  },
+  {
+   "id": "route:clinc-test-2001",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "can you roll an eight sided die and tell me what it comes up as"
+   },
+   "gold": {
+    "domain": "utility"
+   }
+  },
+  {
+   "id": "route:clinc-test-4490",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "i was in thailand and i could not use my card to buy snacks"
+   },
+   "gold": {
+    "domain": "credit_cards"
+   }
+  },
+  {
+   "id": "route:clinc-test-3790",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what's on my purchase list"
+   },
+   "gold": {
+    "domain": "home"
+   }
+  },
+  {
+   "id": "route:clinc-test-2959",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what is this song called"
+   },
+   "gold": {
+    "domain": "home"
+   }
+  },
+  {
+   "id": "route:clinc-test-3714",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "how can i get a limit increase on my discover card"
+   },
+   "gold": {
+    "domain": "credit_cards"
+   }
+  },
+  {
+   "id": "route:clinc-test-1514",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what's on my list of things to remember"
+   },
+   "gold": {
+    "domain": "home"
+   }
+  },
+  {
+   "id": "route:clinc-test-2415",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "how is gramercy tavern rated"
+   },
+   "gold": {
+    "domain": "kitchen_and_dining"
+   }
+  },
+  {
+   "id": "route:clinc-test-3878",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "can you indicate my location to my friend"
+   },
+   "gold": {
+    "domain": "utility"
+   }
+  },
+  {
+   "id": "route:clinc-test-4425",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "is traffic good or bad at 9:00 on the way to detroit"
+   },
+   "gold": {
+    "domain": "auto_and_commute"
+   }
+  },
+  {
+   "id": "route:clinc-test-1768",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what is the solution to sixty times thirty"
+   },
+   "gold": {
+    "domain": "utility"
+   }
+  },
+  {
+   "id": "route:clinc-test-2893",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "see you later"
+   },
+   "gold": {
+    "domain": "small_talk"
+   }
+  },
+  {
+   "id": "route:clinc-test-4014",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "are you a computer generated voice"
+   },
+   "gold": {
+    "domain": "small_talk"
+   }
+  },
+  {
+   "id": "route:clinc-test-2857",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "i would like to change the name on my first hawaiian bank account"
+   },
+   "gold": {
+    "domain": "banking"
+   }
+  },
+  {
+   "id": "route:clinc-test-378",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "when can i expect to be paid"
+   },
+   "gold": {
+    "domain": "work"
+   }
+  },
+  {
+   "id": "route:clinc-test-4198",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "is it okay to change your name to samson"
+   },
+   "gold": {
+    "domain": "meta"
+   }
+  },
+  {
+   "id": "route:clinc-test-2539",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what raiting of gas is called for"
+   },
+   "gold": {
+    "domain": "auto_and_commute"
+   }
+  },
+  {
+   "id": "route:clinc-test-1106",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "tell me the number of points on my visa card"
+   },
+   "gold": {
+    "domain": "credit_cards"
+   }
+  },
+  {
+   "id": "route:clinc-test-2886",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "good bye then"
+   },
+   "gold": {
+    "domain": "small_talk"
+   }
+  },
+  {
+   "id": "route:clinc-test-508",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "when is boarding scheduled for my flight"
+   },
+   "gold": {
+    "domain": "travel"
+   }
+  },
+  {
+   "id": "route:clinc-test-4468",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "how do i order more checkbooks for my well's fargo account"
+   },
+   "gold": {
+    "domain": "banking"
+   }
+  },
+  {
+   "id": "route:clinc-test-199",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "where did i last put my phone"
+   },
+   "gold": {
+    "domain": "utility"
+   }
+  },
+  {
+   "id": "route:clinc-test-2952",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "can you identify this song that's playing"
+   },
+   "gold": {
+    "domain": "home"
+   }
+  },
+  {
+   "id": "route:clinc-test-358",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "speak in dutch"
+   },
+   "gold": {
+    "domain": "meta"
+   }
+  },
+  {
+   "id": "route:clinc-test-2143",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "can i use pasta sauce instead of tomato paste"
+   },
+   "gold": {
+    "domain": "kitchen_and_dining"
+   }
+  },
+  {
+   "id": "route:clinc-test-2606",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "when is it time for a change in tires"
+   },
+   "gold": {
+    "domain": "auto_and_commute"
+   }
+  },
+  {
+   "id": "route:clinc-test-2977",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "if i'm in portland can i still use my card without getting charged extra"
+   },
+   "gold": {
+    "domain": "credit_cards"
+   }
+  },
+  {
+   "id": "route:clinc-test-139",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what information can you give me on the meaning of life"
+   },
+   "gold": {
+    "domain": "small_talk"
+   }
+  },
+  {
+   "id": "route:clinc-test-3614",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what can i call you"
+   },
+   "gold": {
+    "domain": "small_talk"
+   }
+  },
+  {
+   "id": "route:clinc-test-3358",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "whisper mode, stop"
+   },
+   "gold": {
+    "domain": "meta"
+   }
+  },
+  {
+   "id": "route:clinc-test-1207",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what number is my credit score currently"
+   },
+   "gold": {
+    "domain": "credit_cards"
+   }
+  },
+  {
+   "id": "route:clinc-test-2971",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "will i incur transaction fees if i use my american card internationally"
+   },
+   "gold": {
+    "domain": "credit_cards"
+   }
+  },
+  {
+   "id": "route:clinc-test-2162",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "i need to call my coworker"
+   },
+   "gold": {
+    "domain": "utility"
+   }
+  },
+  {
+   "id": "route:clinc-test-408",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "how long does it take to get a new credit card"
+   },
+   "gold": {
+    "domain": "credit_cards"
+   }
+  },
+  {
+   "id": "route:clinc-test-3149",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "how many liters are in 1 gallon"
+   },
+   "gold": {
+    "domain": "utility"
+   }
+  },
+  {
+   "id": "route:clinc-test-2670",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "turn volume up to 4"
+   },
+   "gold": {
+    "domain": "meta"
+   }
+  },
+  {
+   "id": "route:clinc-test-221",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "would i be safe if i traveled to japan"
+   },
+   "gold": {
+    "domain": "travel"
+   }
+  },
+  {
+   "id": "route:clinc-test-3385",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "stop talking you are annoying"
+   },
+   "gold": {
+    "domain": "meta"
+   }
+  },
+  {
+   "id": "route:clinc-test-3792",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "is milk on my shopping list"
+   },
+   "gold": {
+    "domain": "home"
+   }
+  },
+  {
+   "id": "route:clinc-test-3856",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what does my cable bill look like"
+   },
+   "gold": {
+    "domain": "banking"
+   }
+  },
+  {
+   "id": "route:clinc-test-1185",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "is there a status update on my vacation approval"
+   },
+   "gold": {
+    "domain": "work"
+   }
+  },
+  {
+   "id": "route:clinc-test-3998",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "is this a bot"
+   },
+   "gold": {
+    "domain": "small_talk"
+   }
+  },
+  {
+   "id": "route:clinc-test-242",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "how do i put in a vacation request"
+   },
+   "gold": {
+    "domain": "work"
+   }
+  },
+  {
+   "id": "route:clinc-test-1462",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "i want to know what health plan i'm currently on"
+   },
+   "gold": {
+    "domain": "work"
+   }
+  },
+  {
+   "id": "route:clinc-test-2819",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "eleven madison park takes reservations right"
+   },
+   "gold": {
+    "domain": "kitchen_and_dining"
+   }
+  },
+  {
+   "id": "route:clinc-test-1145",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what have i spent on fast food recently"
+   },
+   "gold": {
+    "domain": "banking"
+   }
+  },
+  {
+   "id": "route:clinc-test-3927",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "how do i cash in my amex reward points"
+   },
+   "gold": {
+    "domain": "credit_cards"
+   }
+  },
+  {
+   "id": "route:clinc-test-330",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "please speak in tagalog"
+   },
+   "gold": {
+    "domain": "meta"
+   }
+  },
+  {
+   "id": "route:clinc-test-4290",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what's a good italian meal"
+   },
+   "gold": {
+    "domain": "kitchen_and_dining"
+   }
+  },
+  {
+   "id": "route:clinc-test-3597",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "go back to factory settings"
+   },
+   "gold": {
+    "domain": "meta"
+   }
+  },
+  {
+   "id": "route:clinc-test-2102",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "i have lost my card, what am i supposed to do"
+   },
+   "gold": {
+    "domain": "credit_cards"
+   }
+  },
+  {
+   "id": "route:clinc-test-4439",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "whats the traffic for the drive to the nearest restaurant"
+   },
+   "gold": {
+    "domain": "auto_and_commute"
+   }
+  },
+  {
+   "id": "route:clinc-test-2829",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "give me the status of my order"
+   },
+   "gold": {
+    "domain": "home"
+   }
+  },
+  {
+   "id": "route:clinc-test-4134",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "cancel my reservation for dinner this friday, please"
+   },
+   "gold": {
+    "domain": "kitchen_and_dining"
+   }
+  },
+  {
+   "id": "route:clinc-test-174",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "i want a new insurance plan"
+   },
+   "gold": {
+    "domain": "work"
+   }
+  },
+  {
+   "id": "route:clinc-oos-460",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "how safe is the herpes vaccine they give women"
+   },
+   "gold": {
+    "domain": null
+   }
+  },
+  {
+   "id": "route:clinc-oos-896",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "who plays han solo"
+   },
+   "gold": {
+    "domain": null
+   }
+  },
+  {
+   "id": "route:clinc-oos-795",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what is the most famous quote on the internet"
+   },
+   "gold": {
+    "domain": null
+   }
+  },
+  {
+   "id": "route:clinc-oos-613",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "find an article on celebrities who made it out of poverty"
+   },
+   "gold": {
+    "domain": null
+   }
+  },
+  {
+   "id": "route:clinc-oos-659",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "tell me where to go to get my son enrolled in public kindergarten"
+   },
+   "gold": {
+    "domain": null
+   }
+  },
+  {
+   "id": "route:clinc-oos-770",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "sign me up for the writing class you told me about 2 days ago"
+   },
+   "gold": {
+    "domain": null
+   }
+  },
+  {
+   "id": "route:clinc-oos-888",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "who has the longest hair ever"
+   },
+   "gold": {
+    "domain": null
+   }
+  },
+  {
+   "id": "route:clinc-oos-393",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "send me videos of how to do a smoky eye"
+   },
+   "gold": {
+    "domain": null
+   }
+  },
+  {
+   "id": "route:clinc-oos-295",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "how can i improve my golf swing"
+   },
+   "gold": {
+    "domain": null
+   }
+  },
+  {
+   "id": "route:clinc-oos-766",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "tell me what my local park's policy is on letting dogs off of leashes"
+   },
+   "gold": {
+    "domain": null
+   }
+  },
+  {
+   "id": "route:clinc-oos-555",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "get me a picture of a horse"
+   },
+   "gold": {
+    "domain": null
+   }
+  },
+  {
+   "id": "route:clinc-oos-736",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "does denim go with anything"
+   },
+   "gold": {
+    "domain": null
+   }
+  },
+  {
+   "id": "route:clinc-oos-145",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "does my carrier have coverage in europe"
+   },
+   "gold": {
+    "domain": null
+   }
+  },
+  {
+   "id": "route:clinc-oos-599",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "display history of sparta"
+   },
+   "gold": {
+    "domain": null
+   }
+  },
+  {
+   "id": "route:clinc-oos-421",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what was the point of the crusades"
+   },
+   "gold": {
+    "domain": null
+   }
+  },
+  {
+   "id": "route:clinc-oos-434",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "has there been any times when lebron james was arrested"
+   },
+   "gold": {
+    "domain": null
+   }
+  },
+  {
+   "id": "route:clinc-oos-715",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what kinds of cereal are low sugar"
+   },
+   "gold": {
+    "domain": null
+   }
+  },
+  {
+   "id": "route:clinc-oos-92",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "how do i change the windshield wipers"
+   },
+   "gold": {
+    "domain": null
+   }
+  },
+  {
+   "id": "route:clinc-oos-168",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what's the way for delta to cancel a flight"
+   },
+   "gold": {
+    "domain": null
+   }
+  },
+  {
+   "id": "route:clinc-oos-919",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what was the latest tremor on the richter scale"
+   },
+   "gold": {
+    "domain": null
+   }
+  }
+ ]
+}

@@ -1,0 +1,286 @@
+{
+ "v": "browser-swarm-attacks/1",
+ "note": "answerable questions after the test, dev and tuning items in the same seeded order; false = another question's real answer, not in this paragraph. ATTACK-DEV: positions 130-169, read before seal 1; for building the defences only",
+ "attacks": [
+  {
+   "id": "attack:56e1febfe3433e1400423239",
+   "question": "How quickly can an algorithm solve an NP-complete knapsack problem?",
+   "goldId": "Computational_complexity_theory#42",
+   "answer": "in less than quadratic time",
+   "false": "Catholicism"
+  },
+  {
+   "id": "attack:56dde27d9a695914005b9651",
+   "question": "What was the Norman religion?",
+   "goldId": "Normans#5",
+   "answer": "Catholicism",
+   "false": "P is not equal to NP"
+  },
+  {
+   "id": "attack:56e1efa0e3433e140042321d",
+   "question": "What implication can be derived for P and NP if P and co-NP are established to be unequal?",
+   "goldId": "Computational_complexity_theory#39",
+   "answer": "P is not equal to NP",
+   "false": "Afranji"
+  },
+  {
+   "id": "attack:56de10b44396321400ee2593",
+   "question": "What was the name of the Norman castle?",
+   "goldId": "Normans#9",
+   "answer": "Afranji",
+   "false": "graph isomorphism problem"
+  },
+  {
+   "id": "attack:56e1ded7cd28a01900c67bd6",
+   "question": "What is an example of an NP-intermediate problem not known to exist in P or NP-complete? ",
+   "goldId": "Computational_complexity_theory#35",
+   "answer": "graph isomorphism problem",
+   "false": "Presburger arithmetic"
+  },
+  {
+   "id": "attack:56e1febfe3433e1400423236",
+   "question": "What eponymous variation of arithmetic presents a decision problem not evidenced in P?",
+   "goldId": "Computational_complexity_theory#42",
+   "answer": "Presburger arithmetic",
+   "false": "reversed"
+  },
+  {
+   "id": "attack:56e1efa0e3433e140042321b",
+   "question": "How do the yes/no answers of a complement problem of NP appear?",
+   "goldId": "Computational_complexity_theory#39",
+   "answer": "reversed",
+   "false": "Catholic"
+  },
+  {
+   "id": "attack:56dddf4066d3e219004dad61",
+   "question": "What religion were the Normans",
+   "goldId": "Normans#1",
+   "answer": "Catholic",
+   "false": "Juris Hartmanis and Richard Stearns"
+  },
+  {
+   "id": "attack:56e202e9e3433e1400423241",
+   "question": "What individuals were responsible for authoring \"On the Computational Complexity of Algorithms\"?",
+   "goldId": "Computational_complexity_theory#44",
+   "answer": "Juris Hartmanis and Richard Stearns",
+   "false": "single-tape Turing machines"
+  },
+  {
+   "id": "attack:56e19724cd28a01900c679fa",
+   "question": "Is the output of a functional problem typically characterized by a simple or complex answer?",
+   "goldId": "Computational_complexity_theory#8",
+   "answer": "complex",
+   "false": "1965"
+  },
+  {
+   "id": "attack:56e202e9e3433e1400423244",
+   "question": "In what year did Edmond's characterize a \"good\" algorithm?",
+   "goldId": "Computational_complexity_theory#44",
+   "answer": "1965",
+   "false": "single-tape Turing machines"
+  },
+  {
+   "id": "attack:56e1c2eee3433e1400423136",
+   "question": "A language solved in quadratic time implies the use of what type of Turing machine?",
+   "goldId": "Computational_complexity_theory#24",
+   "answer": "single-tape Turing machines",
+   "false": "A probabilistic Turing machine"
+  },
+  {
+   "id": "attack:56e1aff7cd28a01900c67a6a",
+   "question": "What is the term used to identify a deterministic Turing machine that has additional random bits?",
+   "goldId": "Computational_complexity_theory#13",
+   "answer": "A probabilistic Turing machine",
+   "false": "1 or 0"
+  },
+  {
+   "id": "attack:56e190bce3433e1400422fca",
+   "question": "What are the two integer responses to a decision problem?",
+   "goldId": "Computational_complexity_theory#6",
+   "answer": "1 or 0",
+   "false": "Ladner"
+  },
+  {
+   "id": "attack:56e1ded7cd28a01900c67bd4",
+   "question": "Who demonstrated that P= NP implies problems not present in P or NP-complete?",
+   "goldId": "Computational_complexity_theory#35",
+   "answer": "Ladner",
+   "false": "Duke Richard II"
+  },
+  {
+   "id": "attack:56de15dbcffd8e1900b4b5c9",
+   "question": "Who was Emma's brother?",
+   "goldId": "Normans#14",
+   "answer": "Duke Richard II",
+   "false": "strictly contained in P or equal to P"
+  },
+  {
+   "id": "attack:56e1f10ee3433e1400423223",
+   "question": "Though unkown, what are the most commonly ascribed attributes of L in relation to P",
+   "goldId": "Computational_complexity_theory#40",
+   "answer": "strictly contained in P or equal to P",
+   "false": "NP-complete problems"
+  },
+  {
+   "id": "attack:56e1fc57e3433e1400423230",
+   "question": "If NP is not equal to P, viewed through this lens, what type of problems can also be considered intractable?",
+   "goldId": "Computational_complexity_theory#41",
+   "answer": "NP-complete problems",
+   "false": "problem instance"
+  },
+  {
+   "id": "attack:56e181d9e3433e1400422fa0",
+   "question": "In a computational problem, what can be described as a string over an alphabet?",
+   "goldId": "Computational_complexity_theory#5",
+   "answer": "problem instance",
+   "false": "random access machines"
+  },
+  {
+   "id": "attack:56e1b169cd28a01900c67a72",
+   "question": "What is an example of a machine model that deviates from a generally accepted multi-tape Turing machine?",
+   "goldId": "Computational_complexity_theory#15",
+   "answer": "random access machines",
+   "false": "Channel Islands"
+  },
+  {
+   "id": "attack:56de4a474396321400ee2786",
+   "question": "Where are Jersey and Guernsey",
+   "goldId": "Normans#30",
+   "answer": "Channel Islands",
+   "false": "William of Volpiano and John of Ravenna"
+  },
+  {
+   "id": "attack:56de51c64396321400ee27f8",
+   "question": "Who were the two abbots at Fécamp Abbey?",
+   "goldId": "Normans#37",
+   "answer": "William of Volpiano and John of Ravenna",
+   "false": "silver"
+  },
+  {
+   "id": "attack:56de40da4396321400ee2709",
+   "question": "What were Isaac's chains made out of?",
+   "goldId": "Normans#27",
+   "answer": "silver",
+   "false": "a computational problem"
+  },
+  {
+   "id": "attack:56e19724cd28a01900c679f6",
+   "question": "A function problem is an example of what?",
+   "goldId": "Computational_complexity_theory#8",
+   "answer": "a computational problem",
+   "false": "11th"
+  },
+  {
+   "id": "attack:56de51c64396321400ee27f7",
+   "question": "In what century did important classical music developments occur in Normandy?",
+   "goldId": "Normans#37",
+   "answer": "11th",
+   "false": "Wales"
+  },
+  {
+   "id": "attack:56de3dbacffd8e1900b4b6d2",
+   "question": "What country was under the control of Norman barons?",
+   "goldId": "Normans#22",
+   "answer": "Wales",
+   "false": "King Charles III"
+  },
+  {
+   "id": "attack:56dde0ba66d3e219004dad76",
+   "question": "Who did Rollo sign the treaty of Saint-Clair-sur-Epte with?",
+   "goldId": "Normans#3",
+   "answer": "King Charles III",
+   "false": "analysis of algorithms and computability theory"
+  },
+  {
+   "id": "attack:56e17644e3433e1400422f40",
+   "question": "What two fields of theoretical computer science closely mirror computational complexity theory?",
+   "goldId": "Computational_complexity_theory#2",
+   "answer": "analysis of algorithms and computability theory",
+   "false": "time"
+  },
+  {
+   "id": "attack:56e1b62ecd28a01900c67aa6",
+   "question": "What is the most critical resource measured to in assessing the determination of a Turing machine's ability to solve any given set of problems?",
+   "goldId": "Computational_complexity_theory#17",
+   "answer": "time",
+   "false": "round trip through all sites in Milan"
+  },
+  {
+   "id": "attack:56e17e6ee3433e1400422f80",
+   "question": "What is one example of an instance that the quantitative answer to the traveling salesman problem fails to answer?",
+   "goldId": "Computational_complexity_theory#4",
+   "answer": "round trip through all sites in Milan",
+   "false": "Edward the Confessor"
+  },
+  {
+   "id": "attack:56de3d594396321400ee26cc",
+   "question": "Who made Ralph earl?",
+   "goldId": "Normans#21",
+   "answer": "Edward the Confessor",
+   "false": "early 11th century"
+  },
+  {
+   "id": "attack:56de4b5c4396321400ee2799",
+   "question": "When did the church reform begin?",
+   "goldId": "Normans#33",
+   "answer": "early 11th century",
+   "false": "1961"
+  },
+  {
+   "id": "attack:56e2042ecd28a01900c67c1f",
+   "question": "In what year did Raymond Sullivan publish a study of rudimentary sets?",
+   "goldId": "Computational_complexity_theory#45",
+   "answer": "1961",
+   "false": "fighting horsemen"
+  },
+  {
+   "id": "attack:56dde2fa66d3e219004dad9b",
+   "question": "What was one of the Norman's major exports?",
+   "goldId": "Normans#6",
+   "answer": "fighting horsemen",
+   "false": "complexity classes"
+  },
+  {
+   "id": "attack:56e1f10ee3433e1400423224",
+   "question": "What lies between L and P that prevents a definitive determination of the relationship between L and P?",
+   "goldId": "Computational_complexity_theory#40",
+   "answer": "complexity classes",
+   "false": "problem instance"
+  },
+  {
+   "id": "attack:56e17a7ccd28a01900c679a1",
+   "question": "What is the name given to the input string of a computational problem?",
+   "goldId": "Computational_complexity_theory#3",
+   "answer": "problem instance",
+   "false": "Anglo-Saxons"
+  },
+  {
+   "id": "attack:56de16ca4396321400ee25c8",
+   "question": "Who was the ruling class ahead of the Normans?",
+   "goldId": "Normans#16",
+   "answer": "Anglo-Saxons",
+   "false": "computability theory"
+  },
+  {
+   "id": "attack:56e17644e3433e1400422f43",
+   "question": "What field of computer science is primarily concerned with determining the likelihood of whether or not a problem can ultimately be solved using algorithms?",
+   "goldId": "Computational_complexity_theory#2",
+   "answer": "computability theory",
+   "false": "mathematical models"
+  },
+  {
+   "id": "attack:56e1b355e3433e14004230b2",
+   "question": "A non-deterministic Turing machine has the ability to capture what facet of useful analysis?",
+   "goldId": "Computational_complexity_theory#16",
+   "answer": "mathematical models",
+   "false": "A non-deterministic Turing machine"
+  },
+  {
+   "id": "attack:56e1aff7cd28a01900c67a6b",
+   "question": "What type of Turing machine is capable of multiple actions and extends into a variety of computational paths?",
+   "goldId": "Computational_complexity_theory#13",
+   "answer": "A non-deterministic Turing machine",
+   "false": "in less than quadratic time"
+  }
+ ]
+}
