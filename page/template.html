@@ -73,7 +73,7 @@ svg .muted{fill:var(--muted)}
 details{margin:8px 0}
 summary{cursor:pointer;font-weight:600}
 footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-size:14px;color:var(--muted)}
-@media (max-width:520px){nav a{font-size:13px;padding:3px 5px}.kpi{font-size:22px}}
+@media (max-width:640px){nav{position:static}nav a{font-size:13px;padding:3px 5px}.kpi{font-size:22px}h2{scroll-margin-top:8px}}
 </style>
 </head>
 <body>
@@ -85,7 +85,7 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-si
 </nav>
 <main id="top">
 <h1>Small AI that refuses rather than guesses, in your browser tab</h1>
-<p class="lead">Browser Swarm is a team of small AI specialists that runs entirely inside a web page, on your own computer. Each specialist does one bounded job: answer from your documents, read a receipt total, sort a message, convert a date. And each one is checked before it may speak. If the check fails, you get an honest "I can't say", never a confident wrong answer. Nothing you type leaves your device. Nothing is charged per question.</p>
+<p class="lead">Browser Swarm is a team of small AI specialists that runs entirely inside a web page, on your own computer. Each specialist does one bounded job: answer from your documents, read a receipt total, sort a message, convert a date. And each one is checked before it may speak. If the check fails, you get an honest "I can't say" in place of a confident wrong answer. The checks are not perfect, and this page counts every wrong answer that got through. Nothing you type leaves your device. Nothing is charged per question.</p>
 <p>It will not out-think a large cloud model, and this page shows exactly where it loses. What it is built for is the one number that decides whether you can trust AI with routine work: <b>how often it delivers a wrong answer as if it were right</b>. That is the silent-failure rate. It was measured on 410 tasks, with every rule written down and sealed before the test was run, and you can re-run it on your own machine.</p>
 <p><b>The price of that, stated up front:</b> <span data-bind="hl.price">The trade-off is not measured yet.</span></p>
 <div class="chips" aria-label="Headline numbers">
@@ -215,7 +215,7 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-si
 
 <h2 id="adopt">Adoption: what it does for your business</h2>
 <div class="grid two">
-<div class="card"><h3>Where it fits</h3><p>Bounded, repeated work where a wrong answer costs more than a pause. Answering staff questions from your own policy documents. Reading totals off receipts and invoices. Routing customer messages. Normalising dates and amounts. Filling template letters from a record. The swarm does this on the laptops you already own, and says plainly when it cannot.</p></div>
+<div class="card"><h3>Where it fits</h3><p>Bounded, repeated work where a wrong answer costs more than a pause. Answering staff questions from your own policy documents. Reading totals off receipts and invoices. Routing customer messages. Normalising dates and amounts. Filling template letters from a record. The swarm does this on the laptops you already own, and says plainly when it cannot. Expect it to hand back more jobs than it completes: the per-kind table shows how many, for each kind of work.</p></div>
 <div class="card"><h3>Where it does not</h3><p>Open-ended reasoning, general knowledge and anything creative. On those, a small model loses (claim B2, shown above), and the swarm refuses them rather than guess. Keep a person, or a larger model, for that work.</p></div>
 </div>
 <h3>Rolling it out</h3>
@@ -234,7 +234,7 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-si
 <div class="card"><h3>Finance</h3><p>No tokens are bought and the hardware is already on the books. The cost case below uses your own volumes and your own cost of an error. Nothing is assumed for you.</p></div>
 <div class="card"><h3>Operations</h3><p>Refusals come with a reason, and they go to a person. Every answer that is released can be traced: the paragraph and characters it came from, the line it was printed on, or the index entry it agrees with.</p></div>
 <div class="card"><h3>Technology and security</h3><p>No server, no API, no account. <span data-bind="b.req">The network-request count is not measured yet.</span> The code is MIT-licensed, and its kernels are mutation-gated. Every published decision can be re-derived on this page.</p></div>
-<div class="card"><h3>The teams</h3><p>An assistant that says "I can't say" rather than inventing an answer, so staff can lean on what it does say.</p></div>
+<div class="card"><h3>The teams</h3><p>An assistant that says "I can't say" rather than inventing an answer, so staff know which answers have passed a check and which jobs came back to them.</p></div>
 </div>
 <h3>Your cost case</h3>
 <p>This compares the swarm with sending the same work to a frontier API, at that provider's published price (<a href="https://claude.com/pricing">claude.com/pricing</a>, read <span data-bind="price.read">on a date not filled in yet</span>, <span data-bind="price.model">price not filled in yet</span>). The tokens per task are measured from the published tab run. Enter your own monthly volume and your own cost of one wrong answer delivered as if right.</p>
@@ -277,7 +277,7 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-si
 
 <h2 id="paper">White paper: the reef, not the cathedral</h2>
 <p><b>The problem.</b> A large cloud model cannot run on your own device, cannot run without a meter, cannot answer without a network round trip, and cannot tell you in advance what it will refuse. Above all, it cannot show you how often it is confidently wrong. None of that is about how clever it is.</p>
-<p><b>The idea.</b> Use many small, bounded specialists instead of one large model. Take knowledge out of the weights and keep it in a signed corpus. Take trust out of the model and put it in checks written as code. A small model loses on open questions, so it does not take them. On bounded work, a small model behind good checks can be trusted for what it releases, and it says when it cannot answer.</p>
+<p><b>The idea.</b> Use many small, bounded specialists instead of one large model. Take knowledge out of the weights and keep it in a signed corpus. Take trust out of the model and put it in checks written as code. A small model loses on open questions, so it does not take them. On bounded work, a small model behind good checks releases few wrong answers and says when it cannot answer. The measured cost is that it answers far less.</p>
 <p><b>The method.</b> Claims and bars were written first (seal 1). The cells were built on a dev split and a separate tuning pool. Each release rule was chosen there by one stated criterion: the most right answers minus twice the silent failures. Then everything was frozen by hash (seal 2), and the 410-task test split and 40 fresh attacks were read once. The suite includes work the swarm should lose, so the losses are visible.</p>
 <p><b>The result.</b> <span data-bind="p.result">not measured yet</span></p>
 <p><b>What it shows, and what it does not.</b> The checks, not the model, drive silent failures down: the 7B gated arm shows the same checks on a larger model. The small model's part is to be free, private and fast enough. On routing, the word index alone outscores the 1B model. The swarm's value there is the agreement between the two, not the model by itself. Nothing here shows that a small model knows or reasons as well as a large one. B2 shows that it does not.</p>
