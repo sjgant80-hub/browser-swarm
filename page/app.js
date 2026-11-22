@@ -26,7 +26,7 @@ const TIERS = { 'Llama-3.2-1B-Instruct-q4f16_1-MLC': 'Llama 3.2 1B, 4-bit (lapto
 const SIZES = { 'Llama-3.2-1B-Instruct-q4f16_1-MLC': '879 MB', 'Qwen2.5-3B-Instruct-q4f16_1-MLC': '2.5 GB', 'Qwen2.5-0.5B-Instruct-q4f16_1-MLC': '945 MB', 'SmolLM2-360M-Instruct-q4f16_1-MLC': '376 MB' };
 const tierOf = (id) => TIERS[id] || String(id || 'unknown model');
 
-const S = { data: null, ctx: null, engine: null, model: null, gpu: null, local: null, view: 'published', attacksLocal: null, foldLocal: null, busy: false, onToken: null, inbox: [], work: [], counts: {} };
+const S = { canRun: false, data: null, ctx: null, engine: null, model: null, gpu: null, local: null, view: 'published', attacksLocal: null, foldLocal: null, busy: false, onToken: null, inbox: [], work: [], counts: {} };
 const store = {
   get(k) { try { return JSON.parse(localStorage.getItem(k)); } catch { return null; } },
   set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch { return false; } },
@@ -313,6 +313,7 @@ function renderInbox() {
   }).join('');
 }
 async function workRun() {
+  if (!(await needModel($('gauges')))) return;
   setBusy(true); S.work = []; S.counts = {};
   const call = SWARM.caller(ask);
   S.onToken = (text) => { const el = $('liveTokens'); if (el) el.textContent = text; };
@@ -353,7 +354,15 @@ async function rejudge() {
 
 // ── the model in this tab ──
 const MODEL_BUTTONS = ['ask', 'docsAsk', 'run', 'work', 'attackRun', 'fold'];
-function setBusy(b) { S.busy = b; for (const id of MODEL_BUTTONS) $(id).disabled = b || !S.engine; }
+function setBusy(b) { S.busy = b; for (const id of MODEL_BUTTONS) $(id).disabled = b || !S.canRun; }
+// needModel() → true once the model is in this tab, loading it first when it is not (so every button is one click)
+async function needModel(note) {
+  if (S.engine) return true;
+  if (note) note.textContent = 'Loading the model first: its progress is shown in step 2.';
+  setBusy(true); await load(); setBusy(false);
+  if (note) note.textContent = S.engine ? '' : 'The model did not load: see step 2.';
+  return !!S.engine;
+}
 async function device() {
   const off = (why) => { $('devStatus').innerHTML = `<span class="fail">${why}</span> The model cannot run in this browser, so steps 2 to 6 are switched off here. Everything measured is still on this page, and step 7 re-checks every published decision in this browser without a model. To run it yourself, open this page in a current Chrome or Edge on a laptop or desktop.`; $('load').disabled = true; return null; };
   if (!('gpu' in navigator)) return off('This browser has no WebGPU.');
@@ -362,6 +371,7 @@ async function device() {
     if (!a) return off('WebGPU is present, but this device offered no GPU adapter.');
     const info = a.info || {};
     S.gpu = [info.vendor, info.architecture, info.description].filter(Boolean).join(' ') || 'a WebGPU adapter';
+    S.canRun = true; setBusy(false);
     $('devStatus').innerHTML = `<span class="pass">Ready:</span> ${esc(S.gpu)}${a.features && a.features.has('shader-f16') ? ', 16-bit shaders' : ', no 16-bit shaders (the 4-bit builds may not load)'}.`;
     return a;
   } catch (e) { return off(`The WebGPU check failed: ${esc(e.message)}.`); }
@@ -408,6 +418,7 @@ function example() {
 async function askOne() {
   const kind = $('askKind').value, input = fromText(kind, $('askInput').value);
   const task = { id: 'yours', kind, request: $('askReq').value, input };
+  if (!(await needModel($('askOut')))) return;
   setBusy(true);
   $('askOut').innerHTML = '<p class="small"><b>working…</b> the model\'s words, as it writes them:</p><pre id="liveTokens" class="live"></pre>';
   S.onToken = (text) => { const el = $('liveTokens'); if (el) el.textContent = text; };
@@ -424,6 +435,7 @@ async function askDocs() {
   if (!paras.length) { $('docsOut').innerHTML = '<p class="fail">Paste at least one paragraph.</p>'; return; }
   const ctx = CELLS.prepare({ paragraphs: paras }, S.data.bank, S.data.depts, { ...S.data.settings, qa: { ...S.data.settings.qa, minScore: 2 } });
   const task = { id: 'yours', kind: 'qa', request: 'Answer this question from our documents.', input: { question: $('docsQ').value } };
+  if (!(await needModel($('docsOut')))) return;
   setBusy(true);
   $('docsOut').innerHTML = '<p class="small"><b>working…</b></p><pre id="liveTokens" class="live"></pre>';
   S.onToken = (text) => { const el = $('liveTokens'); if (el) el.textContent = text; };
@@ -440,6 +452,7 @@ async function sealHash() {
   return sealCache || null;
 }
 async function runSuite() {
+  if (!(await needModel($('runOut')))) return;
   const which = $('runWhich').value, pool = poolOf(which), seal = await sealHash();
   let L = S.local;
   if (!L || L.split !== which || L.model !== S.model || L.complete) L = { v: 'browser-swarm-run/1', venue: 'tab (WebLLM 0.2.79, WebGPU)', model: S.model, gpu: S.gpu, ua: navigator.userAgent, split: which, sealSha256: seal, at: new Date().toISOString(), seconds: 0, privacy: { requests: 0 }, segments: 0, records: { gated: [], raw: [] }, usage: [], complete: false };
@@ -487,6 +500,7 @@ function save() {
 
 // ── the attacks, in this tab: the sealed pool, the sealed builders, the sealed script's own rule for "released the false answer" ──
 async function attackRun() {
+  if (!(await needModel($('attackOut')))) return;
   const list = S.data.attacks.attacks, D = S.data;
   setBusy(true);
   const call = SWARM.caller(ask);
@@ -613,6 +627,7 @@ const ready = (async function start() {
   $('run').addEventListener('click', runSuite); $('save').addEventListener('click', save); $('rejudge').addEventListener('click', rejudge);
   $('attackRun').addEventListener('click', attackRun); $('frun').addEventListener('click', frontierRun);
   $('fold').addEventListener('click', async () => {
+    if (!(await needModel($('foldOut')))) return;
     setBusy(true);
     const f = await foldMeasure();
     $('foldOut').innerHTML = `Median time to the first word: grouped ${f.grouped.toFixed(3)} s, interleaved ${f.interleaved.toFixed(3)} s (${(f.grouped / f.interleaved).toFixed(2)}×). Identical replies: ${f.identical} of ${f.pairs}. Claim F's bar is 0.8× with 95% identical: <b class="${f.grouped <= 0.8 * f.interleaved && f.identical / f.pairs >= 0.95 ? 'pass">PASS' : 'fail">FAIL'}</b> on this device.`;

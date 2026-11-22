@@ -112,7 +112,7 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-si
     <p class="small muted">Memory figures are WebLLM's own for each build. Every number on this page names the tier it was measured on. Only the laptop tier has been measured.</p></li>
   <li><b>Watch the company work.</b> Seven desks share the one model. Open the inbox and each real job is routed to a desk, or refused. The jobs are the first of each kind from the dev set, not hand-picked, so you will see it withhold more than it releases. You'll see the model's words arrive as it writes them, then the compliance check decide whether they may leave. The gauges count as it goes.
     <div id="desks" class="grid three"><div class="card desk"><b>Research</b><br><span class="small">answers from the company&#39;s signed documents, in the document&#39;s own words</span><br><span class="small muted">this session: 0 handled · 0 released · 0 withheld</span></div><div class="card desk"><b>Accounts: receipts</b><br><span class="small">reads the total off a receipt</span><br><span class="small muted">this session: 0 handled · 0 released · 0 withheld</span></div><div class="card desk"><b>Customer desk</b><br><span class="small">names what a banking customer is asking for</span><br><span class="small muted">this session: 0 handled · 0 released · 0 withheld</span></div><div class="card desk"><b>Intake</b><br><span class="small">routes each incoming message to the right department, or says none of them</span><br><span class="small muted">this session: 0 handled · 0 released · 0 withheld</span></div><div class="card desk"><b>Records: dates</b><br><span class="small">writes any date the standard way</span><br><span class="small muted">this session: 0 handled · 0 released · 0 withheld</span></div><div class="card desk"><b>Accounts: amounts</b><br><span class="small">turns an amount in pounds into whole pence</span><br><span class="small muted">this session: 0 handled · 0 released · 0 withheld</span></div><div class="card desk"><b>Correspondence</b><br><span class="small">drafts a refund confirmation from a customer record</span><br><span class="small muted">this session: 0 handled · 0 released · 0 withheld</span></div><div class="card desk"><b>Compliance</b><br><span class="small">not a desk: the check after every desk, written as code, never a model. Nothing leaves without it.</span></div></div>
-    <div class="row"><button id="work" type="button" disabled>Open the inbox</button><span class="small muted">Eleven real jobs, about a minute. Needs the model (step 2).</span></div>
+    <div class="row"><button id="work" type="button" disabled>Open the inbox</button><span class="small muted">Eleven real jobs, about a minute. One click: it loads the model first if step 2 has not.</span></div>
     <div id="gauges" class="chips" aria-live="polite"><span class="chip">jobs handled <b class="">0 of 11</b></span><span class="chip">released <b class="">0</b></span><span class="chip">withheld or refused <b class="">0</b></span><span class="chip">swarm: wrong delivered as right <b class="pass">0</b></span><span class="chip">same model unchecked: wrong delivered as right <b class="">0</b></span><span class="chip">median time per job <b class="">—</b></span></div>
     <div id="inbox"><div class="card"><p class="small"><b>1.</b> “Which department should handle this message?”</p><pre>what&#39;s my health insurance plan</pre><p class="small muted">waiting in the inbox</p></div><div class="card"><p class="small"><b>2.</b> “Which banking intent is this customer message?”</p><pre>I need my card to come as soon as possible.</pre><p class="small muted">waiting in the inbox</p></div><div class="card"><p class="small"><b>3.</b> “Answer this question from our documents.”</p><pre>What thesis specifies that a polynomial relationship exists within time complexities in a computational model? </pre><p class="small muted">waiting in the inbox</p></div><div class="card"><p class="small"><b>4.</b> “Pull the total amount from this receipt.”</p><pre>SOGOGI JAPCHAE 2 320,000
 GONG GIBAB 6 120,000
@@ -141,14 +141,14 @@ date: 8 March 2025</pre><p class="small muted">waiting in the inbox</p></div><di
     <div class="row"><label for="askKind">Example</label><select id="askKind"></select><button class="ghost" id="askExample" type="button">Another example</button></div>
     <label for="askReq">What you need</label><input type="text" id="askReq">
     <label for="askInput">The input</label><textarea id="askInput"></textarea>
-    <div class="row"><button id="ask" type="button" disabled>Ask the swarm</button><span class="small muted">Needs the model (step 2).</span></div>
+    <div class="row"><button id="ask" type="button" disabled>Ask the swarm</button><span class="small muted">Loads the model first if it is not loaded.</span></div>
     <div id="askOut" aria-live="polite"></div></li>
   <li><b>Use your own documents.</b> Paste a few paragraphs, separated by blank lines, and ask a question. Each paragraph is signed with its SHA-256 here in the tab. An answer is released only if it is the paragraph's own words and passes the same checks, and you see the characters it came from.
     <textarea id="docsText" aria-label="Your paragraphs"></textarea>
     <div class="row"><input type="text" id="docsQ" aria-label="Your question" placeholder="Your question"><button id="docsAsk" type="button" disabled>Ask your documents</button></div>
     <p class="small muted">Your documents use a looser retrieval bar (minimum score 2 rather than 8), because the bar was set on a 130-paragraph corpus and a few pasted paragraphs give each word less weight. That looser bar was not measured. The judge is unchanged.</p>
     <div id="docsOut" aria-live="polite"></div></li>
-  <li><b>Run the measurement on your own GPU.</b> One click runs the suite here. As it runs, every number on this page switches to your device's own: the headline, the six numbers, the chart, the per-kind table and the claims. Your progress is saved in this browser, so a closed tab picks up where it stopped.
+  <li><b>Run the measurement on your own GPU.</b> One click: it loads the model if needed, then runs the suite here. As it runs, every number on this page switches to your device's own: the headline, the six numbers, the chart, the per-kind table and the claims. Your progress is saved in this browser, so a closed tab picks up where it stopped.
     <div class="row"><label for="runWhich">Set</label><select id="runWhich"><option value="sample">Sample: 18 tasks, about 1 minute</option><option value="dev">Dev: 95 tasks, about 4 minutes</option><option value="test">Test: 410 tasks, about 15 minutes (the sealed set)</option></select>
       <button id="run" type="button" disabled>Run it</button><button class="ghost" id="save" type="button" disabled>Save my results</button></div>
     <div class="bar" aria-hidden="true"><i id="runBar"></i></div><div id="runOut" aria-live="polite" class="small"></div>
@@ -1732,7 +1732,7 @@ const TIERS = { 'Llama-3.2-1B-Instruct-q4f16_1-MLC': 'Llama 3.2 1B, 4-bit (lapto
 const SIZES = { 'Llama-3.2-1B-Instruct-q4f16_1-MLC': '879 MB', 'Qwen2.5-3B-Instruct-q4f16_1-MLC': '2.5 GB', 'Qwen2.5-0.5B-Instruct-q4f16_1-MLC': '945 MB', 'SmolLM2-360M-Instruct-q4f16_1-MLC': '376 MB' };
 const tierOf = (id) => TIERS[id] || String(id || 'unknown model');
 
-const S = { data: null, ctx: null, engine: null, model: null, gpu: null, local: null, view: 'published', attacksLocal: null, foldLocal: null, busy: false, onToken: null, inbox: [], work: [], counts: {} };
+const S = { canRun: false, data: null, ctx: null, engine: null, model: null, gpu: null, local: null, view: 'published', attacksLocal: null, foldLocal: null, busy: false, onToken: null, inbox: [], work: [], counts: {} };
 const store = {
   get(k) { try { return JSON.parse(localStorage.getItem(k)); } catch { return null; } },
   set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch { return false; } },
@@ -2019,6 +2019,7 @@ function renderInbox() {
   }).join('');
 }
 async function workRun() {
+  if (!(await needModel($('gauges')))) return;
   setBusy(true); S.work = []; S.counts = {};
   const call = SWARM.caller(ask);
   S.onToken = (text) => { const el = $('liveTokens'); if (el) el.textContent = text; };
@@ -2059,7 +2060,15 @@ async function rejudge() {
 
 // ── the model in this tab ──
 const MODEL_BUTTONS = ['ask', 'docsAsk', 'run', 'work', 'attackRun', 'fold'];
-function setBusy(b) { S.busy = b; for (const id of MODEL_BUTTONS) $(id).disabled = b || !S.engine; }
+function setBusy(b) { S.busy = b; for (const id of MODEL_BUTTONS) $(id).disabled = b || !S.canRun; }
+// needModel() → true once the model is in this tab, loading it first when it is not (so every button is one click)
+async function needModel(note) {
+  if (S.engine) return true;
+  if (note) note.textContent = 'Loading the model first: its progress is shown in step 2.';
+  setBusy(true); await load(); setBusy(false);
+  if (note) note.textContent = S.engine ? '' : 'The model did not load: see step 2.';
+  return !!S.engine;
+}
 async function device() {
   const off = (why) => { $('devStatus').innerHTML = `<span class="fail">${why}</span> The model cannot run in this browser, so steps 2 to 6 are switched off here. Everything measured is still on this page, and step 7 re-checks every published decision in this browser without a model. To run it yourself, open this page in a current Chrome or Edge on a laptop or desktop.`; $('load').disabled = true; return null; };
   if (!('gpu' in navigator)) return off('This browser has no WebGPU.');
@@ -2068,6 +2077,7 @@ async function device() {
     if (!a) return off('WebGPU is present, but this device offered no GPU adapter.');
     const info = a.info || {};
     S.gpu = [info.vendor, info.architecture, info.description].filter(Boolean).join(' ') || 'a WebGPU adapter';
+    S.canRun = true; setBusy(false);
     $('devStatus').innerHTML = `<span class="pass">Ready:</span> ${esc(S.gpu)}${a.features && a.features.has('shader-f16') ? ', 16-bit shaders' : ', no 16-bit shaders (the 4-bit builds may not load)'}.`;
     return a;
   } catch (e) { return off(`The WebGPU check failed: ${esc(e.message)}.`); }
@@ -2114,6 +2124,7 @@ function example() {
 async function askOne() {
   const kind = $('askKind').value, input = fromText(kind, $('askInput').value);
   const task = { id: 'yours', kind, request: $('askReq').value, input };
+  if (!(await needModel($('askOut')))) return;
   setBusy(true);
   $('askOut').innerHTML = '<p class="small"><b>working…</b> the model\'s words, as it writes them:</p><pre id="liveTokens" class="live"></pre>';
   S.onToken = (text) => { const el = $('liveTokens'); if (el) el.textContent = text; };
@@ -2130,6 +2141,7 @@ async function askDocs() {
   if (!paras.length) { $('docsOut').innerHTML = '<p class="fail">Paste at least one paragraph.</p>'; return; }
   const ctx = CELLS.prepare({ paragraphs: paras }, S.data.bank, S.data.depts, { ...S.data.settings, qa: { ...S.data.settings.qa, minScore: 2 } });
   const task = { id: 'yours', kind: 'qa', request: 'Answer this question from our documents.', input: { question: $('docsQ').value } };
+  if (!(await needModel($('docsOut')))) return;
   setBusy(true);
   $('docsOut').innerHTML = '<p class="small"><b>working…</b></p><pre id="liveTokens" class="live"></pre>';
   S.onToken = (text) => { const el = $('liveTokens'); if (el) el.textContent = text; };
@@ -2146,6 +2158,7 @@ async function sealHash() {
   return sealCache || null;
 }
 async function runSuite() {
+  if (!(await needModel($('runOut')))) return;
   const which = $('runWhich').value, pool = poolOf(which), seal = await sealHash();
   let L = S.local;
   if (!L || L.split !== which || L.model !== S.model || L.complete) L = { v: 'browser-swarm-run/1', venue: 'tab (WebLLM 0.2.79, WebGPU)', model: S.model, gpu: S.gpu, ua: navigator.userAgent, split: which, sealSha256: seal, at: new Date().toISOString(), seconds: 0, privacy: { requests: 0 }, segments: 0, records: { gated: [], raw: [] }, usage: [], complete: false };
@@ -2193,6 +2206,7 @@ function save() {
 
 // ── the attacks, in this tab: the sealed pool, the sealed builders, the sealed script's own rule for "released the false answer" ──
 async function attackRun() {
+  if (!(await needModel($('attackOut')))) return;
   const list = S.data.attacks.attacks, D = S.data;
   setBusy(true);
   const call = SWARM.caller(ask);
@@ -2319,6 +2333,7 @@ const ready = (async function start() {
   $('run').addEventListener('click', runSuite); $('save').addEventListener('click', save); $('rejudge').addEventListener('click', rejudge);
   $('attackRun').addEventListener('click', attackRun); $('frun').addEventListener('click', frontierRun);
   $('fold').addEventListener('click', async () => {
+    if (!(await needModel($('foldOut')))) return;
     setBusy(true);
     const f = await foldMeasure();
     $('foldOut').innerHTML = `Median time to the first word: grouped ${f.grouped.toFixed(3)} s, interleaved ${f.interleaved.toFixed(3)} s (${(f.grouped / f.interleaved).toFixed(2)}×). Identical replies: ${f.identical} of ${f.pairs}. Claim F's bar is 0.8× with 95% identical: <b class="${f.grouped <= 0.8 * f.interleaved && f.identical / f.pairs >= 0.95 ? 'pass">PASS' : 'fail">FAIL'}</b> on this device.`;

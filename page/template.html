@@ -112,21 +112,21 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-si
     <p class="small muted">Memory figures are WebLLM's own for each build. Every number on this page names the tier it was measured on. Only the laptop tier has been measured.</p></li>
   <li><b>Watch the company work.</b> Seven desks share the one model. Open the inbox and each real job is routed to a desk, or refused. The jobs are the first of each kind from the dev set, not hand-picked, so you will see it withhold more than it releases. You'll see the model's words arrive as it writes them, then the compliance check decide whether they may leave. The gauges count as it goes.
     <div id="desks" class="grid three">not measured yet</div>
-    <div class="row"><button id="work" type="button" disabled>Open the inbox</button><span class="small muted">Eleven real jobs, about a minute. Needs the model (step 2).</span></div>
+    <div class="row"><button id="work" type="button" disabled>Open the inbox</button><span class="small muted">Eleven real jobs, about a minute. One click: it loads the model first if step 2 has not.</span></div>
     <div id="gauges" class="chips" aria-live="polite">not measured yet</div>
     <div id="inbox">not measured yet</div></li>
   <li><b>Give it your own job.</b> Say what you need in plain words and give the input. The conductor picks a desk from your words, or refuses if no desk owns the job. Try "Book me a flight" to see a refusal.
     <div class="row"><label for="askKind">Example</label><select id="askKind"></select><button class="ghost" id="askExample" type="button">Another example</button></div>
     <label for="askReq">What you need</label><input type="text" id="askReq">
     <label for="askInput">The input</label><textarea id="askInput"></textarea>
-    <div class="row"><button id="ask" type="button" disabled>Ask the swarm</button><span class="small muted">Needs the model (step 2).</span></div>
+    <div class="row"><button id="ask" type="button" disabled>Ask the swarm</button><span class="small muted">Loads the model first if it is not loaded.</span></div>
     <div id="askOut" aria-live="polite"></div></li>
   <li><b>Use your own documents.</b> Paste a few paragraphs, separated by blank lines, and ask a question. Each paragraph is signed with its SHA-256 here in the tab. An answer is released only if it is the paragraph's own words and passes the same checks, and you see the characters it came from.
     <textarea id="docsText" aria-label="Your paragraphs"></textarea>
     <div class="row"><input type="text" id="docsQ" aria-label="Your question" placeholder="Your question"><button id="docsAsk" type="button" disabled>Ask your documents</button></div>
     <p class="small muted">Your documents use a looser retrieval bar (minimum score 2 rather than 8), because the bar was set on a 130-paragraph corpus and a few pasted paragraphs give each word less weight. That looser bar was not measured. The judge is unchanged.</p>
     <div id="docsOut" aria-live="polite"></div></li>
-  <li><b>Run the measurement on your own GPU.</b> One click runs the suite here. As it runs, every number on this page switches to your device's own: the headline, the six numbers, the chart, the per-kind table and the claims. Your progress is saved in this browser, so a closed tab picks up where it stopped.
+  <li><b>Run the measurement on your own GPU.</b> One click: it loads the model if needed, then runs the suite here. As it runs, every number on this page switches to your device's own: the headline, the six numbers, the chart, the per-kind table and the claims. Your progress is saved in this browser, so a closed tab picks up where it stopped.
     <div class="row"><label for="runWhich">Set</label><select id="runWhich"><option value="sample">Sample: 18 tasks, about 1 minute</option><option value="dev">Dev: 95 tasks, about 4 minutes</option><option value="test">Test: 410 tasks, about 15 minutes (the sealed set)</option></select>
       <button id="run" type="button" disabled>Run it</button><button class="ghost" id="save" type="button" disabled>Save my results</button></div>
     <div class="bar" aria-hidden="true"><i id="runBar"></i></div><div id="runOut" aria-live="polite" class="small"></div>
