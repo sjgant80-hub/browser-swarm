@@ -1,0 +1,1 @@
+{ "name": "Browser Swarm", "short_name": "Swarm", "start_url": "./", "display": "standalone", "background_color": "#f7f6f2", "theme_color": "#1f6f5c", "description": "Small AI cells in your browser tab that refuse rather than guess." }

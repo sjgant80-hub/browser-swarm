@@ -1,0 +1,65 @@
+{
+ "witness": "v0.6",
+ "total": 385,
+ "killed": 384,
+ "clean": true,
+ "files": {
+  "src/checks.mjs": {
+   "total": 56,
+   "killed": 56,
+   "ignored": 0,
+   "clean": true
+  },
+  "src/sha256.mjs": {
+   "total": 24,
+   "killed": 24,
+   "ignored": 0,
+   "clean": true
+  },
+  "src/cells.mjs": {
+   "total": 60,
+   "killed": 60,
+   "ignored": 0,
+   "clean": true
+  },
+  "src/swarm.mjs": {
+   "total": 35,
+   "killed": 35,
+   "ignored": 0,
+   "clean": true
+  },
+  "src/score.mjs": {
+   "total": 83,
+   "killed": 83,
+   "ignored": 0,
+   "clean": true
+  },
+  "src/adversary.mjs": {
+   "total": 32,
+   "killed": 32,
+   "ignored": 0,
+   "clean": true
+  },
+  "src/claims.mjs": {
+   "total": 60,
+   "killed": 59,
+   "ignored": 1,
+   "clean": true
+  },
+  "src/cost.mjs": {
+   "total": 19,
+   "killed": 19,
+   "ignored": 0,
+   "clean": true
+  },
+  "genome/cell.mjs": {
+   "total": 16,
+   "killed": 16,
+   "ignored": 0,
+   "clean": true
+  }
+ },
+ "nothingToMutate": {
+  "genome/io.mjs, judge.mjs, lane.mjs, health.mjs, tombstone.mjs": "the estate genome's hook template, byte for byte; gated in estate-genome (template/genome), exercised here by the birth check in CI"
+ }
+}

@@ -1,0 +1,7 @@
+[
+ {
+  "mutation": "< → <=",
+  "snippet": "const beats = (p) => Math.sign(p.bOnly - p.aOnly) === 1 && p.p < 0.05;",
+  "reason": "an exact McNemar p-value is a whole number over a power of two (vendor/stats.mjs mcnemar), so it is never exactly 0.05: < and <= agree on every possible input"
+ }
+]
