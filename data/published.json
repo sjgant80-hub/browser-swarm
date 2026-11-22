@@ -4,8 +4,8 @@
  "big": "data/runs/node-qwen2.5_7b-test.json",
  "node1b": "data/runs/node-llama3.2_1b-test.json",
  "attacks": "data/runs/attacks-sealed-llama3.2_1b.json",
- "fold": null,
+ "fold": "data/runs/fold-tab.json",
  "walk": null,
  "frontier": "data/runs/frontier-raw-test.json",
- "attacksTab": null
+ "attacksTab": "data/runs/attacks-tab.json"
 }
