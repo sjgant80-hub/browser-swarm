@@ -91,7 +91,7 @@ test('no private repository name is in anything this repository ships (checked b
   const banned = new Set(JSON.parse(read('data/private-names.sha256.json')).sha256);
   assert.ok(banned.size >= 50);
   const sha = (s) => createHash('sha256').update(s).digest('hex');
-  const files = ['index.html', 'README.md', 'CLAIMS.md', 'SEAL2.md', 'CLAIMS-2.md', 'SEAL3.md', 'data/adoption.json', 'data/settings2.json', 'NOTICE', 'seed.json', 'sw.js', 'manifest.webmanifest', 'data/published.json', 'data/settings.json', 'data/prices.json'];
+  const files = ['index.html', 'README.md', 'CLAIMS.md', 'SEAL2.md', 'CLAIMS-2.md', 'SEAL3.md', 'CLAIMS-3.md', 'data/adoption.json', 'data/settings2.json', 'NOTICE', 'seed.json', 'sw.js', 'manifest.webmanifest', 'data/published.json', 'data/settings.json', 'data/prices.json'];
   for (const dir of ['src', 'scripts', 'test', 'page', 'genome', 'vendor', '.github/workflows']) for (const f of readdirSync(new URL(`${dir}/`, root))) files.push(`${dir}/${f}`);
   const seen = new Set();
   for (const f of files) {

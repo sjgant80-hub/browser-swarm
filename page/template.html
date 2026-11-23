@@ -90,12 +90,14 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-si
 <p><b>The fix, tried next:</b> <span data-bind="hl.fix">not measured yet</span></p>
 <p><b>The price of the first build, stated up front:</b> <span data-bind="hl.price">The trade-off is not measured yet.</span></p>
 <div class="chips" aria-label="Headline numbers">
-  <span class="chip">swarm silent failures <b data-bind="hl.swarm">not measured yet</b></span>
+  <span class="chip">first build: silent failures <b data-bind="hl.swarm">not measured yet</b></span>
   <span class="chip">the same model with no checks <b data-bind="hl.raw1">not measured yet</b></span>
   <span class="chip">a 7× larger model with no checks <b data-bind="hl.raw7">not measured yet</b></span>
   <span class="chip">a frontier cloud model with no checks <b data-bind="hl.frontier">not measured yet</b></span>
-  <span class="chip">bounded work the swarm gets right <b data-bind="hl.acc">not measured yet</b></span>
+  <span class="chip">first build: bounded work right <b data-bind="hl.acc">not measured yet</b></span>
   <span class="chip">bounded work the 7× larger model gets right <b data-bind="hl.acc7">not measured yet</b></span>
+  <span class="chip">decomposed build: silent failures <b data-bind="hl.swarm2">not measured yet</b></span>
+  <span class="chip">decomposed build: bounded work right <b data-bind="hl.acc2">not measured yet</b></span>
   <span class="chip">data sent off the device <b data-bind="hl.privacy">not measured yet</b></span>
   <span class="chip">the 7× larger model behind the same checks <b data-bind="hl.gated7">not measured yet</b></span>
   <span class="chip">charge per question <b>$0</b> <span class="muted">(no meter: one model download, then your own hardware)</span></span>
@@ -273,7 +275,7 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-si
 <h2 id="brochure">For buyers: the case, no hedging</h2>
 <div class="grid two">
 <div class="card"><h3>What it replaces, and what people still do</h3><p>It takes the routine first pass at the seven bounded jobs above. People still do three things: <span data-bind="b.people">the share is not measured yet.</span> People were not measured on these tasks, so this page makes no claim against human error rates. It is not for critical decisions without a person.</p></div>
-<div class="card"><h3>What it does</h3><p>It does bounded AI work in a browser tab, on your hardware, and checks every answer before release. Its headline measure is the silent-failure rate. <span data-bind="b.vs">The comparison is not measured yet.</span></p></div>
+<div class="card"><h3>What it does</h3><p>It does bounded AI work in a browser tab, on your hardware, and checks every answer before release. Its headline measure is the silent-failure rate. <span data-bind="b.vs">The comparison is not measured yet.</span> <span data-bind="b.fix">The decomposed build is not measured yet.</span></p></div>
 <div class="card"><h3>Chief executive</h3><p>Routine AI work without a data-sharing agreement, without a per-question bill, and with a measured answer to the board's question: how often is it confidently wrong?</p></div>
 <div class="card"><h3>Finance</h3><p>No tokens are bought and the hardware is already on the books. The cost case below uses your own volumes and your own cost of an error. Nothing is assumed for you.</p></div>
 <div class="card"><h3>Operations</h3><p>Refusals come with a reason, and they go to a person. Every answer that is released can be traced: the paragraph and characters it came from, the line it was printed on, or the index entry it agrees with.</p></div>
@@ -324,7 +326,7 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-si
   <li><b>"The model files are not pinned."</b> True today: see the security answers above.</li>
 </ul>
 <h3>The case for the board</h3>
-<p>Most AI risk is not the obvious failure. It is the confident wrong answer that nobody catches. This product measures that rate, publishes it with its losses, and lets anyone check it. <span data-bind="b.board">The cut in confidently wrong answers is not measured yet.</span> It does that with no data leaving the building and no bill per question. Start with one bounded job and your own test set, and decide on your own numbers.</p>
+<p>Most AI risk is not the obvious failure. It is the confident wrong answer that nobody catches. This product measures that rate, publishes it with its losses, and lets anyone check it. <span data-bind="b.board">The cut in confidently wrong answers is not measured yet.</span> <span data-bind="b.fixboard">The decomposed build is not measured yet.</span> It does that with no data leaving the building and no bill per question. Start with one bounded job and your own test set, and decide on your own numbers.</p>
 <div id="walk">not measured yet</div>
 
 <h2 id="paper">White paper: the reef, not the cathedral</h2>

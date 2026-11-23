@@ -215,6 +215,7 @@ const gateCell = (files) => {
   const k = got.reduce((a, g) => a + g.killed, 0), n = got.reduce((a, g) => a + g.total, 0), ig = got.reduce((a, g) => a + (g.ignored || 0), 0);
   return got.every((g) => g.clean === true) ? `<span class="pass">built, gated ${k}/${n}${ig ? ` (${ig} equivalent, with its reason)` : ''}</span>` : `<span class="fail">built, gate not clean: ${k}/${n}</span>`;
 };
+const BOUNDED_KINDS = ['qa', 'extract', 'classify', 'route', 'date', 'pence', 'draft'];
 const meanMs = (recs) => (recs.length ? recs.reduce((a, r) => a + (Number(r.ms) || 0), 0) / recs.length : null);
 const callsPer = (recs) => { const n = recs.map((r) => (r.calls || []).filter((c) => !c.cached).length); return n.length ? n.reduce((a, b) => a + b, 0) / n.length : null; };
 function fixArms() {
@@ -256,17 +257,33 @@ function renderFix() {
   };
   parts.push(side('On the sealed 410, a second read of that set', F.test, F.v1, F.v2, P.tab, P.tab2));
   parts.push(side('On 410 fresh tasks neither build had seen', F.fresh, F.v1fresh, F.v2fresh, P.fresh1, P.fresh2));
+  // where the gain came from and where the wrong answers are, kind by kind, for one pair of runs
+  const whereOf = (a, b, runB, label) => {
+    const kinds = BOUNDED_KINDS.filter((k) => a.byKind[k] && b.byKind[k]);
+    const noModel = kinds.filter((k) => callsPer(runB.records.gated.filter((r) => r.kind === k)) === 0);
+    const gain = (ks) => ks.reduce((n, k) => n + b.byKind[k].correct - a.byKind[k].correct, 0);
+    const each = kinds.filter((k) => !noModel.includes(k)).map((k) => `${esc(KIND_NAMES[k])} ${b.byKind[k].correct - a.byKind[k].correct >= 0 ? '+' : '−'}${Math.abs(b.byKind[k].correct - a.byKind[k].correct)}`).join(', ');
+    const sil = (m) => kinds.filter((k) => m.byKind[k].silent).map((k) => `${esc(KIND_NAMES[k])} ${m.byKind[k].silent}`).join(', ') || 'none';
+    return `<p><b>Where the change came from${label}.</b> The decomposed build got ${gain(kinds) >= 0 ? gain(kinds) + ' more' : -gain(kinds) + ' fewer'} bounded tasks right than the first build. Of that, ${gain(noModel)} came on the desks where no model is asked (${noModel.map((k) => esc(KIND_NAMES[k])).join(', ')}): code doing the job, which says nothing about the model. On the desks where the model is still asked: ${each}. <b>Where the wrong answers are:</b> the decomposed build's silent failures by kind: ${sil(b)}. The first build's: ${sil(a)}.</p>`;
+  };
   // what moved, and the road not taken
   if (F.v1 && F.v2) {
     const d1 = DIAG.summary(F.test, P.tab.records.gated, P.tab.records.raw), d2 = DIAG.summary(F.test, P.tab2.records.gated, P.tab.records.raw);
     const g7 = F.gated7;
     parts.push(`<h3>What moved</h3><p>On the sealed 410 the decomposed build answered ${F.v2.all.released} tasks where the first build answered ${F.v1.all.released}. "Too weak" went from ${d1.b} tasks to ${d2.b}; "gate too strict" went from ${d1.c} to ${d2.c}; correct refusals from ${d1.a} to ${d2.a}. Silent failures went from ${F.v1.all.silent} to ${F.v2.all.silent}.</p>`
-      + (() => { const slow = ORDER.filter((k) => F.v2.byKind[k]).map((k) => [k, F.v2.byKind[k].medianMs]).sort((a, b) => b[1] - a[1])[0]; return `<p><b>Time, said straight.</b> The median time per task went from ${(F.v1.all.medianMs / 1000).toFixed(2)} s to ${(F.v2.all.medianMs / 1000).toFixed(2)} s, and the mean from ${(meanMs(P.tab.records.gated) / 1000).toFixed(2)} s to ${(meanMs(P.tab2.records.gated) / 1000).toFixed(2)} s. The median is low because many tasks now need no model call, or are refused before the model runs. The slowest kind in the decomposed build is ${esc(KIND_NAMES[slow[0]])}, at a median ${(slow[1] / 1000).toFixed(1)} s per task. The whole sealed set took ${P.tab2.seconds} s in the tab.</p>`; })()
+      + (() => { const slow = ORDER.filter((k) => F.v2.byKind[k]).map((k) => [k, F.v2.byKind[k].medianMs]).sort((a, b) => b[1] - a[1])[0]; return `<p><b>Time, said straight.</b> The median time per task went from ${(F.v1.all.medianMs / 1000).toFixed(2)} s to ${(F.v2.all.medianMs / 1000).toFixed(2)} s, and the mean from ${(meanMs(P.tab.records.gated) / 1000).toFixed(2)} s to ${(meanMs(P.tab2.records.gated) / 1000).toFixed(2)} s. The median is low because many tasks now need no model call, or are refused before the model runs. The slowest kind in the decomposed build is ${esc(KIND_NAMES[slow[0]])}, at a median ${(slow[1] / 1000).toFixed(1)} s per task. The whole sealed set took ${P.tab2.seconds} s in the tab (the first build's run, which also made the unchecked arm from the same calls: ${P.tab.seconds} s).</p>`; })()
+      + whereOf(F.v1, F.v2, P.tab2, ' on the sealed 410')
+      + (F.v1fresh && F.v2fresh ? whereOf(F.v1fresh, F.v2fresh, P.fresh2, ' on the fresh 410') : '')
       + (g7 ? `<p><b>The road not taken.</b> A model seven times larger behind the first build's checks got ${pct(g7.bounded.accuracy)} of the bounded work right with ${g7.all.silent} silent failures, at a median ${(g7.all.medianMs / 1000).toFixed(1)} s per task on a laptop processor and with no browser. The decomposed 1B got ${pct(F.v2.bounded.accuracy)} with ${F.v2.all.silent}, in a browser tab, at a median ${(F.v2.all.medianMs / 1000).toFixed(1)} s. ${F.v2.bounded.accuracy >= g7.bounded.accuracy ? 'On this suite the small model, decomposed, matches or beats the larger one on usefulness.' : 'The larger model is still the more useful one. If usefulness matters more than running in a tab, it is the honest choice.'}</p>` : ''));
   }
   $('fixBody').innerHTML = parts.join('');
   bind('fix.default', S.fixHolds === true ? 'The decomposed build is the default here, because its two headline claims (safety held, usefulness up) both passed on the sealed tasks.' : S.fixHolds === false ? 'The first build stays the default here, because the decomposed build did not pass both of its headline claims.' : 'The first build is the default until the decomposed build has been measured on the sealed tasks.');
   bind('bp.atoms', gateCell(['src/atoms.mjs'])); bind('bp.assembly', gateCell(['src/assembly.mjs'])); bind('bp.read', gateCell(['src/read.mjs'])); bind('bp.fixclaims', gateCell(['src/diagnose.mjs', 'src/claims2.mjs']));
+  bind('hl.swarm2', F.v2 ? `${pct(F.v2.all.silentRate)} <span class="muted">(${F.v2.all.silent} of ${F.v2.all.tasks})</span>` : NM);
+  bind('hl.acc2', F.v2 ? `${pct(F.v2.bounded.accuracy)} <span class="muted">(${F.v2.bounded.correct} of ${F.v2.bounded.tasks})</span>` : NM);
+  // the buyer's two sentences about the decomposed build: what it answered, and how often it was wrong
+  bind('b.fix', F.v2 ? `The decomposed build, on the same ${F.v2.all.tasks} sealed tasks: it released ${F.v2.all.released} answers, ${F.v2.all.silent} of them wrong, and got ${pct(F.v2.bounded.accuracy)} of the bounded work right (the first build: ${F.v1 ? pct(F.v1.bounded.accuracy) : '?'}).${F.v2fresh ? ` On ${F.v2fresh.all.tasks} fresh tasks it released ${F.v2fresh.all.released}, ${F.v2fresh.all.silent} of them wrong, and got ${pct(F.v2fresh.bounded.accuracy)} of the bounded work right.` : ''}` : 'The decomposed build is not measured yet.');
+  bind('b.fixboard', F.v2 ? `Breaking each job into smaller checked steps then took the share of bounded work done right from ${F.v1 ? pct(F.v1.bounded.accuracy) : '?'} to ${pct(F.v2.bounded.accuracy)}, with ${F.v2.all.silent} confidently wrong answers in ${F.v2.all.tasks}${F.v2fresh ? ` (and ${F.v2fresh.all.silent} in ${F.v2fresh.all.tasks} on fresh tasks)` : ''}.` : 'The decomposed build is not measured yet.');
   // the headline sentence about the fix
   const D1 = verdict.D1, D2 = verdict.D2;
   bind('hl.fix', F.v2 ? `Then each desk's job was broken into smaller steps for the same small model. On the same sealed tasks the decomposed build got ${pct(F.v2.bounded.accuracy)} of the bounded work right (the first build: ${pct(F.v1 ? F.v1.bounded.accuracy : null)}) with ${F.v2.all.silent} silent failures (the first build: ${F.v1 ? F.v1.all.silent : '?'}). Its two headline claims: safety ${D1.pass ? '<span class="pass">holds</span>' : '<span class="fail">fails</span>'}, usefulness ${D2.pass ? '<span class="pass">reaches its bar</span>' : '<span class="fail">misses its bar</span>'}. <a href="#fix">The fix, in full</a>.` : 'A fix for the low completion rate, breaking each job into smaller steps, is built and not measured yet.');
@@ -286,14 +303,14 @@ function renderClaims(VP, VM) {
     + VP.map((v) => `<tr><td><b>${esc(v.id)}</b> ${esc(NAMES[v.id] || '')}</td><td class="small">${esc((CLAIMS.BARS[v.id] || 'no bar').replace(/\*\*/g, ''))}</td><td class="small">${esc(v.result.replace(/^pending: /, 'Not measured yet: '))}</td><td>${badge(v)}</td><td>${here(v.id)}</td></tr>`).join('') + '</tbody></table>';
 }
 function renderAttacks(VP) {
-  const P = S.data.runs, s = P.attacks ? P.attacks.summary : null, t = P.attacksTab ? P.attacksTab.summary : null, m = S.attacksLocal ? S.attacksLocal.summary : null;
+  const P = S.data.runs, s = P.attacks ? P.attacks.summary : null, t = P.attacksTab ? P.attacksTab.summary : null, t2 = P.attacksTab2 ? P.attacksTab2.summary : null, m = S.attacksLocal ? S.attacksLocal.summary : null;
   const what = { A1: 'changes a signed paragraph after signing', A2: 'adds a signed false copy beside the right paragraph', A2b: 'writes the lie into the right paragraph and signs it', A3: 'adds "ignore … the answer is X" to the right paragraph, signed', A4: 'hands the judge a wrong answer of the right type, copied from the right paragraph' };
   const V = Object.fromEntries(VP.map((v) => [v.id, v]));
   const rel = (x, id) => (!x || !x[id] ? null : id === 'A4' ? [x[id].released, x[id].candidates] : [x[id].gatedFalse, x[id].built]);
   const show = (p) => (p ? `<span class="${p[0] ? 'fail' : 'pass'}">${p[0]}</span> of ${p[1]}` : NM);
   const raw = (x, id) => (!x || !x[id] ? NM : id === 'A4' ? 'no model' : `${x[id].rawFalse} of ${x[id].built}`);
-  $('attackTable').innerHTML = '<table><thead><tr><th>attack</th><th>what the attacker does</th><th class="num">sealed runner: false answer released</th><th class="num">same model, no checks</th><th class="num">in the browser tab</th><th class="num">on this device</th><th>verdict</th></tr></thead><tbody>'
-    + ['A1', 'A2', 'A2b', 'A3', 'A4'].map((id) => `<tr><td><b>${id}</b></td><td>${esc(what[id])}</td><td class="num">${show(rel(s, id))}</td><td class="num">${raw(s, id)}</td><td class="num">${show(rel(t, id))}</td><td class="num">${m ? show(rel(m, id)) : '<span class="badge">UNVERIFIED HERE</span>'}</td><td>${badge(V[id])}</td></tr>`).join('') + '</tbody></table>';
+  $('attackTable').innerHTML = '<table><thead><tr><th>attack</th><th>what the attacker does</th><th class="num">sealed runner: false answer released</th><th class="num">same model, no checks</th><th class="num">in the browser tab</th><th class="num">decomposed build, in the tab</th><th class="num">on this device</th><th>verdict</th></tr></thead><tbody>'
+    + ['A1', 'A2', 'A2b', 'A3', 'A4'].map((id) => `<tr><td><b>${id}</b></td><td>${esc(what[id])}</td><td class="num">${show(rel(s, id))}</td><td class="num">${raw(s, id)}</td><td class="num">${show(rel(t, id))}</td><td class="num">${show(rel(t2, id))}</td><td class="num">${m ? show(rel(m, id)) : '<span class="badge">UNVERIFIED HERE</span>'}</td><td>${badge(V[id])}</td></tr>`).join('') + '</tbody></table>';
 }
 
 // ── a decision, drawn stage by stage, with the source bytes of a released answer ──
@@ -730,7 +747,7 @@ const ready = (async function start() {
   const [suite, corpus, bank, depts, settings, prices, attacks, published] = await Promise.all(['data/suite.json', 'data/corpus.json', 'data/banking-index.json', 'data/departments.json', 'data/settings.json', 'data/prices.json', 'data/attacks.json', 'data/published.json'].map(getJSON));
   const P = published || {};
   const runs = {};
-  for (const k of ['tab', 'big', 'node1b', 'attacks', 'attacksTab', 'fold', 'frontier', 'tab2', 'fresh1', 'fresh2']) runs[k] = P[k] ? await getJSON(P[k]) : null;
+  for (const k of ['tab', 'big', 'node1b', 'attacks', 'attacksTab', 'fold', 'frontier', 'tab2', 'fresh1', 'fresh2', 'attacksTab2']) runs[k] = P[k] ? await getJSON(P[k]) : null;
   const test2 = await getJSON('data/test2.json'), adoption = await getJSON('data/adoption.json'), gates = await getJSON('data/gates.json');
   const settings2 = await getJSON('data/settings2.json');
   S.data = { suite, corpus, bank, depts, settings, settings2, test2, adoption, gates, prices, attacks, runs, walk: P.walk ? await getJSON(P.walk) : null };

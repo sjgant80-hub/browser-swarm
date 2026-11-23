@@ -7,5 +7,6 @@
  "fold": "data/runs/fold-tab.json",
  "walk": "data/walk.json",
  "frontier": "data/runs/frontier-raw-test.json",
- "attacksTab": "data/runs/attacks-tab.json"
+ "attacksTab": "data/runs/attacks-tab.json",
+ "tab2": "data/runs/tab2-test.json"
 }
