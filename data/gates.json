@@ -1,7 +1,7 @@
 {
  "witness": "v0.6",
- "total": 408,
- "killed": 407,
+ "total": 557,
+ "killed": 555,
  "clean": true,
  "files": {
   "src/checks.mjs": {
@@ -59,9 +59,33 @@
    "clean": true
   },
   "src/diagnose.mjs": {
-   "total": 21,
-   "killed": 21,
+   "total": 23,
+   "killed": 23,
    "ignored": 0,
+   "clean": true
+  },
+  "src/atoms.mjs": {
+   "total": 11,
+   "killed": 11,
+   "ignored": 0,
+   "clean": true
+  },
+  "src/assembly.mjs": {
+   "total": 57,
+   "killed": 57,
+   "ignored": 0,
+   "clean": true
+  },
+  "src/read.mjs": {
+   "total": 31,
+   "killed": 31,
+   "ignored": 0,
+   "clean": true
+  },
+  "src/claims2.mjs": {
+   "total": 48,
+   "killed": 47,
+   "ignored": 1,
    "clean": true
   }
  },

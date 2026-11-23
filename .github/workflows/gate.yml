@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: '22' }
-      - name: tests (including seal 2 and the page build)
+      - name: tests (including seal 2, seal 3 and the page build)
         run: node --test test/*.test.mjs
       - name: mutation gate, every gated file CLEAN, counts as committed
         run: |
@@ -32,6 +32,8 @@ jobs:
       - name: every published run re-decided from its recorded replies, identically
         run: |
           for f in $(node -e 'const p=require("./data/published.json");for(const k of ["tab","big","node1b"])if(p[k])console.log(p[k])'); do node scripts/replay.mjs "$f" --check; done
+      - name: every published run of the fix is complete, under both seals, and re-decided identically
+        run: node scripts/publish-fix.mjs --check
   genome:
     runs-on: ubuntu-latest
     steps:

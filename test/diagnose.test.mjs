@@ -27,6 +27,11 @@ test('cause: one cause for every way a task can end', () => {
   assert.deepEqual(D.cause(date, { released: false, stage: 'conductor' }, { released: true, output: good }), { cause: 'gate too strict', detail: 'no desk took a job the model alone got right' });
   assert.deepEqual(D.cause(date, { released: false, stage: 'conductor' }, null), { cause: 'too weak', detail: 'no desk took it, and the model alone was wrong too' });
   assert.equal(D.cause(date, null, null).cause, 'too weak');
+  assert.deepEqual(D.cause(date, { released: false, stage: 'atom', atoms: [{ ok: true }, { ok: false }] }, { released: true, output: good }), { cause: 'too weak', detail: 'a small step the model was asked did not pass its check' });
+  assert.deepEqual(D.cause(date, { released: false, stage: 'atom', atoms: [{ ok: true }] }, { released: true, output: good }), { cause: 'gate too strict', detail: 'the plan found no part to ask about, on a job the model alone got right' });
+  assert.deepEqual(D.cause(date, { released: false, stage: 'atom', atoms: 'x' }, { released: true, output: bad }), { cause: 'too weak', detail: 'the plan found no part to ask about, and the model alone was wrong too' });
+  assert.equal(D.cause(date, { released: false, stage: 'atom' }, null).cause, 'too weak');
+  assert.equal(D.cause(date, { released: false, stage: 'atom', atoms: [{ ok: 0 }] }, { released: true, output: good }).cause, 'gate too strict', 'only a step that failed counts as the model being too weak');
   assert.equal(D.cause(date, { released: 'yes', output: good }, null).cause, 'too weak');
 });
 

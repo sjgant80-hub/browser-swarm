@@ -91,7 +91,7 @@ test('no private repository name is in anything this repository ships (checked b
   const banned = new Set(JSON.parse(read('data/private-names.sha256.json')).sha256);
   assert.ok(banned.size >= 50);
   const sha = (s) => createHash('sha256').update(s).digest('hex');
-  const files = ['index.html', 'README.md', 'CLAIMS.md', 'SEAL2.md', 'NOTICE', 'seed.json', 'sw.js', 'manifest.webmanifest', 'data/published.json', 'data/settings.json', 'data/prices.json'];
+  const files = ['index.html', 'README.md', 'CLAIMS.md', 'SEAL2.md', 'CLAIMS-2.md', 'SEAL3.md', 'data/adoption.json', 'data/settings2.json', 'NOTICE', 'seed.json', 'sw.js', 'manifest.webmanifest', 'data/published.json', 'data/settings.json', 'data/prices.json'];
   for (const dir of ['src', 'scripts', 'test', 'page', 'genome', 'vendor', '.github/workflows']) for (const f of readdirSync(new URL(`${dir}/`, root))) files.push(`${dir}/${f}`);
   const seen = new Set();
   for (const f of files) {
@@ -105,4 +105,11 @@ test('no private repository name is in anything this repository ships (checked b
       }
     }
   }
+});
+
+test('no two elements of the page share an id', () => {
+  const html = read('page/template.html'), seen = new Map();
+  for (const m of html.matchAll(/\sid="([^"]+)"/g)) seen.set(m[1], (seen.get(m[1]) || 0) + 1);
+  assert.deepEqual([...seen].filter(([, n]) => n > 1).map(([id]) => id), []);
+  assert.ok(seen.size > 40);
 });

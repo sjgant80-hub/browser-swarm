@@ -1,0 +1,16 @@
+{
+ "v": "browser-swarm-seal/3",
+ "note": "the decomposed build, frozen before it read a task of either sealed set; a run of the fix counts only when its seal3Sha256 equals the SHA-256 of this file and its sealSha256 equals seal2",
+ "seal2": "c40859345f96aa9396a1167d3ea3410cf39394de36ded191ce6697421f166058",
+ "files": {
+  "src/atoms.mjs": "02b34be6f454589e662b2d7945e8a7ddfff698deb11134fd1ad00940c1c96e1a",
+  "src/assembly.mjs": "1fc421b3a42f186ea1d5b9d6c195652b835fc48f9ab9ce66c672fb591b630722",
+  "src/read.mjs": "08b1f9db9d439335633a3b677c0b58618d3d771a205f50ebc5a072a5e2d8abeb",
+  "src/claims2.mjs": "d4d7ef726a09e931bf54603233dc8b34bfbf5c07229a593f82e8f3437c17d223",
+  "CLAIMS-2.md": "b195d413c562898fba8cd262537af8f587010c5845cee0402954b36363160d9d",
+  "data/settings2.json": "6f2853c66324c11730669249f5755d5972f337f261a6784199bb8a682302be09",
+  "data/adoption.json": "b6d3f95216eb00f67a5b3c77d68c22d1ebc7503743c4c9ffab2b4691a56de434",
+  "data/test2.json": "64e53ff7090d5ea37651097e58547a2ccecf7192e787b2de5cf4c005eba9ab58",
+  "data/tune2.json": "61d8a44da91ab248f08db798584771ef00da42b8860aaabb49921ba9d15037d7"
+ }
+}

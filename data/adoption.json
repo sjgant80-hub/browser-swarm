@@ -1,0 +1,176 @@
+{
+ "v": "browser-swarm-adoption/2",
+ "rule": "A desk switches to a decomposed plan only if, on its tuning tasks, the plan has no more silent failures than the one-call form and a higher score, where the score is right answers minus twice the silent failures (the measure seal 2 used to choose each desk's release rule). Otherwise the desk stays as it was.",
+ "firstRule": "more right answers and no more silent failures than the one-call form",
+ "note": "Measured in a browser tab with the 4-bit 1B, on tuning tasks only: the tune pool of data/suite.json (documents, banking, departments) and data/tune2.json (receipts, dates, amounts, letters). \"Right\" counts a correct refusal on a task where nothing is right to say. The three desks whose plan asks no model (dates, amounts, letters) were scored by running the same code over the same tuning tasks. These are tuning numbers that chose the build; the claims rest on the sealed sets.",
+ "desks": [
+  {
+   "desk": "docs-answer",
+   "kind": "qa",
+   "pool": "tune",
+   "tasks": 190,
+   "v1": {
+    "right": 117,
+    "silent": 9,
+    "released": 21
+   },
+   "v2": {
+    "right": 116,
+    "silent": 1,
+    "released": 8,
+    "callsPerTask": 0.66
+   },
+   "adopted": true,
+   "firstRule": false,
+   "why": "score 114 against 99, and fewer silent failures",
+   "tried": [
+    {
+     "plan": "one sentence only (the model reads just the sentence that best matches the question)",
+     "right": 119,
+     "silent": 8,
+     "released": 23,
+     "why": "It answered more and was wrong almost as often as the first build. Six of its 8 wrong answers were on questions the paragraph does not answer: shown one sentence, the model always finds a phrase. The two-readings plan scored higher."
+    }
+   ],
+   "firstRuleWould": "adopted the one-sentence plan listed below (119 right, 8 silent failures)"
+  },
+  {
+   "desk": "receipt-total",
+   "kind": "extract",
+   "pool": "tune2",
+   "tasks": 40,
+   "v1": {
+    "right": 16,
+    "silent": 0,
+    "released": 16
+   },
+   "v2": {
+    "right": 32,
+    "silent": 0,
+    "released": 32,
+    "callsPerTask": 0.82
+   },
+   "adopted": true,
+   "firstRule": true,
+   "why": "score 32 against 16, and the same number of silent failures"
+  },
+  {
+   "desk": "banking-intent",
+   "kind": "classify",
+   "pool": "tune",
+   "tasks": 120,
+   "v1": {
+    "right": 12,
+    "silent": 4,
+    "released": 16
+   },
+   "v2": {
+    "right": 7,
+    "silent": 1,
+    "released": 8,
+    "callsPerTask": 1.51
+   },
+   "adopted": true,
+   "firstRule": false,
+   "why": "score 5 against 4, and fewer silent failures"
+  },
+  {
+   "desk": "department",
+   "kind": "route",
+   "pool": "tune",
+   "tasks": 100,
+   "v1": {
+    "right": 29,
+    "silent": 2,
+    "released": 13
+   },
+   "v2": {
+    "right": 34,
+    "silent": 6,
+    "released": 25,
+    "callsPerTask": 1.5
+   },
+   "adopted": false,
+   "firstRule": false,
+   "why": "6 silent failures against the one-call form's 2"
+  },
+  {
+   "desk": "iso-date",
+   "kind": "date",
+   "pool": "tune2",
+   "tasks": 40,
+   "v1": {
+    "right": 29,
+    "silent": 0,
+    "released": 29
+   },
+   "v2": {
+    "right": 40,
+    "silent": 0,
+    "released": 40,
+    "callsPerTask": 0
+   },
+   "adopted": true,
+   "firstRule": true,
+   "why": "score 40 against 29, and the same number of silent failures",
+   "tried": [
+    {
+     "plan": "three atoms (the model is asked for the year, the month and the day)",
+     "right": 25,
+     "silent": 0,
+     "released": 25,
+     "why": "Fewer right than the one-call form. Asked for the month as a number, the model often gave the day. Code reads these texts exactly, so the atoms were dropped for the code reader."
+    }
+   ]
+  },
+  {
+   "desk": "pence",
+   "kind": "pence",
+   "pool": "tune2",
+   "tasks": 40,
+   "v1": {
+    "right": 8,
+    "silent": 1,
+    "released": 9
+   },
+   "v2": {
+    "right": 40,
+    "silent": 0,
+    "released": 40,
+    "callsPerTask": 0
+   },
+   "adopted": true,
+   "firstRule": true,
+   "why": "score 40 against 6, and fewer silent failures",
+   "tried": [
+    {
+     "plan": "two atoms (the model is asked for the pounds and for the pence)",
+     "right": 22,
+     "silent": 0,
+     "released": 22,
+     "why": "Better than the one-call form, but the model misread the pence in almost half. Code reads these texts exactly, so the atoms were dropped for the code reader."
+    }
+   ]
+  },
+  {
+   "desk": "refund-letter",
+   "kind": "draft",
+   "pool": "tune2",
+   "tasks": 40,
+   "v1": {
+    "right": 24,
+    "silent": 0,
+    "released": 24
+   },
+   "v2": {
+    "right": 40,
+    "silent": 0,
+    "released": 40,
+    "callsPerTask": 0
+   },
+   "adopted": true,
+   "firstRule": true,
+   "why": "score 40 against 24, and the same number of silent failures"
+  }
+ ]
+}

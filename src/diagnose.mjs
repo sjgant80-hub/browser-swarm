@@ -4,8 +4,10 @@
 //   a  correct refusal    nothing was right to say (an unanswerable or off-corpus question, an out-of-scope message), or
 //                         a trap: a hard open question no desk owns. Refusing these is the designed behaviour.
 //   b  too weak           the swarm had no right answer to release: the model declined, or wrote a wrong answer the
-//                         check rightly withheld, or the lane refused and the model alone was wrong too.
-//   c  gate too strict    a RIGHT answer was withheld by the check, or the lane refused a job the model alone got right.
+//                         check rightly withheld, or a small step it was asked failed its check, or the lane (or a
+//                         decomposed desk's plan) refused and the model alone was wrong too.
+//   c  gate too strict    a RIGHT answer was withheld by the check, or the lane (or a plan) refused a job the model
+//                         alone got right.
 // Smaller steps can fix b. They cannot fix c (only recalibrating the gate can), and a must not be "fixed" at all.
 import { right, shouldRefuse, HARD } from './score.mjs';
 
@@ -25,6 +27,11 @@ export function cause(task, gated, raw) {
   }
   if (stage === 'act') return { cause: 'too weak', detail: 'the model declined, or wrote nothing usable' };
   const aloneRight = get(raw, 'released') === true && right(task, get(raw, 'output'));
+  if (stage === 'atom') {
+    // a decomposed desk: a small step the model was asked failed its check, or the plan's code found nothing to ask about
+    if ((Array.isArray(get(gated, 'atoms')) ? gated.atoms : []).some((a) => get(a, 'ok') === false)) return { cause: 'too weak', detail: 'a small step the model was asked did not pass its check' };
+    return aloneRight ? { cause: 'gate too strict', detail: 'the plan found no part to ask about, on a job the model alone got right' } : { cause: 'too weak', detail: 'the plan found no part to ask about, and the model alone was wrong too' };
+  }
   if (aloneRight) return { cause: 'gate too strict', detail: stage === 'lane' ? 'the lane refused a job the model alone got right' : 'no desk took a job the model alone got right' };
   return { cause: 'too weak', detail: stage === 'lane' ? 'the lane refused, and the model alone was wrong too' : 'no desk took it, and the model alone was wrong too' };
 }

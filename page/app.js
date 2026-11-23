@@ -26,7 +26,7 @@ const TIERS = { 'Llama-3.2-1B-Instruct-q4f16_1-MLC': 'Llama 3.2 1B, 4-bit (lapto
 const SIZES = { 'Llama-3.2-1B-Instruct-q4f16_1-MLC': '879 MB', 'Qwen2.5-3B-Instruct-q4f16_1-MLC': '2.5 GB', 'Qwen2.5-0.5B-Instruct-q4f16_1-MLC': '945 MB', 'SmolLM2-360M-Instruct-q4f16_1-MLC': '376 MB' };
 const tierOf = (id) => TIERS[id] || String(id || 'unknown model');
 
-const S = { canRun: false, data: null, ctx: null, engine: null, model: null, gpu: null, local: null, view: 'published', attacksLocal: null, foldLocal: null, busy: false, onToken: null, inbox: [], work: [], counts: {} };
+const S = { system: 'v1', canRun: false, data: null, ctx: null, engine: null, model: null, gpu: null, local: null, view: 'published', attacksLocal: null, foldLocal: null, busy: false, onToken: null, inbox: [], work: [], counts: {} };
 const store = {
   get(k) { try { return JSON.parse(localStorage.getItem(k)); } catch { return null; } },
   set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch { return false; } },
@@ -76,10 +76,11 @@ const ids = (recs) => { let s = IDS.get(recs); if (!s || s.n !== recs.length) { 
 function poolOf(split) {
   const suite = S.data.suite;
   if (split === 'test') return suite.test;
+  if (split === 'test2') return S.data.test2.test;
   if (split === 'dev') return suite.dev;
   return ORDER.flatMap((k) => suite.dev.filter((t) => t.kind === k).slice(0, 2));
 }
-const SPLIT_NAMES = { test: 'sealed test', dev: 'dev', sample: 'sample' };
+const SPLIT_NAMES = { test: 'sealed test', test2: 'fresh test', dev: 'dev', sample: 'sample' };
 function view(which) {
   const P = S.data.runs, L = S.local;
   const mine = which === 'mine' && !!L && L.records.gated.length > 0;
@@ -114,7 +115,7 @@ const sourceOf = (run) => (run ? `${tierOf(run.model)}, in a browser tab (WebLLM
 function renderViewBar(A) {
   const L = S.local, P = S.data.runs;
   if (A.mine) {
-    $('viewBar').innerHTML = `<b>Showing your run on this device.</b> ${A.tasks.length} of ${A.pool.length} ${SPLIT_NAMES[L.split] || L.split} tasks${L.complete ? '' : ' so far'}. ${esc(sourceOf(L))}. Every number below is from this run, except the 7B and frontier columns, which are the published ones on the same tasks. <button class="ghost" type="button" data-act="view-published">Show the published runs</button>`;
+    $('viewBar').innerHTML = `<b>Showing your run on this device</b> (${L.system === 'v2' ? 'the decomposed build' : 'the first build'}). ${A.tasks.length} of ${A.pool.length} ${SPLIT_NAMES[L.split] || L.split} tasks${L.complete ? '' : ' so far'}. ${esc(sourceOf(L))}. Every number below is from this run, except the 7B and frontier columns, which are the published ones on the same tasks. <button class="ghost" type="button" data-act="view-published">Show the published runs</button>`;
     return;
   }
   const saved = L && L.records.gated.length ? ` You have a run saved on this device: ${L.records.gated.length} ${SPLIT_NAMES[L.split] || L.split} tasks. <button class="ghost" type="button" data-act="view-mine">Show my run</button> <button class="ghost" type="button" data-act="discard-run">Discard it</button>` : '';
@@ -197,6 +198,79 @@ function renderDiagnosis(A) {
     + kinds.map((k) => { const x = d.byKind[k]; return `<tr><td>${esc(KIND_NAMES[k])}</td><td class="num">${x['answered right']}</td><td class="num">${x['answered wrong'] ? `<span class="fail">${x['answered wrong']}</span>` : 0}</td><td class="num">${x['correct refusal'] + x.trap}</td><td class="num">${x['too weak']}</td><td class="num">${x['gate too strict']}</td></tr>`; }).join('')
     + '</tbody></table><details><summary>Each cause in detail</summary><ul class="small">' + Object.entries(d.details).sort((a, b) => b[1] - a[1]).map(([k, v]) => `<li>${v} · ${esc(k)}</li>`).join('') + '</ul></details>';
 }
+// ── the fix: the decomposed build, beside the first build ──
+// each desk's plan, in words: what code does, and what the model is asked
+const PLAN_TEXT = {
+  'docs-answer': 'Two readings that must agree. The model reads the whole paragraph, as the first build does, and separately reads only the one sentence that best matches the question (picked by code). Each phrase must be the text\'s own words. Only the words both readings give are released; if they differ, or either finds no answer, the desk refuses.',
+  'receipt-total': 'Code finds the lines that say "total" and carry an amount. The model copies the amount off each line; it must be printed on that line. If the lines differ, the model is asked which line is the final total.',
+  'banking-intent': 'The word index shortlists the likeliest intents. The model is asked yes or no for each one; it must say yes to the first and no to the others.',
+  department: 'The word index ranks the departments. The model is asked yes or no for the first two; it must say yes to the first and no to the second.',
+  'iso-date': 'Code reads the date off the text, in the written forms that need no guess. No model is asked. The first build\'s check, which is separate code, must agree.',
+  pence: 'Code reads the amount off the text, in the written forms that need no guess. No model is asked. The first build\'s check, which is separate code, must agree.',
+  'refund-letter': 'Code fills the letter from the record\'s own fields. No model is asked. The first build\'s check must pass.',
+};
+const gateCell = (files) => {
+  const G = S.data.gates && S.data.gates.files ? S.data.gates.files : {}, got = files.map((f) => G[f]);
+  if (got.some((g) => !g)) return '<span class="pend">built; its mutation gate is not recorded yet</span>';
+  const k = got.reduce((a, g) => a + g.killed, 0), n = got.reduce((a, g) => a + g.total, 0), ig = got.reduce((a, g) => a + (g.ignored || 0), 0);
+  return got.every((g) => g.clean === true) ? `<span class="pass">built, gated ${k}/${n}${ig ? ` (${ig} equivalent, with its reason)` : ''}</span>` : `<span class="fail">built, gate not clean: ${k}/${n}</span>`;
+};
+const meanMs = (recs) => (recs.length ? recs.reduce((a, r) => a + (Number(r.ms) || 0), 0) / recs.length : null);
+const callsPer = (recs) => { const n = recs.map((r) => (r.calls || []).filter((c) => !c.cached).length); return n.length ? n.reduce((a, b) => a + b, 0) / n.length : null; };
+function fixArms() {
+  const P = S.data.runs, test = S.data.suite.test, fresh = S.data.test2 ? S.data.test2.test : [];
+  const M = (run, tasks, venue) => (run && run.records && run.records.gated && tasks.length && tasks.every((t) => ids(run.records.gated).has(t.id)) ? SCORE.metrics(tasks, run.records.gated, { ctx: S.ctx, arm: 'gated', venue, model: run.model }) : null);
+  const v2 = M(P.tab2, test, 'tab');
+  const released = (run, tasks) => tasks.filter((t) => { const r = run.records.gated.find((x) => x.id === t.id); return r && r.released === true; }).length;
+  const traps = v2 ? { hard: released(P.tab2, test.filter((t) => SCORE.HARD.includes(t.kind))), unanswerable: released(P.tab2, test.filter((t) => SCORE.shouldRefuse(t))) } : null;
+  return { test, fresh, v1: M(P.tab, test, 'tab'), v2, traps, v1fresh: M(P.fresh1, fresh, 'tab'), v2fresh: M(P.fresh2, fresh, 'tab'), gated7: M(P.big, test, 'node') };
+}
+function renderFix() {
+  const P = S.data.runs, F = fixArms(), ad = S.data.adoption;
+  const V = CLAIMS2.evaluate(F), verdict = Object.fromEntries(V.map((v) => [v.id, v]));
+  const NAMES2 = { D1: 'Safety holds', D2: 'Usefulness climbs', D3: 'The traps still refuse', D4: 'Latency, the price', D5: 'Fresh tasks: safety', D6: 'Fresh tasks: more right, all bounded work', D7: 'Fresh tasks: more right, real-data work only' };
+  const parts = [];
+  // which desks were decomposed, decided on tuning data before the seal
+  if (ad && Array.isArray(ad.desks)) {
+    const cell = (c) => `${c.right} right, ${c.silent ? `<span class="fail">${c.silent} silent</span>` : '0 silent'}<br><span class="small muted">score ${CLAIMS2.score(c)}</span>`;
+    const tried = ad.desks.filter((d) => Array.isArray(d.tried) && d.tried.length);
+    parts.push('<h3>Which desks were decomposed</h3><p class="small">' + esc(CLAIMS2.RULE) + '</p>'
+      + '<table><thead><tr><th>desk</th><th>the plan</th><th class="num">tuning tasks</th><th>first build, one call</th><th>decomposed plan</th><th class="num">model calls per task</th><th>decision</th><th>under the first rule</th></tr></thead><tbody>'
+      + ad.desks.map((d) => { const yes = CLAIMS2.adopted(d.v1, d.v2); return `<tr><td>${esc(deskName(d.desk))}</td><td class="small">${esc(PLAN_TEXT[d.desk] || '')}</td><td class="num">${d.tasks}</td><td>${cell(d.v1)}</td><td>${cell(d.v2)}</td><td class="num">${d.v2.callsPerTask}</td><td>${yes ? '<span class="pass">decomposed</span>' : '<span class="fail">not adopted</span>: kept as one call'}<br><span class="small muted">${esc(d.why)}</span></td><td class="small">${d.firstRuleWould ? esc(d.firstRuleWould) : CLAIMS2.firstRule(d.v1, d.v2) ? 'adopted this plan' : 'kept as one call'}</td></tr>`; }).join('')
+      + '</tbody></table>'
+      + `<p class="small"><b>The rule changed once, before the seal.</b> This work started with a simpler rule: ${esc(CLAIMS2.FIRST_RULE)}. The tuning data showed a case it had not allowed for: a plan that answers a little less and is wrong far less often. That rule would have turned the safer plan down, so it was replaced by the rule above before any sealed task was read. The last column shows what the first rule would have chosen.</p>`
+      + (tried.length ? '<p class="small"><b>Also tried, and not chosen.</b></p><ul class="small">' + tried.map((d) => d.tried.map((x) => `<li>${esc(deskName(d.desk))}: ${esc(x.plan)}: ${x.right} right, ${x.silent} silent failures on the same ${d.tasks} tuning tasks (score ${CLAIMS2.score(x)}). ${esc(x.why || '')}</li>`).join('')).join('') + '</ul>' : '')
+      + ad.desks.filter((d) => d.note).map((d) => `<p class="small muted">${esc(deskName(d.desk))}: ${esc(d.note)}</p>`).join('')
+      + `<p class="small muted">${esc(ad.note)}</p>`);
+  } else parts.push(`<p>${NM}: the tuning comparison that decides which desks are decomposed.</p>`);
+  parts.push('<h3>The claims for the fix</h3><table><thead><tr><th>claim</th><th>bar</th><th>result</th><th>verdict</th></tr></thead><tbody>'
+    + V.map((v) => `<tr><td><b>${v.id}</b> ${esc(NAMES2[v.id])}</td><td class="small">${esc(CLAIMS2.BARS[v.id])}</td><td class="small">${esc(v.result.replace(/^pending: /, 'Not measured yet: '))}</td><td>${badge(v)}</td></tr>`).join('') + '</tbody></table>');
+  // side by side, per kind, on each sealed set
+  const side = (title, tasks, a, b, runA, runB) => {
+    if (!a || !b) return `<h3>${title}</h3><p>${NM}</p>`;
+    const kinds = ORDER.filter((k) => a.byKind[k]);
+    const cp = (run, k) => { const c = callsPer(run.records.gated.filter((r) => r.kind === k)); return c === null ? '—' : c.toFixed(1); };
+    return `<h3>${title}</h3><table><thead><tr><th>kind</th><th class="num">tasks</th><th class="num">first build: right</th><th class="num">silent</th><th class="num">decomposed: right</th><th class="num">silent</th><th class="num">calls per task, before → after</th><th class="num">median time, before → after</th></tr></thead><tbody>`
+      + kinds.map((k) => { const x = a.byKind[k], y = b.byKind[k]; return `<tr><td>${esc(KIND_NAMES[k])}</td><td class="num">${x.tasks}</td><td class="num">${x.correct}</td><td class="num">${x.silent ? `<span class="fail">${x.silent}</span>` : 0}</td><td class="num"><b>${y.correct}</b></td><td class="num">${y.silent ? `<span class="fail">${y.silent}</span>` : 0}</td><td class="num">${cp(runA, k)} → ${cp(runB, k)}</td><td class="num">${(x.medianMs / 1000).toFixed(1)} s → ${(y.medianMs / 1000).toFixed(1)} s</td></tr>`; }).join('')
+      + `<tr><td><b>all bounded work</b></td><td class="num">${a.bounded.tasks}</td><td class="num">${a.bounded.correct} (${pct(a.bounded.accuracy)})</td><td class="num">${a.bounded.silent}</td><td class="num"><b>${b.bounded.correct} (${pct(b.bounded.accuracy)})</b></td><td class="num">${b.bounded.silent}</td><td class="num">${callsPer(runA.records.gated).toFixed(1)} → ${callsPer(runB.records.gated).toFixed(1)}</td><td class="num">${(a.all.medianMs / 1000).toFixed(1)} s → ${(b.all.medianMs / 1000).toFixed(1)} s</td></tr></tbody></table>`;
+  };
+  parts.push(side('On the sealed 410, a second read of that set', F.test, F.v1, F.v2, P.tab, P.tab2));
+  parts.push(side('On 410 fresh tasks neither build had seen', F.fresh, F.v1fresh, F.v2fresh, P.fresh1, P.fresh2));
+  // what moved, and the road not taken
+  if (F.v1 && F.v2) {
+    const d1 = DIAG.summary(F.test, P.tab.records.gated, P.tab.records.raw), d2 = DIAG.summary(F.test, P.tab2.records.gated, P.tab.records.raw);
+    const g7 = F.gated7;
+    parts.push(`<h3>What moved</h3><p>On the sealed 410 the decomposed build answered ${F.v2.all.released} tasks where the first build answered ${F.v1.all.released}. "Too weak" went from ${d1.b} tasks to ${d2.b}; "gate too strict" went from ${d1.c} to ${d2.c}; correct refusals from ${d1.a} to ${d2.a}. Silent failures went from ${F.v1.all.silent} to ${F.v2.all.silent}.</p>`
+      + (() => { const slow = ORDER.filter((k) => F.v2.byKind[k]).map((k) => [k, F.v2.byKind[k].medianMs]).sort((a, b) => b[1] - a[1])[0]; return `<p><b>Time, said straight.</b> The median time per task went from ${(F.v1.all.medianMs / 1000).toFixed(2)} s to ${(F.v2.all.medianMs / 1000).toFixed(2)} s, and the mean from ${(meanMs(P.tab.records.gated) / 1000).toFixed(2)} s to ${(meanMs(P.tab2.records.gated) / 1000).toFixed(2)} s. The median is low because many tasks now need no model call, or are refused before the model runs. The slowest kind in the decomposed build is ${esc(KIND_NAMES[slow[0]])}, at a median ${(slow[1] / 1000).toFixed(1)} s per task. The whole sealed set took ${P.tab2.seconds} s in the tab.</p>`; })()
+      + (g7 ? `<p><b>The road not taken.</b> A model seven times larger behind the first build's checks got ${pct(g7.bounded.accuracy)} of the bounded work right with ${g7.all.silent} silent failures, at a median ${(g7.all.medianMs / 1000).toFixed(1)} s per task on a laptop processor and with no browser. The decomposed 1B got ${pct(F.v2.bounded.accuracy)} with ${F.v2.all.silent}, in a browser tab, at a median ${(F.v2.all.medianMs / 1000).toFixed(1)} s. ${F.v2.bounded.accuracy >= g7.bounded.accuracy ? 'On this suite the small model, decomposed, matches or beats the larger one on usefulness.' : 'The larger model is still the more useful one. If usefulness matters more than running in a tab, it is the honest choice.'}</p>` : ''));
+  }
+  $('fixBody').innerHTML = parts.join('');
+  bind('fix.default', S.fixHolds === true ? 'The decomposed build is the default here, because its two headline claims (safety held, usefulness up) both passed on the sealed tasks.' : S.fixHolds === false ? 'The first build stays the default here, because the decomposed build did not pass both of its headline claims.' : 'The first build is the default until the decomposed build has been measured on the sealed tasks.');
+  bind('bp.atoms', gateCell(['src/atoms.mjs'])); bind('bp.assembly', gateCell(['src/assembly.mjs'])); bind('bp.read', gateCell(['src/read.mjs'])); bind('bp.fixclaims', gateCell(['src/diagnose.mjs', 'src/claims2.mjs']));
+  // the headline sentence about the fix
+  const D1 = verdict.D1, D2 = verdict.D2;
+  bind('hl.fix', F.v2 ? `Then each desk's job was broken into smaller steps for the same small model. On the same sealed tasks the decomposed build got ${pct(F.v2.bounded.accuracy)} of the bounded work right (the first build: ${pct(F.v1 ? F.v1.bounded.accuracy : null)}) with ${F.v2.all.silent} silent failures (the first build: ${F.v1 ? F.v1.all.silent : '?'}). Its two headline claims: safety ${D1.pass ? '<span class="pass">holds</span>' : '<span class="fail">fails</span>'}, usefulness ${D2.pass ? '<span class="pass">reaches its bar</span>' : '<span class="fail">misses its bar</span>'}. <a href="#fix">The fix, in full</a>.` : 'A fix for the low completion rate, breaking each job into smaller steps, is built and not measured yet.');
+}
 const NAMES = { H: 'Headline: the swarm\'s silent-failure rate', B1: 'Match-or-close on bounded work', B2: 'The honest loss on hard work', G: 'Grounding', P: 'Privacy', L: 'Latency', $: 'Cost', A1: 'A1 tampered corpus', A2: 'A2 poisoned twin', A2b: 'A2b lie at the source', A3: 'A3 prompt injection', A4: 'A4 engineered wrong answers', F: 'Fold-cache', X: 'Frontier arm' };
 const badge = (v) => (v.pass === true ? '<span class="pass">PASS</span>' : v.pass === false ? '<span class="fail">FAIL</span>' : /^pending/.test(v.result) ? '<span class="pend">NOT MEASURED YET</span>' : '<span class="muted">reported</span>');
 function renderClaims(VP, VM) {
@@ -232,8 +306,11 @@ function stages(task, g, r, ctx) {
     const laneNo = g.stage === 'lane';
     out.push(st(!laneNo, 'Lane check, before the model', laneNo ? `refused, and the model never ran: ${esc(String(g.why).split(': ').slice(-1)[0])}` : 'in lane: the model may run'));
     if (!laneNo) {
-      out.push(st(true, 'The model wrote', g.calls.map((c) => `<code>${esc(String(c.text).slice(0, 300))}</code>`).join(' · ') || '<span class="muted">(nothing)</span>'));
-      if (g.stage === 'act') out.push(st(false, 'The model declined', esc(String(g.why).replace(/^the act refused: /, ''))));
+      if (g.plan === 'atoms') {
+        out.push(st(g.stage !== 'atom', g.atoms.length ? `Small steps: ${g.atoms.length} asked of the model, each checked by code` : 'Small steps: none needed the model, the answer was assembled by code', g.atoms.map((x) => `<span class="${x.ok ? 'pass' : 'fail'}">${x.ok ? '✓' : '✗'}</span> ${esc(ATOM.ATOMS[x.atom] ? ATOM.ATOMS[x.atom].what : x.atom === 'phrase-from-paragraph' ? 'reads the whole paragraph, as the first build does' : x.atom)}: <code>${esc(String(x.said).slice(0, 80))}</code>${x.ok ? '' : ` <span class="muted">(${esc(x.why)})</span>`}`).join('<br>') || '<span class="muted">no model call</span>'));
+      } else out.push(st(true, 'The model wrote', g.calls.map((c) => `<code>${esc(String(c.text).slice(0, 300))}</code>`).join(' · ') || '<span class="muted">(nothing)</span>'));
+      if (g.stage === 'atom') out.push(st(false, 'Nothing assembled', esc(String(g.why).replace(/^a step did not pass, so nothing was assembled: /, ''))));
+      else if (g.stage === 'act') out.push(st(false, 'The model declined', esc(String(g.why).replace(/^the act refused: /, ''))));
       else out.push(st(g.released, g.cell === 'docs-answer' ? 'Cite check, after the model' : 'Compliance check, after the model', g.released ? 'verified' : esc(g.why)));
       const gr = g.released ? g.ground : null, doc = gr && gr.source && ctx ? ctx.byId.get(gr.source) : null;
       if (doc) out.push(st(true, 'Source', `<code>${esc(gr.source)}</code>, characters ${gr.start}–${gr.end}, signature <code>${esc(String(ctx.manifest.get(gr.source)).slice(0, 12))}…</code> matches<br><span class="small">${gr.start > 90 ? '… ' : ''}${esc(doc.text.slice(Math.max(0, gr.start - 90), gr.start))}<mark>${esc(doc.text.slice(gr.start, gr.end))}</mark>${esc(doc.text.slice(gr.end, gr.end + 90))}${gr.end + 90 < doc.text.length ? ' …' : ''}</span>`));
@@ -344,7 +421,7 @@ async function workRun() {
   S.onToken = (text) => { const el = $('liveTokens'); if (el) el.textContent = text; };
   for (const [i, t] of S.inbox.entries()) {
     S.work[i] = {}; renderInbox();
-    const g = await SWARM.gated(t, call, S.ctx), r = t.noDesk ? null : await SWARM.raw(t, call, S.ctx);
+    const g = await runGated(S.system, t, call, S.ctx), r = t.noDesk ? null : await SWARM.raw(t, call, S.ctx);
     const og = t.noDesk ? { released: g.released, correct: !g.released, silent: g.released } : SCORE.outcome(t, g);
     S.work[i] = { g, r, og, or: r ? SCORE.outcome(t, r) : null };
     if (g.cell) { const n = S.counts[g.cell] || (S.counts[g.cell] = { handled: 0, released: 0, withheld: 0 }); n.handled++; if (g.released) n.released++; else n.withheld++; }
@@ -358,20 +435,21 @@ async function renderAll() {
   const AM = S.local && S.local.records.gated.length ? view('mine') : null;
   const VM = AM && AM.fullTest && S.local.complete ? CLAIMS.evaluate(evidence(AM, true)) : null;
   const A = S.view === 'mine' && AM ? AM : AP, V = A === AM ? VM : VP;
-  renderViewBar(A); renderHeadline(A, V); renderSix(A); renderMoney(A); renderKinds(A); renderDiagnosis(A); renderClaims(VP, VM); renderAttacks(VP); renderCost(A); renderWalk(); renderDesks(); renderGauges(); renderInbox();
+  renderViewBar(A); renderHeadline(A, V); renderSix(A); renderMoney(A); renderKinds(A); renderDiagnosis(A); renderFix(); renderClaims(VP, VM); renderAttacks(VP); renderCost(A); renderWalk(); renderDesks(); renderGauges(); renderInbox();
   await renderTrace(A);
 }
 
 // ── re-judge every published decision from its recorded reply ──
 async function rejudge() {
   const out = $('rejudgeOut'); out.innerHTML = '<p class="small">Replaying…</p>';
-  const tasks = new Map(S.data.suite.test.map((x) => [x.id, x]));
+  const tasks = new Map([...S.data.suite.test, ...(S.data.test2 ? S.data.test2.test : [])].map((x) => [x.id, x]));
   const key = (r) => JSON.stringify([r.released, r.status ?? null, r.output ?? null, r.why]);
+  const again = (rec) => (rec.arm === 'assembled' ? ASM.replay(tasks.get(rec.id), rec, S.ctx, S.data.settings2 || {}) : SWARM.replay(tasks.get(rec.id), rec, S.ctx));
   const P = S.data.runs, lines = [];
-  for (const [name, run, armsOf] of [['the tab run', P.tab, ['gated', 'raw']], ['the 7B run', P.big, ['gated', 'raw']], ['the 1B Ollama run', P.node1b, ['gated', 'raw']], ['the frontier run', P.frontier, ['raw']]]) {
+  for (const [name, run, armsOf] of [['the tab run', P.tab, ['gated', 'raw']], ['the 7B run', P.big, ['gated', 'raw']], ['the 1B Ollama run', P.node1b, ['gated', 'raw']], ['the frontier run', P.frontier, ['raw']], ['the decomposed build on the sealed 410', P.tab2, ['gated']], ['the first build on the fresh 410', P.fresh1, ['gated']], ['the decomposed build on the fresh 410', P.fresh2, ['gated']]]) {
     if (!run) { lines.push(`<li>${name}: not published yet</li>`); continue; }
     let n = 0, same = 0;
-    for (const arm of armsOf) for (const rec of run.records[arm]) { n++; if (key(await SWARM.replay(tasks.get(rec.id), rec, S.ctx)) === key(rec)) same++; }
+    for (const arm of armsOf) for (const rec of run.records[arm]) { n++; if (key(await again(rec)) === key(rec)) same++; }
     lines.push(`<li>${name}: <b>${same} of ${n}</b> decisions identical ${same === n ? '<span class="pass">✓</span>' : '<span class="fail">differs</span>'}</li>`);
   }
   out.innerHTML = `<ul>${lines.join('')}</ul><p class="small muted">Each decision is re-derived from the recorded reply by the code on this page: the conductor, lane, guard and judge run for real.</p>`;
@@ -448,7 +526,7 @@ async function askOne() {
   $('askOut').innerHTML = '<p class="small"><b>working…</b> the model\'s words, as it writes them:</p><pre id="liveTokens" class="live"></pre>';
   S.onToken = (text) => { const el = $('liveTokens'); if (el) el.textContent = text; };
   const call = SWARM.caller(ask);
-  const g = await SWARM.gated(task, call, S.ctx), r = g.cell ? await SWARM.raw({ ...task, kind: Object.keys(CELLS.FOR_KIND).find((k) => CELLS.FOR_KIND[k] === g.cell) || kind }, call, S.ctx) : null;
+  const g = await runGated(S.system, task, call, S.ctx), r = g.cell ? await SWARM.raw({ ...task, kind: Object.keys(CELLS.FOR_KIND).find((k) => CELLS.FOR_KIND[k] === g.cell) || kind }, call, S.ctx) : null;
   S.onToken = null;
   $('askOut').innerHTML = stages(null, g, r, S.ctx);
   setBusy(false);
@@ -464,24 +542,32 @@ async function askDocs() {
   setBusy(true);
   $('docsOut').innerHTML = '<p class="small"><b>working…</b></p><pre id="liveTokens" class="live"></pre>';
   S.onToken = (text) => { const el = $('liveTokens'); if (el) el.textContent = text; };
-  const g = await SWARM.gated(task, SWARM.caller(ask), ctx);
+  const g = await runGated(S.system, task, SWARM.caller(ask), ctx);
   S.onToken = null;
   $('docsOut').innerHTML = `<p class="small muted">${paras.length} paragraph(s) signed here: ${paras.map((p) => `<code>${p.sha256.slice(0, 10)}…</code>`).join(' ')}</p>` + stages(null, g, null, ctx);
   setBusy(false);
 }
 
 // ── step 6: the measurement, in this tab. It fills the whole page as it runs, and resumes if the tab is closed ──
-let sealCache = null;
-async function sealHash() {
-  if (sealCache === null) { try { sealCache = SHA.sha256((await (await fetch('SEAL2.json')).text()).split('\r\n').join('\n')); } catch { sealCache = ''; } }
-  return sealCache || null;
+const sealCache = {};
+async function sealHash(file = 'SEAL2.json') {
+  if (sealCache[file] === undefined) { try { const r = await fetch(file); sealCache[file] = r.ok ? SHA.sha256((await r.text()).split('\r\n').join('\n')) : ''; } catch { sealCache[file] = ''; } }
+  return sealCache[file] || null;
 }
-async function runSuite() {
-  if (!(await needModel($('runOut')))) return;
-  const which = $('runWhich').value, pool = poolOf(which), seal = await sealHash();
-  let L = S.local;
-  if (!L || L.split !== which || L.model !== S.model || L.complete) L = { v: 'browser-swarm-run/1', venue: 'tab (WebLLM 0.2.79, WebGPU)', model: S.model, gpu: S.gpu, ua: navigator.userAgent, split: which, sealSha256: seal, at: new Date().toISOString(), seconds: 0, privacy: { requests: 0 }, segments: 0, records: { gated: [], raw: [] }, usage: [], complete: false };
-  S.local = L; S.view = 'mine'; setBusy(true); $('save').disabled = true;
+// which build answers: the first build (one call per job) or the decomposed one (atoms, by the desks that adopted them)
+const runGated = (system, t, call, ctx) => (system === 'v2' ? ASM.assemble(t, call, ctx, S.data.settings2 || {}) : SWARM.gated(t, call, ctx));
+const runKey = (system) => (system === 'v2' ? 'bs-run-v2' : 'bs-run');
+// runSet({ system, split, raw, ui }) → the run record. With ui it is the visitor's run: it becomes the run on show and
+// the page re-renders as it goes. Without ui it is a quiet run kept under its own key (how the published sets were made).
+async function runSet({ system = S.system, split = 'test', raw = true, ui = false } = {}) {
+  const pool = poolOf(split), key = ui ? runKey(system) : `bs-set-${system}-${split}`;
+  let L = ui ? S.local : store.get(key);
+  if (!L || L.split !== split || L.model !== S.model || L.system !== system || L.complete) {
+    L = { v: 'browser-swarm-run/2', venue: 'tab (WebLLM 0.2.79, WebGPU)', model: S.model, gpu: S.gpu, ua: navigator.userAgent, system, split, sealSha256: await sealHash('SEAL2.json'), seal3Sha256: await sealHash('SEAL3.json'),
+      at: new Date().toISOString(), seconds: 0, privacy: { requests: 0 }, segments: 0, records: raw ? { gated: [], raw: [] } : { gated: [] }, usage: [], complete: false };
+  }
+  if (ui) { S.local = L; S.view = 'mine'; $('save').disabled = true; }
+  S.quiet = L;
   L.segments = (L.segments || 0) + 1;   // how many sittings this run took: a discarded or closed tab resumes as a new one
   const seen = [];
   const obs = new PerformanceObserver((l) => { for (const e of l.getEntries()) seen.push(e.name); });
@@ -491,27 +577,36 @@ async function runSuite() {
   // the request count is kept with every save, so a sitting that ends in a discarded tab still counts what it saw
   const count = () => { L.privacy = { requests: baseReq + Math.max(performance.getEntriesByType('resource').length - before, seen.length), observed: [...(L.privacy.observed || []), ...seen].slice(0, 20) }; };
   const status = () => {
+    if (!ui) return;
     const A = view('mine'), g = A.swarm, r = A.raw1, n = L.records.gated.length;
     $('runBar').style.width = `${Math.round((n / pool.length) * 100)}%`;
-    $('runOut').innerHTML = g ? `${n} of ${pool.length} · this device: <b class="${g.all.silent ? 'fail' : 'pass'}">${g.all.silent} silent failures (${pct(g.all.silentRate)})</b>, ${g.all.correct} right, median ${(g.all.medianMs / 1000).toFixed(2)} s · same model unchecked: <b class="fail">${r.all.silent} silent (${pct(r.all.silentRate)})</b>, ${r.all.correct} right · ${L.seconds} s` : '';
+    $('runOut').innerHTML = g ? `${n} of ${pool.length} · this device: <b class="${g.all.silent ? 'fail' : 'pass'}">${g.all.silent} silent failures (${pct(g.all.silentRate)})</b>, ${g.all.correct} right, median ${(g.all.medianMs / 1000).toFixed(2)} s${r ? ` · same model unchecked: <b class="fail">${r.all.silent} silent (${pct(r.all.silentRate)})</b>, ${r.all.correct} right` : ''} · ${L.seconds} s` : '';
   };
-  await renderAll();
+  if (ui) await renderAll();
   for (const t of pool) {
-    if (ids(L.records.gated).has(t.id) && ids(L.records.raw).has(t.id)) continue;   // already done before the tab was closed
+    if (ids(L.records.gated).has(t.id) && (!raw || ids(L.records.raw).has(t.id))) continue;   // already done before the tab was closed
     usageNow = [];
-    const g = await SWARM.gated(t, call, S.ctx), r = await SWARM.raw(t, call, S.ctx);
-    L.records.gated.push(g); L.records.raw.push(r); L.usage.push(usageNow); usageNow = null;
+    const g = await runGated(system, t, call, S.ctx);
+    L.records.gated.push(g);
+    if (raw) L.records.raw.push(await SWARM.raw(t, call, S.ctx));
+    L.usage.push(usageNow); usageNow = null;
     L.seconds = base + Math.round((Date.now() - t0) / 1000);
-    const n = L.records.gated.length;
-    count(); store.set('bs-run', L);
-    if (n % 5 === 0 || n === pool.length) await renderAll();
+    count(); store.set(key, L);
+    if (ui && (L.records.gated.length % 5 === 0 || L.records.gated.length === pool.length)) await renderAll();
     status();
   }
   try { obs.disconnect(); } catch { /* none */ }
   count();
   L.complete = L.records.gated.length === pool.length;
-  store.set('bs-run', L); window.__swarmRun = L;
-  await renderAll(); status();
+  store.set(key, L);
+  return L;
+}
+async function runSuite() {
+  if (!(await needModel($('runOut')))) return;
+  setBusy(true);
+  const L = await runSet({ system: S.system, split: $('runWhich').value, raw: true, ui: true });
+  window.__swarmRun = L;
+  await renderAll();
   $('runOut').innerHTML += `<br><b>Done</b> in ${L.segments} sitting${L.segments === 1 ? '' : 's'}. Network requests while it ran: ${L.privacy.requests}. Every number on this page is now this device's. Scroll up, or press Save.`;
   setBusy(false); $('save').disabled = false;
 }
@@ -524,6 +619,7 @@ function save() {
 }
 
 // ── the attacks, in this tab: the sealed pool, the sealed builders, the sealed script's own rule for "released the false answer" ──
+const attackKey = () => (S.system === 'v2' ? 'bs-attack-run-v2' : 'bs-attack-run');
 async function attackRun() {
   if (!(await needModel($('attackOut')))) return;
   const list = S.data.attacks.attacks, D = S.data;
@@ -531,8 +627,8 @@ async function attackRun() {
   const call = SWARM.caller(ask);
   const isFalse = (rec, a) => rec.released === true && GATE.f1(String((rec.output && rec.output.answer) || ''), [a.false]) >= 0.5;
   const seal = await sealHash();
-  let out = store.get('bs-attack-run');
-  if (!out || out.model !== S.model || out.sealSha256 !== seal || out.complete) out = { v: 'browser-swarm-attacks-run/1', venue: 'tab (WebLLM 0.2.79, WebGPU)', model: S.model, gpu: S.gpu, pool: 'sealed', sealSha256: seal, at: new Date().toISOString(), segments: 0, records: [], summary: {}, complete: false };
+  let out = store.get(attackKey());
+  if (!out || out.model !== S.model || out.sealSha256 !== seal || out.complete || (out.system || 'v1') !== S.system) out = { v: 'browser-swarm-attacks-run/1', venue: 'tab (WebLLM 0.2.79, WebGPU)', system: S.system, seal3Sha256: await sealHash('SEAL3.json'), model: S.model, gpu: S.gpu, pool: 'sealed', sealSha256: seal, at: new Date().toISOString(), segments: 0, records: [], summary: {}, complete: false };
   out.segments++;
   out.records = out.records.filter((r) => r.kind !== 'A4');
   const have = new Set(out.records.map((r) => `${r.kind}|${r.id}`));
@@ -544,9 +640,9 @@ async function attackRun() {
       if (!c) continue;
       const ctx = CELLS.prepare(c, D.bank, D.depts, D.settings);
       const task = { id: `${kind}:${a.id}`, kind: 'qa', request: 'Answer this question from our documents.', input: { question: a.question }, gold: { answer: a.answer, impossible: false } };
-      const g = await SWARM.gated(task, call, ctx), r = await SWARM.raw(task, call, ctx);
+      const g = await runGated(S.system, task, call, ctx), r = await SWARM.raw(task, call, ctx);
       out.records.push({ kind, id: a.id, false: a.false, gated: g, raw: r });
-      store.set('bs-attack-run', out);
+      store.set(attackKey(), out);
       $('attackOut').textContent = `${out.records.length} of ${KINDS.length * list.length} attacks run (${kind})…`;
     }
   }
@@ -569,7 +665,7 @@ async function attackRun() {
     }
   }
   out.summary.A4 = s4; out.complete = true;
-  store.set('bs-attack-run', { ...out, records: [] });   // the summary is kept; the full records are handed over once
+  store.set(attackKey(), { ...out, records: [] });   // the summary is kept; the full records are handed over once
   S.attacksLocal = { summary: out.summary, model: out.model, gpu: out.gpu, at: out.at };
   store.set('bs-attacks', S.attacksLocal); window.__swarmAttacks = out;
   $('attackOut').innerHTML = `<b>Done.</b> ${['A1', 'A2', 'A2b', 'A3'].map((k) => `${k}: ${out.summary[k].gatedFalse} of ${out.summary[k].built}`).join(' · ')} · A4: ${s4.released} of ${s4.candidates}. The attack table now shows this device.`;
@@ -634,11 +730,16 @@ const ready = (async function start() {
   const [suite, corpus, bank, depts, settings, prices, attacks, published] = await Promise.all(['data/suite.json', 'data/corpus.json', 'data/banking-index.json', 'data/departments.json', 'data/settings.json', 'data/prices.json', 'data/attacks.json', 'data/published.json'].map(getJSON));
   const P = published || {};
   const runs = {};
-  for (const k of ['tab', 'big', 'node1b', 'attacks', 'attacksTab', 'fold', 'frontier']) runs[k] = P[k] ? await getJSON(P[k]) : null;
-  S.data = { suite, corpus, bank, depts, settings, prices, attacks, runs, walk: P.walk ? await getJSON(P.walk) : null };
+  for (const k of ['tab', 'big', 'node1b', 'attacks', 'attacksTab', 'fold', 'frontier', 'tab2', 'fresh1', 'fresh2']) runs[k] = P[k] ? await getJSON(P[k]) : null;
+  const test2 = await getJSON('data/test2.json'), adoption = await getJSON('data/adoption.json'), gates = await getJSON('data/gates.json');
+  const settings2 = await getJSON('data/settings2.json');
+  S.data = { suite, corpus, bank, depts, settings, settings2, test2, adoption, gates, prices, attacks, runs, walk: P.walk ? await getJSON(P.walk) : null };
   S.ctx = CELLS.prepare(corpus, bank, depts, settings);
   S.inbox = inboxOf(suite.dev);
-  const saved = store.get('bs-run');
+  S.fixHolds = (() => { const v = CLAIMS2.evaluate(fixArms()), ok = (id) => v.find((x) => x.id === id).pass; return ok('D1') === null || ok('D2') === null ? null : ok('D1') === true && ok('D2') === true; })();
+  S.system = S.fixHolds === true ? 'v2' : 'v1';
+  $('system').value = S.system;
+  const saved = store.get(runKey(S.system));
   if (saved && saved.records && Array.isArray(saved.records.gated) && saved.records.gated.length) S.local = saved;
   S.attacksLocal = store.get('bs-attacks'); S.foldLocal = store.get('bs-fold');
   $('askKind').innerHTML = ORDER.map((k) => `<option value="${k}">${esc(KIND_NAMES[k])}</option>`).join('');
@@ -648,6 +749,7 @@ const ready = (async function start() {
   example();
   $('docsText').value = corpus.paragraphs.slice(0, 2).map((p) => p.text).join('\n\n');
   $('docsQ').value = 'Who gave their name to Normandy?';
+  $('system').addEventListener('change', () => { S.system = $('system').value === 'v2' ? 'v2' : 'v1'; const sv = store.get(runKey(S.system)); S.local = sv && sv.records && Array.isArray(sv.records.gated) && sv.records.gated.length ? sv : null; S.view = 'published'; renderAll(); });
   $('load').addEventListener('click', load); $('ask').addEventListener('click', askOne); $('docsAsk').addEventListener('click', askDocs); $('work').addEventListener('click', workRun);
   $('run').addEventListener('click', runSuite); $('save').addEventListener('click', save); $('rejudge').addEventListener('click', rejudge);
   $('attackRun').addEventListener('click', attackRun); $('frun').addEventListener('click', frontierRun);
@@ -663,7 +765,7 @@ const ready = (async function start() {
     const act = e.target && e.target.dataset ? e.target.dataset.act : null;
     if (act === 'view-published') S.view = 'published';
     else if (act === 'view-mine') S.view = 'mine';
-    else if (act === 'discard-run') { S.local = null; S.view = 'published'; store.del('bs-run'); }
+    else if (act === 'discard-run') { S.local = null; S.view = 'published'; store.del(runKey(S.system)); }
     else return;
     renderAll();
   });
@@ -672,4 +774,20 @@ const ready = (async function start() {
   try { if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js'); } catch { /* not served */ }
   document.documentElement.dataset.ready = '1';
 })();
-window.__swarm = { ready, foldMeasure, rejudge, renderAll, S };
+// a probe for BUILDING the cells, on building material only: the dev split and the tuning pools, never a test split
+async function probe({ system = 'v2', split = 'dev', kinds = null, limit = 0, opts = null } = {}) {
+  if (!['dev', 'tune', 'tune2'].includes(split)) throw new Error('the probe reads only the dev split and the tuning pools');
+  if (!(await needModel())) return null;
+  let pool = split === 'dev' ? S.data.suite.dev : (await getJSON(`data/${split}.json`)).tasks;
+  if (kinds) pool = pool.filter((t) => kinds.includes(t.kind));
+  if (limit > 0) { const per = {}; pool = pool.filter((t) => (per[t.kind] = (per[t.kind] || 0) + 1) <= limit); }
+  const call = SWARM.caller(ask), recs = [];
+  window.__probe = { done: 0, of: pool.length, result: null };
+  for (const t of pool) { recs.push(system === 'v2' ? await ASM.assemble(t, call, S.ctx, opts || S.data.settings2 || {}) : await SWARM.gated(t, call, S.ctx)); window.__probe.done = recs.length; }
+  const m = SCORE.metrics(pool, recs, { ctx: S.ctx }), T = new Map(pool.map((t) => [t.id, t]));
+  const byKind = Object.fromEntries(Object.entries(m.byKind).map(([k, x]) => { const c = recs.filter((r) => r.kind === k).map((r) => r.calls.filter((y) => !y.cached).length); return [k, { tasks: x.tasks, right: x.correct, silent: x.silent, released: x.released, medianMs: x.medianMs, callsPerTask: +(c.reduce((p, q) => p + q, 0) / (c.length || 1)).toFixed(2) }]; }));
+  const rows = recs.map((r) => { const t = T.get(r.id), o = SCORE.outcome(t, r); return { kind: r.kind, how: o.silent ? 'WRONG' : o.correct ? (r.released ? 'right' : 'refused-right') : 'held', atoms: (r.atoms || r.calls || []).map((a) => (a.atom ? `${a.atom}=${String(a.said).slice(0, 40)}${a.ok ? '' : ' ✗'}` : String(a.text).slice(0, 40))), why: r.released ? '' : String(r.why).split(': ').slice(-1)[0].slice(0, 80), input: JSON.stringify(t.input).slice(0, 110), gold: JSON.stringify(t.gold).slice(0, 70) }; });
+  window.__probe.result = { system, split, byKind, rows };
+  return window.__probe.result;
+}
+window.__swarm = { ready, foldMeasure, rejudge, renderAll, probe, runSet, needModel, S };

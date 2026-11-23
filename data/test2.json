@@ -1,0 +1,5788 @@
+{
+ "v": "browser-swarm-suite/2",
+ "note": "a fresh test split of the same shape as the first (410 tasks), drawn further along the same seeded order past every item used before. Read once, after seal 3.",
+ "counts": {
+  "qa": 60,
+  "extract": 50,
+  "classify": 60,
+  "route": 60,
+  "date": 25,
+  "pence": 25,
+  "draft": 50,
+  "knowledge": 40,
+  "reasoning": 40
+ },
+ "sha256": "9f78044b7c03bd563e4662d397a85f065726649612211b27d81ec260299814eb",
+ "test": [
+  {
+   "id": "qa:56e1a38de3433e140042305e",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "How is the time needed to obtain the solution to a problem calculated?"
+   },
+   "gold": {
+    "answer": "as a function of the size of the instance",
+    "goldId": "Computational_complexity_theory#10",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1ded7cd28a01900c67bd5",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is the name for a problem that meets Ladner's assertion?"
+   },
+   "gold": {
+    "answer": "NP-intermediate problems",
+    "goldId": "Computational_complexity_theory#35",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56de4a89cffd8e1900b4b7bd",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is the Norman architecture idiom?"
+   },
+   "gold": {
+    "answer": "Romanesque",
+    "goldId": "Normans#31",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1dc62cd28a01900c67bcb",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What hypothesis is associated with the complexity class of P viewed as a mathematical abstraction with efficient algorithmic functionality?"
+   },
+   "gold": {
+    "answer": "Cobham–Edmonds thesis",
+    "goldId": "Computational_complexity_theory#33",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e190bce3433e1400422fcb",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What will the output be for a member of the language of a decision problem?"
+   },
+   "gold": {
+    "answer": "yes",
+    "goldId": "Computational_complexity_theory#6",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56ddde6b9a695914005b962c",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What century did the Normans first gain their separate identity?"
+   },
+   "gold": {
+    "answer": "10th century",
+    "goldId": "Normans#0",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56de49a8cffd8e1900b4b7a9",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Who sold the rights?"
+   },
+   "gold": {
+    "answer": "Maciot de Bethencourt",
+    "goldId": "Normans#29",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56de3ebc4396321400ee26e7",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What was the name of Bohemond's nephew?"
+   },
+   "gold": {
+    "answer": "Tancred",
+    "goldId": "Normans#24",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1c9bfe3433e1400423194",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "According to reduction, if X and Y can be solved by the same algorithm then X performs what function in relationship to Y?"
+   },
+   "gold": {
+    "answer": "reduces",
+    "goldId": "Computational_complexity_theory#29",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e20a3ae3433e140042324e",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "How many combinatory and graph theoretical problems, formerly believed to be plagued by intractability, did Karp's paper address?"
+   },
+   "gold": {
+    "answer": "21",
+    "goldId": "Computational_complexity_theory#47",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1b754cd28a01900c67abf",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Communication complexity is an example of what type of measure?"
+   },
+   "gold": {
+    "answer": "Complexity measures",
+    "goldId": "Computational_complexity_theory#18",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1d9fee3433e14004231cc",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "NP complete problems contain the lowest likelihood of being located in what problem class?"
+   },
+   "gold": {
+    "answer": "NP",
+    "goldId": "Computational_complexity_theory#32",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1aff7cd28a01900c67a68",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is generally considered to be the most basic iteration of a Turing machine?"
+   },
+   "gold": {
+    "answer": "A deterministic Turing machine",
+    "goldId": "Computational_complexity_theory#13",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56de40da4396321400ee270a",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Who led Richard's troops when Cyprus was conquered?"
+   },
+   "gold": {
+    "answer": "Guy de Lusignan",
+    "goldId": "Normans#27",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e202e9e3433e1400423240",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What paper is commonly considered the bellwether ushering in systematic studies computational complexity?"
+   },
+   "gold": {
+    "answer": "On the Computational Complexity of Algorithms",
+    "goldId": "Computational_complexity_theory#44",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1b62ecd28a01900c67aa5",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is the expression used to identify any given series of problems capable of being solved within time on a deterministic Turing machine?"
+   },
+   "gold": {
+    "answer": "DTIME(f(n))",
+    "goldId": "Computational_complexity_theory#17",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1c9bfe3433e1400423195",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What are two examples of different types of reduction?"
+   },
+   "gold": {
+    "answer": "Karp reductions and Levin reductions",
+    "goldId": "Computational_complexity_theory#29",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56de4b074396321400ee2795",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What place had the Norman Arab architectural style?"
+   },
+   "gold": {
+    "answer": "Sicily",
+    "goldId": "Normans#32",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56de4c324396321400ee27ac",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is Norman art's most well known piece?"
+   },
+   "gold": {
+    "answer": "Bayeux Tapestry",
+    "goldId": "Normans#35",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1f10ee3433e1400423222",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What variable is associated with all problems solved within logarithmic space?"
+   },
+   "gold": {
+    "answer": "L",
+    "goldId": "Computational_complexity_theory#40",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1ddfce3433e14004231d8",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is the prize offered for finding a solution to P=NP?"
+   },
+   "gold": {
+    "answer": "$1,000,000",
+    "goldId": "Computational_complexity_theory#34",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e20a3ae3433e140042324b",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What theorem was implicated by Manuel Blum's axioms?"
+   },
+   "gold": {
+    "answer": "speed-up theorem",
+    "goldId": "Computational_complexity_theory#47",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1dc62cd28a01900c67bce",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "In what theoretical machine is it confirmed that a problem in P belies membership in the NP class?"
+   },
+   "gold": {
+    "answer": "Turing machines",
+    "goldId": "Computational_complexity_theory#33",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56de148dcffd8e1900b4b5bd",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "When did Dyrrachium  fall to the Normans?"
+   },
+   "gold": {
+    "answer": "1082",
+    "goldId": "Normans#11",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1b169cd28a01900c67a73",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "In considering Turing machines and alternate variables, what measurement left unaffected by conversion between machine models? "
+   },
+   "gold": {
+    "answer": "computational power",
+    "goldId": "Computational_complexity_theory#15",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1bc3ae3433e1400423105",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "The analysis of a specific algorithm is typically assigned to what field of computational science?"
+   },
+   "gold": {
+    "answer": "analysis of algorithms",
+    "goldId": "Computational_complexity_theory#21",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56dde0ba66d3e219004dad77",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What river originally bounded the Duchy"
+   },
+   "gold": {
+    "answer": "Seine",
+    "goldId": "Normans#3",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1a564cd28a01900c67a4c",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Assuming that T represents a polynomial in T(n), what is the term given to the corresponding algorithm?"
+   },
+   "gold": {
+    "answer": "polynomial time algorithm",
+    "goldId": "Computational_complexity_theory#11",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56de1563cffd8e1900b4b5c3",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What was the naval base called?"
+   },
+   "gold": {
+    "answer": "Dyrrachium",
+    "goldId": "Normans#13",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56de15104396321400ee25b8",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Who was Robert's son?"
+   },
+   "gold": {
+    "answer": "Bohemond",
+    "goldId": "Normans#12",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1cbe2cd28a01900c67bac",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is the most frequently employed type of reduction?"
+   },
+   "gold": {
+    "answer": "polynomial-time reduction",
+    "goldId": "Computational_complexity_theory#30",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1cbe2cd28a01900c67bb0",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "According to polynomial time reduction squaring can ultimately be logically reduced to what?"
+   },
+   "gold": {
+    "answer": "multiplication",
+    "goldId": "Computational_complexity_theory#30",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1ddfce3433e14004231d5",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "If P is ultimately proven to be equal tot NP, what effect would this have on the efficiency of problems?"
+   },
+   "gold": {
+    "answer": "more efficient solutions",
+    "goldId": "Computational_complexity_theory#34",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e16182e3433e1400422e29",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "By what main attribute are computational problems classified utilizing computational complexity theory? "
+   },
+   "gold": {
+    "answer": "inherent difficulty",
+    "goldId": "Computational_complexity_theory#0",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e1ec83cd28a01900c67c0c",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "That there currently exists no known integer factorization problem underpins what commonly used system?"
+   },
+   "gold": {
+    "answer": "modern cryptographic systems",
+    "goldId": "Computational_complexity_theory#37",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e19724cd28a01900c679f9",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "In addition to the traveling salesman problem, what is another example of a function problem?"
+   },
+   "gold": {
+    "answer": "the integer factorization problem",
+    "goldId": "Computational_complexity_theory#8",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e181d9e3433e1400422fa2",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is another term for the string of a problem instance?"
+   },
+   "gold": {
+    "answer": "bitstrings",
+    "goldId": "Computational_complexity_theory#5",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56e19557e3433e1400422ff1",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What encoding decision needs to be made in order to determine an exact definition of the formal language?"
+   },
+   "gold": {
+    "answer": "how graphs are encoded as binary strings",
+    "goldId": "Computational_complexity_theory#7",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56de3cd0cffd8e1900b4b6be",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Who did Alexander I marry?"
+   },
+   "gold": {
+    "answer": "Sybilla of Normandy",
+    "goldId": "Normans#20",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:56de4a474396321400ee2787",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "How many customaries does Norman customary law have?"
+   },
+   "gold": {
+    "answer": "two",
+    "goldId": "Normans#30",
+    "impossible": false
+   }
+  },
+  {
+   "id": "qa:5ad3fe0d604f3c001a3ffc1d",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What was a centre of ivorywork in the 1100s?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad569c05b96ef001a10ae38",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is an important solved problem in complexity theory?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad3f028604f3c001a3ff825",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What naval base fell to the Normans?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad3f5b0604f3c001a3ff9ac",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What was absorbed into the Anglo-Norman language?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad53e615b96ef001a10abdc",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is a function solution an example of?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad54a375b96ef001a10ac4a",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is the expression used to identify any given series of solutions capable of being solved within time on a deterministic Turing machine?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad5391e5b96ef001a10aba5",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is represented by non-binary notation in the encoding of mathematical objects?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad39d53604f3c001a3fe8d4",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "When did the Frankish identity emerge?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad546c75b96ef001a10ac0f",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is a deterministic Turing machine with an extra supply of random ribbons?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:5ad5391e5b96ef001a10aba4",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is another term for the the string of a problem question?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "unanswerable from its paragraph"
+   }
+  },
+  {
+   "id": "qa:oos:571117d4a58dae1900cd6c0e",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Who is the patron saint of the Huguenots?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5ad28861d7d075001a42993e",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What name is used only for larger streams farther to the north?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5ad26925d7d075001a4292c7",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What must be specified in order to account for their effects on the motion of the head?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:57114dfb50c2381900b54a55",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What working fluid is used in a mercury vapor turbine?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5a5904ed3e1742001a15cf44",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is the point that radiometric isotopes begin diffusing called?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:57096505ed30961900e84084",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What does connecting different Sky Q boxes enable them to do?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5a0c93b9f5590b0018dab474",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "Some computer models suggest the rain forest will become threatened after what?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5ad40582604f3c001a3ffe1d",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": " How many rival princes were involved in living with Gegeen?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:5726a7ecf1498d1400e8e654",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "In which article does the Treaty of Lisbon prohibit anti-competitive agreements?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "qa:oos:57274d9bf1498d1400e8f5f9",
+   "kind": "qa",
+   "request": "Answer this question from our documents.",
+   "input": {
+    "question": "What is the name of the post-independence government school system in Malaysia?"
+   },
+   "gold": {
+    "impossible": true,
+    "reason": "not in the corpus"
+   }
+  },
+  {
+   "id": "extract:cord-train-269",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "01110000 TUNA & CHEDDAR 55,000\n04100000 ONION RINGS 19,800\n[13100000 AQUA BTL 6,600\nTotal 81,400\nCASH 100,000\nCHANGE 18,600"
+   },
+   "gold": {
+    "total": "81,400"
+   }
+  },
+  {
+   "id": "extract:cord-train-304",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "SPECIALTY COMBO\n1 x 25,000 25,000\n*SOURCREAMONION*\n1 x 0 0\n*LEMONADER*\n1 x 5,000 5,000\nBOTTLED WATER\n1 x 0 0\n*ADES300ML*\n1 x 5,000 5,000\nSUB TOTAL 35,000\nGRAND TOTAL 35,000\nCASHIDR 50,000\n15,000\nCHANGE DUE"
+   },
+   "gold": {
+    "total": "35,000"
+   }
+  },
+  {
+   "id": "extract:cord-train-523",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "1 Caramel Medium 50.000\nTOTAL 50.000\nCASH 100.000\nCHANGED 50.000"
+   },
+   "gold": {
+    "total": "50.000"
+   }
+  },
+  {
+   "id": "extract:cord-train-238",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "1X @9000\nVANBALL 9,000\n1.00xITEMs\nSUBTOTAL 9,000\nTOTAL 9,000\nCASH 10,000\nCHANGE 1,000"
+   },
+   "gold": {
+    "total": "9,000"
+   }
+  },
+  {
+   "id": "extract:cord-train-302",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "Dom Cha Vire Sls 1x 155.000 155.000\nP J Cotes du 2x 105,000 210.000\nSubtotal 365,000\nDiscount 20.00% 73.000\nService 28,200\nTax 32.120\nTotal 353,320"
+   },
+   "gold": {
+    "total": "353,320"
+   }
+  },
+  {
+   "id": "extract:cord-train-412",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "1 CHOCO CROSSIANT 13,000\nTOTAL 13,000\nCASH 50,000\nCHANGE 37,000"
+   },
+   "gold": {
+    "total": "13,000"
+   }
+  },
+  {
+   "id": "extract:cord-train-188",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "1 Smoke Beef + Aqua 21,818\nSubTotal: 21,818\nPB1: 2,182\nTotal: 24,000\ncash: 25,000\nChange: 1,000"
+   },
+   "gold": {
+    "total": "24,000"
+   }
+  },
+  {
+   "id": "extract:cord-train-235",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "2X 1,200\nNS MINI STICK 2,400\nMEGA Discount 240-\n1X 8,000\nGERRY SM CHEESE110 8,000\nMEGA Discount 800 -\n3X 2,100\nDECOLGEN TABLET 4S 6,300\nMEGA Discount 630-\n2X 19,900\nFIXALL HK 26521 39,800\nDiscount 8,600 -\nMEGA Discount 3,120-\nSUBTOTAL: 43,110\nTOTAL: 43,110\nMEGA OFFLINE EFT: 43,110"
+   },
+   "gold": {
+    "total": "43,110"
+   }
+  },
+  {
+   "id": "extract:cord-validation-7",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "4 Choco Devil 63,636\nCP 360 Club Card -9,545\nSubTotal: 63,636\nDiscount: -9,545\nPB1: 5,409\nTotal: 59,500\ncash: 100,000\n40,500\nChange:"
+   },
+   "gold": {
+    "total": "59,500"
+   }
+  },
+  {
+   "id": "extract:cord-validation-33",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "1 GRAINS PAN BREAD 20,500\n1 ICED HIBISCUS LYCHEE TEA 37,000\nTOTAL 57,500\nGIFT50 50,000\n811923270311\nCASH 7,500\nCHANGE 0"
+   },
+   "gold": {
+    "total": "57,500"
+   }
+  },
+  {
+   "id": "extract:cord-train-427",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "1 Prs Pangsit Delima 27,000\n1 Prs Lumpia Udg K Th 30,000\n1 Prs Ha Kaou Udng 28,000\n1 Prs Cheong Fen Udg 35,000\n2 Prs Hatosi Rambutan 60,000\n1 Prs Sio May Kpting 23,500\n1 Prs Kwo Tie Jala2 50,000\n1 Prs Pancake Durian 32,000\n1 Prs Mie Gr Udg Gala 65,000\n1 Prs Lamien Udang T 46,000\n1 Prs Lamien Aym Ktsu 46,000\n1 Prs Ns Pgng Kj Sp 55,000\n1 Prs Kwt Polos Mdn 23,500\n1 Prs N Aym Hainam Jl 39,000\n1 Pot Chinese Tea 35,000\n1 Gls Ice Lemon Tea 16,000\n2 Btl Mineral Water 18,000\nSubtotal 629,000\nService Charge 31,450\nPb 1 66,045\nTotal 726,495\nBalance 726,500\nTotal Item 17\nTotal Qty 19"
+   },
+   "gold": {
+    "total": "726,495"
+   }
+  },
+  {
+   "id": "extract:cord-train-54",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "1 KFC Winger HC 20,000\n1 Rice 6,364\nSub Total 26,364\nF.Rest 10 % 2,636\nTotal 29,000\nCash 30,000\nKembali 1,000\n2 Items,"
+   },
+   "gold": {
+    "total": "29,000"
+   }
+  },
+  {
+   "id": "extract:cord-train-530",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "*2 Pcs Cheese Tart Rp 58000.00\nBag-S\nPS Carrier\nSubtotal: Rp 58000.00\nTotal: Rp 58000.00\nustomer Paid Cash: 100000.00\nustomer Change: Rp 42000.00"
+   },
+   "gold": {
+    "total": "Rp 58000.00"
+   }
+  },
+  {
+   "id": "extract:cord-train-189",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "1 PREMIUM TOAST PAN BREAD 24,000\nTOTAL 24,000\nCASH 50,000\nCHANGE 26,000"
+   },
+   "gold": {
+    "total": "24,000"
+   }
+  },
+  {
+   "id": "extract:cord-train-502",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "VANBOOLEN 9,000\nJONGKONG 15,500\nDISC ITEM -30.000%\nAMOUNT -4,650\nPLASTIK KECIL 0\nSENDOK BEBEK 0\nSUBTOTAL 19,850\nTOTAL 19,850\nCASH 20,000\nCHANGE 150"
+   },
+   "gold": {
+    "total": "19,850"
+   }
+  },
+  {
+   "id": "extract:cord-train-309",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "2005- CHEESE JOHN\n9.500,00 x1 9.500,00\nTotal Item: 1\nTotal. 9.500,00\nCash\nTendered: 10.000,00\nChange: 500,00"
+   },
+   "gold": {
+    "total": "9.500,00"
+   }
+  },
+  {
+   "id": "extract:cord-train-595",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "1 CB PR SIRLOIN 162000 162,000\n2 F.FRIES MEDIUM 0 0\n1 F.FRIES COMBO 0 0\n2 BROWN SAUCE 0 0\n1 ES TEH TAWAR 8000 8,000\n1 COCA COLA 13000 13,000\nSubtotal 183,000\nServ.Charge: 5.00 % 9,150\nPB1 10.00 % 19,215\nGrandTotal 211,365\nCash 220,000\nKembalian 8,635"
+   },
+   "gold": {
+    "total": "211,365"
+   }
+  },
+  {
+   "id": "extract:cord-train-115",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "Kupon 9 8,182\nKupon 1 20,000\nLARGE ICED LEMON TEA 12,273\nSubtotal 40,455\nPB1 (10%) 4,046\nRound -1\nDine In Total 44,500\nCash 50,000\nChange 5.500"
+   },
+   "gold": {
+    "total": "44,500"
+   }
+  },
+  {
+   "id": "extract:cord-train-788",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "1 MIE MERAH PG Rp 38,181\n1 MIE CINCANG 19,090\n1 HAI CMP SPC Rp 50,000\nTX1 10,727\nTL Rp 117,998\nCASH 200,000\nCG 82,000"
+   },
+   "gold": {
+    "total": "Rp 117,998"
+   }
+  },
+  {
+   "id": "extract:cord-train-673",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "1 Caramel Small 38.000\nTOTAL 38.000\nCASH 50.000\nCHANGED 12.000"
+   },
+   "gold": {
+    "total": "38.000"
+   }
+  },
+  {
+   "id": "extract:cord-train-485",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "TRIPPLE CHEESE\n1 17,000 17,000\nUB TOTAL 17,000\nBRAND TOTAL 17,000\nLAZZ 7641 17,000\n0\nCHANGE DUE"
+   },
+   "gold": {
+    "total": "17,000"
+   }
+  },
+  {
+   "id": "extract:cord-validation-43",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "ROTI UNYIL 170 272.000\nPAPER BAG BESAR 1 6.000\nTotal 278.000\nCash 300.000\nKembali 22.000\nTotal Qty. 171"
+   },
+   "gold": {
+    "total": "278.000"
+   }
+  },
+  {
+   "id": "extract:cord-train-702",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "BIHUN CAMPUR 1 43,181 43,181\nJERUK MURNI 1 20,000 20,000\nES NONA REGULAR 1 13,000 13,000\nTOTAL 76,181\nTAX 10.00 % 7,618\nGRAND TOTAL 83,799\nTUNAI 100,000\nKEMBALI 16,201"
+   },
+   "gold": {
+    "total": "83,799"
+   }
+  },
+  {
+   "id": "extract:cord-validation-25",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "1Prs Sop Sui Jiao 33,000\n1Prs Ha Kaou Udng 28,000\n1Prs Sio May Kpting 23,500\n1Prs Siomay Kmbinasi 23,000\n1Prs Leng Hong Kien 30,000\n1Prs Mie Kgkung Trsi 35,500\n1Gls Es Teh Tawar 7,000\nSubtotal 180,000\nService Charge 9,000\nPb 1 18,900\nTotal 207,900\nTotal Item 7\nTotal Qty 7"
+   },
+   "gold": {
+    "total": "207,900"
+   }
+  },
+  {
+   "id": "extract:cord-validation-36",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "1 Soft Ori 3 Top 17,272\nTop Oreo 0\n0\nTop Oreo\nTop Banana 0\nSubTotal: 17,272\nPB1: 1,727\nTotal: 18,999\ncash: 18,999"
+   },
+   "gold": {
+    "total": "18,999"
+   }
+  },
+  {
+   "id": "extract:cord-train-573",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "BASO KUAH 1 41,363 41,363\nTOTAL 41,363\nTAX 10.00 % 4,136\nGRAND TOTAL 45,499\nTUNAI 50,000\nKEMBALI 4.501"
+   },
+   "gold": {
+    "total": "45,499"
+   }
+  },
+  {
+   "id": "extract:cord-train-266",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "1 UDANG REBUS (M) 162,000\n=*MEDIUM*=\n1 ANGSIO TH PC JMR 147,000\n=*MEDIUM*=\n1 AYAM GR KERING 108,000\n=*MEDIUM*=\n1 BIHUN GORENG JJ 87,000\n=*MEDIUM*=\n1 NASI GORENG NJUN 87,000\n=*MEDIUM*=\n5 HOT TEA 12,000 60,000\n1 IKAN GURAME MED 158,000\nSOP IKAN\n1 CUMI GR JUNJAN 172,000\n=*LARGE*==\n1 SUP BURUNG DARA 38,000\n1 ICED TEA 12,000\n1 CHINESE TEA 14,000\nKWAN'IM\n2 NASI PUTIH 10,000 20,000\nFOOD 959,000\nBEVERAGES 86,000\nOTHERS 20,000\nSUBTOTAL 1,065,000\nSERVICE CHARGE 63,900\nTax 10% 112,890\nDU 1,241,790"
+   },
+   "gold": {
+    "total": "1,241,790"
+   }
+  },
+  {
+   "id": "extract:cord-validation-1",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "Kopi Susu Kolonel 1 23.000\nTotal 23.000\nTunai 50.000\nKembali 27.000"
+   },
+   "gold": {
+    "total": "23.000"
+   }
+  },
+  {
+   "id": "extract:cord-train-46",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "BASO TAHU BIHUN 1 43.636 43.636\nTOTAL 43.636\nTAX 10.00 % 4.364\nGRAND TOTAL 48.000\nTUNAI 100.000\nKEMBALI 52.000"
+   },
+   "gold": {
+    "total": "48.000"
+   }
+  },
+  {
+   "id": "extract:cord-train-201",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "CARAMELALMOND\n1 x 23,000 23,000\n*CARAMEL DIP*\n1 x 0 0\nSUB TOTAL 23,000\n23,000\nGRAND TOTAL\nCASHIDR 50.000\nCHANGE DUE 27,000"
+   },
+   "gold": {
+    "total": "23,000"
+   }
+  },
+  {
+   "id": "extract:cord-test-25",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "1 TWIST STRAWBERRY DONUT 10,000\n1 TLJ CROQUETTE 17,000\n1 POTATO PEPPER BAGEL 16,000\nTOTAL 43,000\nCASH 50,000\nCHANGE 7,000"
+   },
+   "gold": {
+    "total": "43,000"
+   }
+  },
+  {
+   "id": "extract:cord-test-62",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "1 XXI Java Tea (M) 18.000\n1 Combo 2 30.000\nTOTAL 48.000\nCASH 50.000\nCHANGED 2,000"
+   },
+   "gold": {
+    "total": "48.000"
+   }
+  },
+  {
+   "id": "extract:cord-train-194",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "BUDS CALMING TUMMY RUB CREAM\n30ML(TOILETRIES) BU350003\n200,000\nBUDS PRECIOUS NEWBORN CREAM\n75ML(TOILETRIES) BU350012\n235,000\nBUDS PRECIOUS NEWBORN HEAD TO TOE\nCLEANSER 250ML(TOILETRIES) BU350009\n270,000\nQty: 3 Amount: 705,000"
+   },
+   "gold": {
+    "total": "705,000"
+   }
+  },
+  {
+   "id": "extract:cord-train-63",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "PIS COK KEJU 11,500\nDISC ITEM -20.000%\nAMOUNT -2,300\nCOKLAT KEJU 11,000\nDISC ITEM -20.000%\nAMOUNT -2,200\nBANANA KISMIS 8,000\nDISC ITEM -30.000%\nAMOUNT -2,400\nSUBTOTAL 23,600\nTOTAL 23,600\nCASH 50,000\nCHANGE 26,400"
+   },
+   "gold": {
+    "total": "23,600"
+   }
+  },
+  {
+   "id": "extract:cord-train-797",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "1 GRILLED BABY POTATO ( R 50,500\n1 HOT TUNA 67,000\n1 HOT TUNA 67,000\nDisc -100% (ITM06) -67,000\nSUBTTL 117,500\nSVC CHG 6% 11,070\nPB1 10% 19,557\nTOTAL 148,127"
+   },
+   "gold": {
+    "total": "148,127"
+   }
+  },
+  {
+   "id": "extract:cord-train-334",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "2 Kwetiaw Ayam Jamur 56.364\n1 1/2 OTAK-OTAK 10.000\n1 Es Cincau 14.545\nSubtotal 80.909\nPB 1 8.091\n4 Total 89.000"
+   },
+   "gold": {
+    "total": "89.000"
+   }
+  },
+  {
+   "id": "extract:cord-train-245",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "1 BLACK PRAWN PASTA 80,500\n1 CARBONARA 70,500\n1 EARL GREY MILK TEA 57,000\nSUBTTL 208,000\nSVC CHG 6% 12,480\nPB1 10% 22,048\nTOTAL 242,528"
+   },
+   "gold": {
+    "total": "242,528"
+   }
+  },
+  {
+   "id": "extract:cord-train-285",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "1 Popcorn Salt (M) 40.000\n1 Mineral Water (S) 10,000\n1 Fanta Stwbry (L) 25.000\nTOTAL 75.000\nCASH 100,000\nCHANGED 25,000"
+   },
+   "gold": {
+    "total": "75.000"
+   }
+  },
+  {
+   "id": "extract:cord-train-94",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "4002-Chocolate Orange Peel\n19.000 x2 38.000\n6001-Plastic Bag Small\n0 x1 0\nTotal Item: 3\nTotal. 38.000\nCash\nTendered: 50.000\nChange: 12.000"
+   },
+   "gold": {
+    "total": "38.000"
+   }
+  },
+  {
+   "id": "extract:cord-test-29",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "COLD OCHA 1 10,909\nBCA PROMO 1 54,455\nABURA UDON SPICY 1 0\n:-KAKE UDON 1 0\nSKEWERED SHUMAI 1 12,727\nSKEWERED TOFU ROLL 1 12,727\nEBI TEMPURA 1 13,636\nKITSUNE UDON (KIDS) 1 28,182\nSUB, TOTAL 132,636\nRESTAURANT TAX 13,264\nGRAND TOTAL\n~ BCA EDC [145,900] 145,900"
+   },
+   "gold": {
+    "total": "145,900"
+   }
+  },
+  {
+   "id": "extract:cord-train-1",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "1 SPGTHY BOLOGNASE 58,000\n1 PEPPER AUS 165,000\nWELL DONE\n1 WAGYU RIBEYE 195,000\nMEDIUM WELL\n1 ICED LEMON TEA 22,000\n1 FUSION TEA LYCHE 28,000\n1 NUTTELA BROWNIES 35,000\nSUBTOTAL 503,000\n52,815\nPB1\nSVC CHRG 25,150\nDUE 580,965"
+   },
+   "gold": {
+    "total": "580,965"
+   }
+  },
+  {
+   "id": "extract:cord-train-83",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "1 ICED White 43.000\n1 Mexican Baked Rice 58.000\nSubtotal 101.000\nTotal 101.000\nDEBIT 101.000\nChange 0"
+   },
+   "gold": {
+    "total": "101.000"
+   }
+  },
+  {
+   "id": "extract:cord-train-65",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "6 NASI PUTIH 54,000\n1 SATE PADANG 35,000\n1 GULAI CUMI 25,000\n4 DENDENG BALADO 80,000\n3 KERUPUK KULIT 18,000\n1 RENDANG DAGING 20,000\n1 GULAI HATI 20,000\n1 MUJAIR BAKAR 23,000\n1 GULAI OTAK 20,000\n1 AYAM BAKAR 20,000\n1 SAMBAL TRI BELAH 18,000\n3 LALAP SEGAR 24,000\n1 AYAM PENYET 21,000\n2 AYAM GORENG 40,000\n2 AYAM POP 42,000\n2 GULAI TUNJANG 40,000\n6 TEH 30,000\n1 TERONG BELANDA 20,000\n1 TEH TELUR 25,000\n2 PUDING 16,000\nSubtotal 591,000\nP.Resto 10% 59,100\n41 Total 650,100\nCASH 650,100"
+   },
+   "gold": {
+    "total": "650,100"
+   }
+  },
+  {
+   "id": "extract:cord-train-571",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "1 SMOKY PAN CLASSIC 59,000\n1 Chicken Popcorn 29,000\nSUBTOTAL 88,000\nSC 5% 4,400\nPB1 10% 9,240\nTOTAL 101,640\nTotal item : 2 Total Qty : 2"
+   },
+   "gold": {
+    "total": "101,640"
+   }
+  },
+  {
+   "id": "extract:cord-train-505",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "MACARONI 10,000\nDISC ITEM -30.000%\n-3,000\n2X @9500\nLUMPIA 19,000\nDISC ITEM -30.000%\nAMOUNT -5,700\nBANANA KISMIS 8,000\nDISC ITEM -30.000%\nAMOUNT -2,400\nSOSIS SOLO 9,000\nDISC ITEM -30.000%\nAMOUNT -2,700\nLUMPUR 8,000\nDISC ITEM -30.000%\nAMOUNT -2,400\nDADAR PISANG 8,500\nDISC ITEM -30.000%\nAMOUNT -2,550\nKLEPON 8,000\nDISC ITEM\nAMOUNT -2,400\nBUGIS 8,000\nDISC ITEM -30.000%\nAMOUNT -2,400\nSUBTOTAL 54,950\nPLASTIK TENTENG 0\nTOTAL 54,950"
+   },
+   "gold": {
+    "total": "54,950"
+   }
+  },
+  {
+   "id": "extract:cord-train-288",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "Gyro Platter - Large 72,727\nSubtotal 72,727\nPB1-TAX Tax 7,273\nFor Here Total 80,000\nGoPay 80,000"
+   },
+   "gold": {
+    "total": "80,000"
+   }
+  },
+  {
+   "id": "extract:cord-train-431",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "SATE T1 40,000\nSUBTOTAL 40,000\nPB 1 10% 4,000\nTOTAL 44,000\nCASH 50,000\nCHANGE 6,000"
+   },
+   "gold": {
+    "total": "44,000"
+   }
+  },
+  {
+   "id": "extract:cord-train-131",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "1001-Choco Bun\n22.000 x1 22.000\n6001-Plastic Bag Small\n0 x1 0\nTotal Item: 2\nTotal. 22.000\nCash\nTendered: 50.000\nChange: 28.000"
+   },
+   "gold": {
+    "total": "22.000"
+   }
+  },
+  {
+   "id": "extract:cord-validation-52",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "2 KENTHIR 2 42.000\n2 KOL GORENG 6.000\n2 TEH MANIS 8.000\nSubtotal 56.000\nTotal 56.000\nCASH 56.000\nKembalian 0"
+   },
+   "gold": {
+    "total": "56.000"
+   }
+  },
+  {
+   "id": "extract:cord-train-554",
+   "kind": "extract",
+   "request": "Pull the total amount from this receipt.",
+   "input": {
+    "receipt": "1 White Toast 20,000\nSUBTQTAL 20,000\nDUE 20,000\nROUNDING O\nCASH 50,000\nCHANGE 30,000\nTOTAL QTY 1 ITEM 1 PCS"
+   },
+   "gold": {
+    "total": "20,000"
+   }
+  },
+  {
+   "id": "classify:b77-test-1031",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "has my top-up has been cancelled"
+   },
+   "gold": {
+    "intent": "top_up_reverted"
+   }
+  },
+  {
+   "id": "classify:b77-test-1573",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I can't get money out of the ATM"
+   },
+   "gold": {
+    "intent": "declined_cash_withdrawal"
+   }
+  },
+  {
+   "id": "classify:b77-test-1188",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I want to skip verification of my identity."
+   },
+   "gold": {
+    "intent": "why_verify_identity"
+   }
+  },
+  {
+   "id": "classify:b77-test-2830",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Any fee for topping up?"
+   },
+   "gold": {
+    "intent": "top_up_by_card_charge"
+   }
+  },
+  {
+   "id": "classify:b77-test-1462",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Can someone please assist me with finding my nearest ATM?"
+   },
+   "gold": {
+    "intent": "atm_support"
+   }
+  },
+  {
+   "id": "classify:b77-test-1393",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "How many times can I use a disposable card?"
+   },
+   "gold": {
+    "intent": "disposable_card_limits"
+   }
+  },
+  {
+   "id": "classify:b77-test-1470",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Where can I withdrawal my money?"
+   },
+   "gold": {
+    "intent": "atm_support"
+   }
+  },
+  {
+   "id": "classify:b77-test-1102",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I'm concerned about a payment that has recently been made on my card.  I do not recognize the name that the transaction went to, can you help me?"
+   },
+   "gold": {
+    "intent": "card_payment_not_recognised"
+   }
+  },
+  {
+   "id": "classify:b77-test-1309",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Is it possible to have both a Visa and a Mastercard from you?"
+   },
+   "gold": {
+    "intent": "visa_or_mastercard"
+   }
+  },
+  {
+   "id": "classify:b77-test-1025",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I tryed to make a top-up with cryptocurrency but the payment was referted."
+   },
+   "gold": {
+    "intent": "top_up_reverted"
+   }
+  },
+  {
+   "id": "classify:b77-test-1313",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Please give me both a visa and a master card."
+   },
+   "gold": {
+    "intent": "visa_or_mastercard"
+   }
+  },
+  {
+   "id": "classify:b77-test-284",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I'm just wondering when my card will get here."
+   },
+   "gold": {
+    "intent": "card_delivery_estimate"
+   }
+  },
+  {
+   "id": "classify:b77-test-1073",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Has the check I deposited cleared to I can get the cash?"
+   },
+   "gold": {
+    "intent": "balance_not_updated_after_cheque_or_cash_deposit"
+   }
+  },
+  {
+   "id": "classify:b77-test-529",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "My pin was blocked, how do I make it so I can use it?"
+   },
+   "gold": {
+    "intent": "pin_blocked"
+   }
+  },
+  {
+   "id": "classify:b77-test-3068",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Do you have a list of countries you operate in?"
+   },
+   "gold": {
+    "intent": "country_support"
+   }
+  },
+  {
+   "id": "classify:b77-test-2628",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "How would you use a disposable card?"
+   },
+   "gold": {
+    "intent": "get_disposable_virtual_card"
+   }
+  },
+  {
+   "id": "classify:b77-test-1971",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I have been charged twice"
+   },
+   "gold": {
+    "intent": "transaction_charged_twice"
+   }
+  },
+  {
+   "id": "classify:b77-test-1373",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "If I have more than one disposable card, can I make five payments on each of them?"
+   },
+   "gold": {
+    "intent": "disposable_card_limits"
+   }
+  },
+  {
+   "id": "classify:b77-test-2854",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Would like to use my card and need to activate it first.  Can you help me do this?"
+   },
+   "gold": {
+    "intent": "activate_my_card"
+   }
+  },
+  {
+   "id": "classify:b77-test-3057",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "From what countries can I use this product?"
+   },
+   "gold": {
+    "intent": "country_support"
+   }
+  },
+  {
+   "id": "classify:b77-test-1475",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Are there certain ATMs that I can use this card at?"
+   },
+   "gold": {
+    "intent": "atm_support"
+   }
+  },
+  {
+   "id": "classify:b77-test-2351",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "How does a transfer work?"
+   },
+   "gold": {
+    "intent": "transfer_into_account"
+   }
+  },
+  {
+   "id": "classify:b77-test-1651",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I lost my phone and need help securing it."
+   },
+   "gold": {
+    "intent": "lost_or_stolen_phone"
+   }
+  },
+  {
+   "id": "classify:b77-test-1753",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Why would my transfer be declined? I've checked that I've put in all the right details, but it is still declined."
+   },
+   "gold": {
+    "intent": "declined_transfer"
+   }
+  },
+  {
+   "id": "classify:b77-test-1609",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "When will my card payment be done pending?"
+   },
+   "gold": {
+    "intent": "pending_card_payment"
+   }
+  },
+  {
+   "id": "classify:b77-test-1876",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I am still waiting for a money transfer to show"
+   },
+   "gold": {
+    "intent": "pending_transfer"
+   }
+  },
+  {
+   "id": "classify:b77-test-842",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I am still waiting for a transaction to be completed"
+   },
+   "gold": {
+    "intent": "transfer_not_received_by_recipient"
+   }
+  },
+  {
+   "id": "classify:b77-test-934",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Is it possible for me to get a virtual card?"
+   },
+   "gold": {
+    "intent": "getting_virtual_card"
+   }
+  },
+  {
+   "id": "classify:b77-test-954",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I would like a virtual card- where can I purchase one?"
+   },
+   "gold": {
+    "intent": "getting_virtual_card"
+   }
+  },
+  {
+   "id": "classify:b77-test-2900",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Why was my account charged for using an ATM?"
+   },
+   "gold": {
+    "intent": "cash_withdrawal_charge"
+   }
+  },
+  {
+   "id": "classify:b77-test-1535",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Can I resent my passcode?"
+   },
+   "gold": {
+    "intent": "passcode_forgotten"
+   }
+  },
+  {
+   "id": "classify:b77-test-2032",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Where can I see the source of my money?"
+   },
+   "gold": {
+    "intent": "verify_source_of_funds"
+   }
+  },
+  {
+   "id": "classify:b77-test-107",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "What is the exchange rate like?"
+   },
+   "gold": {
+    "intent": "exchange_rate"
+   }
+  },
+  {
+   "id": "classify:b77-test-1650",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "lost my phone, dont want others to use it."
+   },
+   "gold": {
+    "intent": "lost_or_stolen_phone"
+   }
+  },
+  {
+   "id": "classify:b77-test-767",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "The ATM gave me the wrong amount of cash today when I went to withdraw. The app says it was more."
+   },
+   "gold": {
+    "intent": "wrong_amount_of_cash_received"
+   }
+  },
+  {
+   "id": "classify:b77-test-2940",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "going to need a new card what are the fees and time it takes"
+   },
+   "gold": {
+    "intent": "card_about_to_expire"
+   }
+  },
+  {
+   "id": "classify:b77-test-1249",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "where in the app can i find out about my new pin"
+   },
+   "gold": {
+    "intent": "get_physical_card"
+   }
+  },
+  {
+   "id": "classify:b77-test-292",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Can I have my card delivered on a specific day?"
+   },
+   "gold": {
+    "intent": "card_delivery_estimate"
+   }
+  },
+  {
+   "id": "classify:b77-test-2932",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "When my card expires do you send a new card?"
+   },
+   "gold": {
+    "intent": "card_about_to_expire"
+   }
+  },
+  {
+   "id": "classify:b77-test-2021",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "How can I lookup where funds came from?"
+   },
+   "gold": {
+    "intent": "verify_source_of_funds"
+   }
+  },
+  {
+   "id": "classify:b77-test-924",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "If I don't want a physical card can i get a virtual version?"
+   },
+   "gold": {
+    "intent": "getting_virtual_card"
+   }
+  },
+  {
+   "id": "classify:b77-test-526",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I need help because I drunken blocked my card?"
+   },
+   "gold": {
+    "intent": "pin_blocked"
+   }
+  },
+  {
+   "id": "classify:b77-test-2907",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I was charged extra for a withdrawal"
+   },
+   "gold": {
+    "intent": "cash_withdrawal_charge"
+   }
+  },
+  {
+   "id": "classify:b77-test-1638",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I have a pending payment in my account that I paid a while back ago and it still hasnt gone through. Why would it show pending for so long?"
+   },
+   "gold": {
+    "intent": "pending_card_payment"
+   }
+  },
+  {
+   "id": "classify:b77-test-474",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "How do I report a stolen card?"
+   },
+   "gold": {
+    "intent": "lost_or_stolen_card"
+   }
+  },
+  {
+   "id": "classify:b77-test-1673",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "My phone is lost.  What do I do to prevent someone from using the app?"
+   },
+   "gold": {
+    "intent": "lost_or_stolen_phone"
+   }
+  },
+  {
+   "id": "classify:b77-test-63",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "How do I link this new card?"
+   },
+   "gold": {
+    "intent": "card_linking"
+   }
+  },
+  {
+   "id": "classify:b77-test-1627",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I have waited 15 days, but my payment still hasn't cleared."
+   },
+   "gold": {
+    "intent": "pending_card_payment"
+   }
+  },
+  {
+   "id": "classify:b77-test-2383",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I can't find the top-up verification code."
+   },
+   "gold": {
+    "intent": "verify_top_up"
+   }
+  },
+  {
+   "id": "classify:b77-test-508",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Is there an age limit?"
+   },
+   "gold": {
+    "intent": "age_limit"
+   }
+  },
+  {
+   "id": "classify:b77-test-2444",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "Can you help me find top up by cash deposit?"
+   },
+   "gold": {
+    "intent": "top_up_by_cash_or_cheque"
+   }
+  },
+  {
+   "id": "classify:b77-test-311",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "When can I expect to receive my new card?"
+   },
+   "gold": {
+    "intent": "card_delivery_estimate"
+   }
+  },
+  {
+   "id": "classify:b77-test-2694",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I made an out of country transfer and it hasn't went through yet."
+   },
+   "gold": {
+    "intent": "balance_not_updated_after_bank_transfer"
+   }
+  },
+  {
+   "id": "classify:b77-test-2594",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I took out cash abroad and the exchange rate isn't correct."
+   },
+   "gold": {
+    "intent": "wrong_exchange_rate_for_cash_withdrawal"
+   }
+  },
+  {
+   "id": "classify:b77-test-2125",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "How might  I change my PIN?"
+   },
+   "gold": {
+    "intent": "change_pin"
+   }
+  },
+  {
+   "id": "classify:b77-test-2988",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I got my American Express in Apple Bay but top up is not working"
+   },
+   "gold": {
+    "intent": "apple_pay_or_google_pay"
+   }
+  },
+  {
+   "id": "classify:b77-test-2105",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "There must be an issue, why has my card been cancelled?"
+   },
+   "gold": {
+    "intent": "reverted_card_payment?"
+   }
+  },
+  {
+   "id": "classify:b77-test-2874",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "What are the steps to activating a new card?"
+   },
+   "gold": {
+    "intent": "activate_my_card"
+   }
+  },
+  {
+   "id": "classify:b77-test-814",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "When would my card be charged an extra fee for a transaction?"
+   },
+   "gold": {
+    "intent": "card_payment_fee_charged"
+   }
+  },
+  {
+   "id": "classify:b77-test-781",
+   "kind": "classify",
+   "request": "Which banking intent is this customer message?",
+   "input": {
+    "message": "I asked for $100 cash but only got $20?"
+   },
+   "gold": {
+    "intent": "wrong_amount_of_cash_received"
+   }
+  },
+  {
+   "id": "route:clinc-test-2139",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "can i use mayo instead of miracle whip"
+   },
+   "gold": {
+    "domain": "kitchen_and_dining"
+   }
+  },
+  {
+   "id": "route:clinc-test-3909",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "can i redeem my points by transferring them to someone as a gift"
+   },
+   "gold": {
+    "domain": "credit_cards"
+   }
+  },
+  {
+   "id": "route:clinc-test-2142",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "can i sub bacon for ham"
+   },
+   "gold": {
+    "domain": "kitchen_and_dining"
+   }
+  },
+  {
+   "id": "route:clinc-test-725",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "i need a table for 3 at olive garden for 7"
+   },
+   "gold": {
+    "domain": "kitchen_and_dining"
+   }
+  },
+  {
+   "id": "route:clinc-test-2141",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "can i use oil instead of vinegar"
+   },
+   "gold": {
+    "domain": "kitchen_and_dining"
+   }
+  },
+  {
+   "id": "route:clinc-test-1838",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "tell me how many days off you see that i have taken so far this year please"
+   },
+   "gold": {
+    "domain": "work"
+   }
+  },
+  {
+   "id": "route:clinc-test-2246",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "give me my to-do list"
+   },
+   "gold": {
+    "domain": "home"
+   }
+  },
+  {
+   "id": "route:clinc-test-4349",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "find a recipe for baked ziti"
+   },
+   "gold": {
+    "domain": "kitchen_and_dining"
+   }
+  },
+  {
+   "id": "route:clinc-test-142",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "is there any consensun regarding lifes true meaning"
+   },
+   "gold": {
+    "domain": "small_talk"
+   }
+  },
+  {
+   "id": "route:clinc-test-2526",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what kind of gas should i use for this car"
+   },
+   "gold": {
+    "domain": "auto_and_commute"
+   }
+  },
+  {
+   "id": "route:clinc-test-2394",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "who should i talk to about the fact that i inadvertently split my card almost in half"
+   },
+   "gold": {
+    "domain": "credit_cards"
+   }
+  },
+  {
+   "id": "route:clinc-test-3209",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "i need a hotel room for 4 people from may 3 to may 5 in boston"
+   },
+   "gold": {
+    "domain": "travel"
+   }
+  },
+  {
+   "id": "route:clinc-test-4189",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "start responding to joe"
+   },
+   "gold": {
+    "domain": "meta"
+   }
+  },
+  {
+   "id": "route:clinc-test-2764",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "is the friday's full after 4"
+   },
+   "gold": {
+    "domain": "kitchen_and_dining"
+   }
+  },
+  {
+   "id": "route:clinc-test-12",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what is the right way to say excuse me in spanish"
+   },
+   "gold": {
+    "domain": "travel"
+   }
+  },
+  {
+   "id": "route:clinc-test-3236",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "show me my location"
+   },
+   "gold": {
+    "domain": "auto_and_commute"
+   }
+  },
+  {
+   "id": "route:clinc-test-4110",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "i do not actually need my reservation anymore"
+   },
+   "gold": {
+    "domain": "kitchen_and_dining"
+   }
+  },
+  {
+   "id": "route:clinc-test-3938",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "i want to hear my slow playlist"
+   },
+   "gold": {
+    "domain": "home"
+   }
+  },
+  {
+   "id": "route:clinc-test-2840",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what time is my package getting here"
+   },
+   "gold": {
+    "domain": "home"
+   }
+  },
+  {
+   "id": "route:clinc-test-3349",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "go to whisper mode until my morning alarm goes off"
+   },
+   "gold": {
+    "domain": "meta"
+   }
+  },
+  {
+   "id": "route:clinc-test-2739",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "tell me my credit limit"
+   },
+   "gold": {
+    "domain": "credit_cards"
+   }
+  },
+  {
+   "id": "route:clinc-test-3855",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what are my bills this month"
+   },
+   "gold": {
+    "domain": "banking"
+   }
+  },
+  {
+   "id": "route:clinc-test-3820",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "text emily"
+   },
+   "gold": {
+    "domain": "utility"
+   }
+  },
+  {
+   "id": "route:clinc-test-3336",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "switch over to whisper mode"
+   },
+   "gold": {
+    "domain": "meta"
+   }
+  },
+  {
+   "id": "route:clinc-test-2994",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "is there a fee if i use my card in france"
+   },
+   "gold": {
+    "domain": "credit_cards"
+   }
+  },
+  {
+   "id": "route:clinc-test-3880",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "send my location to this individual"
+   },
+   "gold": {
+    "domain": "utility"
+   }
+  },
+  {
+   "id": "route:clinc-test-1305",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "i need you to repeat that please"
+   },
+   "gold": {
+    "domain": "meta"
+   }
+  },
+  {
+   "id": "route:clinc-test-581",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what area did you come from"
+   },
+   "gold": {
+    "domain": "small_talk"
+   }
+  },
+  {
+   "id": "route:clinc-test-3020",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "when was my oil last changed"
+   },
+   "gold": {
+    "domain": "auto_and_commute"
+   }
+  },
+  {
+   "id": "route:clinc-test-3217",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what's the location where i am"
+   },
+   "gold": {
+    "domain": "auto_and_commute"
+   }
+  },
+  {
+   "id": "route:clinc-test-952",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "could you tell me my name"
+   },
+   "gold": {
+    "domain": "meta"
+   }
+  },
+  {
+   "id": "route:clinc-test-2975",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "do i get charged extra for using my card in portland"
+   },
+   "gold": {
+    "domain": "credit_cards"
+   }
+  },
+  {
+   "id": "route:clinc-test-4338",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "recipes for garlic bread please"
+   },
+   "gold": {
+    "domain": "kitchen_and_dining"
+   }
+  },
+  {
+   "id": "route:clinc-test-106",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "can you tell me the meaning of fluctuate"
+   },
+   "gold": {
+    "domain": "utility"
+   }
+  },
+  {
+   "id": "route:clinc-test-1648",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what's the apr on my capital one venture card"
+   },
+   "gold": {
+    "domain": "credit_cards"
+   }
+  },
+  {
+   "id": "route:clinc-test-3111",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "i think there's a fraudulent charge from mcdonald's on my account"
+   },
+   "gold": {
+    "domain": "banking"
+   }
+  },
+  {
+   "id": "route:clinc-test-576",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "where do you call home"
+   },
+   "gold": {
+    "domain": "small_talk"
+   }
+  },
+  {
+   "id": "route:clinc-test-3483",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "how do i get to central park by foot"
+   },
+   "gold": {
+    "domain": "auto_and_commute"
+   }
+  },
+  {
+   "id": "route:clinc-test-3151",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "i need you to turn the bathroom lights on"
+   },
+   "gold": {
+    "domain": "home"
+   }
+  },
+  {
+   "id": "route:clinc-test-3031",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "check today's calendar for meetings"
+   },
+   "gold": {
+    "domain": "work"
+   }
+  },
+  {
+   "id": "route:clinc-test-2799",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "does the new york restaurant take reservations"
+   },
+   "gold": {
+    "domain": "kitchen_and_dining"
+   }
+  },
+  {
+   "id": "route:clinc-test-1844",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "how much of my pto is left"
+   },
+   "gold": {
+    "domain": "work"
+   }
+  },
+  {
+   "id": "route:clinc-test-2880",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "good speaking to you"
+   },
+   "gold": {
+    "domain": "small_talk"
+   }
+  },
+  {
+   "id": "route:clinc-test-207",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "would you know where to find my phone"
+   },
+   "gold": {
+    "domain": "utility"
+   }
+  },
+  {
+   "id": "route:clinc-test-4489",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "i could not buy food using my card when i was in vietnam"
+   },
+   "gold": {
+    "domain": "credit_cards"
+   }
+  },
+  {
+   "id": "route:clinc-test-2755",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "tell me my hsbc card credit limit"
+   },
+   "gold": {
+    "domain": "credit_cards"
+   }
+  },
+  {
+   "id": "route:clinc-test-2654",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "when will my next vacation day be"
+   },
+   "gold": {
+    "domain": "work"
+   }
+  },
+  {
+   "id": "route:clinc-test-961",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "i need the time zone for la"
+   },
+   "gold": {
+    "domain": "travel"
+   }
+  },
+  {
+   "id": "route:clinc-test-495",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "tell me what the status is for my aa flight"
+   },
+   "gold": {
+    "domain": "travel"
+   }
+  },
+  {
+   "id": "route:clinc-test-3515",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "i don't know how to spell apoplectic, can you tell me"
+   },
+   "gold": {
+    "domain": "utility"
+   }
+  },
+  {
+   "id": "route:clinc-oos-179",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "how much is it to get more data on my phone plan"
+   },
+   "gold": {
+    "domain": null
+   }
+  },
+  {
+   "id": "route:clinc-oos-609",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what's my boss' home address"
+   },
+   "gold": {
+    "domain": null
+   }
+  },
+  {
+   "id": "route:clinc-oos-523",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "how many people were killed in the boston marathon by bombers"
+   },
+   "gold": {
+    "domain": null
+   }
+  },
+  {
+   "id": "route:clinc-oos-251",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what coupons do i have for restaurants"
+   },
+   "gold": {
+    "domain": null
+   }
+  },
+  {
+   "id": "route:clinc-oos-232",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what size pipes are used for sinks"
+   },
+   "gold": {
+    "domain": null
+   }
+  },
+  {
+   "id": "route:clinc-oos-596",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what size space suit should you get based on your girth"
+   },
+   "gold": {
+    "domain": null
+   }
+  },
+  {
+   "id": "route:clinc-oos-998",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "locate jenny at her present position"
+   },
+   "gold": {
+    "domain": null
+   }
+  },
+  {
+   "id": "route:clinc-oos-556",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "does eating poop really help your gut fauna"
+   },
+   "gold": {
+    "domain": null
+   }
+  },
+  {
+   "id": "route:clinc-oos-591",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "program my new robot to bring me snacks"
+   },
+   "gold": {
+    "domain": null
+   }
+  },
+  {
+   "id": "route:clinc-oos-666",
+   "kind": "route",
+   "request": "Which department should handle this message?",
+   "input": {
+    "message": "what is the government department that regulates emissions"
+   },
+   "gold": {
+    "domain": null
+   }
+  },
+  {
+   "id": "date:gen-date-39",
+   "kind": "date",
+   "request": "Convert this date to ISO format.",
+   "input": {
+    "text": "the 23rd of June 2016"
+   },
+   "gold": {
+    "iso": "2016-06-23"
+   }
+  },
+  {
+   "id": "date:gen-date-62",
+   "kind": "date",
+   "request": "Convert this date to ISO format.",
+   "input": {
+    "text": "Sunday 26 April 2026"
+   },
+   "gold": {
+    "iso": "2026-04-26"
+   }
+  },
+  {
+   "id": "date:gen-date-83",
+   "kind": "date",
+   "request": "Convert this date to ISO format.",
+   "input": {
+    "text": "Thursday 4 November 2021"
+   },
+   "gold": {
+    "iso": "2021-11-04"
+   }
+  },
+  {
+   "id": "date:gen-date-225",
+   "kind": "date",
+   "request": "Convert this date to ISO format.",
+   "input": {
+    "text": "1991.11.01"
+   },
+   "gold": {
+    "iso": "1991-11-01"
+   }
+  },
+  {
+   "id": "date:gen-date-375",
+   "kind": "date",
+   "request": "Convert this date to ISO format.",
+   "input": {
+    "text": "Monday 14 July 1997"
+   },
+   "gold": {
+    "iso": "1997-07-14"
+   }
+  },
+  {
+   "id": "date:gen-date-269",
+   "kind": "date",
+   "request": "Convert this date to ISO format.",
+   "input": {
+    "text": "04/09/2023 (day first)"
+   },
+   "gold": {
+    "iso": "2023-09-04"
+   }
+  },
+  {
+   "id": "date:gen-date-122",
+   "kind": "date",
+   "request": "Convert this date to ISO format.",
+   "input": {
+    "text": "1 December 1998"
+   },
+   "gold": {
+    "iso": "1998-12-01"
+   }
+  },
+  {
+   "id": "date:gen-date-169",
+   "kind": "date",
+   "request": "Convert this date to ISO format.",
+   "input": {
+    "text": "delivered on 30 April, 2025"
+   },
+   "gold": {
+    "iso": "2025-04-30"
+   }
+  },
+  {
+   "id": "date:gen-date-180",
+   "kind": "date",
+   "request": "Convert this date to ISO format.",
+   "input": {
+    "text": "the 3rd of January 2009"
+   },
+   "gold": {
+    "iso": "2009-01-03"
+   }
+  },
+  {
+   "id": "date:gen-date-149",
+   "kind": "date",
+   "request": "Convert this date to ISO format.",
+   "input": {
+    "text": "26/07/2001 (day first)"
+   },
+   "gold": {
+    "iso": "2001-07-26"
+   }
+  },
+  {
+   "id": "date:gen-date-138",
+   "kind": "date",
+   "request": "Convert this date to ISO format.",
+   "input": {
+    "text": "Friday 14 April 2023"
+   },
+   "gold": {
+    "iso": "2023-04-14"
+   }
+  },
+  {
+   "id": "date:gen-date-66",
+   "kind": "date",
+   "request": "Convert this date to ISO format.",
+   "input": {
+    "text": "January 14, 2028"
+   },
+   "gold": {
+    "iso": "2028-01-14"
+   }
+  },
+  {
+   "id": "date:gen-date-329",
+   "kind": "date",
+   "request": "Convert this date to ISO format.",
+   "input": {
+    "text": "1998.10.02"
+   },
+   "gold": {
+    "iso": "1998-10-02"
+   }
+  },
+  {
+   "id": "date:gen-date-306",
+   "kind": "date",
+   "request": "Convert this date to ISO format.",
+   "input": {
+    "text": "February 3, 2000"
+   },
+   "gold": {
+    "iso": "2000-02-03"
+   }
+  },
+  {
+   "id": "date:gen-date-177",
+   "kind": "date",
+   "request": "Convert this date to ISO format.",
+   "input": {
+    "text": "the 28th of January 2028"
+   },
+   "gold": {
+    "iso": "2028-01-28"
+   }
+  },
+  {
+   "id": "date:gen-date-69",
+   "kind": "date",
+   "request": "Convert this date to ISO format.",
+   "input": {
+    "text": "delivered on 15 April, 2008"
+   },
+   "gold": {
+    "iso": "2008-04-15"
+   }
+  },
+  {
+   "id": "date:gen-date-290",
+   "kind": "date",
+   "request": "Convert this date to ISO format.",
+   "input": {
+    "text": "delivered on 31 August, 2026"
+   },
+   "gold": {
+    "iso": "2026-08-31"
+   }
+  },
+  {
+   "id": "date:gen-date-352",
+   "kind": "date",
+   "request": "Convert this date to ISO format.",
+   "input": {
+    "text": "16/12/2022 (day first)"
+   },
+   "gold": {
+    "iso": "2022-12-16"
+   }
+  },
+  {
+   "id": "date:gen-date-263",
+   "kind": "date",
+   "request": "Convert this date to ISO format.",
+   "input": {
+    "text": "18th Oct 2023"
+   },
+   "gold": {
+    "iso": "2023-10-18"
+   }
+  },
+  {
+   "id": "date:gen-date-378",
+   "kind": "date",
+   "request": "Convert this date to ISO format.",
+   "input": {
+    "text": "November 3, 1996"
+   },
+   "gold": {
+    "iso": "1996-11-03"
+   }
+  },
+  {
+   "id": "date:gen-date-320",
+   "kind": "date",
+   "request": "Convert this date to ISO format.",
+   "input": {
+    "text": "delivered on 13 February, 2019"
+   },
+   "gold": {
+    "iso": "2019-02-13"
+   }
+  },
+  {
+   "id": "date:gen-date-257",
+   "kind": "date",
+   "request": "Convert this date to ISO format.",
+   "input": {
+    "text": "15 June 2010"
+   },
+   "gold": {
+    "iso": "2010-06-15"
+   }
+  },
+  {
+   "id": "date:gen-date-299",
+   "kind": "date",
+   "request": "Convert this date to ISO format.",
+   "input": {
+    "text": "delivered on 5 August, 2009"
+   },
+   "gold": {
+    "iso": "2009-08-05"
+   }
+  },
+  {
+   "id": "date:gen-date-61",
+   "kind": "date",
+   "request": "Convert this date to ISO format.",
+   "input": {
+    "text": "Thursday 3 September 2015"
+   },
+   "gold": {
+    "iso": "2015-09-03"
+   }
+  },
+  {
+   "id": "date:gen-date-67",
+   "kind": "date",
+   "request": "Convert this date to ISO format.",
+   "input": {
+    "text": "October 26, 2025"
+   },
+   "gold": {
+    "iso": "2025-10-26"
+   }
+  },
+  {
+   "id": "pence:gen-money-36",
+   "kind": "pence",
+   "request": "Convert this money amount to pence.",
+   "input": {
+    "text": "1829 pounds 91 pence"
+   },
+   "gold": {
+    "pence": 182991
+   }
+  },
+  {
+   "id": "pence:gen-money-145",
+   "kind": "pence",
+   "request": "Convert this money amount to pence.",
+   "input": {
+    "text": "£1,977.66"
+   },
+   "gold": {
+    "pence": 197766
+   }
+  },
+  {
+   "id": "pence:gen-money-325",
+   "kind": "pence",
+   "request": "Convert this money amount to pence.",
+   "input": {
+    "text": "£1,802.42"
+   },
+   "gold": {
+    "pence": 180242
+   }
+  },
+  {
+   "id": "pence:gen-money-111",
+   "kind": "pence",
+   "request": "Convert this money amount to pence.",
+   "input": {
+    "text": "£0.49"
+   },
+   "gold": {
+    "pence": 49
+   }
+  },
+  {
+   "id": "pence:gen-money-151",
+   "kind": "pence",
+   "request": "Convert this money amount to pence.",
+   "input": {
+    "text": "296 pounds 79 pence"
+   },
+   "gold": {
+    "pence": 29679
+   }
+  },
+  {
+   "id": "pence:gen-money-323",
+   "kind": "pence",
+   "request": "Convert this money amount to pence.",
+   "input": {
+    "text": "21p"
+   },
+   "gold": {
+    "pence": 21
+   }
+  },
+  {
+   "id": "pence:gen-money-127",
+   "kind": "pence",
+   "request": "Convert this money amount to pence.",
+   "input": {
+    "text": "GBP 0.59"
+   },
+   "gold": {
+    "pence": 59
+   }
+  },
+  {
+   "id": "pence:gen-money-149",
+   "kind": "pence",
+   "request": "Convert this money amount to pence.",
+   "input": {
+    "text": "191 pounds 25 pence"
+   },
+   "gold": {
+    "pence": 19125
+   }
+  },
+  {
+   "id": "pence:gen-money-101",
+   "kind": "pence",
+   "request": "Convert this money amount to pence.",
+   "input": {
+    "text": "GBP 2111.42"
+   },
+   "gold": {
+    "pence": 211142
+   }
+  },
+  {
+   "id": "pence:gen-money-288",
+   "kind": "pence",
+   "request": "Convert this money amount to pence.",
+   "input": {
+    "text": "GBP 94.40"
+   },
+   "gold": {
+    "pence": 9440
+   }
+  },
+  {
+   "id": "pence:gen-money-243",
+   "kind": "pence",
+   "request": "Convert this money amount to pence.",
+   "input": {
+    "text": "GBP 957.40"
+   },
+   "gold": {
+    "pence": 95740
+   }
+  },
+  {
+   "id": "pence:gen-money-224",
+   "kind": "pence",
+   "request": "Convert this money amount to pence.",
+   "input": {
+    "text": "GBP 1427.02"
+   },
+   "gold": {
+    "pence": 142702
+   }
+  },
+  {
+   "id": "pence:gen-money-345",
+   "kind": "pence",
+   "request": "Convert this money amount to pence.",
+   "input": {
+    "text": "61p"
+   },
+   "gold": {
+    "pence": 61
+   }
+  },
+  {
+   "id": "pence:gen-money-168",
+   "kind": "pence",
+   "request": "Convert this money amount to pence.",
+   "input": {
+    "text": "1,275.85 pounds"
+   },
+   "gold": {
+    "pence": 127585
+   }
+  },
+  {
+   "id": "pence:gen-money-72",
+   "kind": "pence",
+   "request": "Convert this money amount to pence.",
+   "input": {
+    "text": "658 pounds 49 pence"
+   },
+   "gold": {
+    "pence": 65849
+   }
+  },
+  {
+   "id": "pence:gen-money-117",
+   "kind": "pence",
+   "request": "Convert this money amount to pence.",
+   "input": {
+    "text": "70p"
+   },
+   "gold": {
+    "pence": 70
+   }
+  },
+  {
+   "id": "pence:gen-money-234",
+   "kind": "pence",
+   "request": "Convert this money amount to pence.",
+   "input": {
+    "text": "£1520.35"
+   },
+   "gold": {
+    "pence": 152035
+   }
+  },
+  {
+   "id": "pence:gen-money-294",
+   "kind": "pence",
+   "request": "Convert this money amount to pence.",
+   "input": {
+    "text": "15.07 pounds"
+   },
+   "gold": {
+    "pence": 1507
+   }
+  },
+  {
+   "id": "pence:gen-money-380",
+   "kind": "pence",
+   "request": "Convert this money amount to pence.",
+   "input": {
+    "text": "£0.98"
+   },
+   "gold": {
+    "pence": 98
+   }
+  },
+  {
+   "id": "pence:gen-money-305",
+   "kind": "pence",
+   "request": "Convert this money amount to pence.",
+   "input": {
+    "text": "£1242.71"
+   },
+   "gold": {
+    "pence": 124271
+   }
+  },
+  {
+   "id": "pence:gen-money-132",
+   "kind": "pence",
+   "request": "Convert this money amount to pence.",
+   "input": {
+    "text": "2313 pounds 46 pence"
+   },
+   "gold": {
+    "pence": 231346
+   }
+  },
+  {
+   "id": "pence:gen-money-343",
+   "kind": "pence",
+   "request": "Convert this money amount to pence.",
+   "input": {
+    "text": "GBP 469.84"
+   },
+   "gold": {
+    "pence": 46984
+   }
+  },
+  {
+   "id": "pence:gen-money-27",
+   "kind": "pence",
+   "request": "Convert this money amount to pence.",
+   "input": {
+    "text": "£2,063.86"
+   },
+   "gold": {
+    "pence": 206386
+   }
+  },
+  {
+   "id": "pence:gen-money-216",
+   "kind": "pence",
+   "request": "Convert this money amount to pence.",
+   "input": {
+    "text": "87p"
+   },
+   "gold": {
+    "pence": 87
+   }
+  },
+  {
+   "id": "pence:gen-money-353",
+   "kind": "pence",
+   "request": "Convert this money amount to pence.",
+   "input": {
+    "text": "a charge of £610.45"
+   },
+   "gold": {
+    "pence": 61045
+   }
+  },
+  {
+   "id": "draft:gen-record-259",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Ben Walker",
+     "order": "ORD-184892",
+     "item": "backpack",
+     "amount": "£276.45",
+     "date": "10 June 2026"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Ben Walker",
+     "order": "ORD-184892",
+     "item": "backpack",
+     "amount": "£276.45",
+     "date": "10 June 2026"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-140",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Daniel Clarke",
+     "order": "ORD-632504",
+     "item": "running shoes",
+     "amount": "£245.72",
+     "date": "19 December 2025"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Daniel Clarke",
+     "order": "ORD-632504",
+     "item": "running shoes",
+     "amount": "£245.72",
+     "date": "19 December 2025"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-230",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Zara Jones",
+     "order": "ORD-107792",
+     "item": "headphones",
+     "amount": "£239.96",
+     "date": "5 January 2025"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Zara Jones",
+     "order": "ORD-107792",
+     "item": "headphones",
+     "amount": "£239.96",
+     "date": "5 January 2025"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-213",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Laura Ali",
+     "order": "ORD-576710",
+     "item": "bookshelf",
+     "amount": "£77.02",
+     "date": "10 April 2026"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Laura Ali",
+     "order": "ORD-576710",
+     "item": "bookshelf",
+     "amount": "£77.02",
+     "date": "10 April 2026"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-274",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Imran Smith",
+     "order": "ORD-116501",
+     "item": "headphones",
+     "amount": "£117.59",
+     "date": "22 May 2026"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Imran Smith",
+     "order": "ORD-116501",
+     "item": "headphones",
+     "amount": "£117.59",
+     "date": "22 May 2026"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-183",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Oliver Walker",
+     "order": "ORD-566944",
+     "item": "desk lamp",
+     "amount": "£47.90",
+     "date": "16 October 2025"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Oliver Walker",
+     "order": "ORD-566944",
+     "item": "desk lamp",
+     "amount": "£47.90",
+     "date": "16 October 2025"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-184",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Aisha Taylor",
+     "order": "ORD-831201",
+     "item": "backpack",
+     "amount": "£206.34",
+     "date": "9 December 2026"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Aisha Taylor",
+     "order": "ORD-831201",
+     "item": "backpack",
+     "amount": "£206.34",
+     "date": "9 December 2026"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-189",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Daniel Clarke",
+     "order": "ORD-566475",
+     "item": "coffee grinder",
+     "amount": "£178.25",
+     "date": "25 January 2025"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Daniel Clarke",
+     "order": "ORD-566475",
+     "item": "coffee grinder",
+     "amount": "£178.25",
+     "date": "25 January 2025"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-48",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Nina Ali",
+     "order": "ORD-866459",
+     "item": "blender",
+     "amount": "£68.38",
+     "date": "9 March 2026"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Nina Ali",
+     "order": "ORD-866459",
+     "item": "blender",
+     "amount": "£68.38",
+     "date": "9 March 2026"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-145",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Ruth Smith",
+     "order": "ORD-150966",
+     "item": "blender",
+     "amount": "£124.94",
+     "date": "4 November 2026"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Ruth Smith",
+     "order": "ORD-150966",
+     "item": "blender",
+     "amount": "£124.94",
+     "date": "4 November 2026"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-268",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Daniel Jones",
+     "order": "ORD-730918",
+     "item": "running shoes",
+     "amount": "£201.25",
+     "date": "2 October 2025"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Daniel Jones",
+     "order": "ORD-730918",
+     "item": "running shoes",
+     "amount": "£201.25",
+     "date": "2 October 2025"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-96",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Ruth Murphy",
+     "order": "ORD-124693",
+     "item": "blender",
+     "amount": "£89.44",
+     "date": "22 May 2026"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Ruth Murphy",
+     "order": "ORD-124693",
+     "item": "blender",
+     "amount": "£89.44",
+     "date": "22 May 2026"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-66",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Aisha Reid",
+     "order": "ORD-938548",
+     "item": "coffee grinder",
+     "amount": "£37.73",
+     "date": "26 January 2026"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Aisha Reid",
+     "order": "ORD-938548",
+     "item": "coffee grinder",
+     "amount": "£37.73",
+     "date": "26 January 2026"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-18",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Zara Jones",
+     "order": "ORD-986777",
+     "item": "kettle",
+     "amount": "£70.17",
+     "date": "3 April 2025"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Zara Jones",
+     "order": "ORD-986777",
+     "item": "kettle",
+     "amount": "£70.17",
+     "date": "3 April 2025"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-185",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Grace Khan",
+     "order": "ORD-936902",
+     "item": "kettle",
+     "amount": "£5.72",
+     "date": "24 November 2025"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Grace Khan",
+     "order": "ORD-936902",
+     "item": "kettle",
+     "amount": "£5.72",
+     "date": "24 November 2025"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-62",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Kiran Price",
+     "order": "ORD-269199",
+     "item": "bookshelf",
+     "amount": "£158.47",
+     "date": "5 June 2026"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Kiran Price",
+     "order": "ORD-269199",
+     "item": "bookshelf",
+     "amount": "£158.47",
+     "date": "5 June 2026"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-13",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Zara Price",
+     "order": "ORD-571533",
+     "item": "toaster",
+     "amount": "£274.44",
+     "date": "15 August 2026"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Zara Price",
+     "order": "ORD-571533",
+     "item": "toaster",
+     "amount": "£274.44",
+     "date": "15 August 2026"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-43",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Hannah Walker",
+     "order": "ORD-443056",
+     "item": "desk lamp",
+     "amount": "£124.45",
+     "date": "25 July 2025"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Hannah Walker",
+     "order": "ORD-443056",
+     "item": "desk lamp",
+     "amount": "£124.45",
+     "date": "25 July 2025"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-296",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Aisha Price",
+     "order": "ORD-802465",
+     "item": "bookshelf",
+     "amount": "£290.99",
+     "date": "21 August 2025"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Aisha Price",
+     "order": "ORD-802465",
+     "item": "bookshelf",
+     "amount": "£290.99",
+     "date": "21 August 2025"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-167",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Ruth Shah",
+     "order": "ORD-136797",
+     "item": "rain jacket",
+     "amount": "£147.97",
+     "date": "12 July 2025"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Ruth Shah",
+     "order": "ORD-136797",
+     "item": "rain jacket",
+     "amount": "£147.97",
+     "date": "12 July 2025"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-270",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Hannah Shah",
+     "order": "ORD-737055",
+     "item": "rain jacket",
+     "amount": "£188.13",
+     "date": "7 December 2025"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Hannah Shah",
+     "order": "ORD-737055",
+     "item": "rain jacket",
+     "amount": "£188.13",
+     "date": "7 December 2025"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-85",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Daniel Smith",
+     "order": "ORD-666675",
+     "item": "coffee grinder",
+     "amount": "£29.47",
+     "date": "6 March 2025"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Daniel Smith",
+     "order": "ORD-666675",
+     "item": "coffee grinder",
+     "amount": "£29.47",
+     "date": "6 March 2025"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-89",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Zara Taylor",
+     "order": "ORD-556943",
+     "item": "backpack",
+     "amount": "£35.46",
+     "date": "10 October 2025"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Zara Taylor",
+     "order": "ORD-556943",
+     "item": "backpack",
+     "amount": "£35.46",
+     "date": "10 October 2025"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-60",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Sam Wood",
+     "order": "ORD-137386",
+     "item": "garden hose",
+     "amount": "£233.55",
+     "date": "1 November 2025"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Sam Wood",
+     "order": "ORD-137386",
+     "item": "garden hose",
+     "amount": "£233.55",
+     "date": "1 November 2025"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-266",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Jack Clarke",
+     "order": "ORD-816844",
+     "item": "running shoes",
+     "amount": "£297.34",
+     "date": "19 August 2025"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Jack Clarke",
+     "order": "ORD-816844",
+     "item": "running shoes",
+     "amount": "£297.34",
+     "date": "19 August 2025"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-73",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Nina Evans",
+     "order": "ORD-700223",
+     "item": "desk lamp",
+     "amount": "£270.84",
+     "date": "21 October 2025"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Nina Evans",
+     "order": "ORD-700223",
+     "item": "desk lamp",
+     "amount": "£270.84",
+     "date": "21 October 2025"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-298",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Ella Walker",
+     "order": "ORD-223963",
+     "item": "running shoes",
+     "amount": "£66.10",
+     "date": "16 August 2026"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Ella Walker",
+     "order": "ORD-223963",
+     "item": "running shoes",
+     "amount": "£66.10",
+     "date": "16 August 2026"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-70",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Alex Evans",
+     "order": "ORD-725832",
+     "item": "kettle",
+     "amount": "£70.62",
+     "date": "7 May 2025"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Alex Evans",
+     "order": "ORD-725832",
+     "item": "kettle",
+     "amount": "£70.62",
+     "date": "7 May 2025"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-246",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Laura Khan",
+     "order": "ORD-663098",
+     "item": "desk lamp",
+     "amount": "£127.51",
+     "date": "2 August 2026"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Laura Khan",
+     "order": "ORD-663098",
+     "item": "desk lamp",
+     "amount": "£127.51",
+     "date": "2 August 2026"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-135",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Aisha Shah",
+     "order": "ORD-147641",
+     "item": "phone case",
+     "amount": "£265.62",
+     "date": "22 November 2026"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Aisha Shah",
+     "order": "ORD-147641",
+     "item": "phone case",
+     "amount": "£265.62",
+     "date": "22 November 2026"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-51",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Alex Murphy",
+     "order": "ORD-749994",
+     "item": "kettle",
+     "amount": "£35.92",
+     "date": "13 May 2026"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Alex Murphy",
+     "order": "ORD-749994",
+     "item": "kettle",
+     "amount": "£35.92",
+     "date": "13 May 2026"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-10",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Alex Shah",
+     "order": "ORD-948272",
+     "item": "rain jacket",
+     "amount": "£259.21",
+     "date": "18 September 2025"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Alex Shah",
+     "order": "ORD-948272",
+     "item": "rain jacket",
+     "amount": "£259.21",
+     "date": "18 September 2025"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-173",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Jack Walker",
+     "order": "ORD-914985",
+     "item": "phone case",
+     "amount": "£207.15",
+     "date": "22 August 2026"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Jack Walker",
+     "order": "ORD-914985",
+     "item": "phone case",
+     "amount": "£207.15",
+     "date": "22 August 2026"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-200",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Laura Murphy",
+     "order": "ORD-847469",
+     "item": "rain jacket",
+     "amount": "£189.00",
+     "date": "26 March 2026"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Laura Murphy",
+     "order": "ORD-847469",
+     "item": "rain jacket",
+     "amount": "£189.00",
+     "date": "26 March 2026"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-166",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Oliver Khan",
+     "order": "ORD-757998",
+     "item": "phone case",
+     "amount": "£31.44",
+     "date": "2 May 2025"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Oliver Khan",
+     "order": "ORD-757998",
+     "item": "phone case",
+     "amount": "£31.44",
+     "date": "2 May 2025"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-84",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Sam Reid",
+     "order": "ORD-519717",
+     "item": "coffee grinder",
+     "amount": "£209.15",
+     "date": "2 June 2026"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Sam Reid",
+     "order": "ORD-519717",
+     "item": "coffee grinder",
+     "amount": "£209.15",
+     "date": "2 June 2026"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-227",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Faisal Taylor",
+     "order": "ORD-371963",
+     "item": "blender",
+     "amount": "£31.88",
+     "date": "15 November 2026"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Faisal Taylor",
+     "order": "ORD-371963",
+     "item": "blender",
+     "amount": "£31.88",
+     "date": "15 November 2026"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-278",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Daniel Hughes",
+     "order": "ORD-983509",
+     "item": "coffee grinder",
+     "amount": "£64.91",
+     "date": "8 February 2025"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Daniel Hughes",
+     "order": "ORD-983509",
+     "item": "coffee grinder",
+     "amount": "£64.91",
+     "date": "8 February 2025"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-153",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Hannah Evans",
+     "order": "ORD-788288",
+     "item": "running shoes",
+     "amount": "£160.22",
+     "date": "24 March 2026"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Hannah Evans",
+     "order": "ORD-788288",
+     "item": "running shoes",
+     "amount": "£160.22",
+     "date": "24 March 2026"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-32",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Jack Murphy",
+     "order": "ORD-331967",
+     "item": "bookshelf",
+     "amount": "£268.16",
+     "date": "11 October 2026"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Jack Murphy",
+     "order": "ORD-331967",
+     "item": "bookshelf",
+     "amount": "£268.16",
+     "date": "11 October 2026"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-52",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Alex Shah",
+     "order": "ORD-816137",
+     "item": "running shoes",
+     "amount": "£147.93",
+     "date": "11 June 2025"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Alex Shah",
+     "order": "ORD-816137",
+     "item": "running shoes",
+     "amount": "£147.93",
+     "date": "11 June 2025"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-21",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Alex Reid",
+     "order": "ORD-252603",
+     "item": "headphones",
+     "amount": "£51.03",
+     "date": "18 June 2025"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Alex Reid",
+     "order": "ORD-252603",
+     "item": "headphones",
+     "amount": "£51.03",
+     "date": "18 June 2025"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-186",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Oliver Clarke",
+     "order": "ORD-566479",
+     "item": "rain jacket",
+     "amount": "£79.00",
+     "date": "3 June 2026"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Oliver Clarke",
+     "order": "ORD-566479",
+     "item": "rain jacket",
+     "amount": "£79.00",
+     "date": "3 June 2026"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-281",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Ella Price",
+     "order": "ORD-912057",
+     "item": "rain jacket",
+     "amount": "£277.10",
+     "date": "10 December 2026"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Ella Price",
+     "order": "ORD-912057",
+     "item": "rain jacket",
+     "amount": "£277.10",
+     "date": "10 December 2026"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-116",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Aisha Khan",
+     "order": "ORD-926019",
+     "item": "kettle",
+     "amount": "£178.70",
+     "date": "15 May 2025"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Aisha Khan",
+     "order": "ORD-926019",
+     "item": "kettle",
+     "amount": "£178.70",
+     "date": "15 May 2025"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-132",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Ruth Patel",
+     "order": "ORD-511084",
+     "item": "rain jacket",
+     "amount": "£169.94",
+     "date": "22 May 2026"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Ruth Patel",
+     "order": "ORD-511084",
+     "item": "rain jacket",
+     "amount": "£169.94",
+     "date": "22 May 2026"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-15",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Kiran Reid",
+     "order": "ORD-287438",
+     "item": "headphones",
+     "amount": "£30.87",
+     "date": "22 March 2026"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Kiran Reid",
+     "order": "ORD-287438",
+     "item": "headphones",
+     "amount": "£30.87",
+     "date": "22 March 2026"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-124",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Ben Shah",
+     "order": "ORD-988909",
+     "item": "headphones",
+     "amount": "£279.73",
+     "date": "25 March 2025"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Ben Shah",
+     "order": "ORD-988909",
+     "item": "headphones",
+     "amount": "£279.73",
+     "date": "25 March 2025"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-175",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Tom Khan",
+     "order": "ORD-512973",
+     "item": "blender",
+     "amount": "£261.74",
+     "date": "6 July 2026"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Tom Khan",
+     "order": "ORD-512973",
+     "item": "blender",
+     "amount": "£261.74",
+     "date": "6 July 2026"
+    }
+   }
+  },
+  {
+   "id": "draft:gen-record-202",
+   "kind": "draft",
+   "request": "Draft a refund confirmation from this record.",
+   "input": {
+    "record": {
+     "name": "Priya Shah",
+     "order": "ORD-652989",
+     "item": "running shoes",
+     "amount": "£239.56",
+     "date": "8 June 2025"
+    }
+   },
+   "gold": {
+    "record": {
+     "name": "Priya Shah",
+     "order": "ORD-652989",
+     "item": "running shoes",
+     "amount": "£239.56",
+     "date": "8 June 2025"
+    }
+   }
+  },
+  {
+   "id": "knowledge:mmlu-astronomy-87",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "As the life of a star progresses heavy elements are produced. The elements form layers around the star in this order (starting from the outer layer):",
+    "options": {
+     "A": "H → He → Li → N → O → Si → Fe",
+     "B": "H → He → C → O → Ne → Si → Fe",
+     "C": "H → He → Li → O → Ne → Si → Fe",
+     "D": "H → He → C → N → O → Si → Fe"
+    },
+    "subject": "astronomy"
+   },
+   "gold": {
+    "letter": "B"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-world_religions-14",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "What does the word \"Islam\" mean in Arabic?",
+    "options": {
+     "A": "Worship",
+     "B": "Submission",
+     "C": "Obedience",
+     "D": "Faith"
+    },
+    "subject": "world_religions"
+   },
+   "gold": {
+    "letter": "B"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-high_school_geography-96",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Which of the following is MOST likely to experience population pressure?",
+    "options": {
+     "A": "An industrial society with abundant natural resources and large imports of food",
+     "B": "A society with a highly mechanized agricultural sector",
+     "C": "A non-ecumene",
+     "D": "A slash-and-burn agricultural society"
+    },
+    "subject": "high_school_geography"
+   },
+   "gold": {
+    "letter": "D"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-astronomy-89",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Moons cause/contribute to which of the following?",
+    "options": {
+     "A": "stability of particles within rings.",
+     "B": "gravitational effects at ring edges as the moons pass by.",
+     "C": "gaps between rings.",
+     "D": "Moons contribute to all of the above."
+    },
+    "subject": "astronomy"
+   },
+   "gold": {
+    "letter": "D"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-prehistory-16",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "The significance of Frere's discovery was that what he found was located:",
+    "options": {
+     "A": "beneath the remains of extinct animals.",
+     "B": "on the surface, above the remains of extinct animals.",
+     "C": "in a region of Africa where no one thought humans had ever lived.",
+     "D": "on top of the ruins of a Medieval castle."
+    },
+    "subject": "prehistory"
+   },
+   "gold": {
+    "letter": "A"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-nutrition-259",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Maternal weight gain is usually monitored in pregnancy. Which of the following statements is/are true:\n",
+    "options": {
+     "A": "research to define pattern and level of optimal weight gain is ongoing",
+     "B": "both inadequate and excessive weight gain are associated with poorer maternal and infant health outcomes",
+     "C": "excessive maternal weight gain in pregnancy has been linked to obesity in the offspring",
+     "D": "all of the options given are correct"
+    },
+    "subject": "nutrition"
+   },
+   "gold": {
+    "letter": "D"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-global_facts-14",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "About what percentage of the global population was literate in 1950?",
+    "options": {
+     "A": "36%",
+     "B": "56%",
+     "C": "76%",
+     "D": "96%"
+    },
+    "subject": "global_facts"
+   },
+   "gold": {
+    "letter": "B"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-high_school_geography-183",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "The construction of freeways leads to all but which of the following results?",
+    "options": {
+     "A": "Urban sprawl",
+     "B": "Traffic increase",
+     "C": "Traffic congestion",
+     "D": "Decreased dependency on cars"
+    },
+    "subject": "high_school_geography"
+   },
+   "gold": {
+    "letter": "D"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-nutrition-122",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Which of the following statements about glucose metabolism is correct?\n",
+    "options": {
+     "A": "Glucagon increases the rate of glycolysis",
+     "B": "Glycolysis requires NADP+",
+     "C": "In glycolysis, glucose is cleaved into two three-carbon products",
+     "D": "The end-product of glycolysis in red blood cells is pyruvate"
+    },
+    "subject": "nutrition"
+   },
+   "gold": {
+    "letter": "C"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-astronomy-103",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "The famous Drake equation attempts to answer the following question:",
+    "options": {
+     "A": "Will the Sun become a black hole?",
+     "B": "Is the universe infinitely large?",
+     "C": "How old is the visible universe?",
+     "D": "Are we alone in the universe?"
+    },
+    "subject": "astronomy"
+   },
+   "gold": {
+    "letter": "D"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-world_religions-34",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": " In the Zoroastrian tradition, the term Gathas refers to which of the following?",
+    "options": {
+     "A": "Hymns",
+     "B": "Laws",
+     "C": "Ethics",
+     "D": "Myths"
+    },
+    "subject": "world_religions"
+   },
+   "gold": {
+    "letter": "A"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-nutrition-204",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "The critical pH below which demineralisation of tooth enamel occurs is usually around:\n",
+    "options": {
+     "A": "6",
+     "B": "5.7",
+     "C": "5.5",
+     "D": "5"
+    },
+    "subject": "nutrition"
+   },
+   "gold": {
+    "letter": "C"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-prehistory-226",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Homo habilis emerged around ________ years ago; Homo erectus followed at around _________ years ago.",
+    "options": {
+     "A": "4.5 million; 3.2 million",
+     "B": "3.6 million; 2.8 million",
+     "C": "2.5 million; 1.8 million",
+     "D": "1.4 million; 800,000"
+    },
+    "subject": "prehistory"
+   },
+   "gold": {
+    "letter": "C"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-global_facts-35",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "As of 2019, about what percentage of Turks say God plays an important role in their life?",
+    "options": {
+     "A": "59%",
+     "B": "69%",
+     "C": "79%",
+     "D": "89%"
+    },
+    "subject": "global_facts"
+   },
+   "gold": {
+    "letter": "D"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-world_religions-119",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": " Which leader is known for spreading the dharma of non-violence?",
+    "options": {
+     "A": "Ngo Dinh Diem",
+     "B": "The Dalai Lama",
+     "C": "Siddhartha",
+     "D": "Ashoka"
+    },
+    "subject": "world_religions"
+   },
+   "gold": {
+    "letter": "D"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-nutrition-300",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Energy that is expended for standing at an office desk, walking to a file cabinet, and other office job-related activities is referred to the following energy expenditure component:\n",
+    "options": {
+     "A": "Non-exercise activity thermogenesis (NEAT)",
+     "B": "Structured (volitional) exercise activity thermogenesis",
+     "C": "Physical activity (non-resting) energy expenditure",
+     "D": "Basal metabolic rate"
+    },
+    "subject": "nutrition"
+   },
+   "gold": {
+    "letter": "A"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-nutrition-109",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Which of the following is not a function of vitamin D?\n",
+    "options": {
+     "A": "Lipid-soluble antioxidant in cell membranes",
+     "B": "Fast responses to increase calcium absorption with no change in gene expression",
+     "C": "Regulation of differentiation of adipocytes",
+     "D": "Regulation of bone turnover"
+    },
+    "subject": "nutrition"
+   },
+   "gold": {
+    "letter": "A"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-astronomy-36",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "What does the astronomical term ecliptic describe?",
+    "options": {
+     "A": "The path of the Sun in the sky throughout a year.",
+     "B": "The axial tilt of the Earth throughout a year.",
+     "C": "The movement of the stars due to Earth’s rotation.",
+     "D": "The central line through the axis of rotation."
+    },
+    "subject": "astronomy"
+   },
+   "gold": {
+    "letter": "A"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-astronomy-67",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "The Pleiades is an open star cluster that plays a role in many ancient stories and is well-known for containing ... bright stars.",
+    "options": {
+     "A": "5",
+     "B": "7",
+     "C": "9",
+     "D": "12"
+    },
+    "subject": "astronomy"
+   },
+   "gold": {
+    "letter": "B"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-nutrition-128",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Which one of these organs has the lowest energy expenditure per unit of body mass (kg)?\n",
+    "options": {
+     "A": "Brain",
+     "B": "Kidney",
+     "C": "Liver",
+     "D": "Skeletal Muscle"
+    },
+    "subject": "nutrition"
+   },
+   "gold": {
+    "letter": "D"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-nutrition-16",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Crohn's disease:\n",
+    "options": {
+     "A": "Always affects the colon",
+     "B": "May lead to intestinal obstruction",
+     "C": "Is best treated surgically",
+     "D": "Requires a gluten free diet"
+    },
+    "subject": "nutrition"
+   },
+   "gold": {
+    "letter": "B"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-nutrition-163",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Which of the following cannot be a substrate for gluconeogenesis?\n",
+    "options": {
+     "A": "Glutamic acid",
+     "B": "Aspartic acid",
+     "C": "Palmitic acid",
+     "D": "Galactose"
+    },
+    "subject": "nutrition"
+   },
+   "gold": {
+    "letter": "C"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-high_school_geography-124",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Which of the following factors would be considered a \"pull\" factor for Riva when considering a move from India to the United States?",
+    "options": {
+     "A": "Abject poverty",
+     "B": "Better job and higher wages",
+     "C": "India's caste system",
+     "D": "Violence in her neighborhood"
+    },
+    "subject": "high_school_geography"
+   },
+   "gold": {
+    "letter": "B"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-nutrition-239",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Assessing growth in routine practice should be:\n",
+    "options": {
+     "A": "Height only",
+     "B": "Weight only",
+     "C": "Weight and height",
+     "D": "Head circumference"
+    },
+    "subject": "nutrition"
+   },
+   "gold": {
+    "letter": "C"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-nutrition-137",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "What is the estimated global prevalence of untreated dental caries?\n",
+    "options": {
+     "A": "20%",
+     "B": "40%",
+     "C": "60%",
+     "D": "80%"
+    },
+    "subject": "nutrition"
+   },
+   "gold": {
+    "letter": "B"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-nutrition-178",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Risk management for chemical contaminants of food generally relies on:\n",
+    "options": {
+     "A": "Banning of the contaminant from food",
+     "B": "Allowing levels of contamination based on what manufacturers believe is achievable",
+     "C": "Banning any food found to contain detectable amounts of the contaminants",
+     "D": "Prohibiting the introduction into commerce food containing contaminants at levels greater than a specified level (a risk-based MRL or tolerance)"
+    },
+    "subject": "nutrition"
+   },
+   "gold": {
+    "letter": "D"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-prehistory-216",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "From which of the following primates do humans descend?",
+    "options": {
+     "A": "chimpanzees",
+     "B": "gorillas",
+     "C": "orangutans",
+     "D": "none of the above"
+    },
+    "subject": "prehistory"
+   },
+   "gold": {
+    "letter": "D"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-global_facts-36",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Which of the following was responsible for the most death in the 20th century?",
+    "options": {
+     "A": "Earthquakes",
+     "B": "Volcanic activity",
+     "C": "Wildfires",
+     "D": "Floods"
+    },
+    "subject": "global_facts"
+   },
+   "gold": {
+    "letter": "D"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-nutrition-192",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "What difference will urbanisation make for hunger and malnutrition?\n",
+    "options": {
+     "A": "No significant difference; low-income urban and rural people face similar constraints in accessing food and consume similar diets in developing countries.",
+     "B": "It will reduce poverty and hunger because these are almost entirely concentrated in rural areas.",
+     "C": "Urban dwellers depend more than rural people on purchases to acquire food, have little opportunity to grow their own food, and so are much more vulnerable to food price increases.",
+     "D": "Poor city folk eat mainly sorghum, millet, maize and root crops, so a lot more of those foods will need to be produced as the world urbanises."
+    },
+    "subject": "nutrition"
+   },
+   "gold": {
+    "letter": "C"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-prehistory-220",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "The appropriateness and usefulness of pedestrian survey depends on:",
+    "options": {
+     "A": "the presence of primary and secondary refuse.",
+     "B": "naturally exposed layers in which to search for artifacts, ecofacts, or bone.",
+     "C": "associations that can be established between artifacts, ecofacts, and bone.",
+     "D": "the existence of a cache or collection of artifacts."
+    },
+    "subject": "prehistory"
+   },
+   "gold": {
+    "letter": "B"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-prehistory-50",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "What do the Hassunan and Samarran sites in Mesopotamia have in common?",
+    "options": {
+     "A": "Both relied heavily on agriculture.",
+     "B": "Both have an abundance of rare luxury items.",
+     "C": "Both have high-status burials.",
+     "D": "Both have sophisticated monumental architecture."
+    },
+    "subject": "prehistory"
+   },
+   "gold": {
+    "letter": "A"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-astronomy-99",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "The constellation ... is a bright W-shaped constellation in the northern sky.",
+    "options": {
+     "A": "Centaurus",
+     "B": "Cygnus",
+     "C": "Cassiopeia",
+     "D": "Cepheus"
+    },
+    "subject": "astronomy"
+   },
+   "gold": {
+    "letter": "C"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-world_religions-12",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "What is the communal meal offered at the place of worship called in Sikhism?",
+    "options": {
+     "A": "Sangat",
+     "B": "Langar",
+     "C": "Gurdwara",
+     "D": "Panth"
+    },
+    "subject": "world_religions"
+   },
+   "gold": {
+    "letter": "B"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-high_school_geography-159",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Which theory below was used as justification for US involvement in Vietnam in the 1960s and 1970s?",
+    "options": {
+     "A": "Devolution",
+     "B": "Colonialism",
+     "C": "Heartland theory",
+     "D": "Containment theory"
+    },
+    "subject": "high_school_geography"
+   },
+   "gold": {
+    "letter": "D"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-global_facts-25",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "As of 2019, about what percentage of people from Brazil says homosexuality should be accepted by society?",
+    "options": {
+     "A": "37%",
+     "B": "47%",
+     "C": "57%",
+     "D": "67%"
+    },
+    "subject": "global_facts"
+   },
+   "gold": {
+    "letter": "D"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-astronomy-128",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Mars has an atmosphere that is almost entirely carbon dioxide.Why isn't there a strong greenhouse effect keeping the planet warm?",
+    "options": {
+     "A": "Mars does not have enough internal heat to drive the greenhouse effect",
+     "B": "Mars is too far from the sun for the greenhouse effect to work",
+     "C": "the greenhouse effect requires an ozone layer which Mars does not have",
+     "D": "the atmosphere on Mars is too thin to trap a significant amount of heat"
+    },
+    "subject": "astronomy"
+   },
+   "gold": {
+    "letter": "D"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-high_school_geography-91",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "What is the most abundant fossil fuel?",
+    "options": {
+     "A": "Phosphate",
+     "B": "Oil",
+     "C": "Petroleum",
+     "D": "Coal"
+    },
+    "subject": "high_school_geography"
+   },
+   "gold": {
+    "letter": "D"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-prehistory-51",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Which crop is South America's most significant agricultural contribution to Europe?",
+    "options": {
+     "A": "rice",
+     "B": "potatoes",
+     "C": "squash",
+     "D": "beans"
+    },
+    "subject": "prehistory"
+   },
+   "gold": {
+    "letter": "B"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-world_religions-148",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "What is the English title for the divination text also known as the Yijing?",
+    "options": {
+     "A": "The Classic of Documents",
+     "B": "The Lotus Sutra",
+     "C": "The Flower Garland Sutra",
+     "D": "The Classic of Changes"
+    },
+    "subject": "world_religions"
+   },
+   "gold": {
+    "letter": "D"
+   }
+  },
+  {
+   "id": "knowledge:mmlu-high_school_geography-174",
+   "kind": "knowledge",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Which of the following items below is NOT considered a barrier to the diffusion of an innovation?",
+    "options": {
+     "A": "Internet",
+     "B": "Distance",
+     "C": "Cultural obstacles",
+     "D": "Government interference"
+    },
+    "subject": "high_school_geography"
+   },
+   "gold": {
+    "letter": "A"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-elementary_mathematics-191",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "The temperature on Mars reaches 27°C during the day and −125°C at night. What is the average temperature?",
+    "options": {
+     "A": "76°C",
+     "B": "−49°C",
+     "C": "49°C",
+     "D": "−76°C"
+    },
+    "subject": "elementary_mathematics"
+   },
+   "gold": {
+    "letter": "B"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-high_school_mathematics-237",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "One computer in a lab is programmed to back up data at the turn of the minute every five minutes. Another computer is programmed to back up data at the turn of the minute every two minutes. Find the number of times in twenty-four hours that the two computers back up data at the same time. (Assume that the computers do not back up at the start of the 24-hour period.)",
+    "options": {
+     "A": "144",
+     "B": "12",
+     "C": "6",
+     "D": "36"
+    },
+    "subject": "high_school_mathematics"
+   },
+   "gold": {
+    "letter": "A"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-elementary_mathematics-216",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Maria spends $9 on lunch each day she is at work. To find how much money she spends on lunch during a 5-day work week she multiplies 5 × 9. How much money does Maria spend on lunch during a 5-day work week?",
+    "options": {
+     "A": "$40 ",
+     "B": "$45 ",
+     "C": "$50 ",
+     "D": "$59 "
+    },
+    "subject": "elementary_mathematics"
+   },
+   "gold": {
+    "letter": "B"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-elementary_mathematics-39",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Let 12-9+c=12. What value of c makes the equation true?",
+    "options": {
+     "A": "0",
+     "B": "3",
+     "C": "9",
+     "D": "12"
+    },
+    "subject": "elementary_mathematics"
+   },
+   "gold": {
+    "letter": "C"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-high_school_mathematics-200",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Grady rides his bike $60\\%$ faster than his little brother Noah. If Grady rides $12$ miles further than Noah in two hours, how fast in miles per hour does Noah ride?",
+    "options": {
+     "A": "32",
+     "B": "20",
+     "C": "10",
+     "D": "7.2"
+    },
+    "subject": "high_school_mathematics"
+   },
+   "gold": {
+    "letter": "C"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-elementary_mathematics-254",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Solve 5 over 8 *m = 6.",
+    "options": {
+     "A": "3 and 5 over 9",
+     "B": "3 and 3 over 4",
+     "C": "5 and 1 over 3",
+     "D": "9 and 3 over 5"
+    },
+    "subject": "elementary_mathematics"
+   },
+   "gold": {
+    "letter": "D"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-elementary_mathematics-333",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Find the value of the expression −25 − (−11).",
+    "options": {
+     "A": "−36",
+     "B": "−14",
+     "C": "14",
+     "D": "36"
+    },
+    "subject": "elementary_mathematics"
+   },
+   "gold": {
+    "letter": "C"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-elementary_mathematics-354",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Ken and Tami are making necklaces. Ken makes 25 necklaces. Tami makes m more necklaces than Ken. Which expression represents the total number of necklaces Ken and Tami made?",
+    "options": {
+     "A": "25 + (25+ m)",
+     "B": "25 + 25m",
+     "C": "25 + m",
+     "D": "25m"
+    },
+    "subject": "elementary_mathematics"
+   },
+   "gold": {
+    "letter": "A"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-elementary_mathematics-118",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Tara can develop 2 rolls of film in about 18 minutes. At this rate, how long will it take her to develop 8 rolls of film?",
+    "options": {
+     "A": "42 minutes",
+     "B": "1 hour 12 minutes",
+     "C": "1 hour 20 minutes",
+     "D": "1 hour 44 minutes"
+    },
+    "subject": "elementary_mathematics"
+   },
+   "gold": {
+    "letter": "B"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-elementary_mathematics-37",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Which expression represents the phrase below? 3 fewer than a number, p",
+    "options": {
+     "A": "3-p",
+     "B": "p+3",
+     "C": "3/p",
+     "D": "p-3"
+    },
+    "subject": "elementary_mathematics"
+   },
+   "gold": {
+    "letter": "D"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-high_school_mathematics-165",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "An amoeba is placed in a puddle one day, and on that same day it splits into two amoebas. The next day, each new amoeba splits into two new amoebas, and so on, so that each day every living amoeba splits into two new amoebas. After one week, how many amoebas are in the puddle? (Assume the puddle has no amoebas before the first one is placed in the puddle.)",
+    "options": {
+     "A": "256",
+     "B": "1024",
+     "C": "64",
+     "D": "128"
+    },
+    "subject": "high_school_mathematics"
+   },
+   "gold": {
+    "letter": "D"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-high_school_mathematics-25",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "The symbol $5!$ means $5\\cdot 4\\cdot 3\\cdot 2\\cdot 1$. What is the greatest odd integer that is a factor of $5!$ ?",
+    "options": {
+     "A": "5",
+     "B": "3",
+     "C": "15",
+     "D": "31"
+    },
+    "subject": "high_school_mathematics"
+   },
+   "gold": {
+    "letter": "C"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-high_school_mathematics-94",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Given that $a$ and $b$ are real numbers such that $-3\\leq a\\leq1$ and $-2\\leq b\\leq 4$, and values for $a$ and $b$ are chosen at random, what is the probability that the product $a\\cdot b$ is positive? Express your answer as a common fraction.",
+    "options": {
+     "A": "\\frac{5}{12}",
+     "B": "\\frac{5}{11}",
+     "C": "\\frac{7}{12}",
+     "D": "\\frac{5}{17}"
+    },
+    "subject": "high_school_mathematics"
+   },
+   "gold": {
+    "letter": "A"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-high_school_mathematics-258",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Suppose that we roll two fair 6-sided dice. What is the probability that the two numbers rolled sum to 4?",
+    "options": {
+     "A": "\\frac{1}{4}",
+     "B": "\\frac{1}{12}",
+     "C": "\\frac{1}{3}",
+     "D": "\\frac{1}{9}"
+    },
+    "subject": "high_school_mathematics"
+   },
+   "gold": {
+    "letter": "B"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-elementary_mathematics-95",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Ms. Gutierrez needs to order rope for her gym class of 32 students. Each student will receive a piece of rope that is 5 feet 8 inches long. What is the total length of rope Ms. Gutierrez needs to order for her class?",
+    "options": {
+     "A": "106 feet 8 inches",
+     "B": "154 feet 8 inches",
+     "C": "160 feet 8 inches",
+     "D": "181 feet 4 inches"
+    },
+    "subject": "elementary_mathematics"
+   },
+   "gold": {
+    "letter": "D"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-elementary_mathematics-69",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Write the prime factorization of 77. Use exponents where possible.",
+    "options": {
+     "A": "7 • 11^2 • 13",
+     "B": "7^2 • 11",
+     "C": "7 • 11 • 13",
+     "D": "7 • 11"
+    },
+    "subject": "elementary_mathematics"
+   },
+   "gold": {
+    "letter": "D"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-elementary_mathematics-158",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Which set of integers is in order from least to greatest?",
+    "options": {
+     "A": "−9, −6, −3, 7, 11",
+     "B": "−3, −6, 7, 11, –9",
+     "C": "11, −9, 7, −6, −3",
+     "D": "7, 11, −6, −3, −9"
+    },
+    "subject": "elementary_mathematics"
+   },
+   "gold": {
+    "letter": "A"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-elementary_mathematics-251",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Solve the equation x + 71 = −22.",
+    "options": {
+     "A": "−93",
+     "B": "−49",
+     "C": "49",
+     "D": "93"
+    },
+    "subject": "elementary_mathematics"
+   },
+   "gold": {
+    "letter": "A"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-elementary_mathematics-2",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Find the quotient of −40 ÷ (−8).",
+    "options": {
+     "A": "1 over 5",
+     "B": "−5",
+     "C": "−1 over 5",
+     "D": "5"
+    },
+    "subject": "elementary_mathematics"
+   },
+   "gold": {
+    "letter": "D"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-high_school_mathematics-226",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "A consumer report revealed the following information about three tubes of toothpaste. Bright is $60 \\%$ more expensive than Fresh and has $25\\%$ less volume than Glow. Glow is $25\\%$ less expensive than Bright and has $33\\frac{1}{3} \\%$ more volume than Fresh. Fresh costs $\\$1.00$ per unit of volume. What is the number of cents per unit of volume of Glow?",
+    "options": {
+     "A": "90",
+     "B": "120",
+     "C": "60",
+     "D": "320"
+    },
+    "subject": "high_school_mathematics"
+   },
+   "gold": {
+    "letter": "A"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-elementary_mathematics-347",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "A group of students played a basketball game after school. Which total can be found using the expression 7 x 2?",
+    "options": {
+     "A": "the total number of points if a player made 7 shots and each shot was worth 2 points",
+     "B": "the total number of basketballs if 7 basketballs were old and 2 basketballs were new",
+     "C": "the total number of points if one player had 7 points and a different player had 2 points",
+     "D": "the total number of basketballs used if there were 7 basketballs and 2 of the basketballs were not used"
+    },
+    "subject": "elementary_mathematics"
+   },
+   "gold": {
+    "letter": "A"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-elementary_mathematics-271",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Which measurement would best be rounded to the nearest thousand?",
+    "options": {
+     "A": "The length of a football field in yards",
+     "B": "The height of a professional football player in inches",
+     "C": "The number of people at a professional football game",
+     "D": "The weight of a professional football player in pounds"
+    },
+    "subject": "elementary_mathematics"
+   },
+   "gold": {
+    "letter": "C"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-elementary_mathematics-328",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Which numbers are in order from least to greatest?",
+    "options": {
+     "A": "1 over 8, 0.75, 1 over 3, 5 over 6",
+     "B": "5 over 6, 1 over 3, 0.75, 1 over 8",
+     "C": "1 over 8, 1 over 3, 0.75, 5 over 6",
+     "D": "5 over 6, 0.75, 1 over 3, 1 over 8"
+    },
+    "subject": "elementary_mathematics"
+   },
+   "gold": {
+    "letter": "C"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-high_school_mathematics-125",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "How many diagonals are in a regular octagon?",
+    "options": {
+     "A": "8",
+     "B": "16",
+     "C": "17",
+     "D": "20"
+    },
+    "subject": "high_school_mathematics"
+   },
+   "gold": {
+    "letter": "D"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-elementary_mathematics-279",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "The vice president of sales took a client out to lunch. If the lunch was $44 and she gave a 20% tip, how much money did she spend on lunch?",
+    "options": {
+     "A": "$8.80 ",
+     "B": "$35.20 ",
+     "C": "$52.80 ",
+     "D": "$53.80 "
+    },
+    "subject": "elementary_mathematics"
+   },
+   "gold": {
+    "letter": "C"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-high_school_mathematics-8",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "We roll a fair 6-sided die 5 times. What is the probability that we get a 6 in at most 2 of the rolls?",
+    "options": {
+     "A": "\\frac{125}{648}",
+     "B": "\\frac{25}{648}",
+     "C": "\\frac{625}{648}",
+     "D": "\\frac{1}{648}"
+    },
+    "subject": "high_school_mathematics"
+   },
+   "gold": {
+    "letter": "C"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-elementary_mathematics-73",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Westview School is buying new basketball uniforms. Each uniform costs $46. The school will buy 12 uniforms. Which equation shows a way to find the total cost of the uniforms?",
+    "options": {
+     "A": "(40 × 10) + (6 × 2) = 400 + 12",
+     "B": "(40 × 6) + (10 × 2) = 240 + 20",
+     "C": "(40 × 12) + (6 × 12) = 480 + 72",
+     "D": "(40 × 12) + (60 × 12) = 480 + 720"
+    },
+    "subject": "elementary_mathematics"
+   },
+   "gold": {
+    "letter": "C"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-high_school_mathematics-91",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Let $f(x)=3x+4$ and $g(x)=2x-3$. If $h(x)=f(g(x))$, then what is the inverse of $h(x)$?",
+    "options": {
+     "A": "\\frac{x-5}{3}",
+     "B": "\\frac{x+5}{3}",
+     "C": "\\frac{x+5}{6}",
+     "D": "\\frac{x-5}{6}"
+    },
+    "subject": "high_school_mathematics"
+   },
+   "gold": {
+    "letter": "C"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-high_school_mathematics-59",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Solve for the sum of all possible values of $x$ when $3^{x^2+4x+4}=9^{x+2}$.",
+    "options": {
+     "A": "1",
+     "B": "2",
+     "C": "-2",
+     "D": "0"
+    },
+    "subject": "high_school_mathematics"
+   },
+   "gold": {
+    "letter": "C"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-elementary_mathematics-249",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Which expression shows a prime factorization?",
+    "options": {
+     "A": "2 • 9 • 11",
+     "B": "2.5 • 7 • 3",
+     "C": "1 • 11 • 13",
+     "D": "2 • 2 • 2 • 3 • 11"
+    },
+    "subject": "elementary_mathematics"
+   },
+   "gold": {
+    "letter": "D"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-elementary_mathematics-218",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Which of the following is the most appropriate unit for expressing the weight of a pencil?",
+    "options": {
+     "A": "pounds",
+     "B": "ounces",
+     "C": "quarts",
+     "D": "pints"
+    },
+    "subject": "elementary_mathematics"
+   },
+   "gold": {
+    "letter": "B"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-high_school_mathematics-29",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "A relative maximum value of the function y = (ln x)/x is",
+    "options": {
+     "A": "1",
+     "B": "e",
+     "C": "2/e",
+     "D": "1/e"
+    },
+    "subject": "high_school_mathematics"
+   },
+   "gold": {
+    "letter": "D"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-elementary_mathematics-272",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Sheila has been given 5 minutes to solve 20 arithmetic problems. What is the minimum rate Sheila can work in order to finish in time?",
+    "options": {
+     "A": "1 problem per minute",
+     "B": "2 problems per minute",
+     "C": "4 problems per minute",
+     "D": "5 problems per minute"
+    },
+    "subject": "elementary_mathematics"
+   },
+   "gold": {
+    "letter": "C"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-elementary_mathematics-215",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "What number makes the equation 35 / ? = 7 true?",
+    "options": {
+     "A": "5",
+     "B": "6",
+     "C": "7",
+     "D": "8"
+    },
+    "subject": "elementary_mathematics"
+   },
+   "gold": {
+    "letter": "A"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-elementary_mathematics-203",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "What is 60% of 30?",
+    "options": {
+     "A": "1.8",
+     "B": "18",
+     "C": "180",
+     "D": "1800"
+    },
+    "subject": "elementary_mathematics"
+   },
+   "gold": {
+    "letter": "B"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-elementary_mathematics-222",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "A baseball team sold 215 youth tickets for $3 ea",
+    "options": {
+     "A": "(215 × 3) – (467 × 7)",
+     "B": "(215 × 7) – (467 × 3)",
+     "C": "(467 × 3) – (215 × 7)",
+     "D": "(467 × 7) – (215 × 3)"
+    },
+    "subject": "elementary_mathematics"
+   },
+   "gold": {
+    "letter": "D"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-elementary_mathematics-243",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "A store has 3 boxes of shirts. Each box has 4 packages with 7 shirts in each package. The expression 3 × (4 × 7) can be used to find the total number of shirts. Which expression can also be used to find the total number of shirts?",
+    "options": {
+     "A": "12 × 3",
+     "B": "12 × 7",
+     "C": "28 × 4",
+     "D": "28 × 7"
+    },
+    "subject": "elementary_mathematics"
+   },
+   "gold": {
+    "letter": "B"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-elementary_mathematics-44",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Gwen wrote the number pattern below on a piece of paper. 1, 5, 9, 13 What are the next two terms in Gwen’s pattern?",
+    "options": {
+     "A": "15, 17",
+     "B": "15, 19",
+     "C": "17, 19",
+     "D": "17, 21"
+    },
+    "subject": "elementary_mathematics"
+   },
+   "gold": {
+    "letter": "D"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-high_school_mathematics-118",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "A number $x$ equals $2^{15}\\cdot3^6$. What number's cube equals $x$?",
+    "options": {
+     "A": "288",
+     "B": "27",
+     "C": "125",
+     "D": "121"
+    },
+    "subject": "high_school_mathematics"
+   },
+   "gold": {
+    "letter": "A"
+   }
+  },
+  {
+   "id": "reasoning:mmlu-high_school_mathematics-223",
+   "kind": "reasoning",
+   "request": "Answer this multiple-choice question.",
+   "input": {
+    "question": "Evaluate$$\\lceil\\sqrt{5}\\rceil + \\lceil\\sqrt{6}\\rceil + \\lceil\\sqrt{7}\\rceil + \\cdots + \\lceil\\sqrt{29}\\rceil$$Note: For a real number $x,$ $\\lceil x \\rceil$ denotes the smallest integer that is greater than or equal to $x.$",
+    "options": {
+     "A": "112",
+     "B": "111",
+     "C": "2006",
+     "D": "110"
+    },
+    "subject": "high_school_mathematics"
+   },
+   "gold": {
+    "letter": "A"
+   }
+  }
+ ]
+}

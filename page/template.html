@@ -79,7 +79,7 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-si
 <body>
 <nav aria-label="Sections">
   <a class="brand" href="#top">Browser Swarm</a>
-  <a href="#start">Start here</a><a href="#results">The six numbers</a><a href="#claims">Claims</a><a href="#how">How it works</a>
+  <a href="#start">Start here</a><a href="#results">The six numbers</a><a href="#fix">The fix</a><a href="#claims">Claims</a><a href="#how">How it works</a>
   <a href="#attacks">Attacks</a><a href="#blueprint">Blueprint</a><a href="#adopt">Adoption</a><a href="#brochure">For buyers</a><a href="#paper">White paper</a>
   <button class="ghost" id="theme" type="button" aria-label="Switch light or dark">Theme</button>
 </nav>
@@ -87,7 +87,8 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-si
 <h1>Small AI that refuses rather than guesses, in your browser tab</h1>
 <p class="lead">Browser Swarm is a web page that runs a small AI model on your own computer. It is free and open source, and there is nothing to install. The one model is given seven job descriptions, like seven desks in an office. Each desk does one bounded job: answer from your documents, read a receipt total, sort a message, convert a date. And each one is checked before it may speak. If the check fails, you get an honest "I can't say" in place of a confident wrong answer. The checks are not perfect, and this page counts every wrong answer that got through. Nothing you type leaves your device. Nothing is charged per question.</p>
 <p>It will not out-think a large cloud model, and this page shows exactly where it loses. What it is built for is the one number that decides whether you can trust AI with routine work: <b>how often it delivers a wrong answer as if it were right</b>. That is the silent-failure rate. It was measured on 410 tasks, with every rule written down and sealed before the test was run, and you can re-run it on your own machine.</p>
-<p><b>The price of that, stated up front:</b> <span data-bind="hl.price">The trade-off is not measured yet.</span></p>
+<p><b>The fix, tried next:</b> <span data-bind="hl.fix">not measured yet</span></p>
+<p><b>The price of the first build, stated up front:</b> <span data-bind="hl.price">The trade-off is not measured yet.</span></p>
 <div class="chips" aria-label="Headline numbers">
   <span class="chip">swarm silent failures <b data-bind="hl.swarm">not measured yet</b></span>
   <span class="chip">the same model with no checks <b data-bind="hl.raw1">not measured yet</b></span>
@@ -125,6 +126,7 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-si
     <div class="bar" aria-hidden="true"><i id="loadBar"></i></div><div id="loadStatus" class="small muted">Not loaded yet. Without it you can still read every result and re-check the published runs in step 7.</div>
     <p class="small muted">The model stays in the browser's storage, but it has to be loaded into memory on each visit: press Load, or any Run button. Memory figures are WebLLM's own for each build. Every number on this page names the tier it was measured on. Only the laptop tier has been measured.</p></li>
   <li><b>Watch the company work.</b> Seven desks share the one model. Open the inbox and each real job is routed to a desk, or refused. The jobs are the first of each kind from the dev set, not hand-picked, so you will see it withhold more than it releases. You'll see the model's words arrive as it writes them, then the compliance check decide whether they may leave. The gauges count as it goes.
+    <div class="row"><label for="system">Build</label><select id="system"><option value="v1">First build: one call per job</option><option value="v2">Decomposed build: smaller steps, by the desks that earned them</option></select><span class="small muted">The build used by steps 3 to 6. <span data-bind="fix.default">not measured yet</span></span></div>
     <div id="desks" class="grid three">not measured yet</div>
     <div class="row"><button id="work" type="button" disabled>Open the inbox</button><span class="small muted">Eleven real jobs, about a minute. One click: it loads the model first if step 2 has not.</span></div>
     <div id="gauges" class="chips" aria-live="polite">not measured yet</div>
@@ -141,7 +143,7 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-si
     <p class="small muted">Your documents use a looser retrieval bar (minimum score 2 rather than 8), because the bar was set on a 130-paragraph corpus and a few pasted paragraphs give each word less weight. That looser bar was not measured. The judge is unchanged.</p>
     <div id="docsOut" aria-live="polite"></div></li>
   <li><b>Run the measurement on your own GPU.</b> One click: it loads the model if needed, then runs the suite here. As it runs, every number on this page switches to your device's own: the headline, the six numbers, the chart, the per-kind table and the claims. Your progress is saved in this browser, so a closed tab picks up where it stopped.
-    <div class="row"><label for="runWhich">Set</label><select id="runWhich"><option value="sample">Sample: 18 tasks, about 1 minute</option><option value="dev">Dev: 95 tasks, about 4 minutes</option><option value="test">Test: 410 tasks, about 15 minutes (the sealed set)</option></select>
+    <div class="row"><label for="runWhich">Set</label><select id="runWhich"><option value="sample">Sample: 18 tasks, about 1 minute</option><option value="dev">Dev: 95 tasks, about 4 minutes</option><option value="test">Test: 410 tasks, about 15 minutes (the sealed set)</option><option value="test2">Fresh test: 410 more tasks (the second sealed set)</option></select>
       <button id="run" type="button" disabled>Run it</button><button class="ghost" id="save" type="button" disabled>Save my results</button></div>
     <div class="bar" aria-hidden="true"><i id="runBar"></i></div><div id="runOut" aria-live="polite" class="small"></div>
     <div class="row"><button class="ghost" id="attackRun" type="button" disabled>Run the attacks here</button><span class="small muted">40 fresh questions, four attacks each, plus the judge-only attack. About 8 minutes.</span></div>
@@ -174,6 +176,10 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-si
 <p>Before changing anything, every task the swarm did not answer was given one cause, from the guard's own record of where it stopped. There are three kinds, and they need opposite fixes. Smaller steps for the model can fix "too weak". Only loosening a check could fix "gate too strict", and that is not on the table. Correct refusals are not to be fixed at all.</p>
 <div class="tbl" id="diagnosis">not measured yet</div>
 
+<h2 id="fix">The fix: smaller steps for the same small model</h2>
+<p>The diagnosis says the swarm is safe and mostly unhelpful because the model is too weak for each desk's whole job in one reply. The fix does not use a bigger model and does not loosen any check. Each desk's job is broken, by code, into atoms: single narrow questions, each shown a few worked examples, each with its own check. A wrong atom is withheld, so a weak step makes the chain refuse; it cannot put a wrong part into an answer. The verified atoms are assembled by code, and the result still faces the desk's judge. No model plans and no model assembles. These claims were registered, and the code frozen, before the decomposed build saw a sealed task: <a href="https://github.com/sjgant80-hub/browser-swarm/blob/main/CLAIMS-2.md">CLAIMS-2.md</a> and <a href="https://github.com/sjgant80-hub/browser-swarm/blob/main/SEAL3.md">SEAL3.md</a>.</p>
+<div class="tbl" id="fixBody">not measured yet</div>
+
 <h2 id="claims">The pre-registered claims</h2>
 <p>Every claim and its bar was committed to git before any model saw a test task: <a href="https://github.com/sjgant80-hub/browser-swarm/blob/main/CLAIMS.md">CLAIMS.md</a>, seal 1, commit <code>08dc357</code>. The code and settings were then frozen and hashed before the test ran: <a href="https://github.com/sjgant80-hub/browser-swarm/blob/main/SEAL2.md">SEAL2.md</a>, seal 2, commit <code>1983e89</code>. The verdicts are computed on this page, by the gated kernel <code>src/claims.mjs</code>. A claim that failed stays here, failed, in red. The last column is your own device: every claim is marked unverified there until you run it yourself in step 6.</p>
 <div class="tbl" id="claimsTable">not measured yet</div>
@@ -200,6 +206,20 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-si
   <li><b>The base model</b> answers under the cell's card. Every cell shares this one model, so the swarm costs the memory of one model.</li>
   <li><b>The judge</b> checks the answer with code, never with a model. For documents: the answer must be the source's own words, in the sentence that best matches the question, carrying enough of the question's words, and not in a sentence that gives orders. For a receipt: the number must be printed on a total line. For an intent or a department: the model must agree with an independent word index built from training data. For a date or an amount: it is read back against the words it came from. For a letter: every fact must be word for word, and no other number may appear. Only a verified answer is released. Everything else is withheld, with the reason.</li>
 </ol>
+<h3 id="atoms">The decomposed build: smaller steps inside step 3</h3>
+<p>In the decomposed build, steps 1, 2 and 4 are unchanged. Step 3 is split. A desk's plan, written as code, breaks the job into atoms: one narrow question each, shown with a few worked examples, each with a check of its own. The model answers one atom at a time. An atom whose check fails is withheld and the chain stops there, so the desk refuses. The atoms that pass are put together by code, and the result goes to the same judge as before. Where code can read a part straight off the text, code reads it and the model is not asked.</p>
+<svg class="diagram" viewBox="0 0 900 200" role="img" aria-labelledby="atomTitle"><title id="atomTitle">A plan written as code asks the model one small question at a time, checks each answer, assembles the checked answers by code, and hands the result to the judge</title>
+  <g fill="none" stroke="var(--line)" stroke-width="2"><rect x="8" y="50" width="130" height="64" rx="10" fill="var(--panel)"/><rect x="178" y="50" width="130" height="64" rx="10" fill="var(--panel)"/><rect x="348" y="50" width="130" height="64" rx="10" fill="var(--panel)"/><rect x="518" y="50" width="150" height="64" rx="10" fill="var(--panel)"/><rect x="708" y="50" width="130" height="64" rx="10" fill="var(--panel)"/>
+  <path d="M138 82h40M308 82h40M478 82h40M668 82h40" stroke="var(--muted)" marker-end="url(#ar)"/>
+  <path d="M413 114v22a10 10 0 0 1-10 10H253a10 10 0 0 1-10-10v-22" stroke="var(--muted)" marker-end="url(#ar)"/><path d="M413 50V28" stroke="var(--no)"/></g>
+  <text x="73" y="78" text-anchor="middle">the plan</text><text x="73" y="98" text-anchor="middle" class="muted">code</text>
+  <text x="243" y="78" text-anchor="middle">one atom</text><text x="243" y="98" text-anchor="middle" class="muted">asked of the 1B</text>
+  <text x="413" y="78" text-anchor="middle">its check</text><text x="413" y="98" text-anchor="middle" class="muted">code</text>
+  <text x="593" y="78" text-anchor="middle">assemble</text><text x="593" y="98" text-anchor="middle" class="muted">code, from checked atoms</text>
+  <text x="773" y="78" text-anchor="middle">the judge</text><text x="773" y="98" text-anchor="middle" class="muted">as before</text>
+  <text x="413" y="20" text-anchor="middle" class="muted">check fails: withheld, the desk refuses</text><text x="328" y="168" text-anchor="middle" class="muted">passed: the next atom</text>
+</svg>
+<p class="small muted">Which desks use a plan like this, what each plan asks, and how each scored before it was adopted are in <a href="#fix">the fix</a>.</p>
 <h3>Traced from the published tab run</h3>
 <p class="small muted">Three real tasks from the run being shown, each re-decided by the code on this page from its recorded model reply. A released answer shows the characters it came from in its signed source.</p>
 <div id="trace">not measured yet</div>
@@ -218,6 +238,10 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-si
 <tr><td>Documents in the tab</td><td>DocDec's grounded router and gate (byte for byte), a signed corpus (a SHA-256 for each paragraph, checked in the tab), a twin check, and DocDec's sentence chooser as a second key.</td><td class="pass">built, gated</td></tr>
 <tr><td>Word indexes</td><td>Banking77 and CLINC150 training data, turned into per-intent and per-department word weights: an independent second key for the label cells.</td><td class="pass">built</td></tr>
 <tr><td>Measurement</td><td>The suite (410 test tasks), the scoring rules, the claims and the replay (<code>src/score.mjs</code>, <code>src/claims.mjs</code>, <code>src/swarm.mjs</code>).</td><td class="pass">built, gated</td></tr>
+<tr><td>Atoms</td><td>The smallest steps: one narrow question to the base model, a few invented worked examples, and a check written as code (<code>src/atoms.mjs</code>).</td><td data-bind="bp.atoms">not measured yet</td></tr>
+<tr><td>Plans and assembly</td><td>For each desk, the plan that breaks its job into atoms and the code that assembles the checked atoms. Each atom goes through the guard on its own. A desk uses its plan only if it earned it on tuning data (<code>src/assembly.mjs</code>).</td><td data-bind="bp.assembly">not measured yet</td></tr>
+<tr><td>Code readers</td><td>Dates and amounts read straight off the text, in the forms that need no guess. The first build's check, which is separate code, must agree (<code>src/read.mjs</code>).</td><td data-bind="bp.read">not measured yet</td></tr>
+<tr><td>Diagnosis and the fix's claims</td><td>One cause for every non-answer, and the verdicts on the fix (<code>src/diagnose.mjs</code>, <code>src/claims2.mjs</code>).</td><td data-bind="bp.fixclaims">not measured yet</td></tr>
 <tr><td>Fold-cache</td><td>Reusing the shared start of each cell's prompt across calls. It is measured on this page (claim F). WebLLM decides whether it reuses anything.</td><td data-bind="bp.fold">not measured yet</td></tr>
 <tr><td>LoRA adapters, hot-swapped</td><td>Specialists as separate small adapters on the base model.</td><td class="pend">not built: WebLLM 0.2.79 has no adapter API (checked in its published bundle)</td></tr>
 <tr><td>Speculative decoding</td><td>A 135M draft model proposes and the base model verifies, for speed.</td><td class="pend">not built: WebLLM 0.2.79 has no draft-model API</td></tr>

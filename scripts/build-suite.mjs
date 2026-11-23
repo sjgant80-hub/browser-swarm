@@ -187,8 +187,10 @@ const mmlu = (subjects) => subjects.flatMap((s) => {
   const f = join(mdir, `${s}_test.csv`); source(`MMLU ${s}`, f, 'MIT', 'https://github.com/hendrycks/test');
   return csv(readFileSync(f, 'utf8')).map(([question, A, B, C, D, letter], i) => ({ id: `mmlu-${s}-${i}`, subject: s, question, options: { A, B, C, D }, letter }));
 });
-const know = take(mmlu(['global_facts', 'high_school_geography', 'prehistory', 'world_religions', 'nutrition', 'astronomy']), (x) => x.id, 40, 8);
-const reas = take(mmlu(['elementary_mathematics', 'high_school_mathematics']), (x) => x.id, 40, 8);
+const knowPool = mmlu(['global_facts', 'high_school_geography', 'prehistory', 'world_religions', 'nutrition', 'astronomy']);
+const know = take(knowPool, (x) => x.id, 40, 8);
+const reasPool = mmlu(['elementary_mathematics', 'high_school_mathematics']);
+const reas = take(reasPool, (x) => x.id, 40, 8);
 const mcTask = (kind) => (x) => ({ id: `${kind}:${x.id}`, kind, request: 'Answer this multiple-choice question.', input: { question: x.question, options: x.options, subject: x.subject }, gold: { letter: x.letter } });
 
 const split = (s) => [
@@ -222,4 +224,20 @@ writeFileSync('data/attacks-dev.json', JSON.stringify({ v: 'browser-swarm-attack
 writeFileSync('data/attacks.json', JSON.stringify({ v: 'browser-swarm-attacks/1', note: `${note}. SEALED: positions 170-209, read once after seal 2`, attacks: attackPool(170) }, null, 1) + '\n');
 writeFileSync('data/tune.json', JSON.stringify({ v: 'browser-swarm-tune/1', note: 'the items after test and dev in the same seeded order; used only to choose settings', tasks: tune }, null, 1) + '\n');
 writeFileSync('data/departments.json', JSON.stringify(departments, null, 1) + '\n');
+// ── the second round (the decomposition fix): further along the SAME seeded order, past every item used above ──
+// tune2: building material for the kinds the first tuning pool did not cover. test2: a fresh sealed test split of the
+// same shape as the first, read once, after seal 3.
+const span = (items, key, from, n) => order(items, key).slice(from, from + n);
+const tune2 = [...span(receipts, (r) => r.id, 60, 40).map(exTask), ...span(dates, (x) => x.id, 33, 40).map(dtTask), ...span(money, (x) => x.id, 33, 40).map(moTask), ...span(records, (x) => x.id, 60, 40).map(drTask)];
+const test2 = [
+  ...span(answerable, (q) => q.qid, 210, 40).map((q) => qaTask(q, 'a')), ...span(impossible, (q) => q.qid, 43, 10).map((q) => qaTask(q, 'u')), ...span(offCorpus, (q) => q.qid, 92, 10).map((q) => qaTask(q, 'o')),
+  ...span(receipts, (r) => r.id, 100, 50).map(exTask), ...span(btest, (b) => b.id, 195, 60).map(clTask), ...span(inScope, (x) => x.id, 140, 50).map(rtTask), ...span(oos, (x) => x.id, 33, 10).map(rtTask),
+  ...span(dates, (x) => x.id, 73, 25).map(dtTask), ...span(money, (x) => x.id, 73, 25).map(moTask), ...span(records, (x) => x.id, 100, 50).map(drTask),
+  ...span(knowPool, (x) => x.id, 48, 40).map(mcTask('knowledge')), ...span(reasPool, (x) => x.id, 48, 40).map(mcTask('reasoning')),
+];
+const used = new Set([...test, ...dev, ...tune].map((t) => t.id));
+for (const t of [...tune2, ...test2]) { if (used.has(t.id)) throw new Error('the second round reuses ' + t.id); used.add(t.id); }
+writeFileSync('data/tune2.json', JSON.stringify({ v: 'browser-swarm-tune/2', note: 'the next items in the same seeded order for receipts, dates, amounts and refund records; used only to build the decomposed cells', tasks: tune2 }, null, 1) + '\n');
+writeFileSync('data/test2.json', JSON.stringify({ v: 'browser-swarm-suite/2', note: 'a fresh test split of the same shape as the first (410 tasks), drawn further along the same seeded order past every item used before. Read once, after seal 3.', counts: count(test2), sha256: sha(JSON.stringify(test2)), test: test2 }, null, 1) + '\n');
+console.log(`tune2 ${tune2.length} ${JSON.stringify(count(tune2))} · test2 ${test2.length} ${JSON.stringify(count(test2))} sha ${sha(JSON.stringify(test2)).slice(0, 12)}`);
 console.log(`test ${test.length} ${JSON.stringify(suite.counts.test)}\ndev ${dev.length} ${JSON.stringify(suite.counts.dev)}\ncorpus ${paragraphs.length} root ${root.slice(0, 12)} · cord skipped ${cordSkipped} · test sha ${suite.testSha256.slice(0, 12)}`);

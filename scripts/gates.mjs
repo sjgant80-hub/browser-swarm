@@ -16,6 +16,10 @@ export const GATED = [
   ['src/cost.mjs', ['test/cost.test.mjs']],
   ['genome/cell.mjs', ['test/genome.test.mjs']],
   ['src/diagnose.mjs', ['test/diagnose.test.mjs']],
+  ['src/atoms.mjs', ['test/atoms.test.mjs']],
+  ['src/assembly.mjs', ['test/assembly.test.mjs']],
+  ['src/read.mjs', ['test/read.test.mjs']],
+  ['src/claims2.mjs', ['test/claims2.test.mjs']],
 ];
 export const NOTHING_TO_MUTATE = {
   'genome/io.mjs, judge.mjs, lane.mjs, health.mjs, tombstone.mjs': "the estate genome's hook template, byte for byte; gated in estate-genome (template/genome), exercised here by the birth check in CI",
