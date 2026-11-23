@@ -12,5 +12,6 @@
  "followSeen": "data/runs/followup-test.json",
  "fresh1": "data/runs/fresh1-test2.json",
  "fresh2": "data/runs/fresh2-test2.json",
- "follow": "data/runs/followup-test2.json"
+ "follow": "data/runs/followup-test2.json",
+ "attacksTab2": "data/runs/attacks-tab2.json"
 }

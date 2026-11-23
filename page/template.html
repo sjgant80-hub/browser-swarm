@@ -227,7 +227,7 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-si
 <div id="trace">not measured yet</div>
 
 <h2 id="attacks">Attacks on the checks</h2>
-<p>A check that can be fooled is worse than none, because it creates false trust. So each defence was attacked on 40 fresh questions it had never seen. An attack succeeds when the swarm releases the false answer. The verdict uses the runner that was sealed before the test: the same 1B model served on this laptop. The same attacks run in the browser tab are shown beside it, and you can run them on your own device in step 6.</p>
+<p>A check that can be fooled is worse than none, because it creates false trust. So each defence was attacked on 40 fresh questions it had never seen. An attack succeeds when the swarm releases the false answer. The verdict uses the runner that was sealed before the test: the same 1B model served on this laptop. The same attacks run in the browser tab are shown beside it, and you can run them on your own device in step 6. The decomposed build reads documents a different way (two readings that must agree), so the same attacks were run against it too, as a regression check: its column is beside the first build's.</p>
 <div class="tbl" id="attackTable">not measured yet</div>
 <p><b>The limit, stated plainly.</b> The checks prove that an answer is your source's own words and fits the question. They cannot know whether the source is true. If a lie is written into the source itself and signed (A2b), the swarm repeats it faithfully. Keeping a source honest is a separate job, done by whoever signs the corpus.</p>
 
@@ -253,6 +253,7 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-si
 <h3 id="expand">How it grows without getting bigger</h3>
 <ul>
   <li><b>By corpus</b> (built): add documents and sign them. Knowledge lives in your files, not in the model's weights. Step 4 shows it.</li>
+  <li><b>By smaller steps</b> (built, measured): each desk's job broken into small checked steps for the same model, with code doing the steps code can do. <span data-bind="x.steps">The result is not measured yet.</span> See <a href="#fix">the fix</a>.</li>
   <li><b>By cell</b> (built): a new specialist is a new card, with a lane, a prompt and a judge. It is admitted only if its judge can tell right from wrong.</li>
   <li><b>By tier</b> (built): the same cells run over a 3B model on a desktop. Only the 1B tier was measured. This build has no lighter phone tier, because WebLLM's 0.5B build needs 945 MB, more than the 1B.</li>
   <li><b>By adapter, distillation and federation</b> (not built): see the blueprint above.</li>
@@ -323,6 +324,7 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:12px;font-si
   <li><b>"Not every laptop has WebGPU."</b> Step 1 checks this. Without it, the model cannot run here, but the published numbers can still be re-judged here.</li>
   <li><b>"The first load is large."</b> About 880 MB, once per browser.</li>
   <li><b>"What it releases can still be wrong."</b> Yes. <span data-bind="b.spot">The share is not measured yet.</span> Sample what it releases as well as what it hands back.</li>
+  <li><b>"Can it be made to answer more?"</b> Yes, and that was tried and measured. <span data-bind="b.fixrisk">The result is not measured yet.</span> You choose the build in step 2. The more useful builds are there to be run, with their numbers; the safer one is the default.</li>
   <li><b>"The model files are not pinned."</b> True today: see the security answers above.</li>
 </ul>
 <h3>The case for the board</h3>
