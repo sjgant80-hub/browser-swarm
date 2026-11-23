@@ -13,10 +13,10 @@ import { fileURLToPath } from 'node:url';
 export const KERNELS = [
   ['SHA', 'src/sha256.mjs'], ['KERNEL', 'vendor/docdec-kernel.mjs'], ['GATE', 'vendor/docdec-gate.mjs'], ['STATS', 'vendor/stats.mjs'],
   ['GUARD', 'vendor/guard.mjs'], ['ROUTE', 'vendor/route.mjs'], ['CHECKS', 'src/checks.mjs'], ['CELLS', 'src/cells.mjs'],
-  ['SCORE', 'src/score.mjs'], ['SWARM', 'src/swarm.mjs'], ['ADV', 'src/adversary.mjs'], ['CLAIMS', 'src/claims.mjs'], ['COST', 'src/cost.mjs'],
+  ['SCORE', 'src/score.mjs'], ['SWARM', 'src/swarm.mjs'], ['ADV', 'src/adversary.mjs'], ['CLAIMS', 'src/claims.mjs'], ['COST', 'src/cost.mjs'], ['DIAG', 'src/diagnose.mjs'],
 ];
 // what bake() writes into the page: these ids, and every data-bind. Device, load and run status are the visitor's own.
-export const BAKED = ['viewBar', 'six', 'sixNote', 'money', 'kinds', 'claimsTable', 'attackTable', 'trace', 'walk', 'desks', 'gauges', 'inbox'];
+export const BAKED = ['viewBar', 'six', 'sixNote', 'money', 'kinds', 'claimsTable', 'attackTable', 'trace', 'walk', 'desks', 'gauges', 'inbox', 'diagnosis'];
 const LF = (s) => s.split('\r\n').join('\n');
 const nsOf = (spec, from) => {
   const name = spec.split('/').pop();

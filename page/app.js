@@ -179,6 +179,24 @@ function renderKinds(A) {
       + `<td class="num">${k(A.raw1, kind, (x) => (x.silent ? `<span class="fail">${x.silent}</span>` : '0'))}</td><td class="num">${k(A.raw7, kind, (x) => x.correct)}</td><td class="num">${k(A.raw7, kind, (x) => (x.silent ? `<span class="fail">${x.silent}</span>` : '0'))}</td></tr>`).join('')
       : `<tr><td colspan="8">${NM}</td></tr>`) + '</tbody></table>';
 }
+function renderDiagnosis(A) {
+  const run = A.tab;
+  if (!run || !run.records.gated.length) { $('diagnosis').innerHTML = NM; return; }
+  const d = DIAG.summary(A.tasks, run.records.gated, run.records.raw), n = d.notAnswered || 1;
+  const row = (name, count, what) => `<tr><td><b>${name}</b></td><td class="num">${count}</td><td class="num">${pct(count / n, 0)}</td><td class="small">${what}</td></tr>`;
+  const kinds = ORDER.filter((k) => d.byKind[k]);
+  const verdict = d.largest === 'b' ? 'The largest cause is <b>too weak</b>: the swarm had no right answer to release. That is the cause smaller steps can fix, so the fix to build is decomposition, with every check left exactly as it is.'
+    : d.largest === 'c' ? 'The largest cause is <b>the gate</b>: right answers were withheld. The fix is to recalibrate the checks, not to add cells.'
+      : 'The largest cause is <b>correct refusal</b>: the swarm is more useful than its headline accuracy suggests.';
+  $('diagnosis').innerHTML = `<table><thead><tr><th>cause</th><th class="num">tasks</th><th class="num">of the ${d.notAnswered} not answered</th><th>what it means</th></tr></thead><tbody>`
+    + row('Correct refusal', d.a, `${d.by.trap} hard open questions no desk owns, and ${d.by['correct refusal']} tasks where nothing was right to say. Refusing these is the designed behaviour.`)
+    + row('Too weak', d.b, 'The model declined, or wrote a wrong answer the check rightly withheld, or the lane refused and the model alone was wrong too.')
+    + row('Gate too strict', d.c, 'A right answer was withheld by a check, or the lane refused a job the model alone got right.')
+    + `</tbody></table><p>${verdict}</p><p class="small">Usefulness over the ${d.answerable} answerable bounded tasks only: ${d.answerableRight} right (${pct(d.answerableRate)}). Leaving out the tasks it was right to refuse does not flatter it.</p>`
+    + '<table><thead><tr><th>kind</th><th class="num">answered right</th><th class="num">answered wrong</th><th class="num">correct refusal</th><th class="num">too weak</th><th class="num">gate too strict</th></tr></thead><tbody>'
+    + kinds.map((k) => { const x = d.byKind[k]; return `<tr><td>${esc(KIND_NAMES[k])}</td><td class="num">${x['answered right']}</td><td class="num">${x['answered wrong'] ? `<span class="fail">${x['answered wrong']}</span>` : 0}</td><td class="num">${x['correct refusal'] + x.trap}</td><td class="num">${x['too weak']}</td><td class="num">${x['gate too strict']}</td></tr>`; }).join('')
+    + '</tbody></table><details><summary>Each cause in detail</summary><ul class="small">' + Object.entries(d.details).sort((a, b) => b[1] - a[1]).map(([k, v]) => `<li>${v} · ${esc(k)}</li>`).join('') + '</ul></details>';
+}
 const NAMES = { H: 'Headline: the swarm\'s silent-failure rate', B1: 'Match-or-close on bounded work', B2: 'The honest loss on hard work', G: 'Grounding', P: 'Privacy', L: 'Latency', $: 'Cost', A1: 'A1 tampered corpus', A2: 'A2 poisoned twin', A2b: 'A2b lie at the source', A3: 'A3 prompt injection', A4: 'A4 engineered wrong answers', F: 'Fold-cache', X: 'Frontier arm' };
 const badge = (v) => (v.pass === true ? '<span class="pass">PASS</span>' : v.pass === false ? '<span class="fail">FAIL</span>' : /^pending/.test(v.result) ? '<span class="pend">NOT MEASURED YET</span>' : '<span class="muted">reported</span>');
 function renderClaims(VP, VM) {
@@ -340,7 +358,7 @@ async function renderAll() {
   const AM = S.local && S.local.records.gated.length ? view('mine') : null;
   const VM = AM && AM.fullTest && S.local.complete ? CLAIMS.evaluate(evidence(AM, true)) : null;
   const A = S.view === 'mine' && AM ? AM : AP, V = A === AM ? VM : VP;
-  renderViewBar(A); renderHeadline(A, V); renderSix(A); renderMoney(A); renderKinds(A); renderClaims(VP, VM); renderAttacks(VP); renderCost(A); renderWalk(); renderDesks(); renderGauges(); renderInbox();
+  renderViewBar(A); renderHeadline(A, V); renderSix(A); renderMoney(A); renderKinds(A); renderDiagnosis(A); renderClaims(VP, VM); renderAttacks(VP); renderCost(A); renderWalk(); renderDesks(); renderGauges(); renderInbox();
   await renderTrace(A);
 }
 

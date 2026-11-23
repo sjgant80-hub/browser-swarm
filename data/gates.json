@@ -1,7 +1,7 @@
 {
  "witness": "v0.6",
- "total": 387,
- "killed": 386,
+ "total": 408,
+ "killed": 407,
  "clean": true,
  "files": {
   "src/checks.mjs": {
@@ -55,6 +55,12 @@
   "genome/cell.mjs": {
    "total": 16,
    "killed": 16,
+   "ignored": 0,
+   "clean": true
+  },
+  "src/diagnose.mjs": {
+   "total": 21,
+   "killed": 21,
    "ignored": 0,
    "clean": true
   }
