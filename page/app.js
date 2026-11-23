@@ -115,7 +115,7 @@ const sourceOf = (run) => (run ? `${tierOf(run.model)}, in a browser tab (WebLLM
 function renderViewBar(A) {
   const L = S.local, P = S.data.runs;
   if (A.mine) {
-    $('viewBar').innerHTML = `<b>Showing your run on this device</b> (${L.system === 'v2' ? 'the decomposed build' : 'the first build'}). ${A.tasks.length} of ${A.pool.length} ${SPLIT_NAMES[L.split] || L.split} tasks${L.complete ? '' : ' so far'}. ${esc(sourceOf(L))}. Every number below is from this run, except the 7B and frontier columns, which are the published ones on the same tasks. <button class="ghost" type="button" data-act="view-published">Show the published runs</button>`;
+    $('viewBar').innerHTML = `<b>Showing your run on this device</b> (${BUILD_NAMES[L.system] || BUILD_NAMES.v1}). ${A.tasks.length} of ${A.pool.length} ${SPLIT_NAMES[L.split] || L.split} tasks${L.complete ? '' : ' so far'}. ${esc(sourceOf(L))}. Every number below is from this run, except the 7B and frontier columns, which are the published ones on the same tasks. <button class="ghost" type="button" data-act="view-published">Show the published runs</button>`;
     return;
   }
   const saved = L && L.records.gated.length ? ` You have a run saved on this device: ${L.records.gated.length} ${SPLIT_NAMES[L.split] || L.split} tasks. <button class="ghost" type="button" data-act="view-mine">Show my run</button> <button class="ghost" type="button" data-act="discard-run">Discard it</button>` : '';
@@ -215,6 +215,7 @@ const gateCell = (files) => {
   const k = got.reduce((a, g) => a + g.killed, 0), n = got.reduce((a, g) => a + g.total, 0), ig = got.reduce((a, g) => a + (g.ignored || 0), 0);
   return got.every((g) => g.clean === true) ? `<span class="pass">built, gated ${k}/${n}${ig ? ` (${ig} equivalent, with its reason)` : ''}</span>` : `<span class="fail">built, gate not clean: ${k}/${n}</span>`;
 };
+const BUILD_NAMES = { v1: 'the first build', v2: 'the decomposed build', v3: 'the follow-up build' };
 const BOUNDED_KINDS = ['qa', 'extract', 'classify', 'route', 'date', 'pence', 'draft'];
 const meanMs = (recs) => (recs.length ? recs.reduce((a, r) => a + (Number(r.ms) || 0), 0) / recs.length : null);
 const callsPer = (recs) => { const n = recs.map((r) => (r.calls || []).filter((c) => !c.cached).length); return n.length ? n.reduce((a, b) => a + b, 0) / n.length : null; };
@@ -224,7 +225,7 @@ function fixArms() {
   const v2 = M(P.tab2, test, 'tab');
   const released = (run, tasks) => tasks.filter((t) => { const r = run.records.gated.find((x) => x.id === t.id); return r && r.released === true; }).length;
   const traps = v2 ? { hard: released(P.tab2, test.filter((t) => SCORE.HARD.includes(t.kind))), unanswerable: released(P.tab2, test.filter((t) => SCORE.shouldRefuse(t))) } : null;
-  return { test, fresh, v1: M(P.tab, test, 'tab'), v2, traps, v1fresh: M(P.fresh1, fresh, 'tab'), v2fresh: M(P.fresh2, fresh, 'tab'), gated7: M(P.big, test, 'node') };
+  return { test, fresh, v1: M(P.tab, test, 'tab'), v2, traps, v1fresh: M(P.fresh1, fresh, 'tab'), v2fresh: M(P.fresh2, fresh, 'tab'), v3fresh: M(P.follow, fresh, 'tab'), v3seen: M(P.followSeen, test, 'tab'), gated7: M(P.big, test, 'node') };
 }
 function renderFix() {
   const P = S.data.runs, F = fixArms(), ad = S.data.adoption;
@@ -246,6 +247,18 @@ function renderFix() {
   } else parts.push(`<p>${NM}: the tuning comparison that decides which desks are decomposed.</p>`);
   parts.push('<h3>The claims for the fix</h3><table><thead><tr><th>claim</th><th>bar</th><th>result</th><th>verdict</th></tr></thead><tbody>'
     + V.map((v) => `<tr><td><b>${v.id}</b> ${esc(NAMES2[v.id])}</td><td class="small">${esc(CLAIMS2.BARS[v.id])}</td><td class="small">${esc(v.result.replace(/^pending: /, 'Not measured yet: '))}</td><td>${badge(v)}</td></tr>`).join('') + '</tbody></table>');
+  // the follow-up claim (CLAIMS-3.md): registered after D1 failed, judged on the fresh 410 only
+  if (F.v2) {
+    const E = CLAIMS3.evaluate(F.v3fresh), NAMES3 = { E1: 'Safety, on tasks never seen', E2: 'Usefulness, on tasks never seen' };
+    const d1 = verdict.D1;
+    parts.push('<h3 id="followup">The follow-up, registered after the result above</h3>'
+      + `<p>${d1.pass === false ? 'The safety claim (D1) failed, and it stays failed.' : 'The claims above stand as they are.'} The wrong answers pointed at one desk: the banking desk, whose yes-or-no plan had been adopted on tuning data by one point of score. So one more claim was registered, <b>after</b> seeing that result and <b>before</b> any result on the fresh 410 was known: the same build with the banking desk put back to one call, judged on the fresh tasks only. It was committed while both fresh-set runs were still in progress: <a href="https://github.com/sjgant80-hub/browser-swarm/blob/main/CLAIMS-3.md">CLAIMS-3.md</a>. No new model run was made for it. On every task the follow-up build makes the model calls one of the two registered runs already holds, so its record is assembled from those runs and every decision is decided again by its own code.</p>`
+      + '<table><thead><tr><th>claim</th><th>bar</th><th>result</th><th>verdict</th></tr></thead><tbody>'
+      + E.map((v) => `<tr><td><b>${v.id}</b> ${esc(NAMES3[v.id])}</td><td class="small">${esc(CLAIMS3.BARS[v.id])}</td><td class="small">${esc(v.result.replace(/^pending: /, 'Not measured yet: '))}</td><td>${badge(v)}</td></tr>`).join('') + '</tbody></table>'
+      + (F.v3fresh && F.v1fresh ? `<p>On the fresh 410 the follow-up build released ${F.v3fresh.all.released} answers, ${F.v3fresh.all.silent} of them wrong, and got ${pct(F.v3fresh.bounded.accuracy)} of the bounded work right. The first build, on the same tasks: ${F.v1fresh.all.released} released, ${F.v1fresh.all.silent} wrong, ${pct(F.v1fresh.bounded.accuracy)} right.</p>` : '')
+      + (F.v3seen ? `<p class="small muted">Seen data, not a claim: on the sealed 410, which is where the failure was seen and this build was chosen, the follow-up build comes to ${F.v3seen.all.silent} silent failures and ${pct(F.v3seen.bounded.accuracy)} of the bounded work right.</p>` : ''));
+    bind('hl.follow', F.v3fresh ? `A follow-up was then registered before any fresh result was known: the same build with the banking desk put back. On 410 fresh tasks it got ${pct(F.v3fresh.bounded.accuracy)} of the bounded work right with ${F.v3fresh.all.silent} silent failures: safety ${E[0].pass ? '<span class="pass">holds</span>' : '<span class="fail">fails</span>'}, usefulness ${E[1].pass ? '<span class="pass">reaches its bar</span>' : '<span class="fail">misses its bar</span>'}. <a href="#followup">The follow-up</a>.` : 'A follow-up claim is registered and not measured yet.');
+  } else bind('hl.follow', '');
   // side by side, per kind, on each sealed set
   const side = (title, tasks, a, b, runA, runB) => {
     if (!a || !b) return `<h3>${title}</h3><p>${NM}</p>`;
@@ -272,12 +285,18 @@ function renderFix() {
     const g7 = F.gated7;
     parts.push(`<h3>What moved</h3><p>On the sealed 410 the decomposed build answered ${F.v2.all.released} tasks where the first build answered ${F.v1.all.released}. "Too weak" went from ${d1.b} tasks to ${d2.b}; "gate too strict" went from ${d1.c} to ${d2.c}; correct refusals from ${d1.a} to ${d2.a}. Silent failures went from ${F.v1.all.silent} to ${F.v2.all.silent}.</p>`
       + (() => { const slow = ORDER.filter((k) => F.v2.byKind[k]).map((k) => [k, F.v2.byKind[k].medianMs]).sort((a, b) => b[1] - a[1])[0]; return `<p><b>Time, said straight.</b> The median time per task went from ${(F.v1.all.medianMs / 1000).toFixed(2)} s to ${(F.v2.all.medianMs / 1000).toFixed(2)} s, and the mean from ${(meanMs(P.tab.records.gated) / 1000).toFixed(2)} s to ${(meanMs(P.tab2.records.gated) / 1000).toFixed(2)} s. The median is low because many tasks now need no model call, or are refused before the model runs. The slowest kind in the decomposed build is ${esc(KIND_NAMES[slow[0]])}, at a median ${(slow[1] / 1000).toFixed(1)} s per task. The whole sealed set took ${P.tab2.seconds} s in the tab (the first build's run, which also made the unchecked arm from the same calls: ${P.tab.seconds} s).</p>`; })()
+      + `<p><b>Counted two ways.</b> The registered bar counts silent failures per task, and on that count the decomposed build ${verdict.D1.pass ? 'held the line' : 'did worse than the first build'}: ${F.v2.all.silent} in ${F.v2.all.tasks} against ${F.v1.all.silent}${F.v2fresh && F.v1fresh ? `, and ${F.v2fresh.all.silent} against ${F.v1fresh.all.silent} on the fresh tasks` : ''}. It also answers far more. Per answer released, the first build was wrong in ${F.v1.all.silent} of ${F.v1.all.released} (${pct(F.v1.all.silentAmongReleased)}) and the decomposed build in ${F.v2.all.silent} of ${F.v2.all.released} (${pct(F.v2.all.silentAmongReleased)})${F.v2fresh && F.v1fresh ? `; on the fresh tasks, ${F.v1fresh.all.silent} of ${F.v1fresh.all.released} (${pct(F.v1fresh.all.silentAmongReleased)}) and ${F.v2fresh.all.silent} of ${F.v2fresh.all.released} (${pct(F.v2fresh.all.silentAmongReleased)})` : ''}. So each released answer is about as likely to be wrong as before, and there are more of them. That does not rescue the claim: the claim was per task, and it stays as registered.</p>`
       + whereOf(F.v1, F.v2, P.tab2, ' on the sealed 410')
       + (F.v1fresh && F.v2fresh ? whereOf(F.v1fresh, F.v2fresh, P.fresh2, ' on the fresh 410') : '')
       + (g7 ? `<p><b>The road not taken.</b> A model seven times larger behind the first build's checks got ${pct(g7.bounded.accuracy)} of the bounded work right with ${g7.all.silent} silent failures, at a median ${(g7.all.medianMs / 1000).toFixed(1)} s per task on a laptop processor and with no browser. The decomposed 1B got ${pct(F.v2.bounded.accuracy)} with ${F.v2.all.silent}, in a browser tab, at a median ${(F.v2.all.medianMs / 1000).toFixed(1)} s. ${F.v2.bounded.accuracy >= g7.bounded.accuracy ? 'On this suite the small model, decomposed, matches or beats the larger one on usefulness.' : 'The larger model is still the more useful one. If usefulness matters more than running in a tab, it is the honest choice.'}</p>` : ''));
   }
+  const made = [['The decomposed build on the sealed 410', P.tab2], ['The first build on the fresh 410', P.fresh1], ['The decomposed build on the fresh 410', P.fresh2]].filter(([, r]) => r);
+  if (made.length) {
+    const hosts = (r) => [...new Set((r.privacy && Array.isArray(r.privacy.observed) ? r.privacy.observed : []).map((u) => { try { return new URL(u).host; } catch { return String(u); } }))];
+    parts.push('<h3>How these runs were made</h3><ul class="small">' + made.map(([name, r]) => `<li>${name}: ${esc(sourceOf(r))}, ${r.seconds} s of work in ${r.segments} sitting${r.segments === 1 ? '' : 's'}. ${r.segments > 1 ? 'The browser discarded the tab while it ran; the run saves every task and picked up where it stopped. ' : ''}Network requests counted by the browser while it ran: ${r.privacy ? r.privacy.requests : 'not counted'}${r.privacy && r.privacy.requests ? ` (to ${hosts(r).map(esc).join(', ')}: this computer itself, where the measurement saved the run file before it)` : ''}.</li>`).join('') + '</ul><p class="small muted">Each of these files holds every model reply. This page decides all of them again from those replies when you press "Re-judge the published runs" in step 6, and the repository does the same on every push.</p>');
+  }
   $('fixBody').innerHTML = parts.join('');
-  bind('fix.default', S.fixHolds === true ? 'The decomposed build is the default here, because its two headline claims (safety held, usefulness up) both passed on the sealed tasks.' : S.fixHolds === false ? 'The first build stays the default here, because the decomposed build did not pass both of its headline claims.' : 'The first build is the default until the decomposed build has been measured on the sealed tasks.');
+  bind('fix.default', S.followHolds === true ? 'The follow-up build is the default here: both of its claims passed on tasks it had never seen.' : S.fixHolds === true ? 'The decomposed build is the default here, because its two headline claims (safety held, usefulness up) both passed on the sealed tasks.' : S.fixHolds === false ? `The first build stays the default here: the decomposed build did not pass both of its headline claims${S.followHolds === false ? ', and nor did the follow-up build' : ''}.` : 'The first build is the default until the decomposed build has been measured on the sealed tasks.');
   bind('bp.atoms', gateCell(['src/atoms.mjs'])); bind('bp.assembly', gateCell(['src/assembly.mjs'])); bind('bp.read', gateCell(['src/read.mjs'])); bind('bp.fixclaims', gateCell(['src/diagnose.mjs', 'src/claims2.mjs']));
   bind('hl.swarm2', F.v2 ? `${pct(F.v2.all.silentRate)} <span class="muted">(${F.v2.all.silent} of ${F.v2.all.tasks})</span>` : NM);
   bind('hl.acc2', F.v2 ? `${pct(F.v2.bounded.accuracy)} <span class="muted">(${F.v2.bounded.correct} of ${F.v2.bounded.tasks})</span>` : NM);
@@ -286,7 +305,7 @@ function renderFix() {
   bind('b.fixboard', F.v2 ? `Breaking each job into smaller checked steps then took the share of bounded work done right from ${F.v1 ? pct(F.v1.bounded.accuracy) : '?'} to ${pct(F.v2.bounded.accuracy)}, with ${F.v2.all.silent} confidently wrong answers in ${F.v2.all.tasks}${F.v2fresh ? ` (and ${F.v2fresh.all.silent} in ${F.v2fresh.all.tasks} on fresh tasks)` : ''}.` : 'The decomposed build is not measured yet.');
   // the headline sentence about the fix
   const D1 = verdict.D1, D2 = verdict.D2;
-  bind('hl.fix', F.v2 ? `Then each desk's job was broken into smaller steps for the same small model. On the same sealed tasks the decomposed build got ${pct(F.v2.bounded.accuracy)} of the bounded work right (the first build: ${pct(F.v1 ? F.v1.bounded.accuracy : null)}) with ${F.v2.all.silent} silent failures (the first build: ${F.v1 ? F.v1.all.silent : '?'}). Its two headline claims: safety ${D1.pass ? '<span class="pass">holds</span>' : '<span class="fail">fails</span>'}, usefulness ${D2.pass ? '<span class="pass">reaches its bar</span>' : '<span class="fail">misses its bar</span>'}. <a href="#fix">The fix, in full</a>.` : 'A fix for the low completion rate, breaking each job into smaller steps, is built and not measured yet.');
+  bind('hl.fix', F.v2 ? `Then each desk's job was broken into smaller steps for the same small model. On the same sealed tasks the decomposed build got ${pct(F.v2.bounded.accuracy)} of the bounded work right (the first build: ${pct(F.v1 ? F.v1.bounded.accuracy : null)}) with ${F.v2.all.silent} silent failures (the first build: ${F.v1 ? F.v1.all.silent : '?'}). Its two headline claims: safety ${D1.pass ? '<span class="pass">holds</span>' : '<span class="fail">fails</span>'}, usefulness ${D2.pass ? '<span class="pass">reaches its bar</span>' : '<span class="fail">misses its bar</span>'}.${F.v2fresh && F.v1fresh ? ` On 410 fresh tasks it got ${pct(F.v2fresh.bounded.accuracy)} right (the first build: ${pct(F.v1fresh.bounded.accuracy)}) with ${F.v2fresh.all.silent} silent failures (the first build: ${F.v1fresh.all.silent}): safety ${verdict.D5.pass ? '<span class="pass">holds</span>' : '<span class="fail">fails</span>'} there too.` : ''} <a href="#fix">The fix, in full</a>.` : 'A fix for the low completion rate, breaking each job into smaller steps, is built and not measured yet.');
 }
 const NAMES = { H: 'Headline: the swarm\'s silent-failure rate', B1: 'Match-or-close on bounded work', B2: 'The honest loss on hard work', G: 'Grounding', P: 'Privacy', L: 'Latency', $: 'Cost', A1: 'A1 tampered corpus', A2: 'A2 poisoned twin', A2b: 'A2b lie at the source', A3: 'A3 prompt injection', A4: 'A4 engineered wrong answers', F: 'Fold-cache', X: 'Frontier arm' };
 const badge = (v) => (v.pass === true ? '<span class="pass">PASS</span>' : v.pass === false ? '<span class="fail">FAIL</span>' : /^pending/.test(v.result) ? '<span class="pend">NOT MEASURED YET</span>' : '<span class="muted">reported</span>');
@@ -461,12 +480,12 @@ async function rejudge() {
   const out = $('rejudgeOut'); out.innerHTML = '<p class="small">Replaying…</p>';
   const tasks = new Map([...S.data.suite.test, ...(S.data.test2 ? S.data.test2.test : [])].map((x) => [x.id, x]));
   const key = (r) => JSON.stringify([r.released, r.status ?? null, r.output ?? null, r.why]);
-  const again = (rec) => (rec.arm === 'assembled' ? ASM.replay(tasks.get(rec.id), rec, S.ctx, S.data.settings2 || {}) : SWARM.replay(tasks.get(rec.id), rec, S.ctx));
+  const again = (rec, run) => (rec.arm === 'assembled' ? ASM.replay(tasks.get(rec.id), rec, S.ctx, (run.system === 'v3' ? S.data.settings3 : S.data.settings2) || {}) : SWARM.replay(tasks.get(rec.id), rec, S.ctx));
   const P = S.data.runs, lines = [];
-  for (const [name, run, armsOf] of [['the tab run', P.tab, ['gated', 'raw']], ['the 7B run', P.big, ['gated', 'raw']], ['the 1B Ollama run', P.node1b, ['gated', 'raw']], ['the frontier run', P.frontier, ['raw']], ['the decomposed build on the sealed 410', P.tab2, ['gated']], ['the first build on the fresh 410', P.fresh1, ['gated']], ['the decomposed build on the fresh 410', P.fresh2, ['gated']]]) {
+  for (const [name, run, armsOf] of [['the tab run', P.tab, ['gated', 'raw']], ['the 7B run', P.big, ['gated', 'raw']], ['the 1B Ollama run', P.node1b, ['gated', 'raw']], ['the frontier run', P.frontier, ['raw']], ['the decomposed build on the sealed 410', P.tab2, ['gated']], ['the first build on the fresh 410', P.fresh1, ['gated']], ['the decomposed build on the fresh 410', P.fresh2, ['gated']], ['the follow-up build on the fresh 410', P.follow, ['gated']], ['the follow-up build on the sealed 410', P.followSeen, ['gated']]]) {
     if (!run) { lines.push(`<li>${name}: not published yet</li>`); continue; }
     let n = 0, same = 0;
-    for (const arm of armsOf) for (const rec of run.records[arm]) { n++; if (key(await again(rec)) === key(rec)) same++; }
+    for (const arm of armsOf) for (const rec of run.records[arm]) { n++; if (key(await again(rec, run)) === key(rec)) same++; }
     lines.push(`<li>${name}: <b>${same} of ${n}</b> decisions identical ${same === n ? '<span class="pass">✓</span>' : '<span class="fail">differs</span>'}</li>`);
   }
   out.innerHTML = `<ul>${lines.join('')}</ul><p class="small muted">Each decision is re-derived from the recorded reply by the code on this page: the conductor, lane, guard and judge run for real.</p>`;
@@ -572,8 +591,8 @@ async function sealHash(file = 'SEAL2.json') {
   return sealCache[file] || null;
 }
 // which build answers: the first build (one call per job) or the decomposed one (atoms, by the desks that adopted them)
-const runGated = (system, t, call, ctx) => (system === 'v2' ? ASM.assemble(t, call, ctx, S.data.settings2 || {}) : SWARM.gated(t, call, ctx));
-const runKey = (system) => (system === 'v2' ? 'bs-run-v2' : 'bs-run');
+const runGated = (system, t, call, ctx) => (system === 'v2' ? ASM.assemble(t, call, ctx, S.data.settings2 || {}) : system === 'v3' ? ASM.assemble(t, call, ctx, S.data.settings3 || {}) : SWARM.gated(t, call, ctx));
+const runKey = (system) => (system === 'v1' ? 'bs-run' : `bs-run-${system}`);
 // runSet({ system, split, raw, ui }) → the run record. With ui it is the visitor's run: it becomes the run on show and
 // the page re-renders as it goes. Without ui it is a quiet run kept under its own key (how the published sets were made).
 async function runSet({ system = S.system, split = 'test', raw = true, ui = false } = {}) {
@@ -636,7 +655,7 @@ function save() {
 }
 
 // ── the attacks, in this tab: the sealed pool, the sealed builders, the sealed script's own rule for "released the false answer" ──
-const attackKey = () => (S.system === 'v2' ? 'bs-attack-run-v2' : 'bs-attack-run');
+const attackKey = () => (S.system === 'v1' ? 'bs-attack-run' : `bs-attack-run-${S.system}`);
 async function attackRun() {
   if (!(await needModel($('attackOut')))) return;
   const list = S.data.attacks.attacks, D = S.data;
@@ -747,14 +766,15 @@ const ready = (async function start() {
   const [suite, corpus, bank, depts, settings, prices, attacks, published] = await Promise.all(['data/suite.json', 'data/corpus.json', 'data/banking-index.json', 'data/departments.json', 'data/settings.json', 'data/prices.json', 'data/attacks.json', 'data/published.json'].map(getJSON));
   const P = published || {};
   const runs = {};
-  for (const k of ['tab', 'big', 'node1b', 'attacks', 'attacksTab', 'fold', 'frontier', 'tab2', 'fresh1', 'fresh2', 'attacksTab2']) runs[k] = P[k] ? await getJSON(P[k]) : null;
+  for (const k of ['tab', 'big', 'node1b', 'attacks', 'attacksTab', 'fold', 'frontier', 'tab2', 'fresh1', 'fresh2', 'attacksTab2', 'follow', 'followSeen']) runs[k] = P[k] ? await getJSON(P[k]) : null;
   const test2 = await getJSON('data/test2.json'), adoption = await getJSON('data/adoption.json'), gates = await getJSON('data/gates.json');
-  const settings2 = await getJSON('data/settings2.json');
-  S.data = { suite, corpus, bank, depts, settings, settings2, test2, adoption, gates, prices, attacks, runs, walk: P.walk ? await getJSON(P.walk) : null };
+  const settings2 = await getJSON('data/settings2.json'), settings3 = await getJSON('data/settings3.json');
+  S.data = { suite, corpus, bank, depts, settings, settings2, settings3, test2, adoption, gates, prices, attacks, runs, walk: P.walk ? await getJSON(P.walk) : null };
   S.ctx = CELLS.prepare(corpus, bank, depts, settings);
   S.inbox = inboxOf(suite.dev);
   S.fixHolds = (() => { const v = CLAIMS2.evaluate(fixArms()), ok = (id) => v.find((x) => x.id === id).pass; return ok('D1') === null || ok('D2') === null ? null : ok('D1') === true && ok('D2') === true; })();
-  S.system = S.fixHolds === true ? 'v2' : 'v1';
+  S.followHolds = CLAIMS3.holds(CLAIMS3.evaluate(fixArms().v3fresh));
+  S.system = S.followHolds === true ? 'v3' : S.fixHolds === true ? 'v2' : 'v1';
   $('system').value = S.system;
   const saved = store.get(runKey(S.system));
   if (saved && saved.records && Array.isArray(saved.records.gated) && saved.records.gated.length) S.local = saved;
@@ -766,7 +786,7 @@ const ready = (async function start() {
   example();
   $('docsText').value = corpus.paragraphs.slice(0, 2).map((p) => p.text).join('\n\n');
   $('docsQ').value = 'Who gave their name to Normandy?';
-  $('system').addEventListener('change', () => { S.system = $('system').value === 'v2' ? 'v2' : 'v1'; const sv = store.get(runKey(S.system)); S.local = sv && sv.records && Array.isArray(sv.records.gated) && sv.records.gated.length ? sv : null; S.view = 'published'; renderAll(); });
+  $('system').addEventListener('change', () => { S.system = ['v2', 'v3'].includes($('system').value) ? $('system').value : 'v1'; const sv = store.get(runKey(S.system)); S.local = sv && sv.records && Array.isArray(sv.records.gated) && sv.records.gated.length ? sv : null; S.view = 'published'; renderAll(); });
   $('load').addEventListener('click', load); $('ask').addEventListener('click', askOne); $('docsAsk').addEventListener('click', askDocs); $('work').addEventListener('click', workRun);
   $('run').addEventListener('click', runSuite); $('save').addEventListener('click', save); $('rejudge').addEventListener('click', rejudge);
   $('attackRun').addEventListener('click', attackRun); $('frun').addEventListener('click', frontierRun);

@@ -8,5 +8,9 @@
  "walk": "data/walk.json",
  "frontier": "data/runs/frontier-raw-test.json",
  "attacksTab": "data/runs/attacks-tab.json",
- "tab2": "data/runs/tab2-test.json"
+ "tab2": "data/runs/tab2-test.json",
+ "followSeen": "data/runs/followup-test.json",
+ "fresh1": "data/runs/fresh1-test2.json",
+ "fresh2": "data/runs/fresh2-test2.json",
+ "follow": "data/runs/followup-test2.json"
 }

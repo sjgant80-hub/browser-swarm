@@ -15,6 +15,8 @@ on 410 sealed test tasks and pre-registered before any model saw one.
 - [CLAIMS-2.md](CLAIMS-2.md) — the claims for the fix (the decomposed build), committed before it read a sealed task.
 - [SEAL3.md](SEAL3.md) — what the tuning data chose for the fix, desk by desk, and the rule that chose it. Seal 3 froze
   the decomposed build by hash, and names seal 2, which still holds for the first build.
+- [CLAIMS-3.md](CLAIMS-3.md) — a follow-up claim, registered after the fix failed its safety claim by one and before any
+  fresh-set result was known: the same build with the banking desk put back to one call.
 - `data/runs/` — every published run, with every model reply. The page re-decides them all in your browser, and CI
   re-decides them on every push (`scripts/replay.mjs --check`).
 
@@ -29,12 +31,13 @@ on 410 sealed test tasks and pre-registered before any model saw one.
 | `src/adversary.mjs` | the attacks on the checks (gated) |
 | `src/diagnose.mjs` | one cause for every task the swarm did not answer: correct refusal, model too weak, or gate too strict (gated) |
 | `src/atoms.mjs`, `src/assembly.mjs`, `src/read.mjs` | the decomposed build: the small questions asked of the model, each desk's plan and the code that assembles checked atoms, and the two code readers (gated) |
-| `src/claims2.mjs` | the adoption rule and the verdicts on the fix's claims (gated) |
+| `src/claims2.mjs`, `src/claims3.mjs` | the adoption rule, the verdicts on the fix's claims, and the verdicts on the follow-up claim (gated) |
 | `vendor/` | the Estate Genome's guard and conductor and DocDec's router, gate and statistics, byte for byte (`vendor/PROVENANCE.json`) |
 | `scripts/` | build the suite, run on Ollama, run the attacks, replay, seal, build the page |
 | `page/`, `index.html` | the page; every kernel inlined byte for byte, and every published number baked into the HTML by running the page script at build time (`scripts/make-page.mjs`, `test/page.test.mjs`) |
 | `scripts/publish-tab.mjs` | publishes a run made in a browser tab, only if it is the full sealed test and every decision replays |
 | `scripts/publish-fix.mjs` | publishes a run of the fix only if it is complete, under both seals, and every decision replays; `--check` repeats that in CI |
+| `scripts/compose-followup.mjs` | assembles the follow-up build's record from the two registered runs and decides every task again with its own code; nothing is written unless all 410 come out the same |
 | `scripts/run-frontier.mjs` | the frontier arm, through a spend wall, under its owner's written approval and cap |
 
 Mutation gate: witness v0.6, every gated file CLEAN (`data/gates.json`). One equivalent mutant (the same line, in two files) is baselined with its

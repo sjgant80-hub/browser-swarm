@@ -1,7 +1,7 @@
 {
  "witness": "v0.6",
- "total": 557,
- "killed": 555,
+ "total": 565,
+ "killed": 563,
  "clean": true,
  "files": {
   "src/checks.mjs": {
@@ -86,6 +86,12 @@
    "total": 48,
    "killed": 47,
    "ignored": 1,
+   "clean": true
+  },
+  "src/claims3.mjs": {
+   "total": 8,
+   "killed": 8,
+   "ignored": 0,
    "clean": true
   }
  },

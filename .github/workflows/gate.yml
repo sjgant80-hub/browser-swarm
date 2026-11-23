@@ -34,6 +34,8 @@ jobs:
           for f in $(node -e 'const p=require("./data/published.json");for(const k of ["tab","big","node1b"])if(p[k])console.log(p[k])'); do node scripts/replay.mjs "$f" --check; done
       - name: every published run of the fix is complete, under both seals, and re-decided identically
         run: node scripts/publish-fix.mjs --check
+      - name: the follow-up build's records, composed again from the registered runs, identical to the published files
+        run: node scripts/compose-followup.mjs --check
   genome:
     runs-on: ubuntu-latest
     steps:
